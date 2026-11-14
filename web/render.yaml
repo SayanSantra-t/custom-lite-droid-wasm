@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: custom-lite-droid-wasm
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"

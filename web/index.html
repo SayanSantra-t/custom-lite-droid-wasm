@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Lite Droid — Browser WASM</title>
+  <style>
+    :root { color-scheme: dark; --bg: #0b0d12; --card: #141821; --accent: #4ade80; --text: #e5e7eb; }
+    * { box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
+    body { margin: 0; background: var(--bg); color: var(--text); display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 16px; gap: 14px; }
+    .bar { width: 100%; max-width: 960px; background: var(--card); border: 1px solid #262c3a; border-radius: 12px; padding: 12px 16px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; }
+    .badge { font-size: 12px; padding: 4px 10px; border-radius: 999px; background: #1f2937; border: 1px solid #374151; }
+    .badge.ok { border-color: var(--accent); color: var(--accent); }
+    .main { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; width: 100%; max-width: 960px; }
+    .phone { background: #000; border: 3px solid #2d3446; border-radius: 28px; padding: 12px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    canvas { background: #05070a; border-radius: 16px; width: 320px; height: 568px; image-rendering: pixelated; }
+    .nav { display: flex; gap: 24px; }
+    button { background: #1f2937; color: var(--text); border: 1px solid #374151; border-radius: 8px; padding: 8px 14px; cursor: pointer; font-size: 13px; }
+    button:hover { border-color: var(--accent); }
+    .panel { flex: 1; min-width: 280px; background: var(--card); border: 1px solid #262c3a; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+    .drop { border: 2px dashed #374151; border-radius: 10px; padding: 18px; text-align: center; font-size: 13px; color: #9ca3af; }
+    .drop.over { border-color: var(--accent); color: var(--accent); }
+    pre { margin: 0; background: #090b10; border: 1px solid #1f2937; border-radius: 8px; padding: 10px; height: 260px; overflow: auto; font-size: 12px; color: #86efac; }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <div><strong>Custom Lite Droid</strong> <span class="badge ok">Magisk Rooted</span></div>
+    <div id="profileBadge" class="badge">Detecting device...</div>
+    <div id="cacheBadge" class="badge">IndexedDB Cache: 0 MB</div>
+  </div>
+
+  <div class="main">
+    <div class="phone">
+      <canvas id="screen" width="480" height="854"></canvas>
+      <div class="nav">
+        <button onclick="sendKey('BACK')">◀ Back</button>
+        <button onclick="sendKey('HOME')">● Home</button>
+        <button onclick="sendKey('APP_SWITCH')">■ Recents</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button id="bootBtn" onclick="bootOS()">Boot Lazy OS</button>
+        <button onclick="clearBlockCache()">Clear Block Cache</button>
+      </div>
+      <div id="dropZone" class="drop">
+        Drop <code>.apk</code> or Magisk <code>.zip</code> here to sideload into <code>/data/local/tmp</code>
+      </div>
+      <pre id="log"></pre>
+    </div>
+  </div>
+
+  <script>
+    const logEl = document.getElementById('log');
+    const log = (m) => { logEl.textContent += `[${new Date().toLocaleTimeString()}] ${m}\n`; logEl.scrollTop = logEl.scrollHeight; };
+
+    // 1. Adaptive Device Profile
+    const mem = navigator.deviceMemory || 4;
+    const cores = navigator.hardwareConcurrency || 2;
+    const sab = self.crossOriginIsolated === true;
+    const isLowPower = mem <= 4 || cores <= 4 || !sab;
+    const profile = isLowPower
+      ? { name: 'Low-Power', ramMB: 768, w: 480, h: 854, fps: 15, threads: 1 }
+      : { name: 'Desktop', ramMB: 1536, w: 720, h: 1280, fps: 30, threads: Math.min(4, cores) };
+
+    const canvas = document.getElementById('screen');
+    canvas.width = profile.w; canvas.height = profile.h;
+    document.getElementById('profileBadge').textContent =
+      `${profile.name} (${profile.ramMB}MB RAM · ${profile.w}x${profile.h} · ${profile.threads}T · SAB:${sab ? 'ON' : 'OFF'})`;
+
+    // 2. IndexedDB Lazy Block Cache (only stores 64KB chunks actually read)
+    const DB_NAME = 'pixel_wasm_blocks';
+    function openDB() {
+      return new Promise((res, rej) => {
+        const req = indexedDB.open(DB_NAME, 1);
+        req.onupgradeneeded = () => req.result.createObjectStore('chunks');
+        req.onsuccess = () => res(req.result);
+        req.onerror = () => rej(req.error);
+      });
+    }
+
+    async function fetchChunk(idx, file) {
+      const db = await openDB();
+      const cached = await new Promise(r => {
+        const g = db.transaction('chunks').objectStore('chunks').get(idx);
+        g.onsuccess = () => r(g.result);
+      });
+      if (cached) return cached;
+      const resp = await fetch(`./chunks/${file}`);
+      const buf = new Uint8Array(await resp.arrayBuffer());
+      await new Promise(r => {
+        const p = db.transaction('chunks', 'readwrite').objectStore('chunks').put(buf, idx);
+        p.oncomplete = r;
+      });
+      return buf;
+    }
+
+    async function clearBlockCache() {
+      indexedDB.deleteDatabase(DB_NAME);
+      document.getElementById('cacheBadge').textContent = 'IndexedDB Cache: 0 MB';
+      log('Cleared IndexedDB OS block cache.');
+    }
+
+    async function bootOS() {
+      log(`Initializing ${profile.name} profile...`);
+      try {
+        const m = await fetch('./manifest.json').then(r => r.json());
+        log(`Manifest loaded: ${m.chunks.length} blocks (${(m.total_size / 1048576).toFixed(1)} MB virtual disk).`);
+        log('Ready to attach qemu-system-x86_64.wasm + boot/kernel-ranchu + boot/ramdisk.img (Magisk).');
+      } catch (e) {
+        log('Manifest not found yet — run cloudshell_disassemble.sh first to generate ./chunks and manifest.json.');
+      }
+    }
+
+    function sendKey(k) { log(`Virtual key: ${k}`); }
+
+    const dz = document.getElementById('dropZone');
+    dz.ondragover = (e) => { e.preventDefault(); dz.classList.add('over'); };
+    dz.ondragleave = () => dz.classList.remove('over');
+    dz.ondrop = (e) => {
+      e.preventDefault(); dz.classList.remove('over');
+      for (const f of e.dataTransfer.files) log(`Queued ${f.name} (${(f.size / 1048576).toFixed(2)} MB) for /data/local/tmp`);
+    };
+
+    log(`Device detected: ${mem}GB RAM, ${cores} cores, COOP/COEP=${sab}`);
+  </script>
+</body>
+</html>

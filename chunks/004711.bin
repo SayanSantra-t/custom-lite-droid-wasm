@@ -1,0 +1,1579 @@
+2 c493 c494 c495 c496 c497 c498 c499 c500 c501 c502 c503 c504 c505 c506 c507 c508 c509 c510 c511 c512 c513 c514 c515 c516 c517 c518 c519 c520 c521 c522 c523 c524 c525 c526 c527 c528 c529 c530 c531 c532 c533 c534 c535 c536 c537 c538 c539 c540 c541 c542 c543 c544 c545 c546 c547 c548 c549 c550 c551 c552 c553 c554 c555 c556 c557 c558 c559 c560 c561 c562 c563 c564 c565 c566 c567 c568 c569 c570 c571 c572 c573 c574 c575 c576 c577 c578 c579 c580 c581 c582 c583 c584 c585 c586 c587 c588 c589 c590 c591 c592 c593 c594 c595 c596 c597 c598 c599 c600 c601 c602 c603 c604 c605 c606 c607 c608 c609 c610 c611 c612 c613 c614 c615 c616 c617 c618 c619 c620 c621 c622 c623 c624 c625 c626 c627 c628 c629 c630 c631 c632 c633 c634 c635 c636 c637 c638 c639 c640 c641 c642 c643 c644 c645 c646 c647 c648 c649 c650 c651 c652 c653 c654 c655 c656 c657 c658 c659 c660 c661 c662 c663 c664 c665 c666 c667 c668 c669 c670 c671 c672 c673 c674 c675 c676 c677 c678 c679 c680 c681 c682 c683 c684 c685 c686 c687 c688 c689 c690 c691 c692 c693 c694 c695 c696 c697 c698 c699 c700 c701 c702 c703 c704 c705 c706 c707 c708 c709 c710 c711 c712 c713 c714 c715 c716 c717 c718 c719 c720 c721 c722 c723 c724 c725 c726 c727 c728 c729 c730 c731 c732 c733 c734 c735 c736 c737 c738 c739 c740 c741 c742 c743 c744 c745 c746 c747 c748 c749 c750 c751 c752 c753 c754 c755 c756 c757 c758 c759 c760 c761 c762 c763 c764 c765 c766 c767 c768 c769 c770 c771 c772 c773 c774 c775 c776 c777 c778 c779 c780 c781 c782 c783 c784 c785 c786 c787 c788 c789 c790 c791 c792 c793 c794 c795 c796 c797 c798 c799 c800 c801 c802 c803 c804 c805 c806 c807 c808 c809 c810 c811 c812 c813 c814 c815 c816 c817 c818 c819 c820 c821 c822 c823 c824 c825 c826 c827 c828 c829 c830 c831 c832 c833 c834 c835 c836 c837 c838 c839 c840 c841 c842 c843 c844 c845 c846 c847 c848 c849 c850 c851 c852 c853 c854 c855 c856 c857 c858 c859 c860 c861 c862 c863 c864 c865 c866 c867 c868 c869 c870 c871 c872 c873 c874 c875 c876 c877 c878 c879 c880 c881 c882 c883 c884 c885 c886 c887 c888 c889 c890 c891 c892 c893 c894 c895 c896 c897 c898 c899 c900 c901 c902 c903 c904 c905 c906 c907 c908 c909 c910 c911 c912 c913 c914 c915 c916 c917 c918 c919 c920 c921 c922 c923 c924 c925 c926 c927 c928 c929 c930 c931 c932 c933 c934 c935 c936 c937 c938 c939 c940 c941 c942 c943 c944 c945 c946 c947 c948 c949 c950 c951 c952 c953 c954 c955 c956 c957 c958 c959 c960 c961 c962 c963 c964 c965 c966 c967 c968 c969 c970 c971 c972 c973 c974 c975 c976 c977 c978 c979 c980 c981 c982 c983 c984 c985 c986 c987 c988 c989 c990 c991 c992 c993 c994 c995 c996 c997 c998 c999 c1000 c1001 c1002 c1003 c1004 c1005 c1006 c1007 c1008 c1009 c1010 c1011 c1012 c1013 c1014 c1015 c1016 c1017 c1018 c1019 c1020 c1021 c1022 c1023 ))
+;;* lmx 329 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_1 domain (process (fork)))
+;;* lme
+
+;;* lmx 329 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_2 domain (process (fork)))
+;;* lme
+
+;;* lmx 329 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_3 domain (process (fork)))
+;;* lme
+
+;;* lmx 330 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_4 domain (process (fork)))
+;;* lme
+
+;;* lmx 330 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_5 domain (process (fork)))
+;;* lme
+
+;;* lmx 330 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_6 domain (process (fork)))
+;;* lme
+
+;;* lmx 331 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_7 domain (process (fork)))
+;;* lme
+
+;;* lmx 331 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_8 domain (process (fork)))
+;;* lme
+
+;;* lmx 331 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_9 domain (process (fork)))
+;;* lme
+
+;;* lmx 332 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_10 domain (process (fork)))
+;;* lme
+
+;;* lmx 332 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_11 domain (process (fork)))
+;;* lme
+
+;;* lmx 332 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_12 domain (process (fork)))
+;;* lme
+
+;;* lmx 333 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_13 domain (process (fork)))
+;;* lme
+
+;;* lmx 333 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_14 domain (process (fork)))
+;;* lme
+
+;;* lmx 333 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_15 domain (process (fork)))
+;;* lme
+
+;;* lmx 334 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_16 domain (process (fork)))
+;;* lme
+
+;;* lmx 334 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_17 domain (process (fork)))
+;;* lme
+
+;;* lmx 334 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_18 domain (process (fork)))
+;;* lme
+
+;;* lmx 335 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_19 domain (process (fork)))
+;;* lme
+
+;;* lmx 335 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_20 domain (process (fork)))
+;;* lme
+
+;;* lmx 335 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_21 domain (process (fork)))
+;;* lme
+
+;;* lmx 336 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_22 domain (process (fork)))
+;;* lme
+
+;;* lmx 336 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_23 domain (process (fork)))
+;;* lme
+
+;;* lmx 336 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_24 domain (process (fork)))
+;;* lme
+
+;;* lmx 337 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_25 domain (process (fork)))
+;;* lme
+
+;;* lmx 337 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_26 domain (process (fork)))
+;;* lme
+
+;;* lmx 337 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_27 domain (process (fork)))
+;;* lme
+
+;;* lmx 338 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_28 domain (process (fork)))
+;;* lme
+
+;;* lmx 338 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_29 domain (process (fork)))
+;;* lme
+
+;;* lmx 338 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_30 domain (process (fork)))
+;;* lme
+
+;;* lmx 339 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_31 domain (process (fork)))
+;;* lme
+
+;;* lmx 339 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_32 domain (process (fork)))
+;;* lme
+
+;;* lmx 339 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_33 domain (process (fork)))
+;;* lme
+
+;;* lmx 340 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_34 domain (process (fork)))
+;;* lme
+
+;;* lmx 340 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_35 domain (process (fork)))
+;;* lme
+
+;;* lmx 340 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_36 domain (process (fork)))
+;;* lme
+
+;;* lmx 341 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_37 domain (process (fork)))
+;;* lme
+
+;;* lmx 341 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_38 domain (process (fork)))
+;;* lme
+
+;;* lmx 341 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_39 domain (process (fork)))
+;;* lme
+
+;;* lmx 342 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_40 domain (process (fork)))
+;;* lme
+
+;;* lmx 342 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_41 domain (process (fork)))
+;;* lme
+
+;;* lmx 342 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_42 domain (process (fork)))
+;;* lme
+
+;;* lmx 343 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_43 domain (process (fork)))
+;;* lme
+
+;;* lmx 343 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_44 domain (process (fork)))
+;;* lme
+
+;;* lmx 343 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_45 domain (process (fork)))
+;;* lme
+
+;;* lmx 344 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_46 domain (process (fork)))
+;;* lme
+
+;;* lmx 344 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_47 domain (process (fork)))
+;;* lme
+
+;;* lmx 344 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_48 domain (process (fork)))
+;;* lme
+
+;;* lmx 345 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_49 domain (process (fork)))
+;;* lme
+
+;;* lmx 345 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_50 domain (process (fork)))
+;;* lme
+
+;;* lmx 345 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_51 domain (process (fork)))
+;;* lme
+
+;;* lmx 346 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_52 domain (process (fork)))
+;;* lme
+
+;;* lmx 346 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_53 domain (process (fork)))
+;;* lme
+
+;;* lmx 346 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_54 domain (process (fork)))
+;;* lme
+
+;;* lmx 347 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_55 domain (process (fork)))
+;;* lme
+
+;;* lmx 347 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_56 domain (process (fork)))
+;;* lme
+
+;;* lmx 347 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_57 domain (process (fork)))
+;;* lme
+
+;;* lmx 348 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_58 domain (process (fork)))
+;;* lme
+
+;;* lmx 348 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_59 domain (process (fork)))
+;;* lme
+
+;;* lmx 348 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_60 domain (process (fork)))
+;;* lme
+
+;;* lmx 349 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_61 domain (process (fork)))
+;;* lme
+
+;;* lmx 349 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_62 domain (process (fork)))
+;;* lme
+
+;;* lmx 349 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_63 domain (process (fork)))
+;;* lme
+
+;;* lmx 350 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_64 domain (process (fork)))
+;;* lme
+
+;;* lmx 350 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_65 domain (process (fork)))
+;;* lme
+
+;;* lmx 350 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_66 domain (process (fork)))
+;;* lme
+
+;;* lmx 351 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_67 domain (process (fork)))
+;;* lme
+
+;;* lmx 351 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_68 domain (process (fork)))
+;;* lme
+
+;;* lmx 351 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_69 domain (process (fork)))
+;;* lme
+
+;;* lmx 352 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_70 domain (process (fork)))
+;;* lme
+
+;;* lmx 352 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_71 domain (process (fork)))
+;;* lme
+
+;;* lmx 352 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_72 domain (process (fork)))
+;;* lme
+
+;;* lmx 353 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_73 domain (process (fork)))
+;;* lme
+
+;;* lmx 353 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_74 domain (process (fork)))
+;;* lme
+
+;;* lmx 353 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_75 domain (process (fork)))
+;;* lme
+
+;;* lmx 354 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_76 domain (process (fork)))
+;;* lme
+
+;;* lmx 354 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_77 domain (process (fork)))
+;;* lme
+
+;;* lmx 354 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_78 domain (process (fork)))
+;;* lme
+
+;;* lmx 355 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_79 domain (process (fork)))
+;;* lme
+
+;;* lmx 355 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_80 domain (process (fork)))
+;;* lme
+
+;;* lmx 355 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_81 domain (process (fork)))
+;;* lme
+
+;;* lmx 356 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_82 domain (process (fork)))
+;;* lme
+
+;;* lmx 356 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_83 domain (process (fork)))
+;;* lme
+
+;;* lmx 356 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_84 domain (process (fork)))
+;;* lme
+
+;;* lmx 357 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_85 domain (process (fork)))
+;;* lme
+
+;;* lmx 357 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_86 domain (process (fork)))
+;;* lme
+
+;;* lmx 357 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_87 domain (process (fork)))
+;;* lme
+
+;;* lmx 358 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_88 domain (process (fork)))
+;;* lme
+
+;;* lmx 358 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_89 domain (process (fork)))
+;;* lme
+
+;;* lmx 358 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_90 domain (process (fork)))
+;;* lme
+
+;;* lmx 359 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_91 domain (process (fork)))
+;;* lme
+
+;;* lmx 359 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_92 domain (process (fork)))
+;;* lme
+
+;;* lmx 359 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_93 domain (process (fork)))
+;;* lme
+
+;;* lmx 360 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_94 domain (process (fork)))
+;;* lme
+
+;;* lmx 360 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_95 domain (process (fork)))
+;;* lme
+
+;;* lmx 360 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_96 domain (process (fork)))
+;;* lme
+
+;;* lmx 361 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_97 domain (process (fork)))
+;;* lme
+
+;;* lmx 361 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_98 domain (process (fork)))
+;;* lme
+
+;;* lmx 361 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_99 domain (process (fork)))
+;;* lme
+
+;;* lmx 362 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_100 domain (process (fork)))
+;;* lme
+
+;;* lmx 362 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_101 domain (process (fork)))
+;;* lme
+
+;;* lmx 362 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_102 domain (process (fork)))
+;;* lme
+
+;;* lmx 363 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_103 domain (process (fork)))
+;;* lme
+
+;;* lmx 363 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_104 domain (process (fork)))
+;;* lme
+
+;;* lmx 363 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_105 domain (process (fork)))
+;;* lme
+
+;;* lmx 364 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_106 domain (process (fork)))
+;;* lme
+
+;;* lmx 364 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_107 domain (process (fork)))
+;;* lme
+
+;;* lmx 364 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_108 domain (process (fork)))
+;;* lme
+
+;;* lmx 365 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_109 domain (process (fork)))
+;;* lme
+
+;;* lmx 365 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_110 domain (process (fork)))
+;;* lme
+
+;;* lmx 365 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_111 domain (process (fork)))
+;;* lme
+
+;;* lmx 366 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_112 domain (process (fork)))
+;;* lme
+
+;;* lmx 366 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_113 domain (process (fork)))
+;;* lme
+
+;;* lmx 366 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_114 domain (process (fork)))
+;;* lme
+
+;;* lmx 367 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_115 domain (process (fork)))
+;;* lme
+
+;;* lmx 367 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_116 domain (process (fork)))
+;;* lme
+
+;;* lmx 367 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_117 domain (process (fork)))
+;;* lme
+
+;;* lmx 368 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_118 domain (process (fork)))
+;;* lme
+
+;;* lmx 368 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_119 domain (process (fork)))
+;;* lme
+
+;;* lmx 368 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_120 domain (process (fork)))
+;;* lme
+
+;;* lmx 369 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_121 domain (process (fork)))
+;;* lme
+
+;;* lmx 369 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_122 domain (process (fork)))
+;;* lme
+
+;;* lmx 369 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_123 domain (process (fork)))
+;;* lme
+
+;;* lmx 370 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_124 domain (process (fork)))
+;;* lme
+
+;;* lmx 370 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_125 domain (process (fork)))
+;;* lme
+
+;;* lmx 370 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_126 domain (process (fork)))
+;;* lme
+
+;;* lmx 371 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_127 domain (process (fork)))
+;;* lme
+
+;;* lmx 371 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_128 domain (process (fork)))
+;;* lme
+
+;;* lmx 371 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_129 domain (process (fork)))
+;;* lme
+
+;;* lmx 372 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_130 domain (process (fork)))
+;;* lme
+
+;;* lmx 372 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_131 domain (process (fork)))
+;;* lme
+
+;;* lmx 372 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_132 domain (process (fork)))
+;;* lme
+
+;;* lmx 373 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_133 domain (process (fork)))
+;;* lme
+
+;;* lmx 373 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_134 domain (process (fork)))
+;;* lme
+
+;;* lmx 373 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_135 domain (process (fork)))
+;;* lme
+
+;;* lmx 374 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_136 domain (process (fork)))
+;;* lme
+
+;;* lmx 374 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_137 domain (process (fork)))
+;;* lme
+
+;;* lmx 374 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_138 domain (process (fork)))
+;;* lme
+
+;;* lmx 375 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_139 domain (process (fork)))
+;;* lme
+
+;;* lmx 375 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_140 domain (process (fork)))
+;;* lme
+
+;;* lmx 375 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_141 domain (process (fork)))
+;;* lme
+
+;;* lmx 376 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_142 domain (process (fork)))
+;;* lme
+
+;;* lmx 376 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_143 domain (process (fork)))
+;;* lme
+
+;;* lmx 376 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_144 domain (process (fork)))
+;;* lme
+
+;;* lmx 377 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_145 domain (process (fork)))
+;;* lme
+
+;;* lmx 377 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_146 domain (process (fork)))
+;;* lme
+
+;;* lmx 377 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_147 domain (process (fork)))
+;;* lme
+
+;;* lmx 378 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_148 domain (process (fork)))
+;;* lme
+
+;;* lmx 378 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_149 domain (process (fork)))
+;;* lme
+
+;;* lmx 378 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_150 domain (process (fork)))
+;;* lme
+
+;;* lmx 379 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_151 domain (process (fork)))
+;;* lme
+
+;;* lmx 379 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_152 domain (process (fork)))
+;;* lme
+
+;;* lmx 379 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_153 domain (process (fork)))
+;;* lme
+
+;;* lmx 380 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_154 domain (process (fork)))
+;;* lme
+
+;;* lmx 380 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_155 domain (process (fork)))
+;;* lme
+
+;;* lmx 380 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_156 domain (process (fork)))
+;;* lme
+
+;;* lmx 381 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_157 domain (process (fork)))
+;;* lme
+
+;;* lmx 381 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_158 domain (process (fork)))
+;;* lme
+
+;;* lmx 381 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_159 domain (process (fork)))
+;;* lme
+
+;;* lmx 382 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_160 domain (process (fork)))
+;;* lme
+
+;;* lmx 382 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_161 domain (process (fork)))
+;;* lme
+
+;;* lmx 382 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_162 domain (process (fork)))
+;;* lme
+
+;;* lmx 383 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_163 domain (process (fork)))
+;;* lme
+
+;;* lmx 383 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_164 domain (process (fork)))
+;;* lme
+
+;;* lmx 383 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_165 domain (process (fork)))
+;;* lme
+
+;;* lmx 384 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_166 domain (process (fork)))
+;;* lme
+
+;;* lmx 384 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_167 domain (process (fork)))
+;;* lme
+
+;;* lmx 384 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_168 domain (process (fork)))
+;;* lme
+
+;;* lmx 385 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_169 domain (process (fork)))
+;;* lme
+
+;;* lmx 385 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_170 domain (process (fork)))
+;;* lme
+
+;;* lmx 385 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_171 domain (process (fork)))
+;;* lme
+
+;;* lmx 386 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_172 domain (process (fork)))
+;;* lme
+
+;;* lmx 386 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_173 domain (process (fork)))
+;;* lme
+
+;;* lmx 386 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_174 domain (process (fork)))
+;;* lme
+
+;;* lmx 387 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_175 domain (process (fork)))
+;;* lme
+
+;;* lmx 387 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_176 domain (process (fork)))
+;;* lme
+
+;;* lmx 387 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_177 domain (process (fork)))
+;;* lme
+
+;;* lmx 388 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_178 domain (process (fork)))
+;;* lme
+
+;;* lmx 388 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_179 domain (process (fork)))
+;;* lme
+
+;;* lmx 388 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_180 domain (process (fork)))
+;;* lme
+
+;;* lmx 389 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_181 domain (process (fork)))
+;;* lme
+
+;;* lmx 389 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_182 domain (process (fork)))
+;;* lme
+
+;;* lmx 389 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_183 domain (process (fork)))
+;;* lme
+
+;;* lmx 392 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_184 domain (process (fork)))
+;;* lme
+
+;;* lmx 392 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_185 domain (process (fork)))
+;;* lme
+
+;;* lmx 392 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_186 domain (process (fork)))
+;;* lme
+
+;;* lmx 393 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_187 domain (process (fork)))
+;;* lme
+
+;;* lmx 393 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_188 domain (process (fork)))
+;;* lme
+
+;;* lmx 393 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_189 domain (process (fork)))
+;;* lme
+
+;;* lmx 394 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_190 domain (process (fork)))
+;;* lme
+
+;;* lmx 394 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_191 domain (process (fork)))
+;;* lme
+
+;;* lmx 394 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_192 domain (process (fork)))
+;;* lme
+
+;;* lmx 395 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_193 domain (process (fork)))
+;;* lme
+
+;;* lmx 395 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_194 domain (process (fork)))
+;;* lme
+
+;;* lmx 395 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_195 domain (process (fork)))
+;;* lme
+
+;;* lmx 396 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_196 domain (process (fork)))
+;;* lme
+
+;;* lmx 396 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_197 domain (process (fork)))
+;;* lme
+
+;;* lmx 396 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_198 domain (process (fork)))
+;;* lme
+
+;;* lmx 397 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_199 domain (process (fork)))
+;;* lme
+
+;;* lmx 397 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_200 domain (process (fork)))
+;;* lme
+
+;;* lmx 397 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_201 domain (process (fork)))
+;;* lme
+
+;;* lmx 398 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_202 domain (process (fork)))
+;;* lme
+
+;;* lmx 398 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_203 domain (process (fork)))
+;;* lme
+
+;;* lmx 398 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_204 domain (process (fork)))
+;;* lme
+
+;;* lmx 399 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_205 domain (process (fork)))
+;;* lme
+
+;;* lmx 399 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_206 domain (process (fork)))
+;;* lme
+
+;;* lmx 399 system/sepolicy/public/attributes
+
+(neverallow base_typeattr_207 domain (process (fork)))
+;;* lme
+
+;;* lmx 8 system/sepolicy/public/adbd.te
+
+(neverallow base_typeattr_208 adbd (process (transition)))
+;;* lme
+
+;;* lmx 9 system/sepolicy/public/adbd.te
+
+(neverallow base_typeattr_209 adbd (process (dyntransition)))
+;;* lme
+
+(allow adbd shell_test_data_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow adbd shell_test_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow adbd shell_test_data_file (lnk_file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow aidl_lazy_test_server servicemanager (binder (call transfer)))
+(allow servicemanager aidl_lazy_test_server (binder (call transfer)))
+(allow servicemanager aidl_lazy_test_server (dir (search)))
+(allow servicemanager aidl_lazy_test_server (file (read open)))
+(allow servicemanager aidl_lazy_test_server (process (getattr)))
+(allow aidl_lazy_test_server binderservicedomain (binder (call transfer)))
+(allow binderservicedomain aidl_lazy_test_server (binder (transfer)))
+(allow aidl_lazy_test_server binderservicedomain (fd (use)))
+(allow aidl_lazy_test_server aidl_lazy_test_service (service_manager (add find)))
+;;* lmx 4 system/sepolicy/public/aidl_lazy_test_server.te
+
+(neverallow base_typeattr_210 aidl_lazy_test_service (service_manager (add)))
+;;* lme
+
+(allow aidl_lazy_test_server su (tcp_socket (read write accept getopt)))
+(allow apexd servicemanager (binder (call transfer)))
+(allow servicemanager apexd (binder (call transfer)))
+(allow servicemanager apexd (dir (search)))
+(allow servicemanager apexd (file (read open)))
+(allow servicemanager apexd (process (getattr)))
+(allow apexd apex_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/apexd.te
+
+(neverallow base_typeattr_211 apex_service (service_manager (add)))
+;;* lme
+
+(allow apexd su (tcp_socket (read write accept getopt)))
+;;* lmx 8 system/sepolicy/public/apexd.te
+
+(neverallow base_typeattr_212 apex_service (service_manager (find)))
+;;* lme
+
+;;* lmx 9 system/sepolicy/public/apexd.te
+
+(neverallow base_typeattr_213 apexd (binder (call)))
+;;* lme
+
+;;* lmx 11 system/sepolicy/public/apexd.te
+
+(neverallow base_typeattr_214 apexd (process (ptrace)))
+;;* lme
+
+;;* lmx 20 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_215 self (capability (chown dac_override dac_read_search fowner fsetid kill setgid setuid setpcap linux_immutable net_bind_service net_broadcast net_admin net_raw ipc_lock ipc_owner sys_module sys_rawio sys_chroot sys_ptrace sys_pacct sys_admin sys_boot sys_nice sys_resource sys_time sys_tty_config mknod lease audit_write audit_control setfcap)))
+(neverallow base_typeattr_215 self (capability2 (mac_override mac_admin syslog wake_alarm block_suspend audit_read perfmon)))
+(neverallow base_typeattr_215 self (cap_userns (chown dac_override dac_read_search fowner fsetid kill setgid setuid setpcap linux_immutable net_bind_service net_broadcast net_admin net_raw ipc_lock ipc_owner sys_module sys_rawio sys_chroot sys_ptrace sys_pacct sys_admin sys_boot sys_nice sys_resource sys_time sys_tty_config mknod lease audit_write audit_control setfcap)))
+(neverallow base_typeattr_215 self (cap2_userns (mac_override mac_admin syslog wake_alarm block_suspend audit_read perfmon)))
+;;* lme
+
+;;* lmx 23 system/sepolicy/public/app.te
+
+(neverallow appdomain dev_type (blk_file (read write)))
+;;* lme
+
+;;* lmx 26 system/sepolicy/public/app.te
+
+(neverallow isolated_app graphics_device (chr_file (read write)))
+(neverallow shell graphics_device (chr_file (read write)))
+(neverallow untrusted_app graphics_device (chr_file (read write)))
+;;* lme
+
+;;* lmx 29 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_216 nfc_device (chr_file (read write)))
+;;* lme
+
+;;* lmx 31 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_217 hci_attach_dev (chr_file (read write)))
+;;* lme
+
+;;* lmx 32 system/sepolicy/public/app.te
+
+(neverallow appdomain tee_device (chr_file (read write)))
+;;* lme
+
+;;* lmx 42 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_218 domain (netlink_tcpdiag_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind nlmsg_read nlmsg_write)))
+(neverallow base_typeattr_218 domain (netlink_nflog_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow base_typeattr_218 domain (netlink_xfrm_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind nlmsg_read nlmsg_write)))
+(neverallow base_typeattr_218 domain (netlink_audit_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind nlmsg_read nlmsg_write nlmsg_relay nlmsg_readpriv nlmsg_tty_audit)))
+(neverallow base_typeattr_218 domain (netlink_dnrt_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+;;* lme
+
+;;* lmx 48 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_218 domain (netlink_kobject_uevent_socket (write append)))
+;;* lme
+
+;;* lmx 51 system/sepolicy/public/app.te
+
+(neverallow appdomain socket_device (sock_file (write)))
+;;* lme
+
+;;* lmx 54 system/sepolicy/public/app.te
+
+(neverallow appdomain adbd_socket (sock_file (write)))
+;;* lme
+
+;;* lmx 55 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_219 rild_socket (sock_file (write)))
+;;* lme
+
+;;* lmx 58 system/sepolicy/public/app.te
+
+(neverallow appdomain base_typeattr_220 (process (ptrace)))
+;;* lme
+
+;;* lmx 72 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_221 appdomain (process (ptrace)))
+;;* lme
+
+;;* lmx 76 system/sepolicy/public/app.te
+
+(neverallow appdomain base_typeattr_220 (file (write create setattr relabelfrom append unlink link rename)))
+;;* lme
+
+;;* lmx 77 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_222 base_typeattr_220 (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 86 system/sepolicy/public/app.te
+
+(neverallow appdomain base_typeattr_223 (process (sigkill sigstop signal)))
+;;* lme
+
+;;* lmx 90 system/sepolicy/public/app.te
+
+(neverallow appdomain rootfs (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain rootfs (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain rootfs (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain rootfs (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain rootfs (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain rootfs (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain rootfs (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 94 system/sepolicy/public/app.te
+
+(neverallow appdomain system_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 98 system/sepolicy/public/app.te
+
+(neverallow appdomain exec_type (file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 105 system/sepolicy/public/app.te
+
+(neverallow appdomain system_data_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_data_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_data_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_data_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_data_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_data_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain system_data_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 109 system/sepolicy/public/app.te
+
+(neverallow appdomain drm_data_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain drm_data_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain drm_data_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain drm_data_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain drm_data_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain drm_data_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain drm_data_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 112 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_224 apk_data_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_data_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_data_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_data_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_data_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_data_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_data_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 115 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_224 apk_tmp_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_tmp_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_tmp_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_tmp_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_tmp_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_tmp_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_tmp_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 118 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_224 apk_private_data_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_data_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_data_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_data_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_data_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_data_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_data_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 121 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_224 apk_private_tmp_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_tmp_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_tmp_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_tmp_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_tmp_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_tmp_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_224 apk_private_tmp_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 124 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_222 shell_data_file (file (create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_222 shell_data_file (dir (create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_222 shell_data_file (lnk_file (create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_222 shell_data_file (chr_file (create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_222 shell_data_file (blk_file (create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_222 shell_data_file (sock_file (create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_222 shell_data_file (fifo_file (create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 127 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_217 bluetooth_data_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_217 bluetooth_data_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_217 bluetooth_data_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_217 bluetooth_data_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_217 bluetooth_data_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_217 bluetooth_data_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow base_typeattr_217 bluetooth_data_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 128 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_225 credstore_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow base_typeattr_225 credstore_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+(neverallow base_typeattr_225 credstore_data_file (lnk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_225 credstore_data_file (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow base_typeattr_225 credstore_data_file (blk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_225 credstore_data_file (sock_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_225 credstore_data_file (fifo_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 131 system/sepolicy/public/app.te
+
+(neverallow appdomain keystore_data_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain keystore_data_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain keystore_data_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain keystore_data_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain keystore_data_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain keystore_data_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain keystore_data_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 134 system/sepolicy/public/app.te
+
+(neverallow appdomain systemkeys_data_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain systemkeys_data_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain systemkeys_data_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain systemkeys_data_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain systemkeys_data_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain systemkeys_data_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain systemkeys_data_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 137 system/sepolicy/public/app.te
+
+(neverallow appdomain wifi_data_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain wifi_data_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain wifi_data_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain wifi_data_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain wifi_data_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain wifi_data_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain wifi_data_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 140 system/sepolicy/public/app.te
+
+(neverallow appdomain dhcp_data_file (file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain dhcp_data_file (dir (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain dhcp_data_file (lnk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain dhcp_data_file (chr_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain dhcp_data_file (blk_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain dhcp_data_file (sock_file (write create setattr relabelfrom relabelto append unlink link rename)))
+(neverallow appdomain dhcp_data_file (fifo_file (write create setattr relabelfrom relabelto append unlink link rename)))
+;;* lme
+
+;;* lmx 144 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_226 apk_tmp_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow base_typeattr_226 apk_tmp_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+(neverallow base_typeattr_226 apk_tmp_file (lnk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_226 apk_tmp_file (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow base_typeattr_226 apk_tmp_file (blk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_226 apk_tmp_file (sock_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_226 apk_tmp_file (fifo_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_226 apk_private_tmp_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow base_typeattr_226 apk_private_tmp_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+(neverallow base_typeattr_226 apk_private_tmp_file (lnk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_226 apk_private_tmp_file (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow base_typeattr_226 apk_private_tmp_file (blk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_226 apk_private_tmp_file (sock_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow base_typeattr_226 apk_private_tmp_file (fifo_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 146 system/sepolicy/public/app.te
+
+(neverallow untrusted_app_all apk_tmp_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+(neverallow untrusted_app_all apk_tmp_file (lnk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_all apk_tmp_file (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_all apk_tmp_file (blk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_all apk_tmp_file (sock_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_all apk_tmp_file (fifo_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_all apk_private_tmp_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+(neverallow untrusted_app_all apk_private_tmp_file (lnk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_all apk_private_tmp_file (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_all apk_private_tmp_file (blk_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_all apk_private_tmp_file (sock_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_all apk_private_tmp_file (fifo_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 147 system/sepolicy/public/app.te
+
+(neverallow untrusted_app_all apk_tmp_file (file (ioctl write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_all apk_private_tmp_file (file (ioctl write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 150 system/sepolicy/public/app.te
+
+(neverallow appdomain efs_file (file (write)))
+(neverallow appdomain efs_file (dir (write)))
+(neverallow appdomain efs_file (lnk_file (write)))
+(neverallow appdomain efs_file (chr_file (write)))
+(neverallow appdomain efs_file (blk_file (write)))
+(neverallow appdomain efs_file (sock_file (write)))
+(neverallow appdomain efs_file (fifo_file (write)))
+;;* lme
+
+;;* lmx 151 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_222 efs_file (file (read)))
+(neverallow base_typeattr_222 efs_file (dir (read)))
+(neverallow base_typeattr_222 efs_file (lnk_file (read)))
+(neverallow base_typeattr_222 efs_file (chr_file (read)))
+(neverallow base_typeattr_222 efs_file (blk_file (read)))
+(neverallow base_typeattr_222 efs_file (sock_file (read)))
+(neverallow base_typeattr_222 efs_file (fifo_file (read)))
+;;* lme
+
+;;* lmx 155 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_227 sysfs (file (write)))
+(neverallow base_typeattr_227 sysfs (dir (write)))
+(neverallow base_typeattr_227 sysfs (lnk_file (write)))
+(neverallow base_typeattr_227 sysfs (chr_file (write)))
+(neverallow base_typeattr_227 sysfs (blk_file (write)))
+(neverallow base_typeattr_227 sysfs (sock_file (write)))
+(neverallow base_typeattr_227 sysfs (fifo_file (write)))
+;;* lme
+
+;;* lmx 157 system/sepolicy/public/app.te
+
+(neverallow appdomain proc (file (write)))
+(neverallow appdomain proc (dir (write)))
+(neverallow appdomain proc (lnk_file (write)))
+(neverallow appdomain proc (chr_file (write)))
+(neverallow appdomain proc (blk_file (write)))
+(neverallow appdomain proc (sock_file (write)))
+(neverallow appdomain proc (fifo_file (write)))
+;;* lme
+
+;;* lmx 160 system/sepolicy/public/app.te
+
+(neverallow appdomain kernel (system (syslog_read syslog_mod syslog_console)))
+;;* lme
+
+;;* lmx 163 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_222 base_typeattr_209 (security (compute_av check_context)))
+;;* lme
+
+;;* lmx 164 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_222 base_typeattr_209 (netlink_selinux_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+;;* lme
+
+;;* lmx 168 system/sepolicy/public/app.te
+
+(neverallow appdomain fs_type (filesystem (mount remount unmount relabelfrom relabelto associate quotamod quotaget watch)))
+;;* lme
+
+;;* lmx 179 system/sepolicy/public/app.te
+
+(neverallow appdomain dev_type (lnk_file (write create setattr relabelfrom append unlink link rename)))
+(neverallow appdomain rootfs (lnk_file (write create setattr relabelfrom append unlink link rename)))
+(neverallow appdomain tmpfs (lnk_file (write create setattr relabelfrom append unlink link rename)))
+(neverallow appdomain system_file (lnk_file (write create setattr relabelfrom append unlink link rename)))
+(neverallow appdomain apk_data_file (lnk_file (write create setattr relabelfrom append unlink link rename)))
+(neverallow appdomain cache_file (lnk_file (write create setattr relabelfrom append unlink link rename)))
+(neverallow appdomain cache_recovery_file (lnk_file (write create setattr relabelfrom append unlink link rename)))
+;;* lme
+
+;;* lmx 185 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_222 input_device (chr_file (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 193 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_228 bluetooth_a2dp_offload_prop (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(neverallow base_typeattr_228 bluetooth_audio_hal_prop (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(neverallow base_typeattr_228 bluetooth_prop (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(neverallow base_typeattr_228 exported_bluetooth_prop (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+;;* lme
+
+(allow system_app property_socket (sock_file (write)))
+(allow system_app init (unix_stream_socket (connectto)))
+(allow system_app nfc_prop (property_service (set)))
+(allow system_app nfc_prop (file (read getattr map open)))
+(allow system_app property_socket (sock_file (write)))
+(allow system_app init (unix_stream_socket (connectto)))
+(allow system_app radio_control_prop (property_service (set)))
+(allow system_app radio_control_prop (file (read getattr map open)))
+;;* lmx 201 system/sepolicy/public/app.te
+
+(neverallow appdomain proc_uid_time_in_state (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 204 system/sepolicy/public/app.te
+
+(neverallow appdomain proc_uid_concurrent_active_time (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 207 system/sepolicy/public/app.te
+
+(neverallow appdomain proc_uid_concurrent_policy_time (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 210 system/sepolicy/public/app.te
+
+(neverallow appdomain proc_uid_cpupower (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 215 system/sepolicy/public/app.te
+
+(neverallow base_typeattr_222 proc_net_tcp_udp (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 223 system/sepolicy/public/app.te
+
+(neverallow appdomain system_bootstrap_lib_file (file (read write append map execute open execute_no_trans)))
+;;* lme
+
+;;* lmx 225 system/sepolicy/public/app.te
+
+(neverallow appdomain system_bootstrap_lib_file (dir (read getattr open search)))
+;;* lme
+
+(allow audioserver hal_audio_server (process (signal)))
+(allow audioserver sensorservice_service (service_manager (find)))
+(allow audioserver system_server (unix_stream_socket (read write)))
+(allow bootanim servicemanager (binder (call transfer)))
+(allow servicemanager bootanim (binder (call transfer)))
+(allow servicemanager bootanim (dir (search)))
+(allow servicemanager bootanim (file (read open)))
+(allow servicemanager bootanim (process (getattr)))
+(allow bootanim surfaceflinger (binder (call transfer)))
+(allow surfaceflinger bootanim (binder (transfer)))
+(allow bootanim surfaceflinger (fd (use)))
+(allow bootanim audioserver (binder (call transfer)))
+(allow audioserver bootanim (binder (transfer)))
+(allow bootanim audioserver (fd (use)))
+(allow bootanim hwservicemanager (binder (call transfer)))
+(allow hwservicemanager bootanim (binder (call transfer)))
+(allow hwservicemanager bootanim (dir (search)))
+(allow hwservicemanager bootanim (file (read map open)))
+(allow hwservicemanager bootanim (process (getattr)))
+(allow bootanim gpu_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow bootanim gpu_device (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow bootanim sysfs_gpu (file (ioctl read getattr lock map open watch watch_reads)))
+(allow bootanim oemfs (dir (search)))
+(allow bootanim oemfs (file (ioctl read getattr lock map open watch watch_reads)))
+(allow bootanim audio_device (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow bootanim audio_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow bootanim audioserver_service (service_manager (find)))
+(allow bootanim surfaceflinger_service (service_manager (find)))
+(allow bootanim surfaceflinger (unix_stream_socket (read write)))
+(allow bootanim ion_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow bootanim dmabuf_system_heap_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow bootanim hal_graphics_allocator (fd (use)))
+(allow bootanim hal_graphics_composer (fd (use)))
+(allow bootanim proc_meminfo (file (ioctl read getattr lock map open watch watch_reads)))
+(allow bootanim system_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow bootstat runtime_event_log_tags_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow bootstat bootstat_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow bootstat bootstat_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow bootstat metadata_file (dir (search)))
+(allow bootstat metadata_bootstat_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow bootstat metadata_bootstat_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow bootstat pstorefs (dir (search)))
+(allow bootstat pstorefs (file (ioctl read getattr lock map open watch watch_reads)))
+(allow bootstat kernel (system (syslog_read)))
+(allow bootstat logcat_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow bootstat logdr_socket (sock_file (write)))
+(allow bootstat logd (unix_stream_socket (connectto)))
+(allow bootstat statsdw_socket (sock_file (write)))
+(allow bootstat statsd (unix_dgram_socket (sendto)))
+;;* lmx 32 system/sepolicy/public/bootstat.te
+
+(neverallow base_typeattr_229 system_boot_reason_prop (property_service (set)))
+;;* lme
+
+(allow init pdx_bufferhub_client_endpoint_socket_type (unix_stream_socket (create bind)))
+(allow bufferhubd pdx_bufferhub_client_endpoint_socket_type (unix_stream_socket (read write getattr setattr lock append listen accept getopt setopt shutdown)))
+(allow bufferhubd self (process (setsockcreate)))
+(allow bufferhubd pdx_bufferhub_clien

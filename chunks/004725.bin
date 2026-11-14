@@ -1,0 +1,457 @@
+isten accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow isolated_app_all base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow ephemeral_app base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow isolated_app base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow isolated_compute_app base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow mediaprovider base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_30 base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_29 base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_27 base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_25 base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+(neverallow mediaprovider_app base_typeattr_209 (vsock_socket (ioctl create setattr lock relabelfrom relabelto append map bind connect listen accept setopt shutdown recvfrom sendto name_bind)))
+;;* lme
+
+;;* lmx 131 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow isolated_app_all domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow ephemeral_app domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow isolated_app domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow isolated_compute_app domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow mediaprovider domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow untrusted_app domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow untrusted_app_30 domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow untrusted_app_29 domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow untrusted_app_27 domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow untrusted_app_25 domain (netlink_route_socket (bind nlmsg_readpriv)))
+(neverallow mediaprovider_app domain (netlink_route_socket (bind nlmsg_readpriv)))
+;;* lme
+
+;;* lmx 132 system/sepolicy/private/app_neverallows.te
+
+(neverallow priv_app domain (netlink_route_socket (bind nlmsg_readpriv)))
+;;* lme
+
+;;* lmx 141 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_617 domain (netlink_route_socket (nlmsg_getneigh)))
+;;* lme
+
+;;* lmx 144 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_614 cache_file (dir (write create setattr relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm add_name remove_name reparent rmdir)))
+(neverallow base_typeattr_614 cache_recovery_file (dir (write create setattr relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm add_name remove_name reparent rmdir)))
+;;* lme
+
+;;* lmx 145 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_614 cache_file (file (ioctl write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow base_typeattr_614 cache_recovery_file (file (ioctl write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 167 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_614 base_typeattr_618 (file (create unlink)))
+(neverallow base_typeattr_614 base_typeattr_618 (dir (create unlink)))
+(neverallow base_typeattr_614 base_typeattr_618 (lnk_file (create unlink)))
+(neverallow base_typeattr_614 base_typeattr_618 (chr_file (create unlink)))
+(neverallow base_typeattr_614 base_typeattr_618 (blk_file (create unlink)))
+(neverallow base_typeattr_614 base_typeattr_618 (sock_file (create unlink)))
+(neverallow base_typeattr_614 base_typeattr_618 (fifo_file (create unlink)))
+;;* lme
+
+;;* lmx 170 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_619 fuse_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 173 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all tun_device (chr_file (open)))
+(neverallow isolated_app_all tun_device (chr_file (open)))
+(neverallow ephemeral_app tun_device (chr_file (open)))
+(neverallow isolated_app tun_device (chr_file (open)))
+(neverallow isolated_compute_app tun_device (chr_file (open)))
+(neverallow mediaprovider tun_device (chr_file (open)))
+(neverallow untrusted_app tun_device (chr_file (open)))
+(neverallow untrusted_app_30 tun_device (chr_file (open)))
+(neverallow untrusted_app_29 tun_device (chr_file (open)))
+(neverallow untrusted_app_27 tun_device (chr_file (open)))
+(neverallow untrusted_app_25 tun_device (chr_file (open)))
+(neverallow mediaprovider_app tun_device (chr_file (open)))
+;;* lme
+
+;;* lmx 177 system/sepolicy/private/app_neverallows.te
+
+(neverallowx untrusted_app_all tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx isolated_app_all tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx ephemeral_app tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx isolated_app tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx isolated_compute_app tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx mediaprovider tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx untrusted_app tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx untrusted_app_30 tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx untrusted_app_29 tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx untrusted_app_27 tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx untrusted_app_25 tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+(neverallowx mediaprovider_app tun_device (ioctl chr_file ((range 0x0 0x53ff) (range 0x5500 0xffff))))
+;;* lme
+
+;;* lmx 177 system/sepolicy/private/app_neverallows.te
+
+(neverallowx untrusted_app_all tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx isolated_app_all tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx ephemeral_app tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx isolated_app tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx isolated_compute_app tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx mediaprovider tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx untrusted_app tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx untrusted_app_30 tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx untrusted_app_29 tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx untrusted_app_27 tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx untrusted_app_25 tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+(neverallowx mediaprovider_app tun_device (ioctl chr_file ((range 0x5400 0x544f) (range 0x5452 0x54d1) (range 0x54d3 0x54ff))))
+;;* lme
+
+;;* lmx 180 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow isolated_app_all anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow ephemeral_app anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow isolated_app anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow isolated_compute_app anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow mediaprovider anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_30 anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_29 anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_27 anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_25 anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow mediaprovider_app anr_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto map unlink link rename execute quotaon mounton audit_access execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 181 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow isolated_app_all anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow ephemeral_app anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow isolated_app anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow isolated_compute_app anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow mediaprovider anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow untrusted_app anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow untrusted_app_30 anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow untrusted_app_29 anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow untrusted_app_27 anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow untrusted_app_25 anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow mediaprovider_app anr_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+;;* lme
+
+;;* lmx 199 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_all proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_asound (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_kmsg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_loadavg (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_mounts (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_pagetypeinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_slabinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_stat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_swaps (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_uptime (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_version (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_vmallocinfo (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app proc_vmstat (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+;;* lme
+
+;;* lmx 203 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_619 proc_filesystems (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+;;* lme
+
+;;* lmx 206 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app_all config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow ephemeral_app config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_app config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow isolated_compute_app config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_30 config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_29 config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_27 config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow untrusted_app_25 config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+(neverallow mediaprovider_app config_gz (file (ioctl read write create setattr lock relabelfrom append unlink link rename execute open watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans)))
+;;* lme
+
+;;* lmx 209 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app_all preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow ephemeral_app preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_compute_app preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_30 preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_29 preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_27 preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_25 preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider_app preloads_data_file (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 213 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all system_file (file (lock)))
+(neverallow isolated_app_all system_file (file (lock)))
+(neverallow ephemeral_app system_file (file (lock)))
+(neverallow isolated_app system_file (file (lock)))
+(neverallow isolated_compute_app system_file (file (lock)))
+(neverallow mediaprovider system_file (file (lock)))
+(neverallow untrusted_app system_file (file (lock)))
+(neverallow untrusted_app_30 system_file (file (lock)))
+(neverallow untrusted_app_29 system_file (file (lock)))
+(neverallow untrusted_app_27 system_file (file (lock)))
+(neverallow untrusted_app_25 system_file (file (lock)))
+(neverallow mediaprovider_app system_file (file (lock)))
+;;* lme
+
+;;* lmx 217 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all base_typeattr_209 (hwservice_manager (add list)))
+(neverallow isolated_app_all base_typeattr_209 (hwservice_manager (add list)))
+(neverallow ephemeral_app base_typeattr_209 (hwservice_manager (add list)))
+(neverallow isolated_app base_typeattr_209 (hwservice_manager (add list)))
+(neverallow isolated_compute_app base_typeattr_209 (hwservice_manager (add list)))
+(neverallow mediaprovider base_typeattr_209 (hwservice_manager (add list)))
+(neverallow untrusted_app base_typeattr_209 (hwservice_manager (add list)))
+(neverallow untrusted_app_30 base_typeattr_209 (hwservice_manager (add list)))
+(neverallow untrusted_app_29 base_typeattr_209 (hwservice_manager (add list)))
+(neverallow untrusted_app_27 base_typeattr_209 (hwservice_manager (add list)))
+(neverallow untrusted_app_25 base_typeattr_209 (hwservice_manager (add list)))
+(neverallow mediaprovider_app base_typeattr_209 (hwservice_manager (add list)))
+;;* lme
+
+;;* lmx 232 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all protected_hwservice (hwservice_manager (find)))
+(neverallow isolated_app_all protected_hwservice (hwservice_manager (find)))
+(neverallow ephemeral_app protected_hwservice (hwservice_manager (find)))
+(neverallow isolated_app protected_hwservice (hwservice_manager (find)))
+(neverallow isolated_compute_app protected_hwservice (hwservice_manager (find)))
+(neverallow mediaprovider protected_hwservice (hwservice_manager (find)))
+(neverallow untrusted_app protected_hwservice (hwservice_manager (find)))
+(neverallow untrusted_app_30 protected_hwservice (hwservice_manager (find)))
+(neverallow untrusted_app_29 protected_hwservice (hwservice_manager (find)))
+(neverallow untrusted_app_27 protected_hwservice (hwservice_manager (find)))
+(neverallow untrusted_app_25 protected_hwservice (hwservice_manager (find)))
+(neverallow mediaprovider_app protected_hwservice (hwservice_manager (find)))
+;;* lme
+
+;;* lmx 233 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all protected_service (service_manager (find)))
+(neverallow isolated_app_all protected_service (service_manager (find)))
+(neverallow ephemeral_app protected_service (service_manager (find)))
+(neverallow isolated_app protected_service (service_manager (find)))
+(neverallow isolated_compute_app protected_service (service_manager (find)))
+(neverallow mediaprovider protected_service (service_manager (find)))
+(neverallow untrusted_app protected_service (service_manager (find)))
+(neverallow untrusted_app_30 protected_service (service_manager (find)))
+(neverallow untrusted_app_29 protected_service (service_manager (find)))
+(neverallow untrusted_app_27 protected_service (service_manager (find)))
+(neverallow untrusted_app_25 protected_service (service_manager (find)))
+(neverallow mediaprovider_app protected_service (service_manager (find)))
+;;* lme
+
+;;* lmx 236 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app_all selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow ephemeral_app selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_compute_app selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_30 selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_29 selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_27 selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_25 selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider_app selinuxfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 243 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_620 proc_tty_drivers (file (ioctl read getattr lock map open watch watch_reads)))
+;;* lme
+
+;;* lmx 244 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow isolated_app_all proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow ephemeral_app proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow isolated_app proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow isolated_compute_app proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow mediaprovider proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow untrusted_app proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow untrusted_app_30 proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow untrusted_app_29 proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow untrusted_app_27 proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow untrusted_app_25 proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+(neverallow mediaprovider_app proc_tty_drivers (file (write create setattr relabelfrom relabelto append unlink link rename execute quotaon mounton audit_access execmod watch_mount watch_sb watch_with_perm execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 247 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all cgroup (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow isolated_app_all cgroup (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow ephemeral_app cgroup (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow isolated_app cgroup (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow isolated_compute_app cgroup (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow mediaprovider cgroup (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app cgroup (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_30 cgroup (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_29 cgroup (file (ioctl read write create getat

@@ -1,0 +1,856 @@
+            <axis tag="wght" stylevalue="90.0"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansKhmer-Regular">
+            NotoSansKhmer-VF.ttf
+            <axis tag="wdth" stylevalue="100.0"/>
+            <axis tag="wght" stylevalue="108.0"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansKhmer-Regular">
+            NotoSansKhmer-VF.ttf
+            <axis tag="wdth" stylevalue="100.0"/>
+            <axis tag="wght" stylevalue="128.0"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansKhmer-Regular">
+            NotoSansKhmer-VF.ttf
+            <axis tag="wdth" stylevalue="100.0"/>
+            <axis tag="wght" stylevalue="151.0"/>
+        </font>
+        <font weight="800" style="normal" postScriptName="NotoSansKhmer-Regular">
+            NotoSansKhmer-VF.ttf
+            <axis tag="wdth" stylevalue="100.0"/>
+            <axis tag="wght" stylevalue="169.0"/>
+        </font>
+        <font weight="900" style="normal" postScriptName="NotoSansKhmer-Regular">
+            NotoSansKhmer-VF.ttf
+            <axis tag="wdth" stylevalue="100.0"/>
+            <axis tag="wght" stylevalue="190.0"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif">NotoSerifKhmer-Regular.otf</font>
+        <font weight="700" style="normal" fallbackFor="serif">NotoSerifKhmer-Bold.otf</font>
+    </family>
+    <family lang="und-Khmr" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansKhmerUI">
+            NotoSansKhmerUI-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansKhmerUI-Bold.ttf</font>
+    </family>
+    <family lang="und-Laoo" variant="elegant">
+        <font weight="400" style="normal">NotoSansLao-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansLao-Bold.ttf</font>
+        <font weight="400" style="normal" fallbackFor="serif">
+            NotoSerifLao-Regular.ttf
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif">NotoSerifLao-Bold.ttf</font>
+    </family>
+    <family lang="und-Laoo" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansLaoUI">NotoSansLaoUI-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansLaoUI-Bold.ttf</font>
+    </family>
+    <family lang="und-Mymr" variant="elegant">
+        <font weight="400" style="normal">NotoSansMyanmar-Regular.otf</font>
+        <font weight="500" style="normal">NotoSansMyanmar-Medium.otf</font>
+        <font weight="700" style="normal">NotoSansMyanmar-Bold.otf</font>
+        <font weight="400" style="normal" fallbackFor="serif">NotoSerifMyanmar-Regular.otf</font>
+        <font weight="700" style="normal" fallbackFor="serif">NotoSerifMyanmar-Bold.otf</font>
+    </family>
+    <family lang="und-Mymr" variant="compact">
+        <font weight="400" style="normal">NotoSansMyanmarUI-Regular.otf</font>
+        <font weight="500" style="normal">NotoSansMyanmarUI-Medium.otf</font>
+        <font weight="700" style="normal">NotoSansMyanmarUI-Bold.otf</font>
+    </family>
+    <family lang="und-Thaa">
+        <font weight="400" style="normal" postScriptName="NotoSansThaana">
+            NotoSansThaana-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansThaana-Bold.ttf</font>
+    </family>
+    <family lang="und-Cham">
+        <font weight="400" style="normal" postScriptName="NotoSansCham">NotoSansCham-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansCham-Bold.ttf</font>
+    </family>
+    <family lang="und-Ahom">
+        <font weight="400" style="normal">NotoSansAhom-Regular.otf</font>
+    </family>
+    <family lang="und-Adlm">
+        <font weight="400" style="normal" postScriptName="NotoSansAdlam-Regular">
+            NotoSansAdlam-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansAdlam-Regular">
+            NotoSansAdlam-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansAdlam-Regular">
+            NotoSansAdlam-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansAdlam-Regular">
+            NotoSansAdlam-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Avst">
+        <font weight="400" style="normal" postScriptName="NotoSansAvestan">
+            NotoSansAvestan-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Bali">
+        <font weight="400" style="normal" postScriptName="NotoSansBalinese">
+            NotoSansBalinese-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Bamu">
+        <font weight="400" style="normal" postScriptName="NotoSansBamum">NotoSansBamum-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Batk">
+        <font weight="400" style="normal" postScriptName="NotoSansBatak">NotoSansBatak-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Brah">
+        <font weight="400" style="normal" postScriptName="NotoSansBrahmi">
+            NotoSansBrahmi-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Bugi">
+        <font weight="400" style="normal" postScriptName="NotoSansBuginese">
+            NotoSansBuginese-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Buhd">
+        <font weight="400" style="normal" postScriptName="NotoSansBuhid">NotoSansBuhid-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Cans">
+        <font weight="400" style="normal">
+            NotoSansCanadianAboriginal-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Cari">
+        <font weight="400" style="normal" postScriptName="NotoSansCarian">
+            NotoSansCarian-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Cakm">
+        <font weight="400" style="normal">NotoSansChakma-Regular.otf</font>
+    </family>
+    <family lang="und-Cher">
+        <font weight="400" style="normal">NotoSansCherokee-Regular.ttf</font>
+    </family>
+    <family lang="und-Copt">
+        <font weight="400" style="normal" postScriptName="NotoSansCoptic">
+            NotoSansCoptic-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Xsux">
+        <font weight="400" style="normal" postScriptName="NotoSansCuneiform">
+            NotoSansCuneiform-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Cprt">
+        <font weight="400" style="normal" postScriptName="NotoSansCypriot">
+            NotoSansCypriot-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Dsrt">
+        <font weight="400" style="normal" postScriptName="NotoSansDeseret">
+            NotoSansDeseret-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Egyp">
+        <font weight="400" style="normal" postScriptName="NotoSansEgyptianHieroglyphs">
+            NotoSansEgyptianHieroglyphs-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Elba">
+        <font weight="400" style="normal">NotoSansElbasan-Regular.otf</font>
+    </family>
+    <family lang="und-Glag">
+        <font weight="400" style="normal" postScriptName="NotoSansGlagolitic">
+            NotoSansGlagolitic-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Goth">
+        <font weight="400" style="normal" postScriptName="NotoSansGothic">
+            NotoSansGothic-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Hano">
+        <font weight="400" style="normal" postScriptName="NotoSansHanunoo">
+            NotoSansHanunoo-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Armi">
+        <font weight="400" style="normal" postScriptName="NotoSansImperialAramaic">
+            NotoSansImperialAramaic-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Phli">
+        <font weight="400" style="normal" postScriptName="NotoSansInscriptionalPahlavi">
+            NotoSansInscriptionalPahlavi-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Prti">
+        <font weight="400" style="normal" postScriptName="NotoSansInscriptionalParthian">
+            NotoSansInscriptionalParthian-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Java">
+        <font weight="400" style="normal">NotoSansJavanese-Regular.otf</font>
+    </family>
+    <family lang="und-Kthi">
+        <font weight="400" style="normal" postScriptName="NotoSansKaithi">
+            NotoSansKaithi-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Kali">
+        <font weight="400" style="normal" postScriptName="NotoSansKayahLi">
+            NotoSansKayahLi-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Khar">
+        <font weight="400" style="normal" postScriptName="NotoSansKharoshthi">
+            NotoSansKharoshthi-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Lepc">
+        <font weight="400" style="normal" postScriptName="NotoSansLepcha">
+            NotoSansLepcha-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Limb">
+        <font weight="400" style="normal" postScriptName="NotoSansLimbu">NotoSansLimbu-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Linb">
+        <font weight="400" style="normal" postScriptName="NotoSansLinearB">
+            NotoSansLinearB-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Lisu">
+        <font weight="400" style="normal" postScriptName="NotoSansLisu">NotoSansLisu-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Lyci">
+        <font weight="400" style="normal" postScriptName="NotoSansLycian">
+            NotoSansLycian-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Lydi">
+        <font weight="400" style="normal" postScriptName="NotoSansLydian">
+            NotoSansLydian-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Mand">
+        <font weight="400" style="normal" postScriptName="NotoSansMandaic">
+            NotoSansMandaic-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Mtei">
+        <font weight="400" style="normal" postScriptName="NotoSansMeeteiMayek">
+            NotoSansMeeteiMayek-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Talu">
+        <font weight="400" style="normal" postScriptName="NotoSansNewTaiLue">
+            NotoSansNewTaiLue-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Nkoo">
+        <font weight="400" style="normal" postScriptName="NotoSansNKo">NotoSansNKo-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Ogam">
+        <font weight="400" style="normal" postScriptName="NotoSansOgham">NotoSansOgham-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Olck">
+        <font weight="400" style="normal" postScriptName="NotoSansOlChiki">
+            NotoSansOlChiki-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Ital">
+        <font weight="400" style="normal" postScriptName="NotoSansOldItalic">
+            NotoSansOldItalic-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Xpeo">
+        <font weight="400" style="normal" postScriptName="NotoSansOldPersian">
+            NotoSansOldPersian-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Sarb">
+        <font weight="400" style="normal" postScriptName="NotoSansOldSouthArabian">
+            NotoSansOldSouthArabian-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Orkh">
+        <font weight="400" style="normal" postScriptName="NotoSansOldTurkic">
+            NotoSansOldTurkic-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Osge">
+        <font weight="400" style="normal">NotoSansOsage-Regular.ttf</font>
+    </family>
+    <family lang="und-Osma">
+        <font weight="400" style="normal" postScriptName="NotoSansOsmanya">
+            NotoSansOsmanya-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Phnx">
+        <font weight="400" style="normal" postScriptName="NotoSansPhoenician">
+            NotoSansPhoenician-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Rjng">
+        <font weight="400" style="normal" postScriptName="NotoSansRejang">
+            NotoSansRejang-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Runr">
+        <font weight="400" style="normal" postScriptName="NotoSansRunic">NotoSansRunic-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Samr">
+        <font weight="400" style="normal" postScriptName="NotoSansSamaritan">
+            NotoSansSamaritan-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Saur">
+        <font weight="400" style="normal" postScriptName="NotoSansSaurashtra">
+            NotoSansSaurashtra-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Shaw">
+        <font weight="400" style="normal" postScriptName="NotoSansShavian">
+            NotoSansShavian-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Sund">
+        <font weight="400" style="normal" postScriptName="NotoSansSundanese">
+            NotoSansSundanese-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Sylo">
+        <font weight="400" style="normal" postScriptName="NotoSansSylotiNagri">
+            NotoSansSylotiNagri-Regular.ttf
+        </font>
+    </family>
+    <!-- Esrangela should precede Eastern and Western Syriac, since it's our default form. -->
+    <family lang="und-Syre">
+        <font weight="400" style="normal" postScriptName="NotoSansSyriacEstrangela">
+            NotoSansSyriacEstrangela-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Syrn">
+        <font weight="400" style="normal" postScriptName="NotoSansSyriacEastern">
+            NotoSansSyriacEastern-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Syrj">
+        <font weight="400" style="normal" postScriptName="NotoSansSyriacWestern">
+            NotoSansSyriacWestern-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Tglg">
+        <font weight="400" style="normal" postScriptName="NotoSansTagalog">
+            NotoSansTagalog-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Tagb">
+        <font weight="400" style="normal" postScriptName="NotoSansTagbanwa">
+            NotoSansTagbanwa-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Lana">
+        <font weight="400" style="normal" postScriptName="NotoSansTaiTham">
+            NotoSansTaiTham-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Tavt">
+        <font weight="400" style="normal" postScriptName="NotoSansTaiViet">
+            NotoSansTaiViet-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Tibt">
+        <font weight="400" style="normal" postScriptName="NotoSerifTibetan-Regular">
+            NotoSerifTibetan-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSerifTibetan-Regular">
+            NotoSerifTibetan-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSerifTibetan-Regular">
+            NotoSerifTibetan-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSerifTibetan-Regular">
+            NotoSerifTibetan-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Tfng">
+        <font weight="400" style="normal">NotoSansTifinagh-Regular.otf</font>
+    </family>
+    <family lang="und-Ugar">
+        <font weight="400" style="normal" postScriptName="NotoSansUgaritic">
+            NotoSansUgaritic-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Vaii">
+        <font weight="400" style="normal" postScriptName="NotoSansVai">NotoSansVai-Regular.ttf
+        </font>
+    </family>
+    <family>
+        <font weight="400" style="normal">NotoSansSymbols-Regular-Subsetted.ttf</font>
+    </family>
+    <family lang="zh-Hans">
+        <font weight="400" style="normal" index="2" postScriptName="NotoSansCJKjp-Regular">
+            NotoSansCJK-Regular.ttc
+        </font>
+        <font weight="400" style="normal" index="2" fallbackFor="serif"
+              postScriptName="NotoSerifCJKjp-Regular">NotoSerifCJK-Regular.ttc
+        </font>
+    </family>
+    <family lang="zh-Hant,zh-Bopo">
+        <font weight="400" style="normal" index="3" postScriptName="NotoSansCJKjp-Regular">
+            NotoSansCJK-Regular.ttc
+        </font>
+        <font weight="400" style="normal" index="3" fallbackFor="serif"
+              postScriptName="NotoSerifCJKjp-Regular">NotoSerifCJK-Regular.ttc
+        </font>
+    </family>
+    <family lang="ja">
+        <font weight="400" style="normal" index="0" postScriptName="NotoSansCJKjp-Regular">
+            NotoSansCJK-Regular.ttc
+        </font>
+        <font weight="400" style="normal" index="0" fallbackFor="serif"
+              postScriptName="NotoSerifCJKjp-Regular">NotoSerifCJK-Regular.ttc
+        </font>
+    </family>
+    <family lang="ko">
+        <font weight="400" style="normal" index="1" postScriptName="NotoSansCJKjp-Regular">
+            NotoSansCJK-Regular.ttc
+        </font>
+        <font weight="400" style="normal" index="1" fallbackFor="serif"
+              postScriptName="NotoSerifCJKjp-Regular">NotoSerifCJK-Regular.ttc
+        </font>
+    </family>
+    <family lang="und-Zsye" ignore="true">
+        <font weight="400" style="normal">NotoColorEmojiLegacy.ttf</font>
+    </family>
+    <family lang="und-Zsye">
+        <font weight="400" style="normal">NotoColorEmoji.ttf</font>
+    </family>
+    <family lang="und-Zsye">
+        <font weight="400" style="normal">NotoColorEmojiFlags.ttf</font>
+    </family>
+    <family lang="und-Zsym">
+        <font weight="400" style="normal">NotoSansSymbols-Regular-Subsetted2.ttf</font>
+    </family>
+    <!--
+        Tai Le, Yi, Mongolian, and Phags-pa are intentionally kept last, to make sure they don't
+        override the East Asian punctuation for Chinese.
+    -->
+    <family lang="und-Tale">
+        <font weight="400" style="normal" postScriptName="NotoSansTaiLe">NotoSansTaiLe-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Yiii">
+        <font weight="400" style="normal" postScriptName="NotoSansYi">NotoSansYi-Regular.ttf</font>
+    </family>
+    <family lang="und-Mong">
+        <font weight="400" style="normal" postScriptName="NotoSansMongolian">
+            NotoSansMongolian-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Phag">
+        <font weight="400" style="normal" postScriptName="NotoSansPhagsPa">
+            NotoSansPhagsPa-Regular.ttf
+        </font>
+    </family>
+    <family lang="und-Hluw">
+        <font weight="400" style="normal">NotoSansAnatolianHieroglyphs-Regular.otf</font>
+    </family>
+    <family lang="und-Bass">
+        <font weight="400" style="normal">NotoSansBassaVah-Regular.otf</font>
+    </family>
+    <family lang="und-Bhks">
+        <font weight="400" style="normal">NotoSansBhaiksuki-Regular.otf</font>
+    </family>
+    <family lang="und-Hatr">
+        <font weight="400" style="normal">NotoSansHatran-Regular.otf</font>
+    </family>
+    <family lang="und-Lina">
+        <font weight="400" style="normal">NotoSansLinearA-Regular.otf</font>
+    </family>
+    <family lang="und-Mani">
+        <font weight="400" style="normal">NotoSansManichaean-Regular.otf</font>
+    </family>
+    <family lang="und-Marc">
+        <font weight="400" style="normal">NotoSansMarchen-Regular.otf</font>
+    </family>
+    <family lang="und-Merc">
+        <font weight="400" style="normal">NotoSansMeroitic-Regular.otf</font>
+    </family>
+    <family lang="und-Plrd">
+        <font weight="400" style="normal">NotoSansMiao-Regular.otf</font>
+    </family>
+    <family lang="und-Mroo">
+        <font weight="400" style="normal">NotoSansMro-Regular.otf</font>
+    </family>
+    <family lang="und-Mult">
+        <font weight="400" style="normal">NotoSansMultani-Regular.otf</font>
+    </family>
+    <family lang="und-Nbat">
+        <font weight="400" style="normal">NotoSansNabataean-Regular.otf</font>
+    </family>
+    <family lang="und-Newa">
+        <font weight="400" style="normal">NotoSansNewa-Regular.otf</font>
+    </family>
+    <family lang="und-Narb">
+        <font weight="400" style="normal">NotoSansOldNorthArabian-Regular.otf</font>
+    </family>
+    <family lang="und-Perm">
+        <font weight="400" style="normal">NotoSansOldPermic-Regular.otf</font>
+    </family>
+    <family lang="und-Hmng">
+        <font weight="400" style="normal">NotoSansPahawhHmong-Regular.otf</font>
+    </family>
+    <family lang="und-Palm">
+        <font weight="400" style="normal">NotoSansPalmyrene-Regular.otf</font>
+    </family>
+    <family lang="und-Pauc">
+        <font weight="400" style="normal">NotoSansPauCinHau-Regular.otf</font>
+    </family>
+    <family lang="und-Shrd">
+        <font weight="400" style="normal">NotoSansSharada-Regular.otf</font>
+    </family>
+    <family lang="und-Sora">
+        <font weight="400" style="normal">NotoSansSoraSompeng-Regular.otf</font>
+    </family>
+    <family lang="und-Gong">
+        <font weight="400" style="normal">NotoSansGunjalaGondi-Regular.otf</font>
+    </family>
+    <family lang="und-Rohg">
+        <font weight="400" style="normal">NotoSansHanifiRohingya-Regular.otf</font>
+    </family>
+    <family lang="und-Khoj">
+        <font weight="400" style="normal">NotoSansKhojki-Regular.otf</font>
+    </family>
+    <family lang="und-Gonm">
+        <font weight="400" style="normal">NotoSansMasaramGondi-Regular.otf</font>
+    </family>
+    <family lang="und-Wcho">
+        <font weight="400" style="normal">NotoSansWancho-Regular.otf</font>
+    </family>
+    <family lang="und-Wara">
+        <font weight="400" style="normal">NotoSansWarangCiti-Regular.otf</font>
+    </family>
+    <family lang="und-Gran">
+        <font weight="400" style="normal">NotoSansGrantha-Regular.ttf</font>
+    </family>
+    <family lang="und-Modi">
+        <font weight="400" style="normal">NotoSansModi-Regular.ttf</font>
+    </family>
+    <family lang="und-Dogr">
+        <font weight="400" style="normal">NotoSerifDogra-Regular.ttf</font>
+    </family>
+    <family lang="und-Medf">
+        <font weight="400" style="normal" postScriptName="NotoSansMedefaidrin-Regular">
+            NotoSansMedefaidrin-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansMedefaidrin-Regular">
+            NotoSansMedefaidrin-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansMedefaidrin-Regular">
+            NotoSansMedefaidrin-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansMedefaidrin-Regular">
+            NotoSansMedefaidrin-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Soyo">
+        <font weight="400" style="normal" postScriptName="NotoSansSoyombo-Regular">
+            NotoSansSoyombo-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansSoyombo-Regular">
+            NotoSansSoyombo-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansSoyombo-Regular">
+            NotoSansSoyombo-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansSoyombo-Regular">
+            NotoSansSoyombo-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Takr">
+        <font weight="400" style="normal" postScriptName="NotoSansTakri-Regular">
+            NotoSansTakri-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansTakri-Regular">
+            NotoSansTakri-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansTakri-Regular">
+            NotoSansTakri-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansTakri-Regular">
+            NotoSansTakri-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Hmnp">
+        <font weight="400" style="normal" postScriptName="NotoSerifHmongNyiakeng-Regular">
+            NotoSerifNyiakengPuachueHmong-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSerifHmongNyiakeng-Regular">
+            NotoSerifNyiakengPuachueHmong-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSerifHmongNyiakeng-Regular">
+            NotoSerifNyiakengPuachueHmong-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSerifHmongNyiakeng-Regular">
+            NotoSerifNyiakengPuachueHmong-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Yezi">
+        <font weight="400" style="normal" postScriptName="NotoSerifYezidi-Regular">
+            NotoSerifYezidi-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSerifYezidi-Regular">
+            NotoSerifYezidi-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSerifYezidi-Regular">
+            NotoSerifYezidi-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSerifYezidi-Regular">
+            NotoSerifYezidi-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+</familyset>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            #
+# Copyright (C) 2018 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Tries to mount system_other as a logical partition. If that fails, then
+# mount as a physical partition.
+
+#<src>                    <mnt_point>  <type> <mnt_flags and options> <fs_mgr_flags>
+system                    /postinstall ext4   ro,nosuid,nodev,noexec  slotselect_other,logical
+system                    /postinstall erofs  ro,nosuid,nodev,noexec  slotselect_other,logical
+/dev/block/by-name/system /postinstall ext4   ro,nosuid,nodev,noexec  slotselect_other
+/dev/block/by-name/system /postinstall erofs  ro,nosuid,nodev,noexec  slotselect_other
+/dev/block/mapper/system /postinstall ext4   ro,nosuid,nodev,noexec  slotselect_other
+/dev/block/mapper/system /postinstall erofs  ro,nosuid,nodev,noexec  slotselect_other
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          rss_stat_throttled unsigned int mm_id; unsigned int curr; int member; long size
+suspend_resume_minimal bool start
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              # Sample file for use for on device debug override only
+# Prefer frameworks/base/core/res/res/values/config.xml and
+# frameworks/base/core/res/res/values-mcc*-mnc*/config.xml
+
+################################
+##### AGPS server settings #####
+################################
+# FOR SUPL SUPPORT, set the following
+# SUPL_HOST=supl.google.com or IP
+# SUPL_PORT=7275
+
+# supl version 2.0
+# SUPL_VER=0x20000
+
+#SUPL_MODE is a bit mask set in config.xml per carrier by default.
+#If it is uncommented here, this value will overwrite the value from
+#config.xml.
+#MSA=0X2
+#MSB=0X1
+#SUPL_MODE=1
+
+# Emergency SUPL, 1=enable, 0=disable
+#SUPL_ES=0
+
+#Choose PDN for Emergency SUPL
+#1 - Use emergency PDN
+#0 - Use regular SUPL PDN for Emergency SUPL
+#USE_EMERGENCY_PDN_FOR_EMERGENCY_SUPL=0
+
+####################################
+#  LTE Positioning Profile Settings
+####################################
+# 0: Enable RRLP on LTE(Default)
+# 1: Enable LPP_User_Plane on LTE
+# 2: Enable LPP_Control_Plane
+# 3: Enable both LPP_User_Plane and LPP_Control_Plane
+#LPP_PROFILE = 2
+
+##################################################
+# Select Positioning Protocol on A-GLONASS system
+##################################################
+# 0x1: RRC CPlane
+# 0x2: RRLP UPlane
+# 0x4: LLP Uplane
+#A_GLONASS_POS_PROTOCOL_SELECT = 0
+
+# Below bit mask configures how GPS functionalities
+# should be locked when user turns off GPS on Settings
+# Set bit 0x1 if MO GPS functionalities are to be locked
+# Set bit 0x2 if NI GPS functionalities are to be locked
+# default - non is locked for backward compatibility
+#GPS_LOCK = 0
+
+################################
+##### PSDS download settings #####
+################################
+# For wear devices only.
+# Enable periodic PSDS download once a day.
+# true: Enable periodic PSDS download
+# false: Disable periodic PSDS download
+#ENABLE_PSDS_PERIODIC_DOWNLOAD=false
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 127.0.0.1       localhost
+::1             ip6-localhost
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ç   .   X   ..  É  0 %android.hidl.allocator@1.0-service.rc   Ñ  , !android.system.suspend-service.rc   Ö   apexd.rcÜ   	atrace.rc   á   atrace_userdebug.rc à   audioserver.rc  â   blank_screen.rc ä   bootanim.rc ã   bootstat-debug.rc   å   bootstat.rc ç   bpfloader.rcé   cameraserver.rc è    clean_scratch_files.rc  ê   cppreopts.rcë   credstore.rcí   	dmesgd.rc   ì   drmserver.rcî   dumpstate.rcï    flags_health_check.rc   ñ   gatekeeperd.rc  ó   gpuservice.rc   ò   gsid.rc ô   heapprofd.rcö   hw  °   hwservicemanager.rc ¢   
+idmap2d.rc  £   incidentd.rc§   init-debug.rc   •   installd.rc ¶   keystore2.rcß   llkd-debuggable.rc  ®   llkd.rc ©   lmkd.rc ™   
+logcatd.rc  ´   logd.rc ¨   
+logtagd.rc  ≠   
+lpdumpd.rc  Æ   mdnsd.rcØ   mediaextractor.rc   ∞   mediametrics.rc ±   mediaserver.rc  ≤   
+mtectrl.rc  ≥   mtpd.rc ¥   ndk_translation.rc  µ   netd.rc ∂   	odsign.rc   ∑   otapreopt.rc∏   perfetto.rc π   prng_seeder.rc  ∫   profcollectd.rc ª   	racoon.rc   º   recovery-persist.rc Ω   recovery-refresh.rc æ   rss_hwm_reset.rcø   servicemanager.rc   ¿   simpleperf.rc   ¡   snapuserd.rc¬   storaged.rc √   surfaceflinger.rc   ƒ   tombstoned.rc   ≈   traced_perf.rc  ∆   
+uncrypt.rc  «   update_engine.rc»   update_verifier.rc  …   usbd.rc     vold.rc À   wifi.rc Ã  Ù	wificond.rc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ﬁ/–service hidl_memory /system/bin/hw/android.hidl.allocator@1.0-service
+    class hal
+    user system
+    group system
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           service system_suspend /system/bin/hw/android.system.suspend-service
+    class early_hal
+    user system
+    group system wakelock
+    capabilities BLOCK_SUSPEND
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              service apexd /system/bin/apexd
+    interface aidl apexservice
+    class core
+    user root
+    group system
+    oneshot
+    disabled # does not start with the core class
+    reboot_on_failure reboot,apexd-failed
+    # CAP_CHOWN, CAP_DAC_OVERRIDE, CAP_DAC_READ_SEARCH required for apexdata snapshot & restore
+    # CAP_SYS_ADMIN is required to access device-mapper and to use mount syscall
+    capabilities CHOWN DAC_OVERRIDE DAC_READ_SEARCH FOWNER SYS_ADMIN
+
+service apexd-bootstrap /system/bin/apexd --bootstrap
+    user root
+    group system
+    oneshot
+    disabled
+    reboot_on_failure reboot,bootloader,bootstrap-apexd-failed
+    # CAP_SYS_ADMIN is required to access device-mapper and to use mount syscall
+    # apexd-bootstrap doesn't manage apexdata snapshot & restore, hence no need for other capabilities.
+    capabilities SYS_ADMIN
+
+service apexd-snapshotde /system/bin/apexd --snapshotde
+    user root
+    group system
+    oneshot
+    disabled
+    # CAP_CHOWN, CAP_DAC_OVERRIDE, CAP_DAC_READ_SEARCH required for apexdata snapshot & restore
+    # apexd-snapshotde doesn't mount APEXes, hence no need for SYS_ADMIN capability
+    capabilities CHOWN DAC_OVERRIDE DAC_READ_SEARCH FOWNER
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ## Permissions to allow system-wide tracing to the kernel trace buffer.
+##
+on late-init
+
+# Allow writing to the kernel trace log.
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
+    chmod 0222 /sys/kernel/tracing/trace_marker
+
+# Scheduler tracepoints require schedstats=enable
+    write /proc/sys/kernel/sched_schedstats 1
+
+# Grant unix world read/write permissions to kernel tracepoints.
+# Access control to these files is now entirely in selinux policy.
+    chmod 0666 /sys/kernel/debug/tracing/trace_clock
+    chmod 0666 /sys/kernel/tracing/trace_clock
+    chmod 0666 /sys/kernel/debug/tracing/buffer_size_kb
+    chmod 0666 /sys/kernel/tracing/buffer_size_kb
+    chmod 0666 /sys/kernel/debug/tracing/options/overwrite
+    chmod 0666 /sys/kernel/tracing/options/overwrite
+    chmod 0666 /sys/kernel/debug/tracing/options/print-tgid
+    chmod 0666 /sys/kernel/tracing/options/print-tgid
+    chmod 0666 /sys/kernel/debug/tracing/options/record-tgid
+    chmod 0666 /sys/kernel/tracing/options/record-tgid
+    chmod 0666 /sys/kernel/debug/tracing/saved_cmdlines_size
+    chmod 0666 /sys/kernel/tracing/saved_cmdlines_size
+    chmod 0666 /sys/kernel/debug/tracing/events/sched/sched_switch/enable
+    chmod 0666 /sys/kernel/tracing/events/sched/sched_switch/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/sched/sched_wakeup/enable
+    chmod 0666 /sys/kernel/tracing/events/sched/sched_wakeup/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/sched/sched_blocked_reason/enable
+    chmod 0666 /sys/kernel/tracing/events/sched/sched_blocked_reason/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/sched/sched_cpu_hotplug/enable
+    chmod 0666 /sys/kernel/tracing/events/sched/sched_cpu_hotplug/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/sched/sched_pi_setprio/enable
+    chmod 0666 /sys/kernel/tracing/events/sched/sched_pi_setprio/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/sched/sched_process_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/sched/sched_process_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/sched/sched_process_free/enable
+    chmod 0666 /sys/kernel/tracing/events/sched/sched_process_free/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/sched/sched_waking/enable
+    chmod 0666 /sys/kernel/tracing/events/sched/sched_waking/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/sched/sched_wakeup_new/enable
+    chmod 0666 /sys/kernel/tracing/events/sched/sched_wakeup_new/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/cgroup/enable
+    chmod 0666 /sys/kernel/tracing/events/cgroup/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/power/cpu_frequency/enable
+    chmod 0666 /sys/kernel/tracing/events/power/cpu_frequency/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/power/cpu_idle/enable
+    chmod 0666 /sys/kernel/tracing/events/power/cpu_idle/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/power/clock_enable/enable
+    chmod 0666 /sys/kernel/tracing/events/power/clock_enable/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/power/clock_disable/enable
+    chmod 0666 /sys/kernel/tracing/events/power/clock_disable/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/power/clock_set_rate/enable
+    chmod 0666 /sys/kernel/tracing/events/power/clock_set_rate/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/power/cpu_frequency_limits/enable
+    chmod 0666 /sys/kernel/tracing/events/power/cpu_frequency_limits/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/cpuhp/cpuhp_enter/enable
+    chmod 0666 /sys/kernel/tracing/events/cpuhp/cpuhp_enter/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/cpuhp/cpuhp_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/cpuhp/cpuhp_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/cpuhp/cpuhp_pause/enable
+    chmod 0666 /sys/kernel/tracing/events/cpuhp/cpuhp_pause/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/power/gpu_frequency/enable
+    chmod 0666 /sys/kernel/tracing/events/power/gpu_frequency/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/power/gpu_work_period/enable
+ 

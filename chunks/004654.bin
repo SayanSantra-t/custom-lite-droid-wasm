@@ -1,0 +1,1350 @@
+permission name="android.permission.UWB_PRIVILEGED"/>
+        <permission name="android.permission.WIFI_UPDATE_USABILITY_STATS_SCORE"/>
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+        <permission name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.STATUS_BAR_SERVICE"/>
+        <permission name="android.permission.REQUEST_INCIDENT_REPORT_APPROVAL"/>
+        <permission name="android.permission.CONTROL_KEYGUARD_SECURE_NOTIFICATIONS"/>
+        <permission name="android.permission.MANAGE_WEAK_ESCROW_TOKEN"/>
+        <permission name="android.permission.SET_WALLPAPER" />
+        <permission name="android.permission.SET_WALLPAPER_COMPONENT" />
+        <permission name="android.permission.SET_WALLPAPER_DIM_AMOUNT" />
+        <permission name="android.permission.REQUEST_NOTIFICATION_ASSISTANT_SERVICE" />
+        <!-- Permissions required for Incremental CTS tests -->
+        <permission name="com.android.permission.USE_INSTALLER_V2"/>
+        <permission name="android.permission.LOADER_USAGE_STATS"/>
+        <!-- Permissions required for Package Verifier tests -->
+        <permission name="android.permission.PACKAGE_VERIFICATION_AGENT" />
+        <!-- Permission required to test system only camera devices. -->
+        <permission name="android.permission.SYSTEM_CAMERA" />
+        <!-- Permission required to test ExplicitHealthCheckServiceImpl. -->
+        <permission name="android.permission.BIND_EXPLICIT_HEALTH_CHECK_SERVICE"/>
+        <!-- Permission required for UiModeManager CTS test. -->
+        <permission name="android.permission.ENTER_CAR_MODE_PRIORITIZED"/>
+        <!-- Permission required for Telecom car mode CTS tests. -->
+        <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
+        <!-- Permission required for Tethering CTS tests. -->
+        <permission name="android.permission.TETHER_PRIVILEGED"/>
+        <!-- Permissions required for ganting and logging -->
+        <permission name="android.permission.LOG_COMPAT_CHANGE" />
+        <permission name="android.permission.READ_COMPAT_CHANGE_CONFIG" />
+        <permission name="android.permission.OVERRIDE_COMPAT_CHANGE_CONFIG" />
+        <permission name="android.permission.OVERRIDE_COMPAT_CHANGE_CONFIG_ON_RELEASE_BUILD" />
+        <!-- Permissions required to test ambient display. -->
+        <permission name="android.permission.READ_DREAM_STATE" />
+        <permission name="android.permission.WRITE_DREAM_STATE" />
+        <!-- Permission required to test lights control APIs. -->
+        <permission name="android.permission.CONTROL_DEVICE_LIGHTS" />
+        <!-- Permission required for ShortcutManagerUsageTest CTS test. -->
+        <permission name="android.permission.ACCESS_SHORTCUTS"/>
+        <permission name="android.permission.REBOOT"/>
+        <!-- Permission required for access VIBRATOR_STATE. -->
+        <permission name="android.permission.ACCESS_VIBRATOR_STATE"/>
+        <!-- Permission required for UsageStatsTest CTS test. -->
+        <permission name="android.permission.MANAGE_NOTIFICATIONS"/>
+        <!-- Permission required for CompanionDeviceManager CTS test. -->
+        <permission name="android.permission.COMPANION_APPROVE_WIFI_CONNECTIONS" />
+        <permission name="android.permission.MANAGE_COMPANION_DEVICES" />
+        <permission name="android.permission.REQUEST_COMPANION_PROFILE_APP_STREAMING" />
+        <permission name="android.permission.REQUEST_COMPANION_PROFILE_WATCH" />
+        <permission name="android.permission.REQUEST_COMPANION_PROFILE_NEARBY_DEVICE_STREAMING" />
+        <permission name="android.permission.REQUEST_COMPANION_PROFILE_COMPUTER" />
+        <permission name="android.permission.REQUEST_COMPANION_SELF_MANAGED" />
+        <!-- Permission required for testing registering pull atom callbacks. -->
+        <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
+        <!-- Permission required for testing system audio effect APIs. -->
+        <permission name="android.permission.MODIFY_DEFAULT_AUDIO_EFFECTS"/>
+        <!-- Permissions required for CTS test - TunerTest -->
+        <permission name="android.permission.ACCESS_TV_DESCRAMBLER" />
+        <permission name="android.permission.ACCESS_TV_SHARED_FILTER" />
+        <permission name="android.permission.ACCESS_TV_TUNER" />
+        <permission name="android.permission.TUNER_RESOURCE_ACCESS" />
+        <!-- Permissions required for CTS test - TVInputManagerTest -->
+        <permission name="android.permission.ACCESS_TUNED_INFO" />
+        <permission name="android.permission.TV_INPUT_HARDWARE" />
+        <permission name="android.permission.TIS_EXTENSION_INTERFACE" />
+        <permission name="com.android.providers.tv.permission.ACCESS_WATCHED_PROGRAMS" />
+        <permission name="com.android.providers.tv.permission.WRITE_EPG_DATA"/>
+        <!-- Permission required for CTS test - PrivilegedLocationPermissionTest -->
+        <permission name="android.permission.LOCATION_HARDWARE" />
+        <!-- Permissions required for GTS test - GtsDialerAudioTestCases -->
+        <permission name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+        <!-- Permissions required for CTS test - AdbManagerTest -->
+        <permission name="android.permission.MANAGE_DEBUGGING" />
+        <!-- Permissions required for CTS test - TimeManagerTest -->
+        <permission name="android.permission.MANAGE_TIME_AND_ZONE_DETECTION" />
+        <permission name="android.permission.SUGGEST_EXTERNAL_TIME" />
+        <!-- Permissions required for CTS test - android.server.biometrics -->
+        <permission name="android.permission.USE_BIOMETRIC" />
+        <permission name="android.permission.TEST_BIOMETRIC" />
+        <!-- Permissions required for CTS test - CtsContactsProviderTestCases -->
+        <permission name="android.contacts.permission.MANAGE_SIM_ACCOUNTS" />
+        <!-- Permissions required for CTS test - CtsHdmiCecHostTestCases -->
+        <permission name="android.permission.HDMI_CEC"/>
+        <!-- Permission required for CTS test - MediaPlayerTest -->
+        <permission name="android.permission.BIND_IMS_SERVICE" />
+        <!-- Permission needed for CTS test - WifiManagerTest -->
+        <permission name="android.permission.WIFI_ACCESS_COEX_UNSAFE_CHANNELS" />
+        <permission name="android.permission.WIFI_UPDATE_COEX_UNSAFE_CHANNELS" />
+        <permission name="android.permission.NEARBY_WIFI_DEVICES" />
+        <permission name="android.permission.MANAGE_WIFI_INTERFACES" />
+        <permission name="android.permission.OVERRIDE_WIFI_CONFIG" />
+        <!-- Permission needed for CTS test - ConcurrencyTest#testP2pExternalApprover
+             P2P external approver API sets require MANAGE_WIFI_NETWORK_SELECTION permission. -->
+        <permission name="android.permission.MANAGE_WIFI_NETWORK_SELECTION" />
+        <!-- Permission needed for CTS test - ConcurrencyTest#testP2pSetWfdInfo -->
+        <permission name="android.permission.CONFIGURE_WIFI_DISPLAY" />
+        <!-- Permission required for CTS test CarrierMessagingServiceWrapperTest -->
+        <permission name="android.permission.BIND_CARRIER_SERVICES"/>
+        <!-- Permission required for CTS test - MusicRecognitionManagerTest -->
+        <permission name="android.permission.MANAGE_MUSIC_RECOGNITION" />
+        <!-- Permission required for CTS test - CallLogTest -->
+        <permission name="com.android.voicemail.permission.READ_VOICEMAIL"/>
+        <permission name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"/>
+        <permission name="android.permission.MODIFY_QUIET_MODE" />
+        <!-- Permission required for GTS test - GtsAssistIntentTestCases -->
+        <permission name="android.permission.MANAGE_SOUND_TRIGGER" />
+        <permission name="android.permission.CAPTURE_AUDIO_HOTWORD" />
+        <!-- Permission required for CTS test - CtsRebootReadinessTestCases -->
+        <permission name="android.permission.SIGNAL_REBOOT_READINESS" />
+        <!-- Permission required for CTS test - PeopleManagerTest -->
+        <permission name="android.permission.READ_PEOPLE_DATA" />
+        <!-- Permission required for CTS test - UiTranslationManagerTest -->
+        <permission name="android.permission.MANAGE_UI_TRANSLATION" />
+        <!-- Permission required for CTS test - ClipboardManagerTest -->
+        <permission name="android.permission.SET_CLIP_SOURCE" />
+        <!-- Permission required for CTS test - FontManagerTest -->
+        <permission name="android.permission.UPDATE_FONTS" />
+        <!-- Permission required for hotword detection service CTS tests -->
+        <permission name="android.permission.MANAGE_HOTWORD_DETECTION" />
+        <permission name="android.permission.BIND_HOTWORD_DETECTION_SERVICE" />
+        <permission name="android.permission.BIND_VISUAL_QUERY_DETECTION_SERVICE" />
+        <permission name="android.permission.MANAGE_APP_HIBERNATION"/>
+        <!-- Permission required for CTS test - ResourceObserverNativeTest -->
+        <permission name="android.permission.REGISTER_MEDIA_RESOURCE_OBSERVER" />
+        <!-- Permission required for CTS test - MediaCodecResourceTest -->
+        <permission name="android.permission.MEDIA_RESOURCE_OVERRIDE_PID" />
+        <!-- Permission required for CTS test - CtsAlarmManagerTestCases -->
+        <permission name="android.permission.SCHEDULE_PRIORITIZED_ALARM" />
+        <!-- Permission required for CTS test - SystemMediaRouter2Test -->
+        <permission name="android.permission.MEDIA_CONTENT_CONTROL"/>
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
+        <permission name="android.permission.MODIFY_AUDIO_SETTINGS_PRIVILEGED"/>
+        <!-- Permission required for CTS test - CallAudioInterceptionTest -->
+        <permission name="android.permission.CALL_AUDIO_INTERCEPTION"/>
+        <!-- Permission required for CTS test - CtsAttributionSourceTestCases -->
+        <permission name="android.permission.RENOUNCE_PERMISSIONS" />
+        <permission name="android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS" />
+        <permission name="android.permission.GET_PROCESS_STATE_AND_OOM_SCORE" />
+        <permission name="android.permission.READ_LOGS" />
+        <permission name="android.permission.BRIGHTNESS_SLIDER_USAGE" />
+        <permission name="android.permission.ACCESS_AMBIENT_LIGHT_STATS" />
+        <permission name="android.permission.CONFIGURE_DISPLAY_BRIGHTNESS" />
+        <permission name="android.permission.GET_TOP_ACTIVITY_INFO" />
+        <permission name="android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER" />
+        <permission name="android.permission.SET_MEDIA_KEY_LISTENER" />
+        <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS" />
+        <!-- Permission required for CTS test - CtsAlarmManagerTestCases -->
+        <permission name="android.permission.UPDATE_DEVICE_STATS" />
+        <!-- Permission required for GTS test - PendingSystemUpdateTest -->
+        <permission name="android.permission.NOTIFY_PENDING_SYSTEM_UPDATE" />
+        <!-- Permission required for GTS test - GtsAssistIntentTestCases -->
+        <permission name="android.permission.MANAGE_VOICE_KEYPHRASES" />
+        <!-- Permission required for test - CellBroadcastComplianceTest -->
+        <permission name="com.android.cellbroadcastservice.FULL_ACCESS_CELL_BROADCAST_HISTORY" />
+        <!-- Permission required for ATS test - CarDevicePolicyManagerTest -->
+        <permission name="android.permission.LOCK_DEVICE" />
+        <!-- Permissions required for CTS test - CtsSafetyCenterTestCases -->
+        <permission name="android.permission.SEND_SAFETY_CENTER_UPDATE" />
+        <permission name="android.permission.READ_SAFETY_CENTER_STATUS" />
+        <!-- Permission required for CTS test - CtsTelephonyTestCases -->
+        <permission name="android.permission.BIND_TELECOM_CONNECTION_SERVICE" />
+        <!-- Permission required for CTS test - CtsAppTestCases -->
+        <permission name="android.permission.CAPTURE_MEDIA_OUTPUT" />
+        <permission name="android.permission.CAPTURE_TUNER_AUDIO_INPUT" />
+        <permission name="android.permission.CAPTURE_VOICE_COMMUNICATION_OUTPUT" />
+        <permission name="android.permission.MODIFY_CELL_BROADCASTS" />
+        <!-- Permission required for CTS test - CtsBroadcastRadioTestCases -->
+        <permission name="android.permission.ACCESS_BROADCAST_RADIO"/>
+        <!-- Permission required for CTS test - CtsAmbientContextServiceTestCases -->
+        <permission name="android.permission.ACCESS_AMBIENT_CONTEXT_EVENT"/>
+        <!-- Permission required for CTS test - CtsTelephonyProviderTestCases -->
+        <permission name="android.permission.WRITE_APN_SETTINGS"/>
+        <!-- Permission required for GTS test - GtsStatsdHostTestCases -->
+        <permission name="android.permission.READ_RESTRICTED_STATS"/>
+        <!-- Permission required for CTS test -->
+        <permission name="android.permission.LOG_FOREGROUND_RESOURCE_USE"/>
+        <!-- Permission required for CTS test - CtsVoiceInteractionTestCases -->
+        <permission name="android.permission.SOUND_TRIGGER_RUN_IN_BATTERY_SAVER"/>
+        <!-- Permission required for CTS test - SatelliteManagerTest -->
+        <permission name="android.permission.SATELLITE_COMMUNICATION"/>
+        <!-- Permission required for GTS test - GtsAttestationVerificationDeviceSideTestCases -->
+        <permission name="android.permission.USE_ATTESTATION_VERIFICATION_SERVICE" />
+        <!-- Permission required for GTS test - GtsCredentialsTestCases -->
+        <permission name="android.permission.LAUNCH_CREDENTIAL_SELECTOR"/>
+        <!-- Permission required for CTS test IntentRedirectionTest -->
+        <permission name="android.permission.QUERY_CLONED_APPS"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.statementservice">
+        <permission name="android.permission.INTENT_FILTER_VERIFICATION_AGENT"/>
+        <permission name="android.permission.DOMAIN_VERIFICATION_AGENT"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.tv">
+        <permission name="android.permission.CHANGE_HDMI_CEC_ACTIVE_SOURCE"/>
+        <permission name="android.permission.DVB_DEVICE"/>
+        <permission name="android.permission.GLOBAL_SEARCH"/>
+        <permission name="android.permission.HDMI_CEC"/>
+        <permission name="android.permission.MODIFY_PARENTAL_CONTROLS"/>
+        <permission name="android.permission.READ_CONTENT_RATING_SYSTEMS"/>
+        <permission name="com.android.providers.tv.permission.ACCESS_ALL_EPG_DATA"/>
+        <permission name="com.android.providers.tv.permission.ACCESS_WATCHED_PROGRAMS"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.vpndialogs">
+        <permission name="android.permission.CONTROL_VPN"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.wallpaper.livepicker">
+        <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
+        <permission name="android.permission.BIND_WALLPAPER"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.wallpaper">
+        <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
+        <permission name="android.permission.BIND_WALLPAPER"/>
+        <permission name="android.permission.CUSTOMIZE_SYSTEM_UI"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.dynsystem">
+        <permission name="android.permission.REBOOT"/>
+        <permission name="android.permission.MANAGE_DYNAMIC_SYSTEM"/>
+        <permission name="android.permission.READ_OEM_UNLOCK_STATE"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.android.settings">
+        <permission name="android.permission.INSTALL_DYNAMIC_SYSTEM"/>
+        <permission name="android.permission.BIND_CELL_BROADCAST_SERVICE"/>
+        <permission name="android.permission.READ_SAFETY_CENTER_STATUS" />
+        <permission name="android.permission.SEND_SAFETY_CENTER_UPDATE" />
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.bips">
+        <permission name="android.permission.SUBSTITUTE_SHARE_TARGET_APP_NAME_AND_ICON"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.calllogbackup">
+        <permission name="com.android.voicemail.permission.READ_VOICEMAIL"/>
+    </privapp-permissions>
+</permissions>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             #
+# Copyright (C) 2017 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# Preloaded-classes filter file for phones.
+#
+# Classes in this file will be allocated into the boot image, and forcibly initialized in
+# the zygote during initialization. This is a trade-off, using virtual address space to share
+# common heap between apps.
+#
+# This file has been derived for mainline phone (and tablet) usage.
+#
+android.R$attr
+android.R$id
+android.R$styleable
+android.accessibilityservice.AccessibilityServiceInfo$1
+android.accessibilityservice.AccessibilityServiceInfo
+android.accessibilityservice.AccessibilityShortcutInfo
+android.accessibilityservice.GestureDescription$MotionEventGenerator
+android.accessibilityservice.IAccessibilityServiceClient$Stub$Proxy
+android.accessibilityservice.IAccessibilityServiceClient$Stub
+android.accessibilityservice.IAccessibilityServiceClient
+android.accessibilityservice.IAccessibilityServiceConnection$Default
+android.accessibilityservice.IAccessibilityServiceConnection
+android.accounts.AbstractAccountAuthenticator$Transport
+android.accounts.AbstractAccountAuthenticator
+android.accounts.Account$1
+android.accounts.Account
+android.accounts.AccountAndUser
+android.accounts.AccountAuthenticatorResponse$1
+android.accounts.AccountAuthenticatorResponse
+android.accounts.AccountManager$10
+android.accounts.AccountManager$11
+android.accounts.AccountManager$15
+android.accounts.AccountManager$16
+android.accounts.AccountManager$17
+android.accounts.AccountManager$18
+android.accounts.AccountManager$1
+android.accounts.AccountManager$20
+android.accounts.AccountManager$2
+android.accounts.AccountManager$3
+android.accounts.AccountManager$4
+android.accounts.AccountManager$5
+android.accounts.AccountManager$8
+android.accounts.AccountManager$AccountKeyData
+android.accounts.AccountManager$AmsTask$1
+android.accounts.AccountManager$AmsTask$Response
+android.accounts.AccountManager$AmsTask
+android.accounts.AccountManager$BaseFutureTask$1
+android.accounts.AccountManager$BaseFutureTask$Response
+android.accounts.AccountManager$BaseFutureTask
+android.accounts.AccountManager$Future2Task$1
+android.accounts.AccountManager$Future2Task
+android.accounts.AccountManager
+android.accounts.AccountManagerCallback
+android.accounts.AccountManagerFuture
+android.accounts.AccountManagerInternal$OnAppPermissionChangeListener
+android.accounts.AccountManagerInternal
+android.accounts.AccountsException
+android.accounts.AuthenticatorDescription$1
+android.accounts.AuthenticatorDescription
+android.accounts.AuthenticatorException
+android.accounts.IAccountAuthenticator$Stub$Proxy
+android.accounts.IAccountAuthenticator$Stub
+android.accounts.IAccountAuthenticator
+android.accounts.IAccountAuthenticatorResponse$Stub$Proxy
+android.accounts.IAccountAuthenticatorResponse$Stub
+android.accounts.IAccountAuthenticatorResponse
+android.accounts.IAccountManager$Stub$Proxy
+android.accounts.IAccountManager$Stub
+android.accounts.IAccountManager
+android.accounts.IAccountManagerResponse$Stub$Proxy
+android.accounts.IAccountManagerResponse$Stub
+android.accounts.IAccountManagerResponse
+android.accounts.NetworkErrorException
+android.accounts.OnAccountsUpdateListener
+android.accounts.OperationCanceledException
+android.animation.AnimationHandler$$ExternalSyntheticLambda0
+android.animation.AnimationHandler$1
+android.animation.AnimationHandler$2
+android.animation.AnimationHandler$AnimationFrameCallback
+android.animation.AnimationHandler$AnimationFrameCallbackProvider
+android.animation.AnimationHandler$MyFrameCallbackProvider
+android.animation.AnimationHandler
+android.animation.Animator$AnimatorConstantState
+android.animation.Animator$AnimatorListener
+android.animation.Animator$AnimatorPauseListener
+android.animation.Animator
+android.animation.AnimatorInflater$PathDataEvaluator
+android.animation.AnimatorInflater
+android.animation.AnimatorListenerAdapter
+android.animation.AnimatorSet$1
+android.animation.AnimatorSet$2
+android.animation.AnimatorSet$3
+android.animation.AnimatorSet$AnimationEvent
+android.animation.AnimatorSet$Builder
+android.animation.AnimatorSet$Node
+android.animation.AnimatorSet$SeekState
+android.animation.AnimatorSet
+android.animation.ArgbEvaluator
+android.animation.BidirectionalTypeConverter
+android.animation.FloatEvaluator
+android.animation.FloatKeyframeSet
+android.animation.IntEvaluator
+android.animation.IntKeyframeSet
+android.animation.Keyframe$FloatKeyframe
+android.animation.Keyframe$IntKeyframe
+android.animation.Keyframe$ObjectKeyframe
+android.animation.Keyframe
+android.animation.KeyframeSet
+android.animation.Keyframes$FloatKeyframes
+android.animation.Keyframes$IntKeyframes
+android.animation.Keyframes
+android.animation.LayoutTransition$1
+android.animation.LayoutTransition$2
+android.animation.LayoutTransition$3
+android.animation.LayoutTransition$4
+android.animation.LayoutTransition$5
+android.animation.LayoutTransition$CleanupCallback
+android.animation.LayoutTransition$TransitionListener
+android.animation.LayoutTransition
+android.animation.ObjectAnimator
+android.animation.PathKeyframes$1
+android.animation.PathKeyframes$2
+android.animation.PathKeyframes$3
+android.animation.PathKeyframes$4
+android.animation.PathKeyframes$FloatKeyframesBase
+android.animation.PathKeyframes$IntKeyframesBase
+android.animation.PathKeyframes$SimpleKeyframes
+android.animation.PathKeyframes
+android.animation.PropertyValuesHolder$1
+android.animation.PropertyValuesHolder$FloatPropertyValuesHolder
+android.animation.PropertyValuesHolder$IntPropertyValuesHolder
+android.animation.PropertyValuesHolder$PropertyValues$DataSource
+android.animation.PropertyValuesHolder$PropertyValues
+android.animation.PropertyValuesHolder
+android.animation.RectEvaluator
+android.animation.RevealAnimator
+android.animation.StateListAnimator$1
+android.animation.StateListAnimator$StateListAnimatorConstantState
+android.animation.StateListAnimator$Tuple
+android.animation.StateListAnimator
+android.animation.TimeAnimator$TimeListener
+android.animation.TimeAnimator
+android.animation.TimeInterpolator
+android.animation.TypeConverter
+android.animation.TypeEvaluator
+android.animation.ValueAnimator$AnimatorUpdateListener
+android.animation.ValueAnimator$DurationScaleChangeListener
+android.animation.ValueAnimator
+android.annotation.ColorInt
+android.annotation.CurrentTimeMillisLong
+android.annotation.FloatRange
+android.annotation.IdRes
+android.annotation.IntRange
+android.annotation.NonNull
+android.annotation.RequiresPermission
+android.annotation.Size
+android.annotation.StringRes
+android.annotation.SystemApi
+android.apex.ApexInfo$1
+android.apex.ApexInfo
+android.apex.ApexSessionInfo$1
+android.apex.ApexSessionInfo
+android.apex.IApexService$Stub$Proxy
+android.apex.IApexService$Stub
+android.apex.IApexService
+android.app.ActionBar$LayoutParams
+android.app.ActionBar
+android.app.Activity$$ExternalSyntheticLambda0
+android.app.Activity$1
+android.app.Activity$HostCallbacks
+android.app.Activity$ManagedCursor
+android.app.Activity$ManagedDialog
+android.app.Activity$NonConfigurationInstances
+android.app.Activity$RequestFinishCallback
+android.app.Activity$TranslucentConversionListener
+android.app.Activity
+android.app.ActivityClient$1
+android.app.ActivityClient$ActivityClientControllerSingleton
+android.app.ActivityClient
+android.app.ActivityManager$1
+android.app.ActivityManager$2
+android.app.ActivityManager$AppTask
+android.app.ActivityManager$MemoryInfo$1
+android.app.ActivityManager$MemoryInfo
+android.app.ActivityManager$OnUidImportanceListener
+android.app.ActivityManager$PendingIntentInfo$1
+android.app.ActivityManager$PendingIntentInfo
+android.app.ActivityManager$ProcessErrorStateInfo$1
+android.app.ActivityManager$ProcessErrorStateInfo
+android.app.ActivityManager$RecentTaskInfo$1
+android.app.ActivityManager$RecentTaskInfo$PersistedTaskSnapshotData
+android.app.ActivityManager$RecentTaskInfo
+android.app.ActivityManager$RunningAppProcessInfo$1
+android.app.ActivityManager$RunningAppProcessInfo
+android.app.ActivityManager$RunningServiceInfo$1
+android.app.ActivityManager$RunningServiceInfo
+android.app.ActivityManager$RunningTaskInfo$1
+android.app.ActivityManager$RunningTaskInfo
+android.app.ActivityManager$TaskDescription$1
+android.app.ActivityManager$TaskDescription
+android.app.ActivityManager$MyUidObserver
+android.app.ActivityManager
+android.app.ActivityManagerInternal
+android.app.ActivityOptions$1
+android.app.ActivityOptions$2
+android.app.ActivityOptions$OnAnimationStartedListener
+android.app.ActivityOptions$SourceInfo$1
+android.app.ActivityOptions$SourceInfo
+android.app.ActivityOptions
+android.app.ActivityTaskManager$1
+android.app.ActivityTaskManager$2
+android.app.ActivityTaskManager$RootTaskInfo$1
+android.app.ActivityTaskManager$RootTaskInfo
+android.app.ActivityTaskManager
+android.app.ActivityThread$$ExternalSyntheticLambda0
+android.app.ActivityThread$$ExternalSyntheticLambda1
+android.app.ActivityThread$$ExternalSyntheticLambda2
+android.app.ActivityThread$$ExternalSyntheticLambda3
+android.app.ActivityThread$$ExternalSyntheticLambda4
+android.app.ActivityThread$$ExternalSyntheticLambda5
+android.app.ActivityThread$1$$ExternalSyntheticLambda0
+android.app.ActivityThread$1
+android.app.ActivityThread$2
+android.app.ActivityThread$3
+android.app.ActivityThread$ActivityClientRecord$1
+android.app.ActivityThread$ActivityClientRecord
+android.app.ActivityThread$AndroidOs
+android.app.ActivityThread$AppBindData
+android.app.ActivityThread$ApplicationThread$$ExternalSyntheticLambda2
+android.app.ActivityThread$ApplicationThread$1
+android.app.ActivityThread$ApplicationThread
+android.app.ActivityThread$BindServiceData
+android.app.ActivityThread$ContextCleanupInfo
+android.app.ActivityThread$CreateBackupAgentData
+android.app.ActivityThread$CreateServiceData
+android.app.ActivityThread$DumpComponentInfo
+android.app.ActivityThread$DumpHeapData
+android.app.ActivityThread$DumpResourcesData
+android.app.ActivityThread$GcIdler
+android.app.ActivityThread$H
+android.app.ActivityThread$Idler
+android.app.ActivityThread$Profiler
+android.app.ActivityThread$ProviderClientRecord
+android.app.ActivityThread$ProviderKey
+android.app.ActivityThread$ProviderRefCount
+android.app.ActivityThread$PurgeIdler
+android.app.ActivityThread$ReceiverData
+android.app.ActivityThread$RequestAssistContextExtras
+android.app.ActivityThread$SafeCancellationTransport
+android.app.ActivityThread$ServiceArgsData
+android.app.ActivityThread$UpdateCompatibilityData
+android.app.ActivityThread
+android.app.ActivityThreadInternal
+android.app.ActivityTransitionCoordinator
+android.app.ActivityTransitionState$$ExternalSyntheticLambda0
+android.app.ActivityTransitionState$1
+android.app.ActivityTransitionState
+android.app.AlarmManager$AlarmClockInfo$1
+android.app.AlarmManager$AlarmClockInfo
+android.app.AlarmManager$ListenerWrapper
+android.app.AlarmManager$OnAlarmListener
+android.app.AlarmManager
+android.app.AlertDialog$Builder
+android.app.AlertDialog
+android.app.AppCompatCallbacks
+android.app.AppComponentFactory
+android.app.AppDetailsActivity
+android.app.AppGlobals
+android.app.AppOpInfo$Builder
+android.app.AppOpInfo
+android.app.AppOpsManager$$ExternalSyntheticLambda2
+android.app.AppOpsManager$$ExternalSyntheticLambda3
+android.app.AppOpsManager$$ExternalSyntheticLambda4
+android.app.AppOpsManager$$ExternalSyntheticLambda5
+android.app.AppOpsManager$1
+android.app.AppOpsManager$2
+android.app.AppOpsManager$3
+android.app.AppOpsManager$4
+android.app.AppOpsManager$5
+android.app.AppOpsManager$AppOpsCollector
+android.app.AppOpsManager$AttributedHistoricalOps$1
+android.app.AppOpsManager$AttributedHistoricalOps
+android.app.AppOpsManager$AttributedOpEntry$1
+android.app.AppOpsManager$AttributedOpEntry$LongSparseArrayParceling
+android.app.AppOpsManager$AttributedOpEntry
+android.app.AppOpsManager$HistoricalOp$1
+android.app.AppOpsManager$HistoricalOp
+android.app.AppOpsManager$HistoricalOps$1
+android.app.AppOpsManager$HistoricalOps
+android.app.AppOpsManager$HistoricalOpsRequest$Builder
+android.app.AppOpsManager$HistoricalOpsRequest
+android.app.AppOpsManager$HistoricalPackageOps$1
+android.app.AppOpsManager$HistoricalPackageOps
+android.app.AppOpsManager$HistoricalUidOps$1
+android.app.AppOpsManager$HistoricalUidOps
+android.app.AppOpsManager$Mode
+android.app.AppOpsManager$NoteOpEvent$1
+android.app.AppOpsManager$NoteOpEvent
+android.app.AppOpsManager$OnOpActiveChangedInternalListener
+android.app.AppOpsManager$OnOpActiveChangedListener
+android.app.AppOpsManager$OnOpChangedInternalListener
+android.app.AppOpsManager$OnOpChangedListener
+android.app.AppOpsManager$OnOpNotedCallback$1$$ExternalSyntheticLambda0
+android.app.AppOpsManager$OnOpNotedCallback$1
+android.app.AppOpsManager$OnOpNotedCallback
+android.app.AppOpsManager$OnOpNotedInternalListener
+android.app.AppOpsManager$OnOpNotedListener
+android.app.AppOpsManager$OnOpStartedListener
+android.app.AppOpsManager$OpEntry$1
+android.app.AppOpsManager$OpEntry
+android.app.AppOpsManager$OpEventProxyInfo$1
+android.app.AppOpsManager$OpEventProxyInfo
+android.app.AppOpsManager$PackageOps$1
+android.app.AppOpsManager$PackageOps
+android.app.AppOpsManager$PausedNotedAppOpsCollection
+android.app.AppOpsManager$RestrictionBypass
+android.app.AppOpsManager$SamplingStrategy
+android.app.AppOpsManager
+android.app.AppOpsManagerInternal
+android.app.Application$ActivityLifecycleCallbacks
+android.app.Application$OnProvideAssistDataListener
+android.app.Application
+android.app.ApplicationErrorReport$1
+android.app.ApplicationErrorReport$AnrInfo
+android.app.ApplicationErrorReport$BatteryInfo
+android.app.ApplicationErrorReport$CrashInfo
+android.app.ApplicationErrorReport$ParcelableCrashInfo$1
+android.app.ApplicationErrorReport$ParcelableCrashInfo
+android.app.ApplicationErrorReport$RunningServiceInfo
+android.app.ApplicationErrorReport
+android.app.ApplicationExitInfo$1
+android.app.ApplicationExitInfo
+android.app.ApplicationLoaders$CachedClassLoader
+android.app.ApplicationLoaders
+android.app.ApplicationPackageManager$$ExternalSyntheticLambda1
+android.app.ApplicationPackageManager$1
+android.app.ApplicationPackageManager$2
+android.app.ApplicationPackageManager$3
+android.app.ApplicationPackageManager$GetPackagesForUidResult
+android.app.ApplicationPackageManager$HasSystemFeatureQuery
+android.app.ApplicationPackageManager$MoveCallbackDelegate
+android.app.ApplicationPackageManager$ResourceName
+android.app.ApplicationPackageManager
+android.app.AsyncNotedAppOp$1
+android.app.AsyncNotedAppOp
+android.app.AutomaticZenRule$1
+android.app.AutomaticZenRule
+android.app.BackStackRecord$Op
+android.app.BackStackRecord
+android.app.BackStackState$1
+android.app.BackStackState
+android.app.BackgroundServiceStartNotAllowedException$1
+android.app.BackgroundServiceStartNotAllowedException
+android.app.BroadcastOptions
+android.app.ClientTransactionHandler
+android.app.ComponentOptions
+android.app.ConfigurationController
+android.app.ContentProviderHolder$1
+android.app.ContentProviderHolder
+android.app.ContextImpl$1
+android.app.ContextImpl$ApplicationContentResolver
+android.app.ContextImpl
+android.app.DexLoadReporter
+android.app.Dialog$$ExternalSyntheticLambda0
+android.app.Dialog$$ExternalSyntheticLambda1
+android.app.Dialog$$ExternalSyntheticLambda2
+android.app.Dialog$ListenersHandler
+android.app.Dialog
+android.app.DialogFragment
+android.app.DirectAction$1
+android.app.DirectAction
+android.app.DisabledWallpaperManager
+android.app.DownloadManager$CursorTranslator
+android.app.DownloadManager$Query
+android.app.DownloadManager$Request
+android.app.DownloadManager
+android.app.DreamManager
+android.app.EnterTransitionCoordinator
+android.app.EventLogTags
+android.app.ExitTransitionCoordinator$ActivityExitTransitionCallbacks
+android.app.ExitTransitionCoordinator$ExitTransitionCallbacks
+android.app.ExitTransitionCoordinator
+android.app.ForegroundServiceStartNotAllowedException$1
+android.app.ForegroundServiceStartNotAllowedException
+android.app.ForegroundServiceTypePolicy$ForegroundServiceTypePolicyInfo
+android.app.Fragment$1
+android.app.Fragment$AnimationInfo
+android.app.Fragment$InstantiationException
+android.app.Fragment$OnStartEnterTransitionListener
+android.app.Fragment
+android.app.FragmentContainer
+android.app.FragmentController
+android.app.FragmentHostCallback
+android.app.FragmentManager$BackStackEntry
+android.app.FragmentManager$FragmentLifecycleCallbacks
+android.app.FragmentManager$OnBackStackChangedListener
+android.app.FragmentManager
+android.app.FragmentManagerImpl$1
+android.app.FragmentManagerImpl$2
+android.app.FragmentManagerImpl$AnimateOnHWLayerIfNeededListener
+android.app.FragmentManagerImpl$OpGenerator
+android.app.FragmentManagerImpl$StartEnterTransitionListener
+android.app.FragmentManagerImpl
+android.app.FragmentManagerNonConfig
+android.app.FragmentManagerState$1
+android.app.FragmentManagerState
+android.app.FragmentState$1
+android.app.FragmentState
+android.app.FragmentTransaction
+android.app.FragmentTransition$2
+android.app.FragmentTransition$5
+android.app.FragmentTransition$FragmentContainerTransition
+android.app.FragmentTransition
+android.app.GameManager
+android.app.GrammaticalInflectionManager
+android.app.IActivityClientController$Stub$Proxy
+android.app.IActivityClientController$Stub
+android.app.IActivityClientController
+android.app.IActivityController$Stub$Proxy
+android.app.IActivityController$Stub
+android.app.IActivityController
+android.app.IActivityManager$Stub$Proxy
+android.app.IActivityManager$Stub
+android.app.IActivityManager
+android.app.IActivityTaskManager$Stub$Proxy
+android.app.IActivityTaskManager$Stub
+android.app.IActivityTaskManager
+android.app.IAlarmCompleteListener$Stub$Proxy
+android.app.IAlarmCompleteListener$Stub
+android.app.IAlarmCompleteListener
+android.app.IAlarmListener$Stub$Proxy
+android.app.IAlarmListener$Stub
+android.app.IAlarmListener
+android.app.IAlarmManager$Stub$Proxy
+android.app.IAlarmManager$Stub
+android.app.IAlarmManager
+android.app.IAppTask$Stub$Proxy
+android.app.IAppTask$Stub
+android.app.IAppTask
+android.app.IAppTraceRetriever$Stub$Proxy
+android.app.IAppTraceRetriever$Stub
+android.app.IAppTraceRetriever
+android.app.IApplicationStartInfoCompleteListener$Stub$Proxy
+android.app.IApplicationStartInfoCompleteListener$Stub
+android.app.IApplicationStartInfoCompleteListener
+android.app.IApplicationThread$Stub$Proxy
+android.app.IApplicationThread$Stub
+android.app.IApplicationThread
+android.app.IAssistDataReceiver$Stub$Proxy
+android.app.IAssistDataReceiver$Stub
+android.app.IAssistDataReceiver
+android.app.IBackupAgent$Stub$Proxy
+android.app.IBackupAgent$Stub
+android.app.IBackupAgent
+android.app.ICompatCameraControlCallback
+android.app.IForegroundServiceObserver$Stub$Proxy
+android.app.IForegroundServiceObserver$Stub
+android.app.IForegroundServiceObserver
+android.app.IGameManagerService$Stub$Proxy
+android.app.IGameManagerService$Stub
+android.app.IGameManagerService
+android.app.IInstantAppResolver$Stub$Proxy
+android.app.IInstantAppResolver$Stub
+android.app.IInstantAppResolver
+android.app.IInstrumentationWatcher$Stub$Proxy
+android.app.IInstrumentationWatcher$Stub
+android.app.IInstrumentationWatcher
+android.app.ILocalWallpaperColorConsumer$Stub
+android.app.ILocalWallpaperColorConsumer
+android.app.ILocaleManager$Stub$Proxy
+android.app.ILocaleManager$Stub
+android.app.ILocaleManager
+android.app.INotificationManager$Stub$Proxy
+android.app.INotificationManager$Stub
+android.app.INotificationManager
+android.app.IOnProjectionStateChangedListener$Stub
+android.app.IOnProjectionStateChangedListener
+android.app.IParcelFileDescriptorRetriever$Stub$Proxy
+android.app.IParcelFileDescriptorRetriever$Stub
+android.app.IParcelFileDescriptorRetriever
+android.app.IProcessObserver$Stub$Proxy
+android.app.IProcessObserver$Stub
+android.app.IProcessObserver
+android.app.IRequestFinishCallback$Stub$Proxy
+android.app.IRequestFinishCallback$Stub
+android.app.IRequestFinishCallback
+android.app.IScreenCaptureObserver
+android.app.ISearchManager$Stub$Proxy
+android.app.ISearchManager$Stub
+android.app.ISearchManager
+android.app.IServiceConnection$Stub$Proxy
+android.app.IServiceConnection$Stub
+android.app.IServiceConnection
+android.app.IStopUserCallback$Stub$Proxy
+android.app.IStopUserCallback$Stub
+android.app.IStopUserCallback
+android.app.ITaskStackListener$Stub$Proxy
+android.app.ITaskStackListener$Stub
+android.app.ITaskStackListener
+android.app.ITransientNotification$Stub$Proxy
+android.app.ITransientNotification$Stub
+android.app.ITransientNotification
+android.app.ITransientNotificationCallback$Stub$Proxy
+android.app.ITransientNotificationCallback$Stub
+android.app.ITransientNotificationCallback
+android.app.IUiAutomationConnection$Stub$Proxy
+android.app.IUiAutomationConnection$Stub
+android.app.IUiAutomationConnection
+android.app.IUiModeManager$Stub$Proxy
+android.app.IUiModeManager$Stub
+android.app.IUiModeManager
+android.app.IUiModeManagerCallback$Stub
+android.app.IUiModeManagerCallback
+android.app.IUidObserver$Stub$Proxy
+android.app.IUidObserver$Stub
+android.app.IUidObserver
+android.app.IUnsafeIntentStrictModeCallback$Stub
+android.app.IUnsafeIntentStrictModeCallback
+android.app.IUriGrantsManager$Stub$Proxy
+android.app.IUriGrantsManager$Stub
+android.app.IUriGrantsManager
+android.app.IUserSwitchObserver$Stub$Proxy
+android.app.IUserSwitchObserver$Stub
+android.app.IUserSwitchObserver
+android.app.IWallpaperManager$Stub$Proxy
+android.app.IWallpaperManager$Stub
+android.app.IWallpaperManager
+android.app.IWallpaperManagerCallback$Stub$Proxy
+android.app.IWallpaperManagerCallback$Stub
+android.app.IWallpaperManagerCallback
+android.app.IWindowToken$Stub
+android.app.IWindowToken
+android.app.InstantAppResolverService$1
+android.app.InstantAppResolverService$InstantAppResolutionCallback
+android.app.InstantAppResolverService$ServiceHandler
+android.app.InstantAppResolverService
+android.app.Instrumentation$ActivityGoing
+android.app.Instrumentation$ActivityMonitor
+android.app.Instrumentation$ActivityResult
+android.app.Instrumentation$ActivityWaiter
+android.app.Instrumentation
+android.app.IntentReceiverLeaked
+android.app.IntentService$ServiceHandler
+android.app.IntentService
+android.app.JobSchedulerImpl
+android.app.KeyguardManager$1
+android.app.KeyguardManager$KeyguardDismissCallback
+android.app.KeyguardManager
+android.app.ListActivity
+android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0
+android.app.LoadedApk$ReceiverDispatcher$Args
+android.app.LoadedApk$ReceiverDispatcher$InnerReceiver
+android.app.LoadedApk$ReceiverDispatcher
+android.app.LoadedApk$ServiceDispatcher$ConnectionInfo
+android.app.LoadedApk$ServiceDispatcher$DeathMonitor
+android.app.LoadedApk$ServiceDispatcher$InnerConnection
+android.app.LoadedApk$ServiceDispatcher$RunConnection
+android.app.LoadedApk$ServiceDispatcher
+android.app.LoadedApk$SplitDependencyLoaderImpl
+android.app.LoadedApk$WarningContextClassLoader
+android.app.LoadedApk
+android.app.LoaderManager$LoaderCallbacks
+android.app.LoaderManager
+android.app.LoaderManagerImpl$LoaderInfo
+android.app.LoaderManagerImpl
+android.app.LocaleManager
+android.app.NativeActivity
+android.app.Notification$$ExternalSyntheticLambda0
+android.app.Notification$1
+android.app.Notification$Action$1
+android.app.Notification$Action$Builder
+android.app.Notification$Action
+android.app.Notification$BigPictureStyle
+android.app.Notification$BigTextStyle
+android.app.Notification$BubbleMetadata$1
+android.app.Notification$BubbleMetadata$Builder
+android.app.Notification$BubbleMetadata
+android.app.Notification$Builder
+android.app.Notification$BuilderRemoteViews
+android.app.Notification$CallStyle
+android.app.Notification$Colors
+android.app.Notification$DecoratedCustomViewStyle
+android.app.Notification$DecoratedMediaCustomViewStyle
+android.app.Notification$Extender
+android.app.Notification$InboxStyle
+android.app.Notification$MediaStyle
+android.app.Notification$MessagingStyle$Message
+android.app.Notification$MessagingStyle
+android.app.Notification$StandardTemplateParams
+android.app.Notification$Style
+android.app.Notification$TemplateBindResult$MarginSet
+android.app.Notification$TemplateBindResult
+android.app.Notification$TvExtender
+android.app.Notification
+android.app.NotificationChannel$1
+android.app.NotificationChannel
+android.app.NotificationChannelGroup$1
+android.app.NotificationChannelGroup
+android.app.NotificationHistory$1
+android.app.NotificationHistory$HistoricalNotification$Builder
+android.app.NotificationHistory$HistoricalNotification
+android.app.NotificationHistory
+android.app.NotificationManager$Policy$1
+android.app.NotificationManager$Policy
+android.app.NotificationManager
+android.app.OnActivityPausedListener
+android.app.PackageInstallObserver$1
+android.app.PackageInstallObserver
+android.app.PendingIntent$$ExternalSyntheticLambda1
+android.app.PendingIntent$1
+android.app.PendingIntent$CancelListener
+android.app.PendingIntent$CanceledException
+android.app.PendingIntent$FinishedDispatcher
+android.app.PendingIntent$OnFinished
+android.app.PendingIntent$OnMarshaledListener
+android.app.PendingIntent
+android.app.Person$1
+android.app.Person$Builder
+android.app.Person
+android.app.PictureInPictureParams$1
+android.app.PictureInPictureParams$Builder
+android.app.PictureInPictureParams
+android.app.PictureInPictureUiState$1
+android.app.PictureInPictureUiState
+android.app.Presentation
+android.app.ProcessMemoryState$1
+android.app.ProcessMemoryState
+android.app.ProfilerInfo$1
+android.app.ProfilerInfo
+android.app.ProgressDialog$1
+android.app.ProgressDialog
+android.app.PropertyInvalidatedCache$1
+android.app.PropertyInvalidatedCache$AutoCorker$1
+android.app.PropertyInvalidatedCache$AutoCorker
+android.app.PropertyInvalidatedCache$DefaultComputer
+android.app.PropertyInvalidatedCache$QueryHandler
+android.app.PropertyInvalidatedCache
+android.app.QueuedWork$QueuedWorkHandler
+android.app.QueuedWork
+android.app.ReceiverInfo$1
+android.app.ReceiverInfo
+android.app.ReceiverRestrictedContext
+android.app.RemoteAction$1
+android.app.RemoteAction
+android.app.RemoteInput$1
+android.app.RemoteInput$Builder
+android.app.RemoteInput
+android.app.RemoteInputHistoryItem$1
+android.app.RemoteInputHistoryItem
+android.app.RemoteServiceException
+android.app.ResourcesManager$$ExternalSyntheticLambda0
+android.app.ResourcesManager$$ExternalSyntheticLambda1
+android.app.ResourcesManager$ActivityResource
+android.app.ResourcesManager$ActivityResources
+android.app.ResourcesManager$ApkAssetsSupplier
+android.app.ResourcesManager$ApkKey
+android.app.ResourcesManager$UpdateHandler
+android.app.ResourcesManager
+android.app.ResultInfo$1
+android.app.ResultInfo
+android.app.RuntimeAppOpAccessMessage$1
+android.app.RuntimeAppOpAccessMessage
+android.app.SearchDialog
+android.app.SearchManager$OnCancelListener
+android.app.SearchManager$OnDismissListener
+android.app.SearchManager
+android.app.SearchableInfo$1
+android.app.SearchableInfo$ActionKeyInfo$1
+android.app.SearchableInfo$ActionKeyInfo
+android.app.SearchableInfo
+android.app.Service
+android.app.ServiceConnectionLeaked
+android.app.ServiceStartArgs$1
+android.app.ServiceStartArgs
+android.app.ServiceStartNotAllowedException
+android.app.SharedElementCallback$1
+android.app.SharedElementCallback
+android.app.SharedPreferencesImpl$1
+android.app.SharedPreferencesImpl$2
+android.app.SharedPreferencesImpl$EditorImpl$$ExternalSyntheticLambda0
+android.app.SharedPreferencesImpl$EditorImpl$1
+android.app.SharedPreferencesImpl$EditorImpl$2
+android.app.SharedPreferencesImpl$EditorImpl
+android.app.SharedPreferencesImpl$MemoryCommitResult
+android.app.SharedPreferencesImpl
+android.app.StackTrace
+android.app.StatusBarManager
+android.app.SyncNotedAppOp$1
+android.app.SyncNotedAppOp
+android.app.SynchronousUserSwitchObserver
+android.app.SystemServiceRegistry$100
+android.app.SystemServiceRegistry$101
+android.app.SystemServiceRegistry$102
+android.app.SystemServiceRegistry$103
+android.app.SystemServiceRegistry$104
+android.app.SystemServiceRegistry$105
+android.app.SystemServiceRegistry$106
+android.app.SystemServiceRegistry$107
+android.app.SystemServiceRegistry$108
+android.app.SystemServiceRegistry$109
+android.app.SystemServiceRegistry$10
+android.app.SystemServiceRegistry$110
+android.app.SystemServiceRegistry$111
+android.app.SystemServiceRegistry$112
+android.app.SystemServiceRegistry$113
+android.app.SystemServiceRegistry$114
+android.app.SystemServiceRegistry$115
+android.app.SystemServiceRegistry$116
+android.app.SystemServiceRegistry$117
+android.app.SystemServiceRegistry$118
+android.app.SystemServiceRegistry$119
+android.app.SystemServiceRegistry$11
+android.app.SystemServiceRegistry$120
+android.app.SystemServiceRegistry$121
+android.app.SystemServiceRegistry$122
+android.app.SystemServiceRegistry$123
+android.app.SystemServiceRegistry$124
+android.app.SystemServiceRegistry$125
+android.app.SystemServiceRegistry$126
+android.app.SystemServiceRegistry$127
+android.app.SystemServiceRegistry$128
+android.app.SystemServiceRegistry$129
+android.app.SystemServiceRegistry$12
+android.app.SystemServiceRegistry$130
+android.app.SystemServiceRegistry$131
+android.app.SystemServiceRegistry$132
+android.app.SystemServiceRegistry$133
+android.app.SystemServiceRegistry$134
+android.app.SystemServiceRegistry$135
+android.app.SystemServiceRegistry$136
+android.app.SystemServiceRegistry$137
+android.app.SystemServiceRegistry$138
+android.app.SystemServiceRegistry$139
+android.app.SystemServiceRegistry$13
+android.app.SystemServiceRegistry$140
+android.app.SystemServiceRegistry$14
+android.app.SystemServiceRegistry$15
+android.app.SystemServiceRegistry$16
+android.app.SystemServiceRegistry$17
+android.app.SystemServiceRegistry$18$$ExternalSyntheticLambda0
+android.app.SystemServiceRegistry$18
+android.app.SystemServiceRegistry$19
+android.app.SystemServiceRegistry$1
+android.app.SystemServiceRegistry$20
+android.app.SystemServiceRegistry$21
+android.app.SystemServiceRegistry$22
+android.app.SystemServiceRegistry$23
+android.app.SystemServiceRegistry$24
+android.app.SystemServiceRegistry$25
+android.app.SystemServiceRegistry$26
+android.app.SystemServiceRegistry$27
+android.app.SystemServiceRegistry$28
+android.app.SystemServiceRegistry$29
+android.app.SystemServiceRegistry$2
+android.app.SystemServiceRegistry$30
+android.app.SystemServiceRegistry$31
+android.app.SystemServiceRegistry$32
+android.app.SystemServiceRegistry$33
+android.app.SystemServiceRegistry$34
+android.app.SystemServiceRegistry$35
+android.app.SystemServiceRegistry$36
+android.app.SystemServiceRegistry$37
+android.app.SystemServiceRegistry$38
+android.app.SystemServiceRegistry$39
+android.app.SystemServiceRegistry$3
+android.app.SystemServiceRegistry$40
+android.app.SystemServiceRegistry$41
+android.app.SystemServiceRegistry$42
+android.app.SystemServiceRegistry$43
+android.app.SystemServiceRegistry$44
+android.app.SystemServiceRegistry$45
+android.app.SystemServiceRegistry$46
+android.app.SystemServiceRegistry$47
+android.app.SystemServiceRegistry$48
+android.app.SystemServiceRegistry$49
+android.app.SystemServiceRegistry$4
+android.app.SystemServiceRegistry$50
+android.app.SystemServiceRegistry$51
+android.app.SystemServiceRegistry$52
+android.app.SystemServiceRegistry$53
+android.app.SystemServiceRegistry$54
+android.app.SystemServiceRegistry$55
+android.app.SystemServiceRegistry$56
+android.app.SystemServiceRegistry$57
+android.app.SystemServiceRegistry$58
+android.app.SystemServiceRegistry$59
+android.app.SystemServiceRegistry$5
+android.app.SystemServiceRegistry$60
+android.app.SystemServiceRegistry$61
+android.app.SystemServiceRegistry$62
+android.app.SystemServiceRegistry$63
+android.app.SystemServiceRegistry$64
+android.app.SystemServiceRegistry$65
+android.app.SystemServiceRegistry$66
+android.app.SystemServiceRegistry$67
+android.app.SystemServiceRegistry$68
+android.app.SystemServiceRegistry$69
+android.app.SystemServiceRegistry$6
+android.app.SystemServiceRegistry$70
+android.app.SystemServiceRegistry$71
+android.app.SystemServiceRegistry$72
+android.app.SystemServiceRegistry$73
+android.app.SystemServiceRegistry$74
+android.app.SystemServiceRegistry$75
+android.app.SystemServiceRegistry$76
+android.app.SystemServiceRegistry$77
+android.app.SystemServiceRegistry$78
+android.app.SystemServiceRegistry$79
+android.app.SystemServiceRegistry$7
+android.app.SystemServiceRegistry$80
+android.app.SystemServiceRegistry$81
+android.app.SystemServiceRegistry$82
+android.app.SystemServiceRegistry$83
+android.app.SystemServiceRegistry$84
+android.app.SystemServiceRegistry$85
+android.app.SystemServiceRegistry$86
+android.app.SystemServiceRegistry$87
+android.app.SystemServiceRegistry$88
+android.app.SystemServiceRegistry$89
+android.app.SystemServiceRegistry$8
+android.app.SystemServiceRegistry$90
+android.app.SystemServiceRegistry$91
+android.app.SystemServiceRegistry$92
+android.app.SystemServiceRegistry$93
+android.app.SystemServiceRegistry$94
+android.app.SystemServiceRegistry$95
+android.app.SystemServiceRegistry$96
+android.app.SystemServiceRegistry$97
+android.app.SystemServiceRegistry$98
+android.app.SystemServiceRegistry$99
+android.app.SystemServiceRegistry$9
+android.app.SystemServiceRegistry$CachedServiceFetcher
+android.app.SystemServiceRegistry$ContextAwareServiceProducerWithBinder
+android.app.SystemServiceRegistry$ContextAwareServiceProducerWithoutBinder
+android.app.SystemServiceRegistry$ServiceFetcher
+android.app.SystemServiceRegistry$StaticServiceFetcher
+android.app.SystemServiceRegistry$StaticServiceProducerWithBinder
+android.app.SystemServiceRegistry$StaticServiceProducerWithoutBinder
+android.app.SystemServiceRegistry
+android.app.TaskInfo
+android.app.TaskStackListener
+android.app.UiModeManager$1
+android.app.UiModeManager$InnerListener
+android.app.UiModeManager$OnProjectionStateChangedListener
+android.app.UiModeManager$OnProjectionStateChangedListenerResourceManager
+android.app.UiModeManager
+android.app.UriGrantsManager$1
+android.app.UriGrantsManager
+android.app.UserSwitchObserver
+android.app.VoiceInteractor$Request
+android.app.VoiceInteractor
+android.app.Vr2dDisplayProperties$1
+android.app.Vr2dDisplayProperties
+android.app.VrManager
+android.app.WaitResult$1
+android.app.WaitResult
+android.app.WallpaperColors$1
+android.app.WallpaperColors
+android.app.WallpaperInfo$1
+android.app.WallpaperInfo
+android.app.WallpaperManager$CachedWallpaper
+android.app.WallpaperManager$ColorManagementProxy
+android.app.WallpaperManager$Globals$$ExternalSyntheticLambda1
+android.app.WallpaperManager$Globals$1
+android.app.WallpaperManager$Globals
+android.app.WallpaperManager$OnColorsChangedListener
+android.app.WallpaperManager
+android.app.WindowConfiguration$1
+android.app.WindowConfiguration
+android.app.admin.DeviceAdminInfo$1
+android.app.admin.DeviceAdminInfo$PolicyInfo
+android.app.admin.DeviceAdminInfo
+android.app.admin.DevicePolicyCache$EmptyDevicePolicyCache
+android.app.admin.DevicePolicyCache
+android.app.admin.DevicePolicyEventLogger
+android.app.admin.DevicePolicyManager$$ExternalSyntheticLambda10
+android.app.admin.DevicePolicyManager$$ExternalSyntheticLambda11
+android.app.admin.DevicePolicyManager$$ExternalSyntheticLambda5
+android.app.admin.DevicePolicyManager$$ExternalSyntheticLambda6
+android.app.admin.DevicePolicyManager$$ExternalSyntheticLambda7
+android.app.admin.DevicePolicyManager$$ExternalSyntheticLambda8
+android.app.admin.DevicePolicyManager$$ExternalSyntheticLambda9
+android.app.admin.DevicePolicyManager$1
+android.app.admin.DevicePolicyManager$2
+android.app.admin.DevicePolicyManager$InstallSystemUpdateCallback
+android.app.admin.DevicePolicyManager$OnClearApplicationUserDataListener
+android.app.admin.DevicePolicyManager
+android.app.admin.DevicePolicyManagerInternal$OnCrossProfileWidgetProvidersChangeListener
+android.app.admin.DevicePolicyManagerInternal
+android.app.admin.DevicePolicyResourcesManager
+android.app.admin.DeviceStateCache
+android.app.admin.FactoryResetProtectionPolicy$1
+android.app.admin.FactoryResetProtectionPolicy
+android.app.admin.IDeviceAdminService$Stub$Proxy
+android.app.admin.IDeviceAdminService$Stub
+android.app.admin.IDeviceAdminService
+android.app.admin.IDevicePolicyManager$Stub$Proxy
+android.app.admin.IDevicePolicyManager$Stub
+android.app.admin.IDevicePolicyManager
+android.app.admin.IKeyguardCallback$Stub
+android.app.admin.IKeyguardCallback
+android.app.admin.NetworkEvent$1
+android.app.admin.NetworkEvent
+android.app.admin.ParcelableResource$1
+android.app.admin.ParcelableResource
+android.app.admin.PasswordMetrics$1
+android.app.admin.PasswordMetrics$ComplexityBucket$1
+android.app.admin.PasswordMetrics$ComplexityBucket$2
+android.app.admin.PasswordMetrics$ComplexityBucket$3
+android.app.admin.PasswordMetrics$ComplexityBucket$4
+android.app.admin.PasswordMetrics$ComplexityBucket
+android.app.admin.PasswordMetrics
+android.app.admin.PasswordPolicy
+android.app.admin.SecurityLog$SecurityEvent$1
+android.app.admin.SecurityLog$SecurityEvent
+android.app.admin.SecurityLog
+android.app.admin.StartInstallingUpdateCallback$Stub$Proxy
+android.app.admin.StartInstallingUpdateCallback$Stub
+android.app.admin.StartInstallingUpdateCallback
+android.app.admin.SystemUpdateInfo$1
+android.app.admin.SystemUpdateInfo
+android.app.admin.SystemUpdatePolicy$1
+android.app.admin.SystemUpdatePolicy
+android.app.admin.WifiSsidPolicy$1
+android.app.admin.WifiSsidPolicy
+android.app.ambientcontext.AmbientContextManager
+android.app.ambientcontext.IAmbientContextManager$Stub$Proxy
+android.app.ambientcontext.IAmbientContextManager$Stub
+android.app.ambientcontext.IAmbientContextManager
+android.app.assist.ActivityId$1
+android.app.assist.ActivityId
+android.app.assist.AssistContent$1
+android.app.assist.AssistContent
+android.app.assist.AssistStructure$1
+android.app.assist.AssistStructure$AutofillOverlay
+android.app.assist.AssistStructure$HtmlInfoNode$1
+android.app.assist.AssistStructure$HtmlInfoNode
+android.app.assist.AssistStructure$HtmlInfoNodeBuilder
+android.app.assist.AssistStructure$ParcelTransferReader
+android.app.assist.AssistStructure$ParcelTransferWriter
+android.app.assist.AssistStructure$SendChannel
+android.app.assist.AssistStructure$ViewNode
+android.app.assist.AssistStructure$ViewNodeBuilder
+android.app.assist.AssistStructure$ViewNodeParcelable$1
+android.app.assist.AssistStructure$ViewNodeParcelable
+android.app.assist.AssistStructure$ViewNodeText
+android.app.assist.AssistStructure$ViewStackEntry
+android.app.assist.AssistStructure$WindowNode
+android.app.assist.AssistStructure
+android.app.backup.BackupAgent$BackupServiceBinder
+android.app.backup.BackupAgent$SharedPrefsSynchronizer
+android.app.backup.BackupAgent
+android.app.backup.BackupAgentHelper
+android.app.backup.BackupDataInput$EntityHeader
+android.app.backup.BackupDataInput
+android.app.backup.BackupDataOutput
+android.app.backup.BackupHelper
+android.app.backup.BackupHelperDispatcher$Header
+android.app.backup.BackupHelperDispatcher
+android.app.backup.BackupManager$BackupObserverWrapper$1
+android.app.backup.BackupManager$BackupObserverWrapper
+android.app.backup.BackupManager
+android.app.backup.BackupManagerMonitor
+android.app.backup.BackupObserver
+android.app.backup.BackupProgress$1
+android.app.backup.BackupProgress
+android.app.backup.BackupRestoreEventLogger
+android.app.backup.BackupTransport$TransportImpl
+android.app.backup.BackupTransport
+android.app.backup.BlobBackupHelper
+android.app.backup.FileBackupHelper
+android.app.backup.FileBackupHelperBase
+android.app.backup.FullBackup
+android.app.backup.FullBackupDataOutput
+android.app.backup.IBackupCallback$Stub$Proxy
+android.app.backup.IBackupCallback$Stub
+android.app.backup.IBackupCallback
+android.app.backup.IBackupManager$Stub$Proxy
+android.app.backup.IBackupManager$Stub
+android.app.backup.IBackupManager
+android.app.backup.IBackupManagerMonitor$Stub$Proxy
+android.app.backup.IBackupManagerMonitor$Stub
+android.app.backup.IBackupManagerMonitor
+android.app.backup.IBackupObserver$Stub$Proxy
+android.app.backup.IBackupObserver$Stub
+android.app.backup.IBackupObserver
+android.app.backup.IFullBackupRestoreObserver$Stub$Proxy
+android.app.backup.IFullBackupRestoreObserver$Stub
+android.app.backup.IFullBackupRestoreObserver
+android.app.backup.IRestoreSession
+android.app.backup.ISelectBackupTransportCallback$Stub$Proxy
+android.app.backup.ISelectBackupTransportCallback$Stub
+android.app.backup.ISelectBackupTransportCallback
+android.app.backup.RestoreDescription$1
+android.app.backup.RestoreDescription
+android.app.backup.SharedPreferencesBackupHelper
+android.app.blob.BlobHandle$1
+android.app.blob.BlobHandle
+android.app.blob.BlobStoreManager
+android.app.blob.BlobStoreManagerFrameworkInitializer$$ExternalSyntheticLambda0
+android.app.blob.BlobStoreManagerFrameworkInitializer
+android.app.blob.IBlobStoreManager$Stub$Proxy
+android.app.blob.IBlobStoreManager$Stub
+android.app.blob.IBlobStoreManager
+android.app.blob.IBlobStoreSession
+android.app.blob.LeaseInfo$1
+android.app.blob.LeaseInfo
+android.app.cloudsearch.CloudSearchManager
+android.app.compat.ChangeIdStateCache
+android.app.compat.ChangeIdStateQuery
+android.app.compat.CompatChanges
+android.app.contentsuggestions.ClassificationsRequest$1
+android.app.contentsuggestions.ClassificationsRequest
+android.app.contentsuggestions.ContentSelection$1
+android.app.contentsuggestions.ContentSelection
+android.app.contentsuggestions.ContentSuggestionsManager$SelectionsCallback
+android.app.contentsuggestions.ContentSuggestionsManager$SelectionsCallbackWrapper
+android.app.contentsuggestions.ContentSuggestionsManager
+android.app.contentsuggestions.IClassificationsCallback$Stub$Proxy
+android.app.contentsuggestions.IClassificationsCallback$Stub
+android.app.contentsuggestions.IClassificationsCallback
+android.app.contentsuggestions.IContentSuggestionsManager$Stub$Proxy
+android.app.contentsuggestions.IContentSuggestionsManager$Stub
+android.app.contentsuggestions.IContentSuggestionsManager
+android.app.contentsuggestions.ISelectionsCallback$Stub$Proxy
+android.app.contentsuggestions.ISelectionsCallback$Stub
+android.app.contentsuggestions.ISelectionsCallback
+android.app.contentsuggestions.SelectionsRequest$1
+android.app.contentsuggestions.SelectionsRequest$Builder
+android.app.contentsuggestions.SelectionsRequest
+android.app.job.IJobCallback$Stub$Proxy
+android.app.job.IJobCallback$Stub
+android.app.job.IJobCallback
+android.app.job.IJobScheduler$Stub$Proxy
+android.app.job.IJobScheduler$Stub
+android.app.job.IJobScheduler
+android.app.job.IJobService$Stub$Proxy
+android.app.job.IJobService$Stub
+android.app.job.IJobService
+android.app.job.IUserVisibleJobObserver
+android.app.job.JobInfo$1
+android.app.job.JobInfo$Builder
+android.app.job.JobInfo$TriggerContentUri$1
+android.app.job.JobInfo$TriggerContentUri
+android.app.job.JobInfo
+android.app.job.JobParameters$1
+android.app.job.JobParameters
+android.app.job.JobScheduler
+android.app.job.JobSchedulerFrameworkInitializer$$ExternalSyntheticLambda0
+android.app.job.JobSchedulerFrameworkInitializer$$ExternalSyntheticLambda1
+android.app.job.JobSchedulerFrameworkInitializer$$ExternalSyntheticLambda2
+android.app.job.JobSchedulerFrameworkInitializer$$ExternalSyntheticLambda3
+android.app.job.JobSchedulerFrameworkInitializer$$ExternalSyntheticLambda4
+android.app.job.JobSchedulerFrameworkInitializer
+android.app.job.JobService$1
+android.app.job.JobService
+android.app.job.JobServiceEngine$JobHandler
+android.app.job.JobServiceEngine$JobInterface
+android.app.job.JobServiceEngine
+android.app.job.JobWorkItem$1
+android.app.job.JobWorkItem
+android.app.people.IPeopleManager$Stub$Proxy
+android.app.people.IPeopleManager$Stub
+android.app.people.IPeopleManager
+android.app.people.PeopleManager
+android.app.prediction.AppPredictionContext$1
+android.app.prediction.AppPredictionContext
+android.app.prediction.AppPredictionManager
+android.app.prediction.AppPredictionSessionId$1
+android.app.prediction.AppPredictionSessionId
+android.app.prediction.AppPredictor$CallbackWrapper
+android.app.prediction.AppPredictor
+android.app.prediction.AppTarget$1
+android.app.prediction.AppTarget$Builder
+android.app.prediction.AppTarget
+android.app.prediction.AppTargetEvent$1
+android.app.prediction.AppTargetEvent
+android.app.prediction.AppTargetId$1
+android.app.prediction.AppTargetId
+android.app.prediction.IPredictionCallback$Stub$Proxy
+android.app.prediction.IPredictionCallback$Stub
+android.app.prediction.IPredictionCallback
+android.app.prediction.IPredictionManager$Stub$Proxy
+android.app.prediction.IPredictionManager$Stub
+android.app.prediction.IPredictionManager
+android.app.search.SearchUiManager
+android.app.servertransaction.ActivityConfigurationChangeItem$1
+android.app.servertransaction.ActivityConfigurationChangeItem
+android.app.servertransaction.ActivityLifecycleItem
+android.app.servertransaction.ActivityRelaunchItem$1
+android.app.servertransaction.ActivityRelaunchItem
+android.app.servertransaction.ActivityResultItem$1
+android.app.servertransaction.ActivityResultItem
+android.app.servertransaction.ActivityTransactionItem
+android.app.servertransaction.BaseClientRequest
+android.app.servertransaction.ClientTra

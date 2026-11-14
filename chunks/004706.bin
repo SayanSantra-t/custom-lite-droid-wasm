@@ -1,0 +1,790 @@
+.wfc_avail_ovr1        u:object_r:telephony_config_prop:s0 exact int
+persist.dbg.wfc_avail_ovr2        u:object_r:telephony_config_prop:s0 exact int
+
+# System locale list filter configuration
+ro.localization.locale_filter u:object_r:localization_prop:s0 exact string
+
+# Graphics related properties
+ro.opengles.version u:object_r:graphics_config_prop:s0 exact int
+
+ro.egl.blobcache.multifile       u:object_r:graphics_config_prop:s0 exact bool
+ro.egl.blobcache.multifile_limit u:object_r:graphics_config_prop:s0 exact int
+
+ro.gfx.driver.0          u:object_r:graphics_config_prop:s0 exact string
+ro.gfx.driver.1          u:object_r:graphics_config_prop:s0 exact string
+ro.gfx.angle.supported   u:object_r:graphics_config_prop:s0 exact bool
+ro.gfx.driver_build_time u:object_r:graphics_config_prop:s0 exact int
+
+graphics.gpu.profiler.support          u:object_r:graphics_config_prop:s0 exact bool
+graphics.gpu.profiler.vulkan_layer_apk u:object_r:graphics_config_prop:s0 exact string
+persist.graphics.egl             u:object_r:graphics_config_writable_prop:s0 exact string
+
+ro.cpuvulkan.version u:object_r:graphics_config_prop:s0 exact int
+
+# surfaceflinger-settable
+graphics.display.kernel_idle_timer.enabled u:object_r:surfaceflinger_display_prop:s0 exact bool
+
+# Disable/enable charger input
+power.battery_input.suspended u:object_r:power_debug_prop:s0 exact bool
+
+# zygote config property
+zygote.critical_window.minute u:object_r:zygote_config_prop:s0 exact int
+
+ro.zygote.disable_gl_preload u:object_r:zygote_config_prop:s0 exact bool
+
+# Allows a device to run without batch attestation keys
+remote_provisioning.strongbox.rkp_only u:object_r:remote_prov_prop:s0 exact bool
+remote_provisioning.tee.rkp_only u:object_r:remote_prov_prop:s0 exact bool
+
+# Hostname for the remote provisioning server a device should communicate with
+remote_provisioning.hostname u:object_r:remote_prov_prop:s0 exact string
+
+# Indicates the system should use rkpd instead of RemoteProvisioner
+remote_provisioning.enable_rkpd u:object_r:remote_prov_prop:s0 exact bool
+
+# Broadcast boot stages, which keystore listens to
+keystore.boot_level u:object_r:keystore_listen_prop:s0 exact int
+
+# Property that tracks keystore crash counts during a boot cycle.
+keystore.crash_count u:object_r:keystore_crash_prop:s0 exact int
+
+# Configure the means by which we protect the L0 key from the future
+ro.keystore.boot_level_key.strategy u:object_r:keystore_config_prop:s0 exact string
+
+partition.system.verified     u:object_r:verity_status_prop:s0 exact string
+partition.system_ext.verified u:object_r:verity_status_prop:s0 exact string
+partition.product.verified    u:object_r:verity_status_prop:s0 exact string
+partition.vendor.verified     u:object_r:verity_status_prop:s0 exact string
+partition.odm.verified        u:object_r:verity_status_prop:s0 exact string
+
+# Properties that holds the hashtree information for verity partitions.
+partition.system.verified.hash_alg     u:object_r:verity_status_prop:s0 exact string
+partition.system_ext.verified.hash_alg u:object_r:verity_status_prop:s0 exact string
+partition.product.verified.hash_alg    u:object_r:verity_status_prop:s0 exact string
+partition.vendor.verified.hash_alg     u:object_r:verity_status_prop:s0 exact string
+partition.odm.verified.hash_alg        u:object_r:verity_status_prop:s0 exact string
+partition.system.verified.root_digest     u:object_r:verity_status_prop:s0 exact string
+partition.system_ext.verified.root_digest u:object_r:verity_status_prop:s0 exact string
+partition.product.verified.root_digest    u:object_r:verity_status_prop:s0 exact string
+partition.vendor.verified.root_digest     u:object_r:verity_status_prop:s0 exact string
+partition.odm.verified.root_digest        u:object_r:verity_status_prop:s0 exact string
+
+ro.setupwizard.enterprise_mode u:object_r:setupwizard_prop:s0 exact bool
+ro.setupwizard.esim_cid_ignore u:object_r:setupwizard_prop:s0 exact string
+ro.setupwizard.rotation_locked u:object_r:setupwizard_prop:s0 exact bool
+ro.setupwizard.wifi_on_exit    u:object_r:setupwizard_prop:s0 exact bool
+
+setupwizard.enable_assist_gesture_training                         u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.avoid_duplicate_tos                            u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.baseline_setupwizard_enabled                   u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.day_night_mode_enabled                         u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.deferred_setup_low_ram_filter                  u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.deferred_setup_notification                    u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.deferred_setup_suggestion                      u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.device_default_dark_mode                       u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.esim_enabled                                   u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.google_services_deferred_setup_pretend_not_suw u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.lock_mobile_data                               u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.lock_mobile_data.carrier-1                     u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.portal_notification                            u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.predeferred_enabled                            u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.return_partner_customization_bundle            u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.show_pixel_tos                                 u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.use_biometric_lock                             u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.feature.wallpaper_suggestion_after_restore             u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.logging                                                u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.metrics_debug_mode                                     u:object_r:setupwizard_prop:s0 exact bool
+setupwizard.theme                                                  u:object_r:setupwizard_prop:s0 exact string
+
+db.log.detailed              u:object_r:sqlite_log_prop:s0 exact bool
+db.log.slow_query_threshold  u:object_r:sqlite_log_prop:s0 exact int
+db.log.slow_query_threshold. u:object_r:sqlite_log_prop:s0 prefix int
+
+# SOC related props
+ro.soc.manufacturer u:object_r:soc_prop:s0 exact string
+ro.soc.model        u:object_r:soc_prop:s0 exact string
+
+# set to true when running rollback tests to disable fallback-to-copy when enabling rollbacks
+# to detect failures where hard linking should work otherwise
+persist.rollback.is_test u:object_r:rollback_test_prop:s0 exact bool
+
+# bootanimation properties
+ro.bootanim.quiescent.enabled u:object_r:bootanim_config_prop:s0 exact bool
+
+# dck properties
+ro.gms.dck.eligible_wcc u:object_r:dck_prop:s0 exact int
+ro.gms.dck.se_capability u:object_r:dck_prop:s0 exact int
+
+# virtualization service properties
+virtualizationservice.state.last_cid u:object_r:virtualizationservice_prop:s0 exact uint
+
+# composd properties
+composd.vm.art.memory_mib.config u:object_r:composd_vm_art_prop:s0 exact uint
+composd.vm.vendor.memory_mib.config u:object_r:composd_vm_vendor_prop:s0 exact int
+
+# properties for the virtual Face HAL
+persist.vendor.face.virtual.type u:object_r:virtual_face_hal_prop:s0 exact string
+persist.vendor.face.virtual.strength u:object_r:virtual_face_hal_prop:s0 exact string
+persist.vendor.face.virtual.enrollments u:object_r:virtual_face_hal_prop:s0 exact string
+persist.vendor.face.virtual.features u:object_r:virtual_face_hal_prop:s0 exact string
+vendor.face.virtual.enrollment_hit u:object_r:virtual_face_hal_prop:s0 exact int
+vendor.face.virtual.operation_start_enroll_latency u:object_r:virtual_face_hal_prop:s0 exact int
+vendor.face.virtual.next_enrollment u:object_r:virtual_face_hal_prop:s0 exact string
+vendor.face.virtual.authenticator_id u:object_r:virtual_face_hal_prop:s0 exact int
+vendor.face.virtual.challenge u:object_r:virtual_face_hal_prop:s0 exact int
+vendor.face.virtual.lockout u:object_r:virtual_face_hal_prop:s0 exact bool
+vendor.face.virtual.operation_authenticate_fails u:object_r:virtual_face_hal_prop:s0 exact bool
+vendor.face.virtual.operation_detect_interaction_fails u:object_r:virtual_face_hal_prop:s0 exact bool
+vendor.face.virtual.operation_enroll_fails u:object_r:virtual_face_hal_prop:s0 exact bool
+vendor.face.virtual.operation_authenticate_latency u:object_r:virtual_face_hal_prop:s0 exact int
+vendor.face.virtual.operation_detect_interaction_latency u:object_r:virtual_face_hal_prop:s0 exact int
+vendor.face.virtual.operation_authenticate_duration u:object_r:virtual_face_hal_prop:s0 exact int
+
+# properties for the virtual Fingerprint HAL
+persist.vendor.fingerprint.virtual.type u:object_r:virtual_fingerprint_hal_prop:s0 exact string
+persist.vendor.fingerprint.virtual.enrollments u:object_r:virtual_fingerprint_hal_prop:s0 exact string
+persist.vendor.fingerprint.virtual.lockout u:object_r:virtual_fingerprint_hal_prop:s0 exact bool
+persist.vendor.fingerprint.virtual.authenticator_id u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+persist.vendor.fingerprint.virtual.sensor_location u:object_r:virtual_fingerprint_hal_prop:s0 exact string
+persist.vendor.fingerprint.virtual.sensor_id u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+persist.vendor.fingerprint.virtual.sensor_strength u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+persist.vendor.fingerprint.virtual.max_enrollments u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+persist.vendor.fingerprint.virtual.navigation_guesture u:object_r:virtual_fingerprint_hal_prop:s0 exact bool
+persist.vendor.fingerprint.virtual.detect_interaction u:object_r:virtual_fingerprint_hal_prop:s0 exact bool
+persist.vendor.fingerprint.virtual.udfps.display_touch u:object_r:virtual_fingerprint_hal_prop:s0 exact bool
+persist.vendor.fingerprint.virtual.udfps.control_illumination u:object_r:virtual_fingerprint_hal_prop:s0 exact bool
+persist.vendor.fingerprint.virtual.lockout_enable u:object_r:virtual_fingerprint_hal_prop:s0 exact bool
+persist.vendor.fingerprint.virtual.lockout_timed_threshold u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+persist.vendor.fingerprint.virtual.lockout_timed_duration u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+persist.vendor.fingerprint.virtual.lockout_permanent_threshold u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+vendor.fingerprint.virtual.enrollment_hit u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+vendor.fingerprint.virtual.next_enrollment u:object_r:virtual_fingerprint_hal_prop:s0 exact string
+vendor.fingerprint.virtual.challenge u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+vendor.fingerprint.virtual.operation_authenticate_fails u:object_r:virtual_fingerprint_hal_prop:s0 exact bool
+vendor.fingerprint.virtual.operation_detect_interaction_fails u:object_r:virtual_fingerprint_hal_prop:s0 exact bool
+vendor.fingerprint.virtual.operation_enroll_fails u:object_r:virtual_fingerprint_hal_prop:s0 exact bool
+vendor.fingerprint.virtual.operation_authenticate_latency u:object_r:virtual_fingerprint_hal_prop:s0 exact string
+vendor.fingerprint.virtual.operation_detect_interaction_latency u:object_r:virtual_fingerprint_hal_prop:s0 exact string
+vendor.fingerprint.virtual.operation_enroll_latency u:object_r:virtual_fingerprint_hal_prop:s0 exact string
+vendor.fingerprint.virtual.operation_authenticate_duration u:object_r:virtual_fingerprint_hal_prop:s0 exact int
+
+# properties for tuner
+ro.tuner.lazyhal    u:object_r:tuner_config_prop:s0 exact bool
+tuner.server.enable u:object_r:tuner_server_ctl_prop:s0 exact bool
+
+# Adaptive haptics settings property
+vibrator.adaptive_haptics.enabled u:object_r:adaptive_haptics_prop:s0 exact string
+
+# UVC Gadget property
+ro.usb.uvc.enabled      u:object_r:usb_uvc_enabled_prop:s0 exact bool
+
+# System UI notification properties
+persist.sysui.notification.builder_extras_override u:object_r:persist_sysui_builder_extras_prop:s0 exact bool
+
+# Properties for Quick Start setup.
+ro.quick_start.oem_id u:object_r:quick_start_prop:s0 exact string
+ro.quick_start.device_id u:object_r:quick_start_prop:s0 exact string
+#line 1 "out/soong/.intermediates/system/sepolicy/contexts/plat_property_contexts/android_common/gen/newline"
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            isSystemServer=true domain=system_server_startup
+user=_app seinfo=platform name=com.android.traceur domain=traceur_app type=app_data_file levelFrom=all
+user=system seinfo=platform domain=system_app type=system_app_data_file
+user=system seinfo=platform isPrivApp=true name=com.android.DeviceAsWebcam domain=device_as_webcam type=system_app_data_file levelFrom=all
+user=bluetooth seinfo=bluetooth domain=bluetooth type=bluetooth_data_file
+user=network_stack seinfo=network_stack domain=network_stack type=radio_data_file
+user=nfc seinfo=platform domain=nfc type=nfc_data_file
+user=secure_element seinfo=platform domain=secure_element levelFrom=all
+user=radio seinfo=platform domain=radio type=radio_data_file
+user=shared_relro domain=shared_relro levelFrom=all
+user=shell seinfo=platform domain=shell name=com.android.shell type=shell_data_file
+user=webview_zygote seinfo=webview_zygote domain=webview_zygote
+user=_isolated domain=isolated_app levelFrom=user
+user=_isolated isIsolatedComputeApp=true domain=isolated_compute_app levelFrom=user
+user=_sdksandbox domain=sdk_sandbox_34 type=sdk_sandbox_data_file levelFrom=all
+user=_sdksandbox isSdkSandboxNext=true domain=sdk_sandbox_next type=sdk_sandbox_data_file levelFrom=all
+user=_app seinfo=app_zygote domain=app_zygote levelFrom=user
+user=_app seinfo=media domain=mediaprovider type=app_data_file levelFrom=user
+user=_app seinfo=platform domain=platform_app type=app_data_file levelFrom=user
+user=_app isEphemeralApp=true domain=ephemeral_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true domain=priv_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.google.android.permissioncontroller domain=permissioncontroller_app type=privapp_data_file levelFrom=all
+user=_app seinfo=media isPrivApp=true name=com.android.providers.media.module domain=mediaprovider_app type=privapp_data_file levelFrom=all
+user=_app seinfo=media isPrivApp=true name=com.android.providers.media.module:* domain=mediaprovider_app type=privapp_data_file levelFrom=all
+user=_app isPrivApp=true name=com.google.android.providers.media.module domain=mediaprovider_app type=privapp_data_file levelFrom=all
+user=_app isPrivApp=true name=com.google.android.providers.media.module:* domain=mediaprovider_app type=privapp_data_file levelFrom=all
+user=_app seinfo=platform isPrivApp=true name=com.android.permissioncontroller domain=permissioncontroller_app type=privapp_data_file levelFrom=all
+user=_app isPrivApp=true name=com.android.vzwomatrigger domain=vzwomatrigger_app type=privapp_data_file levelFrom=all
+user=_app isPrivApp=true name=com.android.rkpdapp domain=rkpdapp type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.google.android.rkpdapp domain=rkpdapp type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.google.android.gms domain=gmscore_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.google.android.gms.* domain=gmscore_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.google.android.gms:* domain=gmscore_app type=privapp_data_file levelFrom=user
+user=_app isPrivApp=true name=com.google.android.gsf domain=gmscore_app type=privapp_data_file levelFrom=user
+user=_app minTargetSdkVersion=34 domain=untrusted_app type=app_data_file levelFrom=all
+user=_app minTargetSdkVersion=32 domain=untrusted_app_32 type=app_data_file levelFrom=all
+user=_app minTargetSdkVersion=30 domain=untrusted_app_30 type=app_data_file levelFrom=all
+user=_app minTargetSdkVersion=29 domain=untrusted_app_29 type=app_data_file levelFrom=all
+user=_app minTargetSdkVersion=28 domain=untrusted_app_27 type=app_data_file levelFrom=all
+user=_app minTargetSdkVersion=26 domain=untrusted_app_27 type=app_data_file levelFrom=user
+user=_app domain=untrusted_app_25 type=app_data_file levelFrom=user
+user=_app minTargetSdkVersion=28 fromRunAs=true domain=runas_app levelFrom=all
+user=_app fromRunAs=true domain=runas_app levelFrom=user
+                                                                                                                                     (role object_r)
+(role auditadm_r)
+(role secadm_r)
+(typeattribute cil_gen_require)
+(roleattribute cil_gen_require)
+(handleunknown deny)
+(mls true)
+(policycap network_peer_controls)
+(policycap open_perms)
+(policycap extended_socket_class)
+(policycap nnp_nosuid_transition)
+(sid devnull)
+(sidcontext devnull (u object_r null_device ((s0) (s0))))
+(sid scmp_packet)
+(sidcontext scmp_packet (u object_r unlabeled ((s0) (s0))))
+(sid policy)
+(sidcontext policy (u object_r unlabeled ((s0) (s0))))
+(sid kmod)
+(sidcontext kmod (u object_r unlabeled ((s0) (s0))))
+(sid sysctl_dev)
+(sidcontext sysctl_dev (u object_r unlabeled ((s0) (s0))))
+(sid sysctl_vm)
+(sidcontext sysctl_vm (u object_r unlabeled ((s0) (s0))))
+(sid sysctl_net_unix)
+(sidcontext sysctl_net_unix (u object_r unlabeled ((s0) (s0))))
+(sid sysctl_net)
+(sidcontext sysctl_net (u object_r unlabeled ((s0) (s0))))
+(sid sysctl_kernel)
+(sidcontext sysctl_kernel (u object_r unlabeled ((s0) (s0))))
+(sid sysctl_fs)
+(sidcontext sysctl_fs (u object_r unlabeled ((s0) (s0))))
+(sid sysctl)
+(sidcontext sysctl (u object_r proc ((s0) (s0))))
+(sid sysctl_modprobe)
+(sidcontext sysctl_modprobe (u object_r unlabeled ((s0) (s0))))
+(sid tcp_socket)
+(sidcontext tcp_socket (u object_r unlabeled ((s0) (s0))))
+(sid icmp_socket)
+(sidcontext icmp_socket (u object_r unlabeled ((s0) (s0))))
+(sid igmp_packet)
+(sidcontext igmp_packet (u object_r unlabeled ((s0) (s0))))
+(sid node)
+(sidcontext node (u object_r node ((s0) (s0))))
+(sid netmsg)
+(sidcontext netmsg (u object_r unlabeled ((s0) (s0))))
+(sid netif)
+(sidcontext netif (u object_r netif ((s0) (s0))))
+(sid port)
+(sidcontext port (u object_r port ((s0) (s0))))
+(sid any_socket)
+(sidcontext any_socket (u object_r unlabeled ((s0) (s0))))
+(sid init)
+(sidcontext init (u object_r unlabeled ((s0) (s0))))
+(sid file_labels)
+(sidcontext file_labels (u object_r unlabeled ((s0) (s0))))
+(sid file)
+(sidcontext file (u object_r unlabeled ((s0) (s0))))
+(sid fs)
+(sidcontext fs (u object_r labeledfs ((s0) (s0))))
+(sid unlabeled)
+(sidcontext unlabeled (u object_r unlabeled ((s0) (s0))))
+(sid security)
+(sidcontext security (u object_r kernel ((s0) (s0))))
+(sid kernel)
+(sidcontext kernel (u r kernel ((s0) (s0))))
+(sidorder (kernel security unlabeled fs file file_labels init any_socket port netif netmsg node igmp_packet icmp_socket tcp_socket sysctl_modprobe sysctl sysctl_fs sysctl_kernel sysctl_net sysctl_net_unix sysctl_vm sysctl_dev kmod policy scmp_packet devnull ))
+(fsuse trans mqueue (u object_r mqueue ((s0) (s0))))
+(fsuse trans shm (u object_r shm ((s0) (s0))))
+(fsuse trans devtmpfs (u object_r device ((s0) (s0))))
+(fsuse trans tmpfs (u object_r tmpfs ((s0) (s0))))
+(fsuse trans devpts (u object_r devpts ((s0) (s0))))
+(fsuse task sockfs (u object_r sockfs ((s0) (s0))))
+(fsuse task pipefs (u object_r pipefs ((s0) (s0))))
+(fsuse xattr virtiofs (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr incremental-fs (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr erofs (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr overlay (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr squashfs (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr f2fs (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr btrfs (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr xfs (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr ext4 (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr ext3 (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr ext2 (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr jffs2 (u object_r labeledfs ((s0) (s0))))
+(fsuse xattr yaffs2 (u object_r labeledfs ((s0) (s0))))
+(genfscon binder "/binder_logs/proc" (u object_r binderfs_logs_proc ((s0) (s0))))
+(genfscon binder "/binder_logs" (u object_r binderfs_logs ((s0) (s0))))
+(genfscon binder "/vndbinder" (u object_r vndbinder_device ((s0) (s0))))
+(genfscon binder "/hwbinder" (u object_r hwbinder_device ((s0) (s0))))
+(genfscon binder "/features" (u object_r binderfs_features ((s0) (s0))))
+(genfscon binder "/binder" (u object_r binder_device ((s0) (s0))))
+(genfscon binder "/" (u object_r binderfs ((s0) (s0))))
+(genfscon binfmt_misc "/" (u object_r binfmt_miscfs ((s0) (s0))))
+(genfscon bpf "/netd_readonly" (u object_r fs_bpf_netd_readonly ((s0) (s0))))
+(genfscon bpf "/net_private" (u object_r fs_bpf_net_private ((s0) (s0))))
+(genfscon bpf "/netd_shared" (u object_r fs_bpf_netd_shared ((s0) (s0))))
+(genfscon bpf "/net_shared" (u object_r fs_bpf_net_shared ((s0) (s0))))
+(genfscon bpf "/tethering" (u object_r fs_bpf_tethering ((s0) (s0))))
+(genfscon bpf "/loader" (u object_r fs_bpf_loader ((s0) (s0))))
+(genfscon bpf "/vendor" (u object_r fs_bpf_vendor ((s0) (s0))))
+(genfscon bpf "/" (u object_r fs_bpf ((s0) (s0))))
+(genfscon cgroup "/" (u object_r cgroup ((s0) (s0))))
+(genfscon cgroup2 "/" (u object_r cgroup_v2 ((s0) (s0))))
+(genfscon configfs "/" (u object_r configfs ((s0) (s0))))
+(genfscon debugfs "/tracing/events/filemap/mm_filemap_delete_from_page_cache/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/vmscan/mm_vmscan_direct_reclaim_begin/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/filemap/mm_filemap_add_to_page_cache/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/vmscan/mm_vmscan_direct_reclaim_end/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/binder/binder_transaction_alloc_buf/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/binder/binder_transaction_received/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ext4/ext4_es_lookup_extent_enter/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ext4/ext4_es_lookup_extent_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/synthetic/suspend_resume_minimal" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/vmscan/mm_vmscan_kswapd_sleep/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/vmscan/mm_vmscan_kswapd_wake/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/synthetic/rss_stat_throttled" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/thermal/thermal_temperature/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sched/sched_blocked_reason/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/power/cpu_frequency_limits/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/binder/binder_set_priority/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/f2fs/f2fs_sync_file_enter/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ext4/ext4_sync_file_enter/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/binder/binder_transaction/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/f2fs/f2fs_get_data_block/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/f2fs/f2fs_sync_file_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ext4/ext4_da_write_begin/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ext4/ext4_sync_file_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sched/sched_process_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sched/sched_process_free/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/mm_event/mm_event_record/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/oom/oom_score_adj_update/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/block/block_rq_complete/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sched/sched_cpu_hotplug/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ext4/ext4_da_write_end/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sched/sched_wakeup_new/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sched/sched_pi_setprio/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/f2fs/f2fs_write_begin/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/power/gpu_work_period/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ext4/ext4_load_inode/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/block/block_rq_issue/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/power/clock_set_rate/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/power/suspend_resume/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/binder/binder_locked/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/binder/binder_unlock/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/kmem/ion_heap_shrink/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/gpu_mem/gpu_mem_total" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/f2fs/f2fs_write_end/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/power/cpu_frequency/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/power/clock_disable/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/power/gpu_frequency/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/cpufreq_interactive/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/thermal/cdev_update/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sched/sched_switch/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sched/sched_wakeup/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sched/sched_waking/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/power/clock_enable/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/binder/binder_lock/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/kmem/ion_heap_grow/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/task/task_newtask/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/cpuhp/cpuhp_enter/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/task/task_rename/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/cpuhp/cpuhp_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/clk/clk_set_rate/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/lowmemorykiller/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/oom/mark_victim/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/clk/clk_disable/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/instances/bootreceiver" (u object_r debugfs_bootreceiver_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/f2fs/f2fs_iget/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/power/cpu_idle/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/clk/clk_enable/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/kmem/rss_stat/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ion/ion_stat/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ftrace/print/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/instances/mm_events" (u object_r debugfs_mm_events_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/options/record-tgid" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/saved_cmdlines_size" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/header_page" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/options/print-tgid" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/options/overwrite" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/dma_fence/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/synthetic_events" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/instances/wifi" (u object_r debugfs_wifi_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/printk_formats" (u object_r debugfs_tracing_printk_formats ((s0) (s0))))
+(genfscon debugfs "/tracing/buffer_size_kb" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/cgroup/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/fence/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/trace_marker" (u object_r debugfs_trace_marker ((s0) (s0))))
+(genfscon debugfs "/tracing/events/sync/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/per_cpu/cpu" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/trace_clock" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/ipi/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/events/irq/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/tracing_on" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/instances" (u object_r debugfs_tracing_instances ((s0) (s0))))
+(genfscon debugfs "/wakeup_sources" (u object_r debugfs_wakeup_sources ((s0) (s0))))
+(genfscon debugfs "/tracing/trace" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/tracing/hyp" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon debugfs "/kprobes" (u object_r debugfs_kprobes ((s0) (s0))))
+(genfscon debugfs "/tracing" (u object_r debugfs_tracing_debug ((s0) (s0))))
+(genfscon debugfs "/mmc0" (u object_r debugfs_mmc ((s0) (s0))))
+(genfscon debugfs "/kcov" (u object_r debugfs_kcov ((s0) (s0))))
+(genfscon debugfs "/" (u object_r debugfs ((s0) (s0))))
+(genfscon esdfs "/" (u object_r sdcardfs ((s0) (s0))))
+(genfscon exfat "/" (u object_r exfat ((s0) (s0))))
+(genfscon functionfs "/" (u object_r functionfs ((s0) (s0))))
+(genfscon fuse "/" (u object_r fuse ((s0) (s0))))
+(genfscon fuseblk "/" (u object_r fuseblk ((s0) (s0))))
+(genfscon fusectl "/" (u object_r fusectlfs ((s0) (s0))))
+(genfscon inotifyfs "/" (u object_r inotify ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_util_clamp_min_rt_default" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_wakeup_granularity_ns" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/kernel/perf_event_max_sample_rate" (u object_r proc_perf ((s0) (s0))))
+(genfscon proc "/sys/kernel/perf_cpu_time_max_percent" (u object_r proc_perf ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_child_runs_first" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_tunable_scaling" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_util_clamp_max" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_util_clamp_min" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/kernel/perf_event_paranoid" (u object_r proc_perf ((s0) (s0))))
+(genfscon proc "/sys/kernel/perf_event_mlock_kb" (u object_r proc_perf ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_rt_runtime_us" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/kernel/randomize_va_space" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_rt_period_us" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/vm/dirty_background_ratio" (u object_r proc_dirty ((s0) (s0))))
+(genfscon proc "/sys/vm/dirty_expire_centisecs" (u object_r proc_dirty ((s0) (s0))))
+(genfscon proc "/sys/vm/watermark_boost_factor" (u object_r proc_watermark_boost_factor ((s0) (s0))))
+(genfscon proc "/sys/vm/watermark_scale_factor" (u object_r proc_watermark_scale_factor ((s0) (s0))))
+(genfscon proc "/sys/kernel/unprivileged_bpf_" (u object_r proc_bpf ((s0) (s0))))
+(genfscon proc "/uid_cputime/remove_uid_range" (u object_r proc_uid_cputime_removeuid ((s0) (s0))))
+(genfscon proc "/sys/kernel/modules_disabled" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_latency_ns" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/kernel/sched_schedstats" (u object_r proc_sched ((s0) (s0))))
+(genfscon proc "/sys/vm/mmap_rnd_compat_bits" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/sys/vm/min_free_order_shift" (u object_r proc_min_free_order_shift ((s0) (s0))))
+(genfscon proc "/sys/fs/protected_hardlinks" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/sys/kernel/core_pipe_limit" (u object_r usermodehelper ((s0) (s0))))
+(genfscon proc "/uid_concurrent_active_time" (u object_r proc_uid_concurrent_active_time ((s0) (s0))))
+(genfscon proc "/uid_concurrent_policy_time" (u object_r proc_uid_concurrent_policy_time ((s0) (s0))))
+(genfscon proc "/sys/fs/protected_symlinks" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/sys/kernel/dmesg_restrict" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/sys/kernel/usermodehelper" (u object_r usermodehelper ((s0) (s0))))
+(genfscon proc "/uid_cputime/show_uid_stat" (u object_r proc_uid_cputime_showstat ((s0) (s0))))
+(genfscon proc "/sys/kernel/kptr_restrict" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/sys/kernel/panic_on_oops" (u object_r proc_panic ((s0) (s0))))
+(genfscon proc "/sys/vm/extra_free_kbytes" (u object_r proc_extra_free_kbytes ((s0) (s0))))
+(genfscon proc "/sys/vm/overcommit_memory" (u object_r proc_overcommit_memory ((s0) (s0))))
+(genfscon proc "/sys/kernel/core_pattern" (u object_r usermodehelper ((s0) (s0))))
+(genfscon proc "/sys/kernel/poweroff_cmd" (u object_r usermodehelper ((s0) (s0))))
+(genfscon proc "/sys/kernel/domainname" (u object_r proc_hostname ((s0) (s0))))
+(genfscon proc "/sys/kernel/hung_task_" (u object_r proc_hung_task ((s0) (s0))))
+(genfscon proc "/sys/fs/pipe-max-size" (u object_r proc_pipe_conf ((s0) (s0))))
+(genfscon proc "/sys/fs/suid_dumpable" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/sys/vm/max_map_count" (u object_r proc_max_map_count ((s0) (s0))))
+(genfscon proc "/sys/vm/mmap_min_addr" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/sys/vm/mmap_rnd_bits" (u object_r proc_security ((s0) (s0))))
+(genfscon proc "/net/xt_qtaguid/ctrl" (u object_r proc_qtaguid_ctrl ((s0) (s0))))
+(genfscon proc "/sys/kernel/hostname" (u object_r proc_hostname ((s0) (s0))))
+(genfscon proc "/sys/kernel/modprobe" (u object_r usermodehelper ((s0) (s0))))
+(genfscon proc "/sys/vm/page-cluster" (u object_r proc_page_cluster ((s0) (s0))))
+(genfscon proc "/sys/kernel/hotplug" (u object_r usermodehelper ((s0) (s0))))
+(genfscon proc "/sys/kernel/pid_max" (u object_r proc_pid_max ((s0) (s0))))
+(genfscon proc "/sys/vm/drop_caches" (u object_r proc_drop_caches ((s0) (s0))))
+(genfscon proc "/sys/kernel/random" (u object_r proc_random ((s0) (s0))))
+(genfscon proc "/sys/net/core/bpf_" (u object_r proc_bpf ((s0) (s0))))
+(genfscon proc "/uid_time_in_state" (u object_r proc_uid_time_in_state ((s0) (s0))))
+(genfscon proc "/sys/kernel/sysrq" (u object_r proc_sysrq ((s0) (s0))))
+(genfscon proc "/uid_procstat/set" (u object_r proc_uid_procstat_set ((s0) (s0))))
+(genfscon proc "/lowmemorykiller" (u object_r proc_lowmemorykiller ((s0) (s0))))
+(genfscon proc "/net/xt_qtaguid/" (u object_r proc_qtaguid_stat ((s0) (s0))))
+(genfscon proc "/pressure/memory" (u object_r proc_pressure_mem ((s0) (s0))))
+(genfscon proc "/sys/kernel/bpf_" (u object_r proc_bpf ((s0) (s0))))
+(genfscon proc "/cpu/alignment" (u object_r proc_cpu_alignment ((s0) (s0))))
+(genfscon proc "/sysrq-trigger" (u object_r proc_sysrq ((s0) (s0))))
+(genfscon proc "/uid_cpupower/" (u object_r proc_uid_cpupower ((s0) (s0))))
+(genfscon proc "/pagetypeinfo" (u object_r proc_pagetypeinfo ((s0) (s0))))
+(genfscon proc "/pressure/cpu" (u object_r proc_pressure_cpu ((s0) (s0))))
+(genfscon proc "/uid_io/stats" (u object_r proc_uid_io_stats ((s0) (s0))))
+(genfscon proc "/vendor_sched" (u object_r proc_vendor_sched ((s0) (s0))))
+(genfscon proc "/filesystems" (u object_r proc_filesystems ((s0) (s0))))
+(genfscon proc "/pressure/io" (u object_r proc_pressure_io ((s0) (s0))))
+(genfscon proc "/sys/abi/swp" (u object_r proc_abi ((s0) (s0))))
+(genfscon proc "/timer_stats" (u object_r proc_timer ((s0) (s0))))
+(genfscon proc "/tty/drivers" (u object_r proc_tty_drivers ((s0) (s0))))
+(genfscon proc "/vmallocinfo" (u object_r proc_vmallocinfo ((s0) (s0))))
+(genfscon proc "/bootconfig" (u object_r proc_bootconfig ((s0) (s0))))
+(genfscon proc "/interrupts" (u object_r proc_interrupts ((s0) (s0))))
+(genfscon proc "/kpageflags" (u object_r proc_kpageflags ((s0) (s0))))
+(genfscon proc "/timer_list" (u object_r proc_timer ((s0) (s0))))
+(genfscon proc "/buddyinfo" (u object_r proc_buddyinfo ((s0) (s0))))
+(genfscon proc "/config.gz" (u object_r config_gz ((s0) (s0))))
+(genfscon proc "/diskstats" (u object_r proc_diskstats ((s0) (s0))))
+(genfscon proc "/kallsyms" (u object_r proc_kallsyms ((s0) (s0))))
+(genfscon proc "/slabinfo" (u object_r proc_slabinfo ((s0) (s0))))
+(genfscon proc "/softirqs" (u object_r proc_timer ((s0) (s0))))
+(genfscon proc "/zoneinfo" (u object_r proc_zoneinfo ((s0) (s0))))
+(genfscon proc "/cmdline" (u object_r proc_cmdline ((s0) (s0))))
+(genfscon proc "/loadavg" (u object_r proc_loadavg ((s0) (s0))))
+(genfscon proc "/meminfo" (u object_r proc_meminfo ((s0) (s0))))
+(genfscon proc "/modules" (u object_r proc_modules ((s0) (s0))))
+(genfscon proc "/net/tcp" (u object_r proc_net_tcp_udp ((s0) (s0))))
+(genfscon proc "/net/udp" (u object_r proc_net_tcp_udp ((s0) (s0))))
+(genfscon proc "/cpuinfo" (u object_r proc_cpuinfo ((s0) (s0))))
+(genfscon proc "/sys/net" (u object_r proc_net ((s0) (s0))))
+(genfscon proc "/version" (u object_r proc_version ((s0) (s0))))
+(genfscon proc "/asound" (u object_r proc_asound ((s0) (s0))))
+(genfscon proc "/mounts" (u object_r proc_mounts ((s0) (s0))))
+(genfscon proc "/uptime" (u object_r proc_uptime ((s0) (s0))))
+(genfscon proc "/vmstat" (u object_r proc_vmstat ((s0) (s0))))
+(genfscon proc "/iomem" (u object_r proc_iomem ((s0) (s0))))
+(genfscon proc "/locks" (u object_r proc_locks ((s0) (s0))))
+(genfscon proc "/swaps" (u object_r proc_swaps ((s0) (s0))))
+(genfscon proc "/keys" (u object_r proc_keys ((s0) (s0))))
+(genfscon proc "/kmsg" (u object_r proc_kmsg ((s0) (s0))))
+(genfscon proc "/misc" (u object_r proc_misc ((s0) (s0))))
+(genfscon proc "/stat" (u object_r proc_stat ((s0) (s0))))
+(genfscon proc "/uid/" (u object_r proc_uid_time_in_state ((s0) (s0))))
+(genfscon proc "/net" (u object_r proc_net ((s0) (s0))))
+(genfscon proc "/" (u object_r proc ((s0) (s0))))
+(genfscon pstore "/" (u object_r pstorefs ((s0) (s0))))
+(genfscon rootfs "/" (u object_r rootfs ((s0) (s0))))
+(genfscon sdcardfs "/" (u object_r sdcardfs ((s0) (s0))))
+(genfscon securityfs "/" (u object_r securityfs ((s0) (s0))))
+(genfscon selinuxfs "/" (u object_r selinuxfs ((s0) (s0))))
+(genfscon sysfs "/module/dm_verity/parameters/prefetch_cluster" (u object_r sysfs_dm_verity ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/timed_output/vibrator/enable" (u object_r sysfs_vibrator ((s0) (s0))))
+(genfscon sysfs "/firmware/devicetree/base/firmware/android" (u object_r sysfs_dt_firmware_android ((s0) (s0))))
+(genfscon sysfs "/devices/platform/nfc-power/nfc_power" (u object_r sysfs_nfc_power_writable ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/block/zram0/uevent" (u object_r sysfs_zram_uevent ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/block/zram1/uevent" (u object_r sysfs_zram_uevent ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/misc/hw_random" (u object_r sysfs_hwrandom ((s0) (s0))))
+(genfscon sysfs "/kernel/mm/transparent_hugepage" (u object_r sysfs_transparent_hugepage ((s0) (s0))))
+(genfscon sysfs "/module/wlan/parameters/fwpath" (u object_r sysfs_wlan_fwpath ((s0) (s0))))
+(genfscon sysfs "/firmware/devicetree/base/avf" (u object_r sysfs_dt_avf ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/android_usb" (u object_r sysfs_android_usb ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/block/zram0" (u object_r sysfs_zram ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/block/zram1" (u object_r sysfs_zram ((s0) (s0))))
+(genfscon sysfs "/fs/incremental-fs/instances" (u object_r sysfs_fs_incfs_metrics ((s0) (s0))))
+(genfscon sysfs "/module/tcp_cubic/parameters" (u object_r sysfs_net ((s0) (s0))))
+(genfscon sysfs "/class/rfkill/rfkill0/state" (u object_r sysfs_bluetooth_writable ((s0) (s0))))
+(genfscon sysfs "/class/rfkill/rfkill1/state" (u object_r sysfs_bluetooth_writable ((s0) (s0))))
+(genfscon sysfs "/class/rfkill/rfkill2/state" (u object_r sysfs_bluetooth_writable ((s0) (s0))))
+(genfscon sysfs "/class/rfkill/rfkill3/state" (u object_r sysfs_bluetooth_writable ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/block/loop" (u object_r sysfs_loop ((s0) (s0))))
+(genfscon sysfs "/fs/fuse/bpf_prog_type_fuse" (u object_r sysfs_fs_fuse_bpf ((s0) (s0))))
+(genfscon sysfs "/fs/incremental-fs/features" (u object_r sysfs_fs_incfs_features ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/block/dm-" (u object_r sysfs_dm ((s0) (s0))))
+(genfscon sysfs "/kernel/mm/lru_gen/enabled" (u object_r sysfs_lru_gen_enabled ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/misc/uhid" (u object_r sysfs_uhid ((s0) (s0))))
+(genfscon sysfs "/kernel/memory_state_time" (u object_r sysfs_power ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/block/" (u object_r sysfs_devices_block ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/switch" (u object_r sysfs_switch ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/wakeup" (u object_r sysfs_wakeup ((s0) (s0))))
+(genfscon sysfs "/module/lowmemorykiller" (u object_r sysfs_lowmemorykiller ((s0) (s0))))
+(genfscon sysfs "/kernel/wakeup_reasons" (u object_r sysfs_wakeup_reasons ((s0) (s0))))
+(genfscon sysfs "/kernel/dmabuf/buffers" (u object_r sysfs_dmabuf_stats ((s0) (s0))))
+(genfscon sysfs "/kernel/uevent_helper" (u object_r sysfs_usermodehelper ((s0) (s0))))
+(genfscon sysfs "/devices/virtual/net" (u object_r sysfs_net ((s0) (s0))))
+(genfscon sysfs "/power/suspend_stats" (u object_r sysfs_suspend_stats ((s0) (s0))))
+(genfscon sysfs "/kernel/vendor_sched" (u object_r sysfs_vendor_sched ((s0) (s0))))
+(genfscon sysfs "/devices/system/cpu" (u object_r sysfs_devices_system_cpu ((s0) (s0))))
+(genfscon sysfs "/power/wakeup_count" (u object_r sysfs_power ((s0) (s0))))
+(genfscon sysfs "/class/android_usb" (u object_r sysfs_android_usb ((s0) (s0))))
+(genfscon sysfs "/power/wake_unlock" (u object_r sysfs_wake_lock ((s0) (s0))))
+(genfscon sysfs "/fs/ext4/features" (u object_r sysfs_fs_ext4_features ((s0) (s0))))
+(genfscon sysfs "/fs/fuse/features" (u object_r sysfs_fs_fuse_features ((s0) (s0))))
+(genfscon sysfs "/power/autosleep" (u object_r sysfs_power ((s0) (s0))))
+(genfscon sysfs "/power/wake_lock" (u object_r sysfs_wake_lock ((s0) (s0))))
+(genfscon sysfs "/kernel/dma_heap" (u object_r sysfs_dma_heap ((s0) (s0))))
+(genfscon sysfs "/devices/cs_etm" (u object_r sysfs_devices_cs_etm ((s0) (s0))))
+(genfscon sysfs "/class/extcon" (u object_r sysfs_extcon ((s0) (s0))))
+(genfscon sysfs "/class/switch" (u object_r sysfs_switch ((s0) (s0))))
+(genfscon sysfs "/class/wakeup" (u object_r sysfs_wakeup ((s0) (s0))))
+(genfscon sysfs "/kernel/notes" (u object_r sysfs_kernel_notes ((s0) (s0))))
+(genfscon sysfs "/power/state" (u object_r sysfs_power ((s0) (s0))))
+(genfscon sysfs "/kernel/ipv4" (u object_r sysfs_ipv4 ((s0) (s0))))
+(genfscon sysfs "/class/leds" (u object_r sysfs_leds ((s0) (s0))))
+(genfscon sysfs "/kernel/ion" (u object_r sysfs_ion ((s0) (s0))))
+(genfscon sysfs "/class/gpu" (u object_r sysfs_gpu ((s0) (s0))))
+(genfscon sysfs "/class/net" (u object_r sysfs_net ((s0) (s0))))
+(genfscon sysfs "/class/rtc" (u object_r sysfs_rtc ((s0) (s0))))
+(genfscon sysfs "/fs/f2fs" (u object_r sysfs_fs_f2fs ((s0) (s0))))
+(genfscon sysfs "/" (u object_r sysfs ((s0) (s0))))
+(genfscon tracefs "/events/filemap/mm_filemap_delete_from_page_cache/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/vmscan/mm_vmscan_direct_reclaim_begin/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/filemap/mm_filemap_add_to_page_cache/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/vmscan/mm_vmscan_direct_reclaim_end/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/binder/binder_transaction_alloc_buf/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/binder/binder_transaction_received/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ext4/ext4_es_lookup_extent_enter/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ext4/ext4_es_lookup_extent_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/synthetic/suspend_resume_minimal" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/vmscan/mm_vmscan_kswapd_sleep/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/vmscan/mm_vmscan_kswapd_wake/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/synthetic/rss_stat_throttled" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/thermal/thermal_temperature/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/sched/sched_blocked_reason/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/power/cpu_frequency_limits/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/binder/binder_set_priority/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/f2fs/f2fs_sync_file_enter/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ext4/ext4_sync_file_enter/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/binder/binder_transaction/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/f2fs/f2fs_get_data_block/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/f2fs/f2fs_sync_file_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ext4/ext4_da_write_begin/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ext4/ext4_sync_file_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/sched/sched_process_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/sched/sched_process_free/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/mm_event/mm_event_record/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/oom/oom_score_adj_update/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/block/block_rq_complete/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/sched/sched_cpu_hotplug/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ext4/ext4_da_write_end/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/sched/sched_wakeup_new/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/sched/sched_pi_setprio/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/f2fs/f2fs_write_begin/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/power/gpu_work_period/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ext4/ext4_load_inode/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/block/block_rq_issue/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/power/clock_set_rate/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/power/suspend_resume/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/binder/binder_locked/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/binder/binder_unlock/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/kmem/ion_heap_shrink/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/gpu_mem/gpu_mem_total" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/f2fs/f2fs_write_end/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/power/cpu_frequency/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/power/clock_disable/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/power/gpu_frequency/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/cpufreq_interactive/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/thermal/cdev_update/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/sched/sched_switch/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/sched/sched_wakeup/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/sched/sched_waking/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/power/clock_enable/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/binder/binder_lock/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/kmem/ion_heap_grow/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/task/task_newtask/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/cpuhp/cpuhp_enter/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/cpuhp/cpuhp_pause/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/task/task_rename/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/cpuhp/cpuhp_exit/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/clk/clk_set_rate/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/lowmemorykiller/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/oom/mark_victim/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/clk/clk_disable/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/instances/bootreceiver" (u object_r debugfs_bootreceiver_tracing ((s0) (s0))))
+(genfscon tracefs "/events/f2fs/f2fs_iget/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/power/cpu_idle/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/clk/clk_enable/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/kmem/rss_stat/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ion/ion_stat/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ftrace/print/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/instances/mm_events" (u object_r debugfs_mm_events_tracing ((s0) (s0))))
+(genfscon tracefs "/options/record-tgid" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/saved_cmdlines_size" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/header_page" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/options/print-tgid" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/options/overwrite" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/dma_fence/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/synthetic_events" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/instances/wifi" (u object_r debugfs_wifi_tracing ((s0) (s0))))
+(genfscon tracefs "/printk_formats" (u object_r debugfs_tracing_printk_formats ((s0) (s0))))
+(genfscon tracefs "/buffer_size_kb" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/cgroup/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/fence/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/trace_marker" (u object_r debugfs_trace_marker ((s0) (s0))))
+(genfscon tracefs "/events/sync/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/per_cpu/cpu" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/trace_clock" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/ipi/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/events/irq/" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/tracing_on" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/instances" (u object_r debugfs_tracing_instances ((s0) (s0))))
+(genfscon tracefs "/trace" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/hyp" (u object_r debugfs_tracing ((s0) (s0))))
+(genfscon tracefs "/" (u object_r debugfs_tracing_debug ((s0) (s0))))
+(genfscon usbfs "/" (u object_r usbfs ((s0) (s0))))
+(genfscon vfat "/" (u object_r vfat ((s0) (s0))))
+(common cap (chown dac_override dac_read_search fowner fsetid kill setgid setuid setpcap linux_immutable net_bind_service net_broadcast net_admin net_raw ipc_lock ipc_owner sys_module sys_rawio sys_chroot sys_ptrace sys_pacct sys_admin sys_boot sys_nice sys_resource sys_time sys_tty_config mknod lease audit_write audit_control setfcap ))
+(common cap2 (mac_override mac_admin syslog wake_alarm block_suspend audit_read perfmon ))
+(common ipc (create destroy getattr setattr read write associate unix_read unix_write ))
+(common socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind ))
+(common file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads ))
+(typealias rs_data_file)
+(typealiasactual rs_data_file app_exec_data_file)
+(class security (compute_av compute_create compute_member check_context load_policy compute_relabel compute_user setenforce setbool setsecparam setcheckreqprot read_policy validate_trans ))
+(class process (fork transition sigchld sigkill sigstop signull signal ptrace getsched setsched getsession getpgid setpgid getcap setcap share getattr setexec setfscreate noatsecure siginh setrlimit rlimitinh dyntransition setcurrent execmem execstack execheap setkeycreate setsockcreate getrlimit ))
+(mlsconstrain (process (sigkill sigstop signal ptrace setsched setpgid setcap share setrlimit)) (or (eq l1 l2) (eq t1 mlstrustedsubject)))
+(mlsconstrain (process (ptrace getsched getsession getpgid getcap share getattr)) (or (dom l1 l2) (eq t1 mlstrustedsubject)))
+(mlsconstrain (process (transition dyntransition)) (or (and (eq h1 h2) (eq l1 l2)) (eq t1 mlstrustedsubject)))
+(class system (ipc_info syslog_read syslog_mod syslog_console module_request module_load ))
+(class capability ())
+(classcommon capability cap)
+(class filesystem (mount remount unmount getattr relabelfrom relabelto associate quotamod quotaget watch ))
+(class file (execute_no_trans entrypoint ))
+(classcommon file file)
+(mlsconstrain (file (write setattr append unlink link rename)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (eq l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (file (read getattr execute)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (dom l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (file (setattr unlink link rename open)) (or (or (and (neq t2 app_data_file_type) (neq t2 appdomain_tmpfs)) (dom l1 l2)) (eq t1 mlstrustedsubject)))
+(mlsconstrain (file (create relabelfrom relabelto)) (and (eq l2 h2) (or (eq l1 l2) (eq t1 mlstrustedsubject))))
+(class anon_inode ())
+(classcommon anon_inode file)
+(mlsconstrain (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute open execmod)) (eq l1 l2))
+(class dir (add_name remove_name reparent search rmdir ))
+(classcommon dir file)
+(mlsconstrain (dir (write setattr rename add_name remove_name reparent rmdir)) (or (or (or (eq t2 app_data_file_type) (eq l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (dir (read getattr search)) (or (or (or (or (eq t2 app_data_file_type) (dom l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)) (and (eq t1 mlsvendorcompat) (or (eq t2 system_data_file) (eq t2 user_profile_root_file)))))
+(mlsconstrain (dir (getattr setattr rename open add_name remove_name reparent search rmdir)) (or (or (neq t2 app_data_file_type) (dom l1 l2)) (eq t1 mlstrustedsubject)))
+(mlsconstrain (dir (create relabelfrom relabelto)) (and (eq l2 h2) (or (eq l1 l2) (eq t1 mlstrustedsubject))))
+(class fd (use ))
+(class lnk_file ())
+(classcommon lnk_file file)
+(mlsconstrain (lnk_file (write setattr append unlink link rename)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (eq l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (lnk_file (read getattr execute)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (dom l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (lnk_file (read setattr unlink link rename open)) (or (or (and (neq t2 privapp_data_file) (neq t2 appdomain_tmpfs)) (dom l1 l2)) (eq t1 mlstrustedsubject)))
+(mlsconstrain (lnk_file (read setattr unlink link rename open)) (or (or (or (neq t2 app_data_file_type) (eq t2 privapp_data_file)) (eq l1 l2)) (eq t1 mlstrustedsubject)))
+(mlsconstrain (lnk_file (create relabelfrom relabelto)) (and (eq l2 h2) (or (eq l1 l2) (eq t1 mlstrustedsubject))))
+(class chr_file (execute_no_trans entrypoint ))
+(classcommon chr_file file)
+(mlsconstrain (chr_file (write setattr append unlink link rename)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (eq l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (chr_file (read getattr execute)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (dom l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (chr_file (create relabelfrom relabelto)) (and (eq l2 h2) (or (eq l1 l2) (eq t1 mlstrustedsubject))))
+(class blk_file ())
+(classcommon blk_file file)
+(mlsconstrain (blk_file (write setattr append unlink link rename)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (eq l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (blk_file (read getattr execute)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (dom l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (blk_file (create relabelfrom relabelto)) (and (eq l2 h2) (or (eq l1 l2) (eq t1 mlstrustedsubject))))
+(class sock_file ())
+(classcommon sock_file file)
+(mlsconstrain (sock_file (write setattr append unlink link rename)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (eq l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (sock_file (read getattr execute)) (or (or (or (or (eq t2 app_data_file_type) (eq t2 appdomain_tmpfs)) (dom l1 l2)) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)))
+(mlsconstrain (sock_file (setattr unlink link rename open)) (or (or (and (neq t2 app_data_file_type) (neq t2 appdomain_tmpfs)) (dom l1 l2)) (eq t1 mlstrustedsubject)))
+(mlsconstrain (sock_file (create relabelfrom relabelto)) (and (eq l2 h2) (or (eq l1 l2) (eq t1 mlstrustedsubject))))
+(class fifo_file ())
+(classcommon fifo_file file)
+(mlsconstrain (fifo_file (write setattr append unlink link rename)) (or (or (or (eq l1 l2) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)) (eq t2 domain)))
+(mlsconstrain (fifo_file (read getattr)) (or (or (or (dom l1 l2) (eq t1 mlstrustedsubject)) (eq t2 mlstrustedobject)) (eq t2 domain)))
+(mlsconstrain (fifo_file (create relabelfrom relabelto)) (and (eq l2 h2) (or (eq l1 l2) (eq t1 mlstrustedsubject))))
+(class socket ())
+(classcommon socket socket)
+(mlsconstrain (socket (create relabelfrom relabelto)) (or (and (eq h1 h2) (eq l1 l2)) (eq t1 mlstrustedsubject)))
+(class tcp_socket (node_bind name_connect ))
+(classcommon tcp_socket socket)
+(mlsconstrain (tcp_socket (create relabelfrom relabelto)) (or (and (eq h1 h2) (eq l1 l2)) (eq t1 mlstrustedsubject)))
+(class udp_socket (node_bind ))
+(classcommon udp_socket socket)
+(mlsconstrain (udp_socket (create relabelfrom relabelto)) (or (and (eq h1 h2) (eq l1 l2)) (eq t1 mlstrustedsubject)))
+(class rawip_socket (node_bind ))
+(classcommon rawip_socket socket)
+(mlsconstrain (rawip_socket (create relabelfrom relabelto)) (or (and (eq h1 h2) (eq l1 l2)) (eq t1 mlstrustedsubject)))
+(class node (recvfrom sendto ))
+(class netif (ingress egress ))
+(class netlink_socket ())
+(classcommon netlink_socket socket)
+(mlsconstrain (netlink_socket (create relabelfrom relabelto)) (or (and (eq h1 h2) (eq l1 l2)) (eq t1 mlstrustedsubject)))
+(class packet_socket ())
+(classcommon packet_socket socket)
+(mlsconstrain (packet_socket (create relabelfrom relabelto)) (or (and (eq h1 h2) (eq l1 l2)) (eq t1 mlstrustedsubject)))
+(class 

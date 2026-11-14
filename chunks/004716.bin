@@ -1,0 +1,1075 @@
+ename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow hal_telephony_server cgroup_v2 (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server cgroup_v2 (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server radio_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_telephony_server radio_device (blk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server efs_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow hal_telephony_server efs_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow hal_telephony_server vendor_shell_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow hal_telephony_server bluetooth_efs_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server bluetooth_efs_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_telephony_server telephony_config_prop (file (read getattr map open)))
+(allow hal_telephony_server property_socket (sock_file (write)))
+(allow hal_telephony_server init (unix_stream_socket (connectto)))
+(allow hal_telephony_server radio_control_prop (property_service (set)))
+(allow hal_telephony_server radio_control_prop (file (read getattr map open)))
+(allow hal_telephony_server property_socket (sock_file (write)))
+(allow hal_telephony_server init (unix_stream_socket (connectto)))
+(allow hal_telephony_server radio_prop (property_service (set)))
+(allow hal_telephony_server radio_prop (file (read getattr map open)))
+(allow hal_telephony_server property_socket (sock_file (write)))
+(allow hal_telephony_server init (unix_stream_socket (connectto)))
+(allow hal_telephony_server telephony_status_prop (property_service (set)))
+(allow hal_telephony_server telephony_status_prop (file (read getattr map open)))
+(allow hal_telephony_server tty_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_telephony_server self (netlink_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_telephony_server self (netlink_generic_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_telephony_server self (netlink_kobject_uevent_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_telephony_server sysfs_wake_lock (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_telephony_server self (capability2 (block_suspend)))
+(allow hal_telephony_server self (cap2_userns (block_suspend)))
+(allow hal_telephony_server system_suspend_server (binder (call transfer)))
+(allow system_suspend_server hal_telephony_server (binder (transfer)))
+(allow hal_telephony_server system_suspend_server (fd (use)))
+(allow hal_telephony_server system_suspend_hwservice (hwservice_manager (find)))
+(allow hal_telephony_server hwservicemanager (binder (call transfer)))
+(allow hwservicemanager hal_telephony_server (binder (call transfer)))
+(allow hwservicemanager hal_telephony_server (dir (search)))
+(allow hwservicemanager hal_telephony_server (file (read map open)))
+(allow hwservicemanager hal_telephony_server (process (getattr)))
+(allow hal_telephony_server hwservicemanager_prop (file (read getattr map open)))
+(allow hal_telephony_server hidl_manager_hwservice (hwservice_manager (find)))
+(allow hal_telephony_server hal_system_suspend_service (service_manager (find)))
+(allow hal_telephony_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_telephony_server (binder (call transfer)))
+(allow servicemanager hal_telephony_server (dir (search)))
+(allow servicemanager hal_telephony_server (file (read open)))
+(allow servicemanager hal_telephony_server (process (getattr)))
+(allow hal_telephony_server proc_net_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_telephony_server proc_net_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server proc_net_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server sysfs_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_telephony_server sysfs_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server sysfs_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server self (socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_telephony_server hal_telephony_server (binder (call transfer)))
+(allow hal_telephony_server hal_telephony_server (binder (transfer)))
+(allow hal_telephony_server hal_telephony_server (fd (use)))
+(allow hal_tetheroffload_client hal_tetheroffload_server (binder (call transfer)))
+(allow hal_tetheroffload_server hal_tetheroffload_client (binder (transfer)))
+(allow hal_tetheroffload_client hal_tetheroffload_server (fd (use)))
+(allow hal_tetheroffload_server hal_tetheroffload_client (binder (call transfer)))
+(allow hal_tetheroffload_client hal_tetheroffload_server (binder (transfer)))
+(allow hal_tetheroffload_server hal_tetheroffload_client (fd (use)))
+(allow hal_tetheroffload_client hal_tetheroffload_hwservice (hwservice_manager (find)))
+(allow hal_tetheroffload_server hal_tetheroffload_hwservice (hwservice_manager (add find)))
+(allow hal_tetheroffload_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_tetheroffload.te
+
+(neverallow base_typeattr_471 hal_tetheroffload_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_tetheroffload.te
+
+(neverallow base_typeattr_472 hal_tetheroffload_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_tetheroffload_client hal_tetheroffload_service (service_manager (find)))
+(allow hal_tetheroffload_server hal_tetheroffload_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_tetheroffload.te
+
+(neverallow base_typeattr_471 hal_tetheroffload_service (service_manager (add)))
+;;* lme
+
+(allow hal_tetheroffload_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_tetheroffload.te
+
+(neverallow base_typeattr_473 hal_tetheroffload_service (service_manager (find)))
+;;* lme
+
+(allow hal_tetheroffload_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_tetheroffload_server (binder (call transfer)))
+(allow servicemanager hal_tetheroffload_server (dir (search)))
+(allow servicemanager hal_tetheroffload_server (file (read open)))
+(allow servicemanager hal_tetheroffload_server (process (getattr)))
+(allow hal_tetheroffload_server hal_tetheroffload_client (netlink_netfilter_socket (read write getattr setopt)))
+(allow hal_thermal_client hal_thermal_server (binder (call transfer)))
+(allow hal_thermal_server hal_thermal_client (binder (transfer)))
+(allow hal_thermal_client hal_thermal_server (fd (use)))
+(allow hal_thermal_server hal_thermal_client (binder (call transfer)))
+(allow hal_thermal_client hal_thermal_server (binder (transfer)))
+(allow hal_thermal_server hal_thermal_client (fd (use)))
+(allow hal_thermal_client hal_thermal_hwservice (hwservice_manager (find)))
+(allow hal_thermal_server hal_thermal_hwservice (hwservice_manager (add find)))
+(allow hal_thermal_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_thermal.te
+
+(neverallow base_typeattr_474 hal_thermal_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_thermal.te
+
+(neverallow base_typeattr_475 hal_thermal_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_thermal_client hal_thermal_service (service_manager (find)))
+(allow hal_thermal_server hal_thermal_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_thermal.te
+
+(neverallow base_typeattr_474 hal_thermal_service (service_manager (add)))
+;;* lme
+
+(allow hal_thermal_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_thermal.te
+
+(neverallow base_typeattr_476 hal_thermal_service (service_manager (find)))
+;;* lme
+
+(allow hal_thermal_server hal_thermal_service (service_manager (add find)))
+;;* lmx 8 system/sepolicy/public/hal_thermal.te
+
+(neverallow base_typeattr_474 hal_thermal_service (service_manager (add)))
+;;* lme
+
+(allow hal_thermal_server su (tcp_socket (read write accept getopt)))
+(allow hal_thermal_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_thermal_server (binder (transfer)))
+(allow hal_thermal_server servicemanager (fd (use)))
+(allow hal_thermal_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_thermal_client (binder (transfer)))
+(allow hal_thermal_client servicemanager (fd (use)))
+(allow hal_tv_cec_client hal_tv_cec_server (binder (call transfer)))
+(allow hal_tv_cec_server hal_tv_cec_client (binder (transfer)))
+(allow hal_tv_cec_client hal_tv_cec_server (fd (use)))
+(allow hal_tv_cec_server hal_tv_cec_client (binder (call transfer)))
+(allow hal_tv_cec_client hal_tv_cec_server (binder (transfer)))
+(allow hal_tv_cec_server hal_tv_cec_client (fd (use)))
+(allow hal_tv_cec_client hal_tv_cec_hwservice (hwservice_manager (find)))
+(allow hal_tv_cec_server hal_tv_cec_hwservice (hwservice_manager (add find)))
+(allow hal_tv_cec_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_tv_cec.te
+
+(neverallow base_typeattr_477 hal_tv_cec_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_tv_cec.te
+
+(neverallow base_typeattr_478 hal_tv_cec_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_tv_hdmi_cec_client hal_tv_hdmi_cec_server (binder (call transfer)))
+(allow hal_tv_hdmi_cec_server hal_tv_hdmi_cec_client (binder (transfer)))
+(allow hal_tv_hdmi_cec_client hal_tv_hdmi_cec_server (fd (use)))
+(allow hal_tv_hdmi_cec_server hal_tv_hdmi_cec_client (binder (call transfer)))
+(allow hal_tv_hdmi_cec_client hal_tv_hdmi_cec_server (binder (transfer)))
+(allow hal_tv_hdmi_cec_server hal_tv_hdmi_cec_client (fd (use)))
+(allow hal_tv_hdmi_cec_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_cec_client (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_cec_client (dir (search)))
+(allow servicemanager hal_tv_hdmi_cec_client (file (read open)))
+(allow servicemanager hal_tv_hdmi_cec_client (process (getattr)))
+(allow hal_tv_hdmi_cec_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_cec_server (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_cec_server (dir (search)))
+(allow servicemanager hal_tv_hdmi_cec_server (file (read open)))
+(allow servicemanager hal_tv_hdmi_cec_server (process (getattr)))
+(allow hal_tv_hdmi_cec_client hal_tv_hdmi_cec_service (service_manager (find)))
+(allow hal_tv_hdmi_cec_server hal_tv_hdmi_cec_service (service_manager (add find)))
+;;* lmx 7 system/sepolicy/public/hal_tv_hdmi_cec.te
+
+(neverallow base_typeattr_479 hal_tv_hdmi_cec_service (service_manager (add)))
+;;* lme
+
+(allow hal_tv_hdmi_cec_server su (tcp_socket (read write accept getopt)))
+;;* lmx 7 system/sepolicy/public/hal_tv_hdmi_cec.te
+
+(neverallow base_typeattr_480 hal_tv_hdmi_cec_service (service_manager (find)))
+;;* lme
+
+(allow hal_tv_hdmi_connection_client hal_tv_hdmi_connection_server (binder (call transfer)))
+(allow hal_tv_hdmi_connection_server hal_tv_hdmi_connection_client (binder (transfer)))
+(allow hal_tv_hdmi_connection_client hal_tv_hdmi_connection_server (fd (use)))
+(allow hal_tv_hdmi_connection_server hal_tv_hdmi_connection_client (binder (call transfer)))
+(allow hal_tv_hdmi_connection_client hal_tv_hdmi_connection_server (binder (transfer)))
+(allow hal_tv_hdmi_connection_server hal_tv_hdmi_connection_client (fd (use)))
+(allow hal_tv_hdmi_connection_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_connection_client (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_connection_client (dir (search)))
+(allow servicemanager hal_tv_hdmi_connection_client (file (read open)))
+(allow servicemanager hal_tv_hdmi_connection_client (process (getattr)))
+(allow hal_tv_hdmi_connection_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_connection_server (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_connection_server (dir (search)))
+(allow servicemanager hal_tv_hdmi_connection_server (file (read open)))
+(allow servicemanager hal_tv_hdmi_connection_server (process (getattr)))
+(allow hal_tv_hdmi_connection_client hal_tv_hdmi_connection_service (service_manager (find)))
+(allow hal_tv_hdmi_connection_server hal_tv_hdmi_connection_service (service_manager (add find)))
+;;* lmx 7 system/sepolicy/public/hal_tv_hdmi_connection.te
+
+(neverallow base_typeattr_481 hal_tv_hdmi_connection_service (service_manager (add)))
+;;* lme
+
+(allow hal_tv_hdmi_connection_server su (tcp_socket (read write accept getopt)))
+;;* lmx 7 system/sepolicy/public/hal_tv_hdmi_connection.te
+
+(neverallow base_typeattr_482 hal_tv_hdmi_connection_service (service_manager (find)))
+;;* lme
+
+(allow hal_tv_hdmi_earc_client hal_tv_hdmi_earc_server (binder (call transfer)))
+(allow hal_tv_hdmi_earc_server hal_tv_hdmi_earc_client (binder (transfer)))
+(allow hal_tv_hdmi_earc_client hal_tv_hdmi_earc_server (fd (use)))
+(allow hal_tv_hdmi_earc_server hal_tv_hdmi_earc_client (binder (call transfer)))
+(allow hal_tv_hdmi_earc_client hal_tv_hdmi_earc_server (binder (transfer)))
+(allow hal_tv_hdmi_earc_server hal_tv_hdmi_earc_client (fd (use)))
+(allow hal_tv_hdmi_earc_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_earc_client (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_earc_client (dir (search)))
+(allow servicemanager hal_tv_hdmi_earc_client (file (read open)))
+(allow servicemanager hal_tv_hdmi_earc_client (process (getattr)))
+(allow hal_tv_hdmi_earc_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_earc_server (binder (call transfer)))
+(allow servicemanager hal_tv_hdmi_earc_server (dir (search)))
+(allow servicemanager hal_tv_hdmi_earc_server (file (read open)))
+(allow servicemanager hal_tv_hdmi_earc_server (process (getattr)))
+(allow hal_tv_hdmi_earc_client hal_tv_hdmi_earc_service (service_manager (find)))
+(allow hal_tv_hdmi_earc_server hal_tv_hdmi_earc_service (service_manager (add find)))
+;;* lmx 7 system/sepolicy/public/hal_tv_hdmi_earc.te
+
+(neverallow base_typeattr_483 hal_tv_hdmi_earc_service (service_manager (add)))
+;;* lme
+
+(allow hal_tv_hdmi_earc_server su (tcp_socket (read write accept getopt)))
+;;* lmx 7 system/sepolicy/public/hal_tv_hdmi_earc.te
+
+(neverallow base_typeattr_484 hal_tv_hdmi_earc_service (service_manager (find)))
+;;* lme
+
+(allow hal_tv_input_client hal_tv_input_server (binder (call transfer)))
+(allow hal_tv_input_server hal_tv_input_client (binder (transfer)))
+(allow hal_tv_input_client hal_tv_input_server (fd (use)))
+(allow hal_tv_input_server hal_tv_input_client (binder (call transfer)))
+(allow hal_tv_input_client hal_tv_input_server (binder (transfer)))
+(allow hal_tv_input_server hal_tv_input_client (fd (use)))
+(allow hal_tv_input_client hal_tv_input_hwservice (hwservice_manager (find)))
+(allow hal_tv_input_server hal_tv_input_hwservice (hwservice_manager (add find)))
+(allow hal_tv_input_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_tv_input.te
+
+(neverallow base_typeattr_485 hal_tv_input_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_tv_input.te
+
+(neverallow base_typeattr_486 hal_tv_input_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_tv_input_client hal_tv_input_service (service_manager (find)))
+(allow hal_tv_input_server hal_tv_input_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_tv_input.te
+
+(neverallow base_typeattr_485 hal_tv_input_service (service_manager (add)))
+;;* lme
+
+(allow hal_tv_input_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_tv_input.te
+
+(neverallow base_typeattr_487 hal_tv_input_service (service_manager (find)))
+;;* lme
+
+(allow hal_tv_input_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_input_server (binder (transfer)))
+(allow hal_tv_input_server servicemanager (fd (use)))
+(allow hal_tv_input_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_input_client (binder (transfer)))
+(allow hal_tv_input_client servicemanager (fd (use)))
+(allow hal_tv_tuner_client hal_tv_tuner_server (binder (call transfer)))
+(allow hal_tv_tuner_server hal_tv_tuner_client (binder (transfer)))
+(allow hal_tv_tuner_client hal_tv_tuner_server (fd (use)))
+(allow hal_tv_tuner_server hal_tv_tuner_client (binder (call transfer)))
+(allow hal_tv_tuner_client hal_tv_tuner_server (binder (transfer)))
+(allow hal_tv_tuner_server hal_tv_tuner_client (fd (use)))
+(allow hal_tv_tuner_client hal_tv_tuner_hwservice (hwservice_manager (find)))
+(allow hal_tv_tuner_server hal_tv_tuner_hwservice (hwservice_manager (add find)))
+(allow hal_tv_tuner_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 4 system/sepolicy/public/hal_tv_tuner.te
+
+(neverallow base_typeattr_488 hal_tv_tuner_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 4 system/sepolicy/public/hal_tv_tuner.te
+
+(neverallow base_typeattr_489 hal_tv_tuner_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_tv_tuner_client hal_tv_tuner_service (service_manager (find)))
+(allow hal_tv_tuner_server hal_tv_tuner_service (service_manager (add find)))
+;;* lmx 5 system/sepolicy/public/hal_tv_tuner.te
+
+(neverallow base_typeattr_488 hal_tv_tuner_service (service_manager (add)))
+;;* lme
+
+(allow hal_tv_tuner_server su (tcp_socket (read write accept getopt)))
+;;* lmx 5 system/sepolicy/public/hal_tv_tuner.te
+
+(neverallow base_typeattr_490 hal_tv_tuner_service (service_manager (find)))
+;;* lme
+
+(allow hal_tv_tuner_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_tuner_server (binder (transfer)))
+(allow hal_tv_tuner_server servicemanager (fd (use)))
+(allow hal_tv_tuner_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_tv_tuner_client (binder (transfer)))
+(allow hal_tv_tuner_client servicemanager (fd (use)))
+(allow hal_usb_client hal_usb_server (binder (call transfer)))
+(allow hal_usb_server hal_usb_client (binder (transfer)))
+(allow hal_usb_client hal_usb_server (fd (use)))
+(allow hal_usb_server hal_usb_client (binder (call transfer)))
+(allow hal_usb_client hal_usb_server (binder (transfer)))
+(allow hal_usb_server hal_usb_client (fd (use)))
+(allow hal_usb_client hal_usb_service (service_manager (find)))
+(allow hal_usb_server hal_usb_service (service_manager (add find)))
+;;* lmx 5 system/sepolicy/public/hal_usb.te
+
+(neverallow base_typeattr_491 hal_usb_service (service_manager (add)))
+;;* lme
+
+(allow hal_usb_server su (tcp_socket (read write accept getopt)))
+;;* lmx 5 system/sepolicy/public/hal_usb.te
+
+(neverallow base_typeattr_492 hal_usb_service (service_manager (find)))
+;;* lme
+
+(allow hal_usb_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_usb_server (binder (transfer)))
+(allow hal_usb_server servicemanager (fd (use)))
+(allow hal_usb_client hal_usb_hwservice (hwservice_manager (find)))
+(allow hal_usb_server hal_usb_hwservice (hwservice_manager (add find)))
+(allow hal_usb_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 8 system/sepolicy/public/hal_usb.te
+
+(neverallow base_typeattr_491 hal_usb_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 8 system/sepolicy/public/hal_usb.te
+
+(neverallow base_typeattr_493 hal_usb_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_usb self (netlink_kobject_uevent_socket (create)))
+(allow hal_usb self (netlink_kobject_uevent_socket (setopt)))
+(allow hal_usb self (netlink_kobject_uevent_socket (getopt)))
+(allow hal_usb self (netlink_kobject_uevent_socket (bind)))
+(allow hal_usb self (netlink_kobject_uevent_socket (read)))
+(allow hal_usb sysfs (dir (open)))
+(allow hal_usb sysfs (dir (read)))
+(allow hal_usb sysfs (file (read)))
+(allow hal_usb sysfs (file (open)))
+(allow hal_usb sysfs (file (write)))
+(allow hal_usb sysfs (file (getattr)))
+(allow hal_usb_gadget_client hal_usb_gadget_server (binder (call transfer)))
+(allow hal_usb_gadget_server hal_usb_gadget_client (binder (transfer)))
+(allow hal_usb_gadget_client hal_usb_gadget_server (fd (use)))
+(allow hal_usb_gadget_server hal_usb_gadget_client (binder (call transfer)))
+(allow hal_usb_gadget_client hal_usb_gadget_server (binder (transfer)))
+(allow hal_usb_gadget_server hal_usb_gadget_client (fd (use)))
+(allow hal_usb_gadget_client hal_usb_gadget_service (service_manager (find)))
+(allow hal_usb_gadget_server hal_usb_gadget_service (service_manager (add find)))
+;;* lmx 5 system/sepolicy/public/hal_usb_gadget.te
+
+(neverallow base_typeattr_494 hal_usb_gadget_service (service_manager (add)))
+;;* lme
+
+(allow hal_usb_gadget_server su (tcp_socket (read write accept getopt)))
+;;* lmx 5 system/sepolicy/public/hal_usb_gadget.te
+
+(neverallow base_typeattr_495 hal_usb_gadget_service (service_manager (find)))
+;;* lme
+
+(allow hal_usb_gadget_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_usb_gadget_server (binder (transfer)))
+(allow hal_usb_gadget_server servicemanager (fd (use)))
+(allow hal_usb_gadget_client hal_usb_gadget_hwservice (hwservice_manager (find)))
+(allow hal_usb_gadget_server hal_usb_gadget_hwservice (hwservice_manager (add find)))
+(allow hal_usb_gadget_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 8 system/sepolicy/public/hal_usb_gadget.te
+
+(neverallow base_typeattr_494 hal_usb_gadget_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 8 system/sepolicy/public/hal_usb_gadget.te
+
+(neverallow base_typeattr_496 hal_usb_gadget_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_usb_gadget_server configfs (lnk_file (read create unlink)))
+(allow hal_usb_gadget_server configfs (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow hal_usb_gadget_server configfs (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow hal_usb_gadget_server functionfs (dir (read search)))
+(allow hal_usb_gadget_server functionfs (file (read)))
+(allow hal_usb_gadget_server proc_interrupts (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_usb_gadget_server usb_uvc_enabled_prop (file (read getattr map open)))
+(allow hal_uwb_client hal_uwb_server (binder (call transfer)))
+(allow hal_uwb_server hal_uwb_client (binder (transfer)))
+(allow hal_uwb_client hal_uwb_server (fd (use)))
+(allow hal_uwb_server hal_uwb_client (binder (call transfer)))
+(allow hal_uwb_client hal_uwb_server (binder (transfer)))
+(allow hal_uwb_server hal_uwb_client (fd (use)))
+(allow hal_uwb_client hal_uwb_service (service_manager (find)))
+(allow hal_uwb_server hal_uwb_service (service_manager (add find)))
+;;* lmx 5 system/sepolicy/public/hal_uwb.te
+
+(neverallow base_typeattr_497 hal_uwb_service (service_manager (add)))
+;;* lme
+
+(allow hal_uwb_server su (tcp_socket (read write accept getopt)))
+;;* lmx 5 system/sepolicy/public/hal_uwb.te
+
+(neverallow base_typeattr_498 hal_uwb_service (service_manager (find)))
+;;* lme
+
+(allow hal_uwb_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_uwb_server (binder (transfer)))
+(allow hal_uwb_server servicemanager (fd (use)))
+(allow hal_uwb_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_uwb_client (binder (transfer)))
+(allow hal_uwb_client servicemanager (fd (use)))
+(allow hal_vehicle_client hal_vehicle_server (binder (call transfer)))
+(allow hal_vehicle_server hal_vehicle_client (binder (transfer)))
+(allow hal_vehicle_client hal_vehicle_server (fd (use)))
+(allow hal_vehicle_server hal_vehicle_client (binder (call transfer)))
+(allow hal_vehicle_client hal_vehicle_server (binder (transfer)))
+(allow hal_vehicle_server hal_vehicle_client (fd (use)))
+(allow hal_vehicle_client hal_vehicle_hwservice (hwservice_manager (find)))
+(allow hal_vehicle_server hal_vehicle_hwservice (hwservice_manager (add find)))
+(allow hal_vehicle_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 6 system/sepolicy/public/hal_vehicle.te
+
+(neverallow base_typeattr_499 hal_vehicle_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 6 system/sepolicy/public/hal_vehicle.te
+
+(neverallow base_typeattr_500 hal_vehicle_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_vehicle_client hal_vehicle_service (service_manager (find)))
+(allow hal_vehicle_server hal_vehicle_service (service_manager (add find)))
+;;* lmx 7 system/sepolicy/public/hal_vehicle.te
+
+(neverallow base_typeattr_499 hal_vehicle_service (service_manager (add)))
+;;* lme
+
+(allow hal_vehicle_server su (tcp_socket (read write accept getopt)))
+;;* lmx 7 system/sepolicy/public/hal_vehicle.te
+
+(neverallow base_typeattr_501 hal_vehicle_service (service_manager (find)))
+;;* lme
+
+(allow hal_vibrator_client hal_vibrator_server (binder (call transfer)))
+(allow hal_vibrator_server hal_vibrator_client (binder (transfer)))
+(allow hal_vibrator_client hal_vibrator_server (fd (use)))
+(allow hal_vibrator_server hal_vibrator_client (binder (call transfer)))
+(allow hal_vibrator_client hal_vibrator_server (binder (transfer)))
+(allow hal_vibrator_server hal_vibrator_client (fd (use)))
+(allow hal_vibrator_client hal_vibrator_hwservice (hwservice_manager (find)))
+(allow hal_vibrator_server hal_vibrator_hwservice (hwservice_manager (add find)))
+(allow hal_vibrator_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_vibrator.te
+
+(neverallow base_typeattr_502 hal_vibrator_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_vibrator.te
+
+(neverallow base_typeattr_503 hal_vibrator_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_vibrator_client hal_vibrator_service (service_manager (find)))
+(allow hal_vibrator_server hal_vibrator_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_vibrator.te
+
+(neverallow base_typeattr_502 hal_vibrator_service (service_manager (add)))
+;;* lme
+
+(allow hal_vibrator_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_vibrator.te
+
+(neverallow base_typeattr_504 hal_vibrator_service (service_manager (find)))
+;;* lme
+
+(allow hal_vibrator_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_vibrator_server (binder (transfer)))
+(allow hal_vibrator_server servicemanager (fd (use)))
+(allow hal_vibrator_server dumpstate (fifo_file (write)))
+(allow hal_vibrator sysfs_vibrator (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_vibrator sysfs_vibrator (dir (search)))
+(allow hal_vr_client hal_vr_server (binder (call transfer)))
+(allow hal_vr_server hal_vr_client (binder (transfer)))
+(allow hal_vr_client hal_vr_server (fd (use)))
+(allow hal_vr_server hal_vr_client (binder (call transfer)))
+(allow hal_vr_client hal_vr_server (binder (transfer)))
+(allow hal_vr_server hal_vr_client (fd (use)))
+(allow hal_vr_client hal_vr_hwservice (hwservice_manager (find)))
+(allow hal_vr_server hal_vr_hwservice (hwservice_manager (add find)))
+(allow hal_vr_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_vr.te
+
+(neverallow base_typeattr_505 hal_vr_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_vr.te
+
+(neverallow base_typeattr_506 hal_vr_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_weaver_client hal_weaver_server (binder (call transfer)))
+(allow hal_weaver_server hal_weaver_client (binder (transfer)))
+(allow hal_weaver_client hal_weaver_server (fd (use)))
+(allow hal_weaver_client hal_weaver_hwservice (hwservice_manager (find)))
+(allow hal_weaver_server hal_weaver_hwservice (hwservice_manager (add find)))
+(allow hal_weaver_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 4 system/sepolicy/public/hal_weaver.te
+
+(neverallow base_typeattr_507 hal_weaver_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 4 system/sepolicy/public/hal_weaver.te
+
+(neverallow base_typeattr_508 hal_weaver_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_weaver_client hal_weaver_service (service_manager (find)))
+(allow hal_weaver_server hal_weaver_service (service_manager (add find)))
+;;* lmx 5 system/sepolicy/public/hal_weaver.te
+
+(neverallow base_typeattr_507 hal_weaver_service (service_manager (add)))
+;;* lme
+
+(allow hal_weaver_server su (tcp_socket (read write accept getopt)))
+;;* lmx 5 system/sepolicy/public/hal_weaver.te
+
+(neverallow base_typeattr_509 hal_weaver_service (service_manager (find)))
+;;* lme
+
+(allow hal_weaver_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_weaver_server (binder (transfer)))
+(allow hal_weaver_server servicemanager (fd (use)))
+(allow hal_wifi_client hal_wifi_server (binder (call transfer)))
+(allow hal_wifi_server hal_wifi_client (binder (transfer)))
+(allow hal_wifi_client hal_wifi_server (fd (use)))
+(allow hal_wifi_server hal_wifi_client (binder (call transfer)))
+(allow hal_wifi_client hal_wifi_server (binder (transfer)))
+(allow hal_wifi_server hal_wifi_client (fd (use)))
+(allow hal_wifi_client hal_wifi_hwservice (hwservice_manager (find)))
+(allow hal_wifi_server hal_wifi_hwservice (hwservice_manager (add find)))
+(allow hal_wifi_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_wifi.te
+
+(neverallow base_typeattr_510 hal_wifi_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_wifi.te
+
+(neverallow base_typeattr_511 hal_wifi_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_wifi_client hal_wifi_service (service_manager (find)))
+(allow hal_wifi_server hal_wifi_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_wifi.te
+
+(neverallow base_typeattr_510 hal_wifi_service (service_manager (add)))
+;;* lme
+
+(allow hal_wifi_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_wifi.te
+
+(neverallow base_typeattr_512 hal_wifi_service (service_manager (find)))
+;;* lme
+
+(allow hal_wifi_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_wifi_server (binder (call transfer)))
+(allow servicemanager hal_wifi_server (dir (search)))
+(allow servicemanager hal_wifi_server (file (read open)))
+(allow servicemanager hal_wifi_server (process (getattr)))
+(allow hal_wifi proc_net_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_wifi proc_net_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_wifi proc_net_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_wifi sysfs_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_wifi sysfs_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_wifi sysfs_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_wifi_server property_socket (sock_file (write)))
+(allow hal_wifi_server init (unix_stream_socket (connectto)))
+(allow hal_wifi_server wifi_hal_prop (property_service (set)))
+(allow hal_wifi_server wifi_hal_prop (file (read getattr map open)))
+(allow hal_wifi property_socket (sock_file (write)))
+(allow hal_wifi init (unix_stream_socket (connectto)))
+(allow hal_wifi wifi_prop (property_service (set)))
+(allow hal_wifi wifi_prop (file (read getattr map open)))
+(allow hal_wifi persist_vendor_debug_wifi_prop (file (read getattr map open)))
+(allow hal_wifi self (udp_socket (ioctl read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allowx hal_wifi self (ioctl udp_socket (0x8914 0x8924 0x8946)))
+(allow hal_wifi self (capability (net_admin net_raw)))
+(allow hal_wifi self (cap_userns (net_admin net_raw)))
+(allow hal_wifi self (netlink_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_wifi self (netlink_generic_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_wifi sysfs_wlan_fwpath (file (write lock append map open)))
+(allow hal_wifi proc_modules (file (read getattr open)))
+(allow hal_wifi dumpstate (fifo_file (write)))
+(allow hal_wifi_server tombstone_wifi_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow hal_wifi_server tombstone_wifi_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow hal_wifi_hostapd_client hal_wifi_hostapd_server (binder (call transfer)))
+(allow hal_wifi_hostapd_server hal_wifi_hostapd_client (binder (transfer)))
+(allow hal_wifi_hostapd_client hal_wifi_hostapd_server (fd (use)))
+(allow hal_wifi_hostapd_server hal_wifi_hostapd_client (binder (call transfer)))
+(allow hal_wifi_hostapd_client hal_wifi_hostapd_server (binder (transfer)))
+(allow hal_wifi_hostapd_server hal_wifi_hostapd_client (fd (use)))
+(allow hal_wifi_hostapd_client hal_wifi_hostapd_hwservice (hwservice_manager (find)))
+(allow hal_wifi_hostapd_server hal_wifi_hostapd_hwservice (hwservice_manager (add find)))
+(allow hal_wifi_hostapd_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_wifi_hostapd.te
+
+(neverallow base_typeattr_513 hal_wifi_hostapd_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_wifi_hostapd.te
+
+(neverallow base_typeattr_514 hal_wifi_hostapd_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_wifi_hostapd_client hal_wifi_hostapd_service (service_manager (find)))
+(allow hal_wifi_hostapd_server hal_wifi_hostapd_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_wifi_hostapd.te
+
+(neverallow base_typeattr_513 hal_wifi_hostapd_service (service_manager (add)))
+;;* lme
+
+(allow hal_wifi_hostapd_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_wifi_hostapd.te
+
+(neverallow base_typeattr_515 hal_wifi_hostapd_service (service_manager (find)))
+;;* lme
+
+(allow hal_wifi_hostapd_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_wifi_hostapd_server (binder (call transfer)))
+(allow servicemanager hal_wifi_hostapd_server (dir (search)))
+(allow servicemanager hal_wifi_hostapd_server (file (read open)))
+(allow servicemanager hal_wifi_hostapd_server (process (getattr)))
+(allow hal_wifi_hostapd_server dumpstate (fifo_file (write)))
+(allow hal_wifi_hostapd_server self (capability (net_admin net_raw)))
+(allow hal_wifi_hostapd_server self (cap_userns (net_admin net_raw)))
+(allow hal_wifi_hostapd_server sysfs_net (dir (search)))
+(allow hal_wifi_hostapd_server proc_net_type (file (read getattr open)))
+(allowx hal_wifi_hostapd_server self (ioctl udp_socket (0x6900 0x6902)))
+(allowx hal_wifi_hostapd_server self (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(allowx hal_wifi_hostapd_server self (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(allow hal_wifi_hostapd_server self (netlink_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_wifi_hostapd_server self (netlink_generic_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_wifi_hostapd_server self (packet_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_wifi_hostapd_server self (netlink_route_socket (nlmsg_write)))
+;;* lmx 31 system/sepolicy/public/hal_wifi_hostapd.te
+
+(neverallow hal_wifi_hostapd_server sdcard_type (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+(neverallow hal_wifi_hostapd_server fuse (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 32 system/sepolicy/public/hal_wifi_hostapd.te
+
+(neverallow hal_wifi_hostapd_server sdcard_type (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow hal_wifi_hostapd_server fuse (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+(allow hal_wifi_supplicant_client hal_wifi_supplicant_server (binder (call transfer)))
+(allow hal_wifi_supplicant_server hal_wifi_supplicant_client (binder (transfer)))
+(allow hal_wifi_supplicant_client hal_wifi_supplicant_server (fd (use)))
+(allow hal_wifi_supplicant_server hal_wifi_supplicant_client (binder (call transfer)))
+(allow hal_wifi_supplicant_client hal_wifi_supplicant_server (binder (transfer)))
+(allow hal_wifi_supplicant_server hal_wifi_supplicant_client (fd (use)))
+(allow hal_wifi_supplicant_client hal_wifi_supplicant_hwservice (hwservice_manager (find)))
+(allow hal_wifi_supplicant_server hal_wifi_supplicant_hwservice (hwservice_manager (add find)))
+(allow hal_wifi_supplicant_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_wifi_supplicant.te
+
+(neverallow base_typeattr_516 hal_wifi_supplicant_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_wifi_supplicant.te
+
+(neverallow base_typeattr_517 hal_wifi_supplicant_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_wifi_supplicant_client hal_wifi_supplicant_service (service_manager (find)))
+(allow hal_wifi_supplicant_server hal_wifi_supplicant_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_wifi_supplicant.te
+
+(neverallow base_typeattr_516 hal_wifi_supplicant_service (service_manager (add)))
+;;* lme
+
+(allow hal_wifi_supplicant_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_wifi_supplicant.te
+
+(neverallow base_typeattr_518 hal_wifi_supplicant_service (service_manager (find)))
+;;* lme
+
+(allowx hal_wifi_supplicant self (ioctl udp_socket (0x6900 0x6902)))
+(allowx hal_wifi_supplicant self (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(allowx hal_wifi_supplicant self (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(allow hal_wifi_supplicant sysfs_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_wifi_supplicant sysfs_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_wifi_supplicant sysfs_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_wifi_supplicant proc_net_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_wifi_supplicant proc_net_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_wifi_supplicant proc_net_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_wifi_supplicant kernel (system (module_request)))
+(allow hal_wifi_supplicant self (capability (setgid setuid net_admin net_raw)))
+(allow hal_wifi_supplicant self (cap_userns (setgid setuid net_admin net_raw)))
+(allow hal_wifi_supplicant cgroup (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow hal_wifi_supplicant cgroup_v2 (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow hal_wifi_supplicant self (netlink_route_socket (nlmsg_write)))
+(allow hal_wifi_supplicant self (netlink_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_wifi_supplicant self (netlink_generic_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_wifi_supplicant self (packet_socket (ioctl read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allowx hal_wifi_supplicant self (ioctl packet_socket ((range 0x5401 0x5404) 0x540b (range 0x540e 0x5411) (range 0x5413 0x5414) (range 0x5450 0x5451))))
+(allowx hal_wifi_supplicant self (ioctl packet_socket (0x6900 0x6902)))
+(allowx hal_wifi_supplicant self (ioctl packet_socket ((range 0x8906 0x8907) (range 0x890b 0x890d) (range 0x8910 0x8927) 0x8929 (range 0x8930 0x8939) (range 0x8940 0x8943) (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(allowx hal_wifi_supplicant self (ioctl packet_socket ((range 0x8b00 0x8b02) (range 0x8b04 0x8b1d) (range 0x8b20 0x8b2d) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(allow keystore hal_wifi_supplicant (dir (search)))
+(allow keystore hal_wifi_supplicant (file (read open)))
+(allow keystore hal_wifi_supplicant (process (getattr)))
+(allow hal_wifi_supplicant apc_service (service_manager (find)))
+(allow hal_wifi_supplicant keystore_service (service_manager (find)))
+(allow hal_wifi_supplicant legacykeystore_service (service_manager (find)))
+(allow hal_wifi_supplicant keystore (binder (call transfer)))
+(allow keystore hal_wifi_supplicant (binder (transfer)))
+(allow hal_wifi_supplicant keystore (fd (use)))
+(allow keystore hal_wifi_supplicant (binder (call transfer)))
+(allow hal_wifi_supplicant keystore (binder (transfer)))
+(allow keystore hal_wifi_supplicant (fd (use)))
+(allow hal_wifi_supplicant_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_wifi_supplicant_server (binder (call transfer)))
+(allow servicemanager hal_wifi_supplicant_server (dir (search)))
+(allow servicemanager hal_wifi_supplicant_server (file (read open)))
+(allow servicemanager hal_wifi_supplicant_server (process (getattr)))
+(allow hal_wifi_supplicant wifi_key (keystore2_key (get_info use)))
+;;* lmx 38 system/sepolicy/public/hal_wifi_supplicant.te
+
+(neverallow hal_wifi_supplicant_server sdcard_type (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+(neverallow hal_wifi_supplicant_server fuse (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 39 system/sepolicy/public/hal_wifi_supplicant.te
+
+(neverallow hal_wifi_supplicant_server sdcard_type (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow hal_wifi_supplicant_server fuse (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 102 system/sepolicy/public/hwservice.te
+
+(neverallow domain base_typeattr_519 (hwservice_manager (add find)))
+;;* lme
+
+(allow hwservicemanager self (binder (set_context_mgr)))
+(allow hwservicemanager system_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hwservicemanager hwservice_contexts_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hwservicemanager selinuxfs (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hwservicemanager selinuxfs (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hwservicemanager selinuxfs (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hwservicemanager selinuxfs (file (write lock append map open)))
+(allow hwservicemanager kernel (security (compute_av)))
+(allow hwservicemanager self (netlink_selinux_socket (read write create getattr setattr lock relabelfrom relabelto append bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(allow idmap resourcecache_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow idmap resourcecache_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow idmap apk_data_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow idmap apk_data_file (dir (search)))
+(allow idmap apk_tmp_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow idmap apk_private_tmp_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow idmap apk_tmp_file (dir (search)))
+(allow idmap apk_private_tmp_file (dir (search)))
+(allow idmap vendor_app_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow idmap vendor_app_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow idmap vendor_app_file (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow idmap vendor_overlay_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow idmap vendor_overlay_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow idmap vendor_overlay_file (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow idmap servicemanager (binder (call transfer)))
+(allow servicemanager idmap (binder (call transfer)))
+(allow servicemanager idmap (dir (search)))
+(allow servicemanager idmap (file (read open)))
+(allow servicemanager idmap (process (getattr)))
+(allow idmap idmap_service (service_manager (add find)))
+;;* lmx 26 system/sepolicy/public/idmap.te
+
+(neverallow base_typeattr_520 idmap_service (service_manager (add)))
+;;* lme
+
+(allow idmap su (tcp_socket (read write accept getopt)))
+(allow init tmpfs (chr_file (ioctl read write create getattr setattr lock append map unlink open watch watch_reads)))
+(allow init tmpfs (chr_file (relabelfrom)))
+(allow init kmsg_device (chr_file (write getattr relabelto)))
+(allow init kmsg_debug_device (chr_file (write relabelto open)))
+(allow init debugfs (dir (mounton)))
+(allow init properties_device (dir (relabelto)))
+(allow init properties_serial (file (write relabelto)))
+(allow init property_type (file (read write create getattr setattr relabelto append map unlink rename open)))
+(allow init properties_device (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow init property_info (file (relabelto)))
+(allow init device (file (relabelfrom)))
+(allow init runtime_event_log_tags_file (file (write create setattr relabelto open)))
+(allow init device (dir (relabelto)))
+(allow init dm_user_device (dir (relabelto)))
+(allow init socket_device (dir (relabelto)))
+(allow init lmkd_socket (sock_file (write)))
+(allow init lmkd (unix_stream_socket (connectto)))
+(allow init console_device (chr_file (relabelto)))
+(allow init ptmx_device (chr_file (relabelto)))
+(allow init null_device (chr_file (relabelto)))
+(allow init random_device (chr_file (relabelto)))
+(allow init tmpfs (chr_file (relabelfrom)))
+(allow init tmpfs (blk_file (relabelfrom)))
+(allow init tmpfs (blk_file (getattr)))
+(allow init block_device (dir (relabelto)))
+(allow init block_device (lnk_file (relabelto)))
+(allow init block_device (blk_file (relabelto)))
+(allow init dm_device (chr_file (relabelto)))
+(allow init dm_device (blk_file (relabelto)))
+(allow init dm_user_device (chr_file (relabelto)))
+(allow init kernel (fd (use)))
+(allow init tmpfs (lnk_file (read getattr relabelfrom)))
+(allow init system_block_device (lnk_file (relabelto)))
+(allow init system_block_device (blk_file (relabelto)))
+(allow init recovery_block_device (lnk_file (relabelto)))
+(allow init recovery_block_device (blk_file (relabelto)))
+(allow init userdata_block_device (lnk_file (relabelto)))
+(allow init userdata_block_device (blk_file (relabelto)))
+(allow init metadata_block_device (lnk_file (relabelto)))
+(allow init metadata_block_device (blk_file (relabelto)))
+(allow init misc_block_device (lnk_file (relabelto)))
+(allow init misc_block_device (blk_file (relabelto)))
+(allow init super_block_device (lnk_file (relabelto)))
+(allow init mnt_sdcard_file (lnk_file (create)))
+(allow init self (capability (sys_resource)))
+(allow init self (cap_userns (sys_resource)))
+(allow init tmpfs (file (getattr unlink)))
+(allow init devpts (chr_file (read write open)))
+(allow init fscklogs (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow init tmpfs (chr_file (write)))
+(allow init console_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init tty_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init self (capability (sys_admin)))
+(allow init self (cap_userns (sys_admin)))
+(allow init self (capability (sys_chroot)))
+(allow init self (cap_userns (sys_chroot)))
+(allow init rootfs (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow init rootfs (dir (mounton)))
+(allow init cgroup (dir (mounton)))
+(allow init system_file (dir (mounton)))
+(allow init linkerconfig_file (dir (mounton)))
+(allow init vendor_file (dir (mounton)))
+(allow init system_data_root_file (dir (mounton)))
+(allow init system_data_file (dir (mounton)))
+(allow init mnt_user_file (dir (mounton)))
+(allow init storage_file (dir (mounton)))
+(allow init postinstall_mnt_dir (dir (mounton)))
+(allow init mirror_data_file (dir (mounton)))
+(allow init cache_file (dir (mounton)))
+(allow init system_dlkm_file (dir (mounton)))
+(allow init fs_bpf (dir (mounton)))
+(allow init device (dir (mounton)))
+(allow init apex_mnt_dir (dir (mounton)))
+(allow init art_apex_dir (dir (mounton)))
+(allow init rootfs (lnk_file (create unlink)))
+(allow init sysfs (dir (mounton)))
+(allow init tmpfs (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow init tmpfs (dir (mounton)))
+(allow init cgroup (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow init cgroup (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init cgroup_rc_file (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init cgroup_desc_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init cgroup_desc_api_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init vendor_cgroup_desc_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init cgroup_v2 (dir (ioctl read write create getattr setattr lock rename mounton open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow init cgroup_v2 (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init configfs (dir (mounton)))
+(allow init configfs (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow init configfs (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow init configfs (lnk_file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow init metadata_file (dir (mounton)))
+(allow init tmpfs (dir (relabelfrom)))
+(allow init self (capability (dac_override dac_read_search)))
+(allow init self (cap_userns (dac_override dac_read_search)))
+(allow init self (capability (sys_time)))
+(allow init self (cap_userns (sys_time)))
+(allow init self (capability (sys_rawio mknod)))
+(allow init self (cap_userns (sys_rawio mknod)))
+(allow init dev_type (blk_file (ioctl read getattr lock map open watch watch_reads)))
+(allowx init dev_type (ioctl blk_file (0x125d)))
+(allowx init system_data_root_file (ioctl dir (0x587d)))
+(allow init base_typeattr_521 (filesystem (mount remount unmount getattr relabelfrom associate quotamod quotaget watch)))
+(allow init debugfs_type (filesystem (mount unmount)))
+(allow init debugfs_tracing_debug (filesystem (mount)))
+(allow init unlabeled (filesystem (mount remount unmount getattr relabelfrom associate quotamod quotaget watch)))
+(allow init contextmount_type (filesystem (relabelto)))
+(allow init contextmount_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow init contextmount_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init contextmount_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow init contextmount_type (sock_file (ioctl read getattr lock map open watch watch_reads)))
+(allow init contextmount_type (fifo_file (ioctl read getattr lock map open watch watch_reads)))
+(allow init rootfs (file (relabelfrom)))
+(allow init rootfs (dir (relabelfrom)))
+(allow init self (capability (chown fowner fsetid)))
+(allow init self (cap_userns (chown fowner fsetid)))
+(allow init base_typeattr_522 (dir (ioctl read create getattr setattr open search)))
+(allow init base_typeattr_523 (dir (write relabelfrom add_name remove_name rmdir)))
+(allow init base_typeattr_524 (file (read write create getattr setattr relabelfrom map unlink open)))
+(allow init tracefs_type (file (ioctl read write create getattr setattr lock relabelfrom append map unlink rename open watch watch_reads)))
+(allow init apex_info_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init base_typeattr_525 (sock_file (read create getattr setattr relabelfrom unlink open)))
+(allow init base_typeattr_525 (fifo_file (read create getattr setattr relabelfrom unlink open)))
+(allow init base_typeattr_526 (lnk_file (create getattr setattr relabelfrom unlink)))
+(allow init cache_file (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow init base_typeattr_527 (file (relabelto)))
+(allow init base_typeattr_527 (dir (relabelto)))
+(allow init base_typeattr_527 (lnk_file (relabelto)))
+(allow init base_typeattr_527 (chr_file (relabelto)))
+(allow init base_typeattr_527 (blk_file (relabelto)))
+(allow init base_typeattr_527 (sock_file (relabelto)))
+(allow init base_typeattr_527 (fifo_file (relabelto)))
+(allow init sysfs (file (getattr relabelfrom)))
+(allow init sysfs (dir (getattr relabelfrom)))
+(allow init sysfs (lnk_file (getattr relabelfrom)))
+(allow init debugfs_tracing (file (getattr relabelfrom)))
+(allow init debugfs_tracing (dir (getattr relabelfrom)))
+(allow init debugfs_tracing (lnk_file (getattr relabelfrom)))
+(allow init debugfs_tracing_debug (file (getattr relabelfrom)))
+(allow init debugfs_tracing_debug (dir (getattr relabelfrom)))
+(allow init debugfs_tracing_debug (lnk_file (getattr relabelfrom)))
+(allow init sysfs_type (file (getattr relabelto)))
+(allow init sysfs_type (dir (getattr relabelto)))
+(allow init sysfs_type (lnk_file (getattr relabelto)))
+(allow init tracefs_type (file (getattr relabelto)))
+(allow init tracefs_type (dir (getattr relabelto)))
+(allow init tracefs_type (lnk_file (getattr relabelto)))
+(allow init dev_type (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow init dev_type (lnk_file (create)))
+(allow init debugfs_tracing (file (write lock append map open)))
+(allow init debugfs_tracing_instances (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow init debugfs_tracing_instances (file (write lock append map open)))
+(allow init debugfs_wifi_tracing (file (write lock append map open)))
+(allow init base_typeattr_528 (file (read setattr open)))
+(allow init base_typeattr_529 (dir (read setattr open search)))
+(allow init binder_device (chr_file (read open)))
+(allow init hwbinder_device (chr_file (read open)))
+(allow init dm_device (chr_file (read open)))
+(allow init pmsg_device (chr_file (read open)))
+(allow init console_device (chr_file (read open)))
+(allow init input_device (chr_file (read open)))
+(allow init ptmx_device (chr_file (read open)))
+(allow init kmsg_device (chr_file (read open)))
+(allow init null_device (chr_file (read open)))
+(allow init random_device (chr_file (read open)))
+(allow init owntty_device (chr_file (read open)))
+(allow init tty_device (chr_file (read open)))
+(allow init zero_device (chr_file (read open)))
+(allow init devpts (chr_file (read open)))
+(allow init unlabeled (dir (ioctl read write create getattr setattr lock relabelfrom rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow init unlabeled (file (ioctl read write create getattr setattr lock relabelfrom append map unlink rename open watch watch_reads)))
+(allow init unlabeled (lnk_file (ioctl read write create getattr setattr lock relabelfrom append map unlink rename open watch watch_reads)))
+(allow init unlabeled (sock_file (ioctl read write create getattr setattr lock relabelfrom append map unlink rename open watch watch_reads)))
+(allow init unlabeled (fifo_file (ioctl read write create getattr setattr lock relabelfrom append map unlink rename open watch watch_reads)))
+(allow init kernel (system (syslog_mod)))
+(allow init self (capability2 (syslog)))
+(allow init self (cap2_userns (syslog)))
+(allow init proc_net_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow init proc_net_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_net_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_filesystems (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init overlayfs_file (dir (write relabelfrom mounton)))
+(allow init overlayfs_file (file (append rename)))
+(allow init overlayfs_file (chr_file (unlink)))
+(allow init system_block_device (blk_file (write)))
+(allow init proc (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_bootconfig (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_cmdline (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_diskstats (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_kmsg (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_meminfo (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_stat (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_uptime (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_version (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init proc_net_type (file (write lock append map open)))
+(allow init proc_overcommit_memory (file (write lock append map open)))
+(allow init proc_min_free_order_shift (file (write lock append map open)))
+(allow init proc_watermark_boost_factor (file (write lock append map open)))
+(allow init proc_abi (file (write lock append map open)))
+(allow init proc_cpu_alignment (file (write lock append map open)))
+(allow init proc_dirty (file (write lock append map open)))
+(allow init proc_extra_free_kbytes (file (write lock append map open)))
+(allow init proc_hostname (file (write lock append map open)))
+(allow init proc_hung_task (file (write lock append map open)))
+(allow init proc_max_map_count (file (write lock append map open)))
+(allow init proc_page_cluster (file (write lock append map open)))
+(allow init proc_panic (file (write lock append map open)))
+(allow init proc_perf (file (write lock append map open)))
+(allow init proc_sched (file (write lock append map open)))
+(allow init proc_sysrq (file (write lock append map open)))
+(allow init proc_security (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init proc_qtaguid_ctrl (file (setattr)))
+(allow init proc_qtaguid_stat (file (setattr)))
+(allow init proc_bootconfig (file (setattr)))
+(allow init proc_cmdline (file (setattr)))
+(allow init proc_kmsg (file (setattr)))
+(allow init proc_net (file (setattr)))
+(allow init proc_pagetypeinfo (file (setattr)))
+(allow init proc_slabinfo (file (setattr)))
+(allow init proc_sysrq (file (setattr)))
+(allow init proc_vmallocinfo (file (setattr)))
+(allow init sysfs_android_usb (file (write lock append map open)))
+(allow init sysfs_dm (file (write lock append map open)))
+(allow init sysfs_dm_verity (file (write lock append map open)))
+(allow init sysfs_leds (file (write lock append map open)))
+(allow init sysfs_power (file (write lock append map open)))
+(allow init sysfs_lru_gen_enabled (file (write lock append map open)))
+(allow init sysfs_fs_f2fs (file (write lock append map open)))
+(allow init sysfs_dt_firmware_android (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init sysfs_fs_ext4_features (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init sysfs_zram (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init loop_control_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init loop_device (blk_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allowx init loop_device (ioctl blk_file ((range 0x4c00 0x4c01) (range 0x4c03 0x4c04) (range 0x4c08 0x4c09) 0x4c82)))
+(allow init sysfs_vibrator (file (write lock append map open)))
+(allow init sysfs_android_usb (file (setattr)))
+(allow init sysfs_ipv4 (file (setattr)))
+(allow init sysfs_leds (file (setattr)))
+(allow init sysfs_wake_lock (file (setattr)))
+(allow init sysfs_power (file (setattr)))
+(allow init sysfs_devices_system_cpu (file (setattr)))
+(allow init sysfs_lowmemorykiller (file (setattr)))
+(allow init sysfs_vibrator (file (setattr)))
+(allow init sysfs_zram (file (setattr)))
+(allow init usermodehelper (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init sysfs_usermodehelper (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow init self (capability (net_admin)))
+(allow init self (cap_userns (net_admin)))
+(allow init self (capability (sys_boot)))
+(allow init self (cap_userns (sys_boot)))
+(allow init misc_logd_file (dir (read write create getattr setattr open add_name search)))
+(allow init misc_logd_file (file (write create getattr setattr open)))
+(allow init self (capability (kill)))
+(allow init self (cap_userns (kill)))
+(allow init domain (process (sigkill signal getpgid)))
+(allow init credstore_data_file (dir (read create getattr setattr open search)))
+(allow init credstore_data_file (file (getattr)))
+(allow init keystore_data_file (dir (read create getattr setattr open search)))
+(allow init keystore_data_file (file (getattr)))
+(allow init vold_data_file (dir (read create getattr setattr open search)))
+(allow init vold_data_file (file (getattr)))
+(allow init shell_data_file (dir (read create getattr setattr open search)))
+(allow init shell_data_file (file (getattr)))
+(allow init self (capability (setgid setuid setpcap)))
+(allow init self (cap_userns (setgid setuid setpcap)))
+(allow init domain (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow init domain (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init domain (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow init self (process (setexec setfscreate setsockcreate)))
+(allow init file_contexts_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init sepolicy_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow init selinuxfs (dir (ioctl read getattr lock open watch watch_reads searc

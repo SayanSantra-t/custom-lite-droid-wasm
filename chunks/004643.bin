@@ -1,0 +1,1227 @@
+6002 sysui_fullscreen_notification (key|3)
+36003 sysui_heads_up_escalation (key|3)
+36004 sysui_status_bar_state (state|1),(keyguardShowing|1),(keyguardOccluded|1),(bouncerShowing|1),(secure|1),(currentlyInsecure|1)
+36010 sysui_panelbar_touch (type|1),(x|1),(y|1),(enabled|1)
+36020 sysui_notificationpanel_touch (type|1),(x|1),(y|1)
+36021 sysui_lockscreen_gesture (type|1),(lengthDp|1),(velocityDp|1)
+36030 sysui_quickpanel_touch (type|1),(x|1),(y|1)
+36040 sysui_panelholder_touch (type|1),(x|1),(y|1)
+36050 sysui_searchpanel_touch (type|1),(x|1),(y|1)
+36060 sysui_recents_connection (type|1),(user|1)
+36070 sysui_latency (action|1|6),(latency|1|3)
+36080 sysui_keyguard (isOccluded|1),(animate|1)
+37001 jank_cuj_events_begin_request (CUJ Type|1|5),(Unix Time Ns|2|3),(Elapsed Time Ns|2|3),(Uptime Ns|2|3),(Tag|3)
+37002 jank_cuj_events_end_request (CUJ Type|1|5),(Unix Time Ns|2|3),(Elapsed Time Ns|2|3),(Uptime Time Ns|2|3)
+37003 jank_cuj_events_cancel_request (CUJ Type|1|5),(Unix Time Ns|2|3),(Elapsed Time Ns|2|3),(Uptime Time Ns|2|3)
+38000 wm_enter_pip (User|1|5),(Token|1|5),(Component Name|3),(is Auto Enter|3)
+40000 volume_changed (stream|1), (prev_level|1), (level|1), (max_level|1), (caller|3)
+40001 stream_devices_changed (stream|1), (prev_devices|1), (devices|1)
+40100 camera_gesture_triggered (gesture_on_time|2|3), (sensor1_on_time|2|3), (sensor2_on_time|2|3), (event_extra|1|1)
+50000 menu_item_selected (Menu type where 0 is options and 1 is context|1|5),(Menu item title|3)
+50001 menu_opened (Menu type where 0 is options and 1 is context|1|5)
+50020 connectivity_state_changed (type|1),(subtype|1),(state|1)
+50021 wifi_state_changed (wifi_state|3)
+50022 wifi_event_handled (wifi_event|1|5)
+50023 wifi_supplicant_state_changed (supplicant_state|1|5)
+50080 ntp_success (server|3),(rtt|2),(offset|2)
+50081 ntp_failure (server|3),(msg|3)
+50100 pdp_bad_dns_address (dns_address|3)
+50101 pdp_radio_reset_countdown_triggered (out_packet_count|1|1)
+50102 pdp_radio_reset (out_packet_count|1|1)
+50103 pdp_context_reset (out_packet_count|1|1)
+50104 pdp_reregister_network (out_packet_count|1|1)
+50105 pdp_setup_fail (cause|1|5), (cid|1|5), (network_type|1|5)
+50106 call_drop (cause|1|5), (cid|1|5), (network_type|1|5)
+50107 data_network_registration_fail (op_numeric|1|5), (cid|1|5)
+50108 data_network_status_on_radio_off (dc_state|3), (enable|1|5)
+50109 pdp_network_drop (cid|1|5), (network_type|1|5)
+50110 cdma_data_setup_failed (cause|1|5), (cid|1|5), (network_type|1|5)
+50111 cdma_data_drop (cid|1|5), (network_type|1|5)
+50112 gsm_rat_switched (cid|1|5), (network_from|1|5), (network_to|1|5)
+50113 gsm_data_state_change (oldState|3), (newState|3)
+50114 gsm_service_state_change (oldState|1|5), (oldGprsState|1|5), (newState|1|5), (newGprsState|1|5)
+50115 cdma_data_state_change (oldState|3), (newState|3)
+50116 cdma_service_state_change (oldState|1|5), (oldDataState|1|5), (newState|1|5), (newDataState|1|5)
+50117 bad_ip_address (ip_address|3)
+50118 data_stall_recovery_get_data_call_list (out_packet_count|1|1)
+50119 data_stall_recovery_cleanup (out_packet_count|1|1)
+50120 data_stall_recovery_reregister (out_packet_count|1|1)
+50121 data_stall_recovery_radio_restart (out_packet_count|1|1)
+50122 data_stall_recovery_radio_restart_with_prop (out_packet_count|1|1)
+50123 gsm_rat_switched_new (cid|1|5), (network_from|1|5), (network_to|1|5)
+50125 exp_det_sms_denied_by_user (app_signature|3)
+50128 exp_det_sms_sent_by_user (app_signature|3)
+51100 netstats_mobile_sample (xt_rx_bytes|2|2),(xt_tx_bytes|2|2),(xt_rx_pkts|2|1),(xt_tx_pkts|2|1),(uid_rx_bytes|2|2),(uid_tx_bytes|2|2),(uid_rx_pkts|2|1),(uid_tx_pkts|2|1),(trusted_time|2|3)
+51101 netstats_wifi_sample (xt_rx_bytes|2|2),(xt_tx_bytes|2|2),(xt_rx_pkts|2|1),(xt_tx_pkts|2|1),(uid_rx_bytes|2|2),(uid_tx_bytes|2|2),(uid_rx_pkts|2|1),(uid_tx_pkts|2|1),(trusted_time|2|3)
+51200 lockdown_vpn_connecting (egress_net|1)
+51201 lockdown_vpn_connected (egress_net|1)
+51202 lockdown_vpn_error (egress_net|1)
+51300 config_install_failed (dir|3)
+51400 ifw_intent_matched (Intent Type|1|5),(Component Name|3),(Caller Uid|1|5),(Caller Pkg Count|1|1),(Caller Pkgs|3),(Action|3),(MIME Type|3),(URI|3),(Flags|1|5)
+51500 idle_maintenance_window_start (time|2|3), (lastUserActivity|2|3), (batteryLevel|1|6), (batteryCharging|1|5)
+51501 idle_maintenance_window_finish (time|2|3), (lastUserActivity|2|3), (batteryLevel|1|6), (batteryCharging|1|5)
+51600 timezone_trigger_check (token|3)
+51610 timezone_request_install (token|3)
+51611 timezone_install_started (token|3)
+51612 timezone_install_complete (token|3), (result|1)
+51620 timezone_request_uninstall (token|3)
+51621 timezone_uninstall_started (token|3)
+51622 timezone_uninstall_complete (token|3), (result|1)
+51630 timezone_request_nothing (token|3)
+51631 timezone_nothing_complete (token|3)
+52000 db_sample (db|3),(sql|3),(time|1|3),(blocking_package|3),(sample_percent|1|6)
+52001 http_stats (useragent|3),(response|2|3),(processing|2|3),(tx|1|2),(rx|1|2)
+52002 content_query_sample (uri|3),(projection|3),(selection|3),(sortorder|3),(time|1|3),(blocking_package|3),(sample_percent|1|6)
+52003 content_update_sample (uri|3),(operation|3),(selection|3),(time|1|3),(blocking_package|3),(sample_percent|1|6)
+52004 binder_sample (descriptor|3),(method_num|1|5),(time|1|3),(blocking_package|3),(sample_percent|1|6)
+53000 harmful_app_warning_uninstall (package_name|3)
+53001 harmful_app_warning_launch_anyway (package_name|3)
+53200 cc_connect_state_changed (user|1|5),(type|1|5),(package_count|1|1)
+53201 cc_set_allowlist (user|1|5),(package_count|1|1),(activity_count|1|1)
+53202 cc_current_allowlist (user|1|5),(count|1|1)
+53203 cc_update_options (user|1|5),(count|1)
+60000 viewroot_draw (Draw time|1|3)
+60001 viewroot_layout (Layout time|1|3)
+60002 view_build_drawing_cache (View created drawing cache|1|5)
+60003 view_use_drawing_cache (View drawn using bitmap cache|1|5)
+60100 sf_frame_dur (window|3),(dur0|1),(dur1|1),(dur2|1),(dur3|1),(dur4|1),(dur5|1),(dur6|1)
+60110 sf_stop_bootanim (time|2|3)
+61000 audioserver_binder_timeout (command|3)
+62000 input_interaction (windows|4)
+62001 input_focus (window|3),(reason|3)
+62002 view_enqueue_input_event (eventType|3),(action|3)
+62003 input_cancel (window|3),(reason|3)
+65537 exp_det_netlink_failure (uid|1)
+70000 screen_toggled (screen_state|1|5)
+70001 intercept_power (action|3),(mPowerKeyHandled|1),(mPowerKeyPressCounter|1)
+70101 browser_zoom_level_change (start level|1|5),(end level|1|5),(time|2|3)
+70102 browser_double_tap_duration (duration|1|3),(time|2|3)
+70150 browser_snap_center
+70151 exp_det_attempt_to_call_object_getclass (app_signature|3)
+70200 aggregation (aggregation time|2|3)
+70201 aggregation_test (field1|1|2),(field2|1|2),(field3|1|2),(field4|1|2),(field5|1|2)
+70220 gms_unknown
+75000 sqlite_mem_alarm_current (current|1|2)
+75001 sqlite_mem_alarm_max (max|1|2)
+75002 sqlite_mem_alarm_alloc_attempt (attempts|1|4)
+75003 sqlite_mem_released (Memory released|1|2)
+75004 sqlite_db_corrupt (Database file corrupt|3)
+76001 tts_speak_success (engine|3),(caller_uid|1),(caller_pid|1),(length|1),(locale|3),(rate|1),(pitch|1),(engine_latency|2|3),(engine_total|2|3),(audio_latency|2|3)
+76002 tts_speak_failure (engine|3),(caller_uid|1),(caller_pid|1),(length|1),(locale|3),(rate|1),(pitch|1)
+76003 tts_v2_speak_success (engine|3),(caller_uid|1),(caller_pid|1),(length|1),(request_config|3),(engine_latency|2|3),(engine_total|2|3),(audio_latency|2|3)
+76004 tts_v2_speak_failure (engine|3),(caller_uid|1),(caller_pid|1),(length|1),(request_config|3), (statusCode|1)
+78001 exp_det_dispatchCommand_overflow
+80100 bionic_event_memcpy_buffer_overflow (uid|1)
+80105 bionic_event_strcat_buffer_overflow (uid|1)
+80110 bionic_event_memmov_buffer_overflow (uid|1)
+80115 bionic_event_strncat_buffer_overflow (uid|1)
+80120 bionic_event_strncpy_buffer_overflow (uid|1)
+80125 bionic_event_memset_buffer_overflow (uid|1)
+80130 bionic_event_strcpy_buffer_overflow (uid|1)
+80200 bionic_event_strcat_integer_overflow (uid|1)
+80205 bionic_event_strncat_integer_overflow (uid|1)
+80300 bionic_event_resolver_old_response (uid|1)
+80305 bionic_event_resolver_wrong_server (uid|1)
+80310 bionic_event_resolver_wrong_query (uid|1)
+81002 dropbox_file_copy (FileName|3),(Size|1),(Tag|3)
+90100 exp_det_cert_pin_failure (certs|4)
+90200 lock_screen_type (type|3)
+90201 exp_det_device_admin_activated_by_user (app_signature|3)
+90202 exp_det_device_admin_declined_by_user (app_signature|3)
+90203 exp_det_device_admin_uninstalled_by_user (app_signature|3)
+90204 settings_latency (action|1|6),(latency|1|3)
+120000 dsu_progress_update (partition_name|3),(installed_bytes|2|5),(total_bytes|2|5),(partition_number|1|5),(total_partition_number|1|5),(total_progress_percentage|1|5)
+120001 dsu_install_complete
+120002 dsu_install_failed (cause|3)
+120003 dsu_install_insufficient_space
+150000 car_helper_start
+150001 car_helper_boot_phase (phase|1)
+150002 car_helper_user_starting (user_id|1)
+150003 car_helper_user_switching (from_user_id|1),(to_user_id|1)
+150004 car_helper_user_unlocking (user_id|1)
+150005 car_helper_user_unlocked (user_id|1)
+150006 car_helper_user_stopping (user_id|1)
+150007 car_helper_user_stopped (user_id|1)
+150008 car_helper_svc_connected
+150050 car_service_init (number_services|1)
+150051 car_service_vhal_reconnected (number_services|1)
+150052 car_service_set_car_service_helper (pid|1)
+150053 car_service_on_user_lifecycle (type|1),(from_user_id|1),(to_user_id|1)
+150055 car_service_create (has_vhal|1)
+150056 car_service_connected (interface|3)
+150057 car_service_destroy (has_vhal|1)
+150058 car_service_vhal_died (cookie|2)
+150059 car_service_init_boot_user
+150060 car_service_on_user_removed (user_id|1)
+150100 car_user_svc_initial_user_info_req (request_type|1),(timeout|1),(current_user_id|1),(current_user_flags|1),(number_existing_users|1)
+150101 car_user_svc_initial_user_info_resp (status|1),(action|1),(user_id|1),(flags|1),(safe_name|3),(user_locales|3)
+150103 car_user_svc_set_initial_user (user_id|1)
+150104 car_user_svc_set_lifecycle_listener (uid|1),(package_name|3)
+150105 car_user_svc_reset_lifecycle_listener (uid|1),(package_name|3)
+150106 car_user_svc_switch_user_req (user_id|1),(timeout|1)
+150107 car_user_svc_switch_user_resp (hal_callback_status|1),(user_switch_status|1),(error_message|3)
+150108 car_user_svc_post_switch_user_req (target_user_id|1),(current_user_id|1)
+150109 car_user_svc_get_user_auth_req (uid|1),(user_id|1),(number_types|1)
+150110 car_user_svc_get_user_auth_resp (number_values|1)
+150111 car_user_svc_switch_user_ui_req (user_id|1)
+150112 car_user_svc_switch_user_from_hal_req (request_id|1),(uid|1)
+150113 car_user_svc_set_user_auth_req (uid|1),(user_id|1),(number_associations|1)
+150114 car_user_svc_set_user_auth_resp (number_values|1),(error_message|3)
+150115 car_user_svc_create_user_req (safe_name|3),(user_type|3),(flags|1),(timeout|1),(hasCallerRestrictions|1)
+150116 car_user_svc_create_user_resp (status|1),(result|1),(error_message|3)
+150117 car_user_svc_create_user_user_created (user_id|1),(safe_name|3),(user_type|3),(flags|1)
+150118 car_user_svc_create_user_user_removed (user_id|1),(reason|3)
+150119 car_user_svc_remove_user_req (user_id|1),(hasCallerRestrictions|1)
+150120 car_user_svc_remove_user_resp (user_id|1),(result|1)
+150121 car_user_svc_notify_app_lifecycle_listener (uid|1),(package_name|3),(event_type|1),(from_user_id|1),(to_user_id|1)
+150122 car_user_svc_notify_internal_lifecycle_listener (listener_name|3),(event_type|1),(from_user_id|1),(to_user_id|1)
+150123 car_user_svc_pre_creation_requested (number_users|1),(number_guests|1)
+150124 car_user_svc_pre_creation_status (number_existing_users|1),(number_users_to_add|1),(number_users_to_remove|1),(number_existing_guests|1),(number_guests_to_add|1),(number_guests_to_remove|1),(number_invalid_users_to_remove|1)
+150125 car_user_svc_start_user_in_background_req (user_id|1)
+150126 car_user_svc_start_user_in_background_resp (user_id|1),(result|1)
+150127 car_user_svc_stop_user_req (user_id|1)
+150128 car_user_svc_stop_user_resp (user_id|1),(result|1)
+150129 car_user_svc_initial_user_info_req_complete (request_type|1)
+150130 car_user_svc_logout_user_req (user_id|1),(timeout|1)
+150131 car_user_svc_logout_user_resp (hal_callback_status|1),(user_switch_status|1),(error_message|3)
+150132 car_initial_user_start_fg_user (user_id|1)
+150133 car_initial_user_info (type|1), (replace_guest|1), (switch_user_id|1), (new_user_name|3), (new_user_flags|1), (supports_override_user_id_property|1), (user_locales|3)
+150134 car_initial_user_fallback_default_behavior (reason|3)
+150135 car_initial_user_replace_guest (user_id|1)
+150136 car_initial_user_unlock_system_user
+150137 car_initial_user_set_last_active (user_id|1)
+150138 car_initial_user_reset_global_property (name|3)
+150140 car_user_hal_initial_user_info_req (request_id|1),(request_type|1),(timeout|1)
+150141 car_user_hal_initial_user_info_resp (request_id|1),(status|1),(action|1),(user_id|1),(flags|1),(safe_name|3),(user_locales|3)
+150142 car_user_hal_switch_user_req (request_id|1),(user_id|1),(user_flags|1),(timeout|1)
+150143 car_user_hal_switch_user_resp (request_id|1),(status|1),(result|1),(error_message|3)
+150144 car_user_hal_post_switch_user_req (request_id|1),(target_user_id|1),(current_user_id|1)
+150145 car_user_hal_get_user_auth_req (int32values|4)
+150146 car_user_hal_get_user_auth_resp (valuesAndError|4)
+150147 car_user_hal_legacy_switch_user_req (request_id|1),(target_user_id|1),(current_user_id|1)
+150148 car_user_hal_set_user_auth_req (int32values|4)
+150149 car_user_hal_set_user_auth_resp (valuesAndError|4)
+150150 car_user_hal_oem_switch_user_req (request_id|1),(target_user_id|1)
+150151 car_user_hal_create_user_req (request_id|1),(safe_name|3),(flags|1),(timeout|1)
+150152 car_user_hal_create_user_resp (request_id|1),(status|1),(result|1),(error_message|3)
+150153 car_user_hal_remove_user_req (target_user_id|1),(current_user_id|1)
+150154 car_user_svc_start_user_visible_on_display_req (user_id|1),(display_id|1)
+150155 car_user_svc_start_user_visible_on_display_resp (user_id|1),(display_id|1),(result|1)
+150171 car_user_mgr_add_listener (uid|1),(package_name|3),(has_filter|1)
+150172 car_user_mgr_remove_listener (uid|1),(package_name|3)
+150173 car_user_mgr_disconnected (uid|1)
+150174 car_user_mgr_switch_user_req (uid|1),(user_id|1)
+150175 car_user_mgr_switch_user_resp (uid|1),(status|1),(error_message|3)
+150176 car_user_mgr_get_user_auth_req (types|4)
+150177 car_user_mgr_get_user_auth_resp (values|4)
+150178 car_user_mgr_set_user_auth_req (types_and_values_pairs|4)
+150179 car_user_mgr_set_user_auth_resp (values|4)
+150180 car_user_mgr_create_user_req (uid|1),(safe_name|3),(user_type|3),(flags|1)
+150181 car_user_mgr_create_user_resp (uid|1),(status|1),(error_message|3)
+150182 car_user_mgr_remove_user_req (uid|1),(user_id|1)
+150183 car_user_mgr_remove_user_resp (uid|1),(status|1)
+150184 car_user_mgr_notify_lifecycle_listener (number_listeners|1),(event_type|1),(from_user_id|1),(to_user_id|1)
+150185 car_user_mgr_pre_create_user_req (uid|1)
+150186 car_user_mgr_logout_user_req (uid|1)
+150187 car_user_mgr_logout_user_resp (uid|1),(status|1),(error_message|3)
+150188 car_user_mgr_start_user_req (uid|1),(user_id|1),(display_id|1)
+150189 car_user_mgr_start_user_resp (uid|1),(user_id|1),(display_id|1),(status|1)
+150190 car_user_mgr_stop_user_req (uid|1),(user_id|1)
+150191 car_user_mgr_stop_user_resp (uid|1),(user_id|1),(status|1)
+150200 car_dp_mgr_remove_user_req (uid|1),(user_id|1)
+150201 car_dp_mgr_remove_user_resp (uid|1),(status|1)
+150202 car_dp_mgr_create_user_req (uid|1),(safe_name|3),(flags|1)
+150203 car_dp_mgr_create_user_resp (uid|1),(status|1)
+150204 car_dp_mgr_start_user_in_background_req (uid|1),(user_id|1)
+150205 car_dp_mgr_start_user_in_background_resp (uid|1),(status|1)
+150206 car_dp_mgr_stop_user_req (uid|1),(user_id|1)
+150207 car_dp_mgr_stop_user_resp (uid|1),(status|1)
+150300 car_pwr_mgr_state_change (state|1)
+150301 car_pwr_mgr_garage_mode (status|1)
+150302 car_pwr_mgr_pwr_policy_change (policy|3)
+150303 car_pwr_mgr_state_req (state|1),(param|1)
+201001 system_update (status|1|5),(download_result|1|5),(bytes|2|2),(url|3)
+201002 system_update_user (action|3)
+202001 vending_reconstruct (changes|1)
+202901 transaction_event (data|3)
+203001 sync_details (authority|3),(send|1|2),(recv|1|2),(details|3)
+203002 google_http_request (elapsed|2|3),(status|1),(appname|3),(reused|1)
+204001 gtalkservice (eventType|1)
+204002 gtalk_connection (status|1)
+204003 gtalk_conn_close (status|1),(duration|1)
+204004 gtalk_heartbeat_reset (interval_and_nt|1),(ip|3)
+204005 c2dm (packet_type|1),(persistent_id|3),(stream_id|1),(last_stream_id|1)
+205001 setup_server_timeout
+205002 setup_required_captcha (action|3)
+205003 setup_io_error (status|3)
+205004 setup_server_error
+205005 setup_retries_exhausted
+205006 setup_no_data_network
+205007 setup_completed
+205008 gls_account_tried (status|1)
+205009 gls_account_saved (status|1)
+205010 gls_authenticate (status|1),(service|3)
+205011 google_mail_switch (direction|1)
+206001 snet (payload|3)
+206003 exp_det_snet (payload|3)
+208000 metrics_heartbeat
+210001 security_adb_shell_interactive
+210002 security_adb_shell_command (command|3)
+210003 security_adb_sync_recv (path|3)
+210004 security_adb_sync_send (path|3)
+210005 security_app_process_start (process|3),(start_time|2|3),(uid|1),(pid|1),(seinfo|3),(sha256|3)
+210006 security_keyguard_dismissed
+210007 security_keyguard_dismiss_auth_attempt (success|1),(method_strength|1)
+210008 security_keyguard_secured
+210009 security_os_startup (boot_state|3),(verity_mode|3)
+210010 security_os_shutdown
+210011 security_logging_started
+210012 security_logging_stopped
+210013 security_media_mounted (path|3),(label|3)
+210014 security_media_unmounted (path|3),(label|3)
+210015 security_log_buffer_size_critical
+210016 security_password_expiration_set (package|3),(admin_user|1),(target_user|1),(timeout|2|3)
+210017 security_password_complexity_set (package|3),(admin_user|1),(target_user|1),(length|1),(quality|1),(num_letters|1),(num_non_letters|1),(num_numeric|1),(num_uppercase|1),(num_lowercase|1),(num_symbols|1)
+210018 security_password_history_length_set (package|3),(admin_user|1),(target_user|1),(length|1)
+210019 security_max_screen_lock_timeout_set (package|3),(admin_user|1),(target_user|1),(timeout|2|3)
+210020 security_max_password_attempts_set (package|3),(admin_user|1),(target_user|1),(num_failures|1)
+210021 security_keyguard_disabled_features_set (package|3),(admin_user|1),(target_user|1),(features|1)
+210022 security_remote_lock (package|3),(admin_user|1),(target_user|1)
+210023 security_wipe_failed (package|3),(admin_user|1)
+210024 security_key_generated (success|1),(key_id|3),(uid|1)
+210025 security_key_imported (success|1),(key_id|3),(uid|1)
+210026 security_key_destroyed (success|1),(key_id|3),(uid|1)
+210027 security_user_restriction_added (package|3),(admin_user|1),(restriction|3)
+210028 security_user_restriction_removed (package|3),(admin_user|1),(restriction|3)
+210029 security_cert_authority_installed (success|1),(subject|3),(target_user|1)
+210030 security_cert_authority_removed (success|1),(subject|3),(target_user|1)
+210031 security_crypto_self_test_completed (success|1)
+210032 security_key_integrity_violation (key_id|3),(uid|1)
+210033 security_cert_validation_failure (reason|3)
+210034 security_camera_policy_set (package|3),(admin_user|1),(target_user|1),(disabled|1)
+210035 security_password_complexity_required (package|3),(admin_user|1),(target_user|1),(complexity|1)
+210036 security_password_changed (password_complexity|1),(target_user|1)
+210037 security_wifi_connection (bssid|3),(event_type|3),(reason|3)
+210038 security_wifi_disconnection (bssid|3),(reason|3)
+210039 security_bluetooth_connection (addr|3),(success|1),(reason|3)
+210040 security_bluetooth_disconnection (addr|3),(reason|3)
+210041 security_package_installed (package_name|3),(version_code|1),(user_id|1)
+210042 security_package_updated (package_name|3),(version_code|1),(user_id|1)
+210043 security_package_uninstalled (package_name|3),(version_code|1),(user_id|1)
+230000 service_manager_stats (call_count|1),(total_time|1|3),(duration|1|3)
+230001 service_manager_slow (time|1|3),(service|3)
+275534 notification_unautogrouped (key|3)
+300000 arc_system_event (event|3)
+524287 sysui_view_visibility (category|1|5),(visible|1|6)
+524288 sysui_action (category|1|5),(pkg|3)
+524290 sysui_count (name|3),(increment|1)
+524291 sysui_histogram (name|3),(bucket|1)
+524292 sysui_multi_action (content|4)
+525000 commit_sys_config_file (name|3),(time|2|3)
+1000000 bt_unexpected_pairing (device_name|3),(device_address|3)
+1000003 mobile_signal_event (level|1|5),(battery|1|6),(time|2|3)
+1000004 cell_radio_power_change_event (enable|1|5),(reason|3|5),(time|2|3)
+1000005 wifi_session (state|1|5),(duration|2|3)
+1000006 wifi_backoff
+1000007 bt_companion_paired (device_type|1|5)
+1000008 bt_proxy_disconnect (session_duration|2|3)
+1000009 bt_acl_disconnect (session_duration|2|3)
+1000010 bt_radio_power_change_event (enable|1|5),(reason|3|5),(time|2|3)
+10195355 killinfo (Pid|1|5),(Uid|1|5),(OomAdj|1),(MinOomAdj|1),(TaskSize|1),(enum kill_reasons|1|5),(MemFree|1),(Cached|1),(SwapCached|1),(Buffers|1),(Shmem|1),(Unevictable|1),(SwapTotal|1),(SwapFree|1),(ActiveAnon|1),(InactiveAnon|1),(ActiveFile|1),(InactiveFile|1),(SReclaimable|1),(SUnreclaim|1),(KernelStack|1),(PageTables|1),(IonHeap|1),(IonHeapPool|1),(CmaFree|1),(MsSinceEvent|1),(MsSincePrevWakeup|1),(WakeupsSinceEvent|1),(SkippedWakeups|1),(TaskSwapSize|1),(GPU|1),(Thrashing|1),(MaxThrashing|1),(PsiMemSome|5),(PsiMemFull|5),(PsiIoSome|5),(PsiIoFull|5),(PsiCpuSome|5)
+1397638484 snet_event_log (subtag|3) (uid|1) (message|3)
+1937006964 stats_log (atom_id|1|5),(data|4)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <?xml version="1.0" encoding="utf-8"?>
+<!--
+    WARNING: Parsing of this file by third-party apps is not supported. The
+    file, and the font files it refers to, will be renamed and/or moved out
+    from their respective location in the next Android release, and/or the
+    format or syntax of the file may change significantly. If you parse this
+    file for information about system fonts, do it at your own risk. Your
+    application will almost certainly break with the next major Android
+    release.
+
+    In this file, all fonts without names are added to the default list.
+    Fonts are chosen based on a match: full BCP-47 language tag including
+    script, then just language, and finally order (the first font containing
+    the glyph).
+
+    Order of appearance is also the tiebreaker for weight matching. This is
+    the reason why the 900 weights of Roboto precede the 700 weights - we
+    prefer the former when an 800 weight is requested. Since bold spans
+    effectively add 300 to the weight, this ensures that 900 is the bold
+    paired with the 500 weight, ensuring adequate contrast.
+
+    TODO(rsheeter) update comment; ordering to match 800 to 900 is no longer required
+-->
+<familyset version="23">
+    <!-- first font is default -->
+    <family name="sans-serif">
+        <font weight="100" style="normal">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="0" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="100" />
+        </font>
+        <font weight="200" style="normal">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="0" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="200" />
+        </font>
+        <font weight="300" style="normal">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="0" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="300" />
+        </font>
+        <font weight="400" style="normal">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="0" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="400" />
+        </font>
+        <font weight="500" style="normal">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="0" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="500" />
+        </font>
+        <font weight="600" style="normal">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="0" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="600" />
+        </font>
+        <font weight="700" style="normal">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="0" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="700" />
+        </font>
+        <font weight="800" style="normal">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="0" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="800" />
+        </font>
+        <font weight="900" style="normal">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="0" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="900" />
+        </font>
+        <font weight="100" style="italic">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="1" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="100" />
+        </font>
+        <font weight="200" style="italic">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="1" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="200" />
+        </font>
+        <font weight="300" style="italic">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="1" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="300" />
+        </font>
+        <font weight="400" style="italic">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="1" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="400" />
+        </font>
+        <font weight="500" style="italic">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="1" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="500" />
+        </font>
+        <font weight="600" style="italic">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="1" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="600" />
+        </font>
+        <font weight="700" style="italic">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="1" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="700" />
+        </font>
+        <font weight="800" style="italic">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="1" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="800" />
+        </font>
+        <font weight="900" style="italic">Roboto-Regular.ttf
+          <axis tag="ital" stylevalue="1" />
+          <axis tag="wdth" stylevalue="100" />
+          <axis tag="wght" stylevalue="900" />
+        </font>
+   </family>
+
+
+    <!-- Note that aliases must come after the fonts they reference. -->
+    <alias name="sans-serif-thin" to="sans-serif" weight="100" />
+    <alias name="sans-serif-light" to="sans-serif" weight="300" />
+    <alias name="sans-serif-medium" to="sans-serif" weight="500" />
+    <alias name="sans-serif-black" to="sans-serif" weight="900" />
+    <alias name="arial" to="sans-serif" />
+    <alias name="helvetica" to="sans-serif" />
+    <alias name="tahoma" to="sans-serif" />
+    <alias name="verdana" to="sans-serif" />
+
+    <family name="sans-serif-condensed">
+      <font weight="100" style="normal">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="100" />
+      </font>
+      <font weight="200" style="normal">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="200" />
+      </font>
+      <font weight="300" style="normal">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="300" />
+      </font>
+      <font weight="400" style="normal">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="400" />
+      </font>
+      <font weight="500" style="normal">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="500" />
+      </font>
+      <font weight="600" style="normal">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="600" />
+      </font>
+      <font weight="700" style="normal">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="700" />
+      </font>
+      <font weight="800" style="normal">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="800" />
+      </font>
+      <font weight="900" style="normal">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="900" />
+      </font>
+      <font weight="100" style="italic">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="1" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="100" />
+      </font>
+      <font weight="200" style="italic">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="1" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="200" />
+      </font>
+      <font weight="300" style="italic">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="1" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="300" />
+      </font>
+      <font weight="400" style="italic">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="1" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="400" />
+      </font>
+      <font weight="500" style="italic">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="1" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="500" />
+      </font>
+      <font weight="600" style="italic">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="1" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="600" />
+      </font>
+      <font weight="700" style="italic">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="1" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="700" />
+      </font>
+      <font weight="800" style="italic">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="1" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="800" />
+      </font>
+      <font weight="900" style="italic">Roboto-Regular.ttf
+        <axis tag="ital" stylevalue="1" />
+        <axis tag="wdth" stylevalue="75" />
+        <axis tag="wght" stylevalue="900" />
+      </font>
+    </family>
+    <alias name="sans-serif-condensed-light" to="sans-serif-condensed" weight="300" />
+    <alias name="sans-serif-condensed-medium" to="sans-serif-condensed" weight="500" />
+
+    <family name="serif">
+        <font weight="400" style="normal" postScriptName="NotoSerif">NotoSerif-Regular.ttf</font>
+        <font weight="700" style="normal">NotoSerif-Bold.ttf</font>
+        <font weight="400" style="italic">NotoSerif-Italic.ttf</font>
+        <font weight="700" style="italic">NotoSerif-BoldItalic.ttf</font>
+    </family>
+    <alias name="serif-bold" to="serif" weight="700" />
+    <alias name="times" to="serif" />
+    <alias name="times new roman" to="serif" />
+    <alias name="palatino" to="serif" />
+    <alias name="georgia" to="serif" />
+    <alias name="baskerville" to="serif" />
+    <alias name="goudy" to="serif" />
+    <alias name="fantasy" to="serif" />
+    <alias name="ITC Stone Serif" to="serif" />
+
+    <family name="monospace">
+        <font weight="400" style="normal">DroidSansMono.ttf</font>
+    </family>
+    <alias name="sans-serif-monospace" to="monospace" />
+    <alias name="monaco" to="monospace" />
+
+    <family name="serif-monospace">
+        <font weight="400" style="normal" postScriptName="CutiveMono-Regular">CutiveMono.ttf</font>
+    </family>
+    <alias name="courier" to="serif-monospace" />
+    <alias name="courier new" to="serif-monospace" />
+
+    <family name="casual">
+        <font weight="400" style="normal" postScriptName="ComingSoon-Regular">ComingSoon.ttf</font>
+    </family>
+
+    <family name="cursive">
+      <font weight="400" style="normal">DancingScript-Regular.ttf
+        <axis tag="wght" stylevalue="400" />
+      </font>
+      <font weight="700" style="normal">DancingScript-Regular.ttf
+        <axis tag="wght" stylevalue="700" />
+      </font>
+    </family>
+
+    <family name="sans-serif-smallcaps">
+        <font weight="400" style="normal">CarroisGothicSC-Regular.ttf</font>
+    </family>
+
+    <family name="source-sans-pro">
+        <font weight="400" style="normal">SourceSansPro-Regular.ttf</font>
+        <font weight="400" style="italic">SourceSansPro-Italic.ttf</font>
+        <font weight="600" style="normal">SourceSansPro-SemiBold.ttf</font>
+        <font weight="600" style="italic">SourceSansPro-SemiBoldItalic.ttf</font>
+        <font weight="700" style="normal">SourceSansPro-Bold.ttf</font>
+        <font weight="700" style="italic">SourceSansPro-BoldItalic.ttf</font>
+    </family>
+    <alias name="source-sans-pro-semi-bold" to="source-sans-pro" weight="600"/>
+
+    <!-- fallback fonts -->
+    <family lang="und-Arab" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoNaskhArabic">
+            NotoNaskhArabic-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoNaskhArabic-Bold.ttf</font>
+    </family>
+    <family lang="und-Arab" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoNaskhArabicUI">
+            NotoNaskhArabicUI-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoNaskhArabicUI-Bold.ttf</font>
+    </family>
+    <family lang="und-Ethi">
+        <font weight="400" style="normal" postScriptName="NotoSansEthiopic-Regular">
+            NotoSansEthiopic-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansEthiopic-Regular">
+            NotoSansEthiopic-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansEthiopic-Regular">
+            NotoSansEthiopic-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansEthiopic-Regular">
+            NotoSansEthiopic-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifEthiopic-Regular">NotoSerifEthiopic-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifEthiopic-Regular">NotoSerifEthiopic-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifEthiopic-Regular">NotoSerifEthiopic-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifEthiopic-Regular">NotoSerifEthiopic-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Hebr">
+        <font weight="400" style="normal" postScriptName="NotoSansHebrew">
+            NotoSansHebrew-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansHebrew-Bold.ttf</font>
+        <font weight="400" style="normal" fallbackFor="serif">NotoSerifHebrew-Regular.ttf</font>
+        <font weight="700" style="normal" fallbackFor="serif">NotoSerifHebrew-Bold.ttf</font>
+    </family>
+    <family lang="und-Thai" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansThai">NotoSansThai-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansThai-Bold.ttf</font>
+        <font weight="400" style="normal" fallbackFor="serif">
+            NotoSerifThai-Regular.ttf
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif">NotoSerifThai-Bold.ttf</font>
+    </family>
+    <family lang="und-Thai" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansThaiUI">
+            NotoSansThaiUI-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansThaiUI-Bold.ttf</font>
+    </family>
+    <family lang="und-Armn">
+        <font weight="400" style="normal" postScriptName="NotoSansArmenian-Regular">
+            NotoSansArmenian-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansArmenian-Regular">
+            NotoSansArmenian-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansArmenian-Regular">
+            NotoSansArmenian-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansArmenian-Regular">
+            NotoSansArmenian-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifArmenian-Regular">NotoSerifArmenian-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifArmenian-Regular">NotoSerifArmenian-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifArmenian-Regular">NotoSerifArmenian-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifArmenian-Regular">NotoSerifArmenian-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Geor,und-Geok">
+        <font weight="400" style="normal" postScriptName="NotoSansGeorgian-Regular">
+            NotoSansGeorgian-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansGeorgian-Regular">
+            NotoSansGeorgian-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansGeorgian-Regular">
+            NotoSansGeorgian-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansGeorgian-Regular">
+            NotoSansGeorgian-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGeorgian-Regular">NotoSerifGeorgian-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGeorgian-Regular">NotoSerifGeorgian-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGeorgian-Regular">NotoSerifGeorgian-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGeorgian-Regular">NotoSerifGeorgian-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Deva" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansDevanagari-Regular">
+            NotoSansDevanagari-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansDevanagari-Regular">
+            NotoSansDevanagari-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansDevanagari-Regular">
+            NotoSansDevanagari-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansDevanagari-Regular">
+            NotoSansDevanagari-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifDevanagari-Regular">NotoSerifDevanagari-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifDevanagari-Regular">NotoSerifDevanagari-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifDevanagari-Regular">NotoSerifDevanagari-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifDevanagari-Regular">NotoSerifDevanagari-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Deva" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansDevanagariUI-Regular">
+            NotoSansDevanagariUI-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansDevanagariUI-Regular">
+            NotoSansDevanagariUI-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansDevanagariUI-Regular">
+            NotoSansDevanagariUI-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansDevanagariUI-Regular">
+            NotoSansDevanagariUI-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+
+    <!-- All scripts of India should come after Devanagari, due to shared
+         danda characters.
+    -->
+    <family lang="und-Gujr" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansGujarati">
+            NotoSansGujarati-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansGujarati-Bold.ttf</font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGujarati-Regular">NotoSerifGujarati-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGujarati-Regular">NotoSerifGujarati-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGujarati-Regular">NotoSerifGujarati-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGujarati-Regular">NotoSerifGujarati-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Gujr" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansGujaratiUI">
+            NotoSansGujaratiUI-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansGujaratiUI-Bold.ttf</font>
+    </family>
+    <family lang="und-Guru" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansGurmukhi-Regular">
+            NotoSansGurmukhi-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansGurmukhi-Regular">
+            NotoSansGurmukhi-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansGurmukhi-Regular">
+            NotoSansGurmukhi-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansGurmukhi-Regular">
+            NotoSansGurmukhi-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGurmukhi-Regular">NotoSerifGurmukhi-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGurmukhi-Regular">NotoSerifGurmukhi-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGurmukhi-Regular">NotoSerifGurmukhi-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifGurmukhi-Regular">NotoSerifGurmukhi-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Guru" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansGurmukhiUI-Regular">
+            NotoSansGurmukhiUI-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansGurmukhiUI-Regular">
+            NotoSansGurmukhiUI-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansGurmukhiUI-Regular">
+            NotoSansGurmukhiUI-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansGurmukhiUI-Regular">
+            NotoSansGurmukhiUI-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Taml" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansTamil-Regular">
+            NotoSansTamil-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansTamil-Regular">
+            NotoSansTamil-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansTamil-Regular">
+            NotoSansTamil-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansTamil-Regular">
+            NotoSansTamil-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifTamil-Regular">NotoSerifTamil-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifTamil-Regular">NotoSerifTamil-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifTamil-Regular">NotoSerifTamil-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifTamil-Regular">NotoSerifTamil-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Taml" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansTamilUI-Regular">
+            NotoSansTamilUI-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansTamilUI-Regular">
+            NotoSansTamilUI-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansTamilUI-Regular">
+            NotoSansTamilUI-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansTamilUI-Regular">
+            NotoSansTamilUI-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Mlym" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansMalayalam-Regular">
+            NotoSansMalayalam-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansMalayalam-Regular">
+            NotoSansMalayalam-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansMalayalam-Regular">
+            NotoSansMalayalam-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansMalayalam-Regular">
+            NotoSansMalayalam-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifMalayalam-Regular">NotoSerifMalayalam-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifMalayalam-Regular">NotoSerifMalayalam-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifMalayalam-Regular">NotoSerifMalayalam-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifMalayalam-Regular">NotoSerifMalayalam-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Mlym" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansMalayalamUI-Regular">
+            NotoSansMalayalamUI-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansMalayalamUI-Regular">
+            NotoSansMalayalamUI-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansMalayalamUI-Regular">
+            NotoSansMalayalamUI-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansMalayalamUI-Regular">
+            NotoSansMalayalamUI-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Beng" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansBengali-Regular">
+            NotoSansBengali-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansBengali-Regular">
+            NotoSansBengali-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansBengali-Regular">
+            NotoSansBengali-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansBengali-Regular">
+            NotoSansBengali-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifBengali-Regular">NotoSerifBengali-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifBengali-Regular">NotoSerifBengali-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifBengali-Regular">NotoSerifBengali-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifBengali-Regular">NotoSerifBengali-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Beng" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansBengaliUI-Regular">
+            NotoSansBengaliUI-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansBengaliUI-Regular">
+            NotoSansBengaliUI-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansBengaliUI-Regular">
+            NotoSansBengaliUI-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansBengaliUI-Regular">
+            NotoSansBengaliUI-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Telu" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansTelugu-Regular">
+            NotoSansTelugu-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansTelugu-Regular">
+            NotoSansTelugu-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansTelugu-Regular">
+            NotoSansTelugu-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansTelugu-Regular">
+            NotoSansTelugu-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifTelugu-Regular">NotoSerifTelugu-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifTelugu-Regular">NotoSerifTelugu-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifTelugu-Regular">NotoSerifTelugu-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifTelugu-Regular">NotoSerifTelugu-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Telu" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansTeluguUI-Regular">
+            NotoSansTeluguUI-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansTeluguUI-Regular">
+            NotoSansTeluguUI-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansTeluguUI-Regular">
+            NotoSansTeluguUI-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansTeluguUI-Regular">
+            NotoSansTeluguUI-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Knda" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansKannada-Regular">
+            NotoSansKannada-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansKannada-Regular">
+            NotoSansKannada-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansKannada-Regular">
+            NotoSansKannada-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansKannada-Regular">
+            NotoSansKannada-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifKannada-Regular">NotoSerifKannada-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifKannada-Regular">NotoSerifKannada-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifKannada-Regular">NotoSerifKannada-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifKannada-Regular">NotoSerifKannada-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Knda" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansKannadaUI-Regular">
+            NotoSansKannadaUI-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansKannadaUI-Regular">
+            NotoSansKannadaUI-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansKannadaUI-Regular">
+            NotoSansKannadaUI-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansKannadaUI-Regular">
+            NotoSansKannadaUI-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Orya" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansOriya">NotoSansOriya-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansOriya-Bold.ttf</font>
+    </family>
+    <family lang="und-Orya" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansOriyaUI">
+            NotoSansOriyaUI-Regular.ttf
+        </font>
+        <font weight="700" style="normal">NotoSansOriyaUI-Bold.ttf</font>
+    </family>
+    <family lang="und-Sinh" variant="elegant">
+        <font weight="400" style="normal" postScriptName="NotoSansSinhala-Regular">
+            NotoSansSinhala-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansSinhala-Regular">
+            NotoSansSinhala-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansSinhala-Regular">
+            NotoSansSinhala-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansSinhala-Regular">
+            NotoSansSinhala-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+        <font weight="400" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifSinhala-Regular">NotoSerifSinhala-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifSinhala-Regular">NotoSerifSinhala-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifSinhala-Regular">NotoSerifSinhala-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" fallbackFor="serif"
+              postScriptName="NotoSerifSinhala-Regular">NotoSerifSinhala-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Sinh" variant="compact">
+        <font weight="400" style="normal" postScriptName="NotoSansSinhalaUI-Regular">
+            NotoSansSinhalaUI-VF.ttf
+            <axis tag="wght" stylevalue="400"/>
+        </font>
+        <font weight="500" style="normal" postScriptName="NotoSansSinhalaUI-Regular">
+            NotoSansSinhalaUI-VF.ttf
+            <axis tag="wght" stylevalue="500"/>
+        </font>
+        <font weight="600" style="normal" postScriptName="NotoSansSinhalaUI-Regular">
+            NotoSansSinhalaUI-VF.ttf
+            <axis tag="wght" stylevalue="600"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="NotoSansSinhalaUI-Regular">
+            NotoSansSinhalaUI-VF.ttf
+            <axis tag="wght" stylevalue="700"/>
+        </font>
+    </family>
+    <family lang="und-Khmr" variant="elegant">
+        <font weight="100" style="normal" postScriptName="NotoSansKhmer-Regular">
+            NotoSansKhmer-VF.ttf
+            <axis tag="wdth" stylevalue="100.0"/>
+            <axis tag="wght" stylevalue="26.0"/>
+        </font>
+        <font weight="200" style="normal" postScriptName="NotoSansKhmer-Regular">
+            NotoSansKhmer-VF.ttf
+            <axis tag="wdth" stylevalue="100.0"/>
+            <axis tag="wght" stylevalue="39.0"/>
+        </font>
+        <font weight="300" style="normal" postScriptName="NotoSansKhmer-Regular">
+            NotoSansKhmer-VF.ttf
+            <axis tag="wdth" stylevalue="100.0"/>
+            <axis tag="wght" stylevalue="58.0"/>
+        </font>
+        <font weight="400" style="normal" postScriptName="NotoSansKhmer-Regular">
+            NotoSansKhmer-VF.ttf
+            <axis tag="wdth" stylevalue="100.0"/>

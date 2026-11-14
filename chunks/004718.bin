@@ -1,0 +1,1490 @@
+_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow mediaswcodec gpu_device (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow modprobe proc_modules (file (ioctl read getattr lock map open watch watch_reads)))
+(allow modprobe proc_cmdline (file (ioctl read getattr lock map open watch watch_reads)))
+(allow modprobe self (capability (sys_module)))
+(allow modprobe self (cap_userns (sys_module)))
+(allow modprobe kernel (key (search)))
+(allow modprobe system_dlkm_file (dir (search)))
+(allow modprobe system_dlkm_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow modprobe system_dlkm_file (system (module_load)))
+(allow mtp self (socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow mtp self (pppox_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow mtp self (capability (net_raw)))
+(allow mtp self (cap_userns (net_raw)))
+(allow mtp ppp (process (signal)))
+(allow mtp vpn_data_file (dir (search)))
+(allow netdomain self (tcp_socket (ioctl read write create getattr setattr lock append map bind connect listen accept getopt setopt shutdown)))
+(allow netdomain self (udp_socket (ioctl read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netdomain self (rawip_socket (ioctl read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netdomain self (icmp_socket (ioctl read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netdomain port_type (tcp_socket (name_connect)))
+(allow netdomain self (netlink_route_socket (read write create getattr setattr lock append connect getopt setopt shutdown nlmsg_read)))
+(allow netdomain dnsproxyd_socket (sock_file (write)))
+(allow netdomain netd (unix_stream_socket (connectto)))
+(allow netdomain fwmarkd_socket (sock_file (write)))
+(allow netdomain netd (unix_stream_socket (connectto)))
+(allow netd mdnsd_socket (sock_file (write)))
+(allow netd mdnsd (unix_stream_socket (connectto)))
+(allowx netd self (ioctl udp_socket (0x6900 0x6902)))
+(allowx netd self (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(allowx netd self (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(allow netd cgroup (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow netd cgroup (file (ioctl read getattr lock map open watch watch_reads)))
+(allow netd cgroup (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow netd system_server (fd (use)))
+(allow netd self (capability (kill net_admin net_raw)))
+(allow netd self (cap_userns (kill net_admin net_raw)))
+(dontaudit netd self (capability (fsetid)))
+(dontaudit netd self (cap_userns (fsetid)))
+(allow netd tun_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allowx netd tun_device (ioctl chr_file (0x54ca 0x54d2)))
+(allow netd self (tun_socket (create)))
+(allow netd self (netlink_kobject_uevent_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netd self (netlink_route_socket (nlmsg_write)))
+(allow netd self (netlink_nflog_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netd self (netlink_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netd self (netlink_tcpdiag_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown nlmsg_read nlmsg_write)))
+(allow netd self (netlink_generic_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netd self (netlink_netfilter_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netd shell_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow netd system_file (file (getattr map execute execute_no_trans)))
+(allow netd devpts (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow netd system_file (file (lock)))
+(dontaudit netd system_file (dir (write)))
+(allow netd proc_qtaguid_ctrl (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow netd qtaguid_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow netd proc_net_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow netd proc_net_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow netd proc_net_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow netd proc_net_type (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow netd sysfs (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow netd sysfs_net (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow netd sysfs_net (file (ioctl read getattr lock map open watch watch_reads)))
+(allow netd sysfs_net (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow netd sysfs_net (file (write lock append map open)))
+(allow netd sysfs_usb (file (write)))
+(allow netd cgroup_v2 (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow netd cgroup_v2 (file (ioctl read getattr lock map open watch watch_reads)))
+(allow netd cgroup_v2 (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow netd self (capability (chown dac_override dac_read_search)))
+(allow netd self (cap_userns (chown dac_override dac_read_search)))
+(allow netd net_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow netd net_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow netd self (capability (fowner)))
+(allow netd self (cap_userns (fowner)))
+(allow netd system_file (file (lock)))
+(allow netd dnsmasq (process (signal)))
+(allow netd servicemanager (binder (call transfer)))
+(allow servicemanager netd (binder (call transfer)))
+(allow servicemanager netd (dir (search)))
+(allow servicemanager netd (file (read open)))
+(allow servicemanager netd (process (getattr)))
+(allow netd netd_service (service_manager (add find)))
+;;* lmx 87 system/sepolicy/public/netd.te
+
+(neverallow base_typeattr_545 netd_service (service_manager (add)))
+;;* lme
+
+(allow netd su (tcp_socket (read write accept getopt)))
+(allow netd dnsresolver_service (service_manager (add find)))
+;;* lmx 88 system/sepolicy/public/netd.te
+
+(neverallow base_typeattr_545 dnsresolver_service (service_manager (add)))
+;;* lme
+
+(allow netd su (tcp_socket (read write accept getopt)))
+(allow netd mdns_service (service_manager (add find)))
+;;* lmx 89 system/sepolicy/public/netd.te
+
+(neverallow base_typeattr_545 mdns_service (service_manager (add)))
+;;* lme
+
+(allow netd su (tcp_socket (read write accept getopt)))
+(allow netd dumpstate (fifo_file (write getattr)))
+(allow netd system_server (binder (call)))
+(allow netd permission_service (service_manager (find)))
+(allow netd netd_listener_service (service_manager (find)))
+(allow netd netdomain (tcp_socket (read write getattr setattr getopt setopt)))
+(allow netd netdomain (udp_socket (read write getattr setattr getopt setopt)))
+(allow netd netdomain (rawip_socket (read write getattr setattr getopt setopt)))
+(allow netd netdomain (tun_socket (read write getattr setattr getopt setopt)))
+(allow netd netdomain (icmp_socket (read write getattr setattr getopt setopt)))
+(allow netd netdomain (fd (use)))
+(allow netd self (netlink_xfrm_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown nlmsg_read nlmsg_write)))
+(allow netd system_net_netd_hwservice (hwservice_manager (add find)))
+(allow netd hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 113 system/sepolicy/public/netd.te
+
+(neverallow base_typeattr_545 system_net_netd_hwservice (hwservice_manager (add)))
+;;* lme
+
+(allow netd hwservicemanager (binder (call transfer)))
+(allow hwservicemanager netd (binder (call transfer)))
+(allow hwservicemanager netd (dir (search)))
+(allow hwservicemanager netd (file (read map open)))
+(allow hwservicemanager netd (process (getattr)))
+(allow system_net_netd_service servicemanager (binder (call transfer)))
+(allow servicemanager system_net_netd_service (binder (transfer)))
+(allow system_net_netd_service servicemanager (fd (use)))
+(allow netd system_net_netd_service (service_manager (add find)))
+;;* lmx 118 system/sepolicy/public/netd.te
+
+(neverallow base_typeattr_545 system_net_netd_service (service_manager (add)))
+;;* lme
+
+(allow netd su (tcp_socket (read write accept getopt)))
+;;* lmx 126 system/sepolicy/public/netd.te
+
+(neverallow netd dev_type (blk_file (read write)))
+;;* lme
+
+;;* lmx 129 system/sepolicy/public/netd.te
+
+(neverallow netd domain (process (ptrace)))
+;;* lme
+
+;;* lmx 132 system/sepolicy/public/netd.te
+
+(neverallow netd system_file (file (write)))
+(neverallow netd system_file (dir (write)))
+(neverallow netd system_file (lnk_file (write)))
+(neverallow netd system_file (chr_file (write)))
+(neverallow netd system_file (blk_file (write)))
+(neverallow netd system_file (sock_file (write)))
+(neverallow netd system_file (fifo_file (write)))
+;;* lme
+
+;;* lmx 135 system/sepolicy/public/netd.te
+
+(neverallow netd app_data_file_type (file (write)))
+(neverallow netd app_data_file_type (dir (write)))
+(neverallow netd app_data_file_type (lnk_file (write)))
+(neverallow netd app_data_file_type (chr_file (write)))
+(neverallow netd app_data_file_type (blk_file (write)))
+(neverallow netd app_data_file_type (sock_file (write)))
+(neverallow netd app_data_file_type (fifo_file (write)))
+(neverallow netd system_data_file (file (write)))
+(neverallow netd system_data_file (dir (write)))
+(neverallow netd system_data_file (lnk_file (write)))
+(neverallow netd system_data_file (chr_file (write)))
+(neverallow netd system_data_file (blk_file (write)))
+(neverallow netd system_data_file (sock_file (write)))
+(neverallow netd system_data_file (fifo_file (write)))
+;;* lme
+
+;;* lmx 145 system/sepolicy/public/netd.te
+
+(neverallow base_typeattr_546 netd_service (service_manager (find)))
+;;* lme
+
+;;* lmx 155 system/sepolicy/public/netd.te
+
+(neverallow base_typeattr_546 dnsresolver_service (service_manager (find)))
+;;* lme
+
+;;* lmx 165 system/sepolicy/public/netd.te
+
+(neverallow base_typeattr_546 mdns_service (service_manager (find)))
+;;* lme
+
+;;* lmx 168 system/sepolicy/public/netd.te
+
+(neverallow base_typeattr_218 netd (binder (call)))
+;;* lme
+
+;;* lmx 169 system/sepolicy/public/netd.te
+
+(neverallow netd base_typeattr_547 (binder (call)))
+;;* lme
+
+;;* lmx 174 system/sepolicy/public/netd.te
+
+(neverallow netd proc_net (dir (write create setattr relabelfrom link rename add_name remove_name reparent rmdir)))
+;;* lme
+
+(dontaudit netd proc_net (dir (write)))
+;;* lmx 177 system/sepolicy/public/netd.te
+
+(neverallow netd sysfs_net (dir (write create setattr relabelfrom link rename add_name remove_name reparent rmdir)))
+;;* lme
+
+(dontaudit netd sysfs_net (dir (write)))
+;;* lmx 181 system/sepolicy/public/netd.te
+
+(neverallow netd self (capability (sys_admin)))
+;;* lme
+
+(dontaudit netd self (capability (sys_admin)))
+(dontaudit netd self (capability (sys_module)))
+(dontaudit netd kernel (system (module_request)))
+(dontaudit netd appdomain (unix_stream_socket (read write)))
+;;* lmx 5 system/sepolicy/public/netutils_wrapper.te
+
+(neverallow domain netutils_wrapper_exec (file (execute_no_trans)))
+;;* lme
+
+(allow performanced servicemanager (binder (call transfer)))
+(allow servicemanager performanced (binder (call transfer)))
+(allow servicemanager performanced (dir (search)))
+(allow servicemanager performanced (file (read open)))
+(allow servicemanager performanced (process (getattr)))
+(allow performanced system_server (binder (call transfer)))
+(allow system_server performanced (binder (transfer)))
+(allow performanced system_server (fd (use)))
+(allow performanced permission_service (service_manager (find)))
+(allow init pdx_performance_client_endpoint_socket_type (unix_stream_socket (create bind)))
+(allow performanced pdx_performance_client_endpoint_socket_type (unix_stream_socket (read write getattr setattr lock append listen accept getopt setopt shutdown)))
+(allow performanced self (process (setsockcreate)))
+(allow performanced pdx_performance_client_channel_socket_type (unix_stream_socket (ioctl read write create getattr setattr lock append map bind connect listen accept getopt setopt shutdown)))
+;;* lmx 10 system/sepolicy/public/performanced.te
+
+(neverallow base_typeattr_548 pdx_performance_client_endpoint_socket_type (unix_stream_socket (listen accept)))
+;;* lme
+
+(allow performanced self (capability (setgid setuid sys_nice)))
+(allow performanced self (cap_userns (setgid setuid sys_nice)))
+(allow performanced appdomain (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow performanced bufferhubd (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow performanced kernel (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow performanced surfaceflinger (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow performanced appdomain (file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced appdomain (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced bufferhubd (file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced bufferhubd (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced kernel (file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced kernel (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced surfaceflinger (file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced surfaceflinger (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(dontaudit performanced domain (dir (read)))
+(allow performanced appdomain (process (setsched)))
+(allow performanced bufferhubd (process (setsched)))
+(allow performanced kernel (process (setsched)))
+(allow performanced surfaceflinger (process (setsched)))
+(dontaudit performanced domain (dir (open)))
+(dontaudit performanced domain (file (read getattr open)))
+(allow performanced cgroup (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow performanced cgroup (file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced cgroup (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced cgroup_v2 (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow performanced cgroup_v2 (file (ioctl read getattr lock map open watch watch_reads)))
+(allow performanced cgroup_v2 (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow postinstall update_engine_common (fd (use)))
+(allow postinstall update_engine_common (fifo_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow postinstall postinstall_file (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow postinstall postinstall_file (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow postinstall postinstall_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow postinstall shell_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow postinstall system_file (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow postinstall toolbox_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow postinstall servicemanager (binder (call transfer)))
+(allow servicemanager postinstall (binder (call transfer)))
+(allow servicemanager postinstall (dir (search)))
+(allow servicemanager postinstall (file (read open)))
+(allow servicemanager postinstall (process (getattr)))
+(allow postinstall system_server (binder (call transfer)))
+(allow system_server postinstall (binder (transfer)))
+(allow postinstall system_server (fd (use)))
+(allow postinstall otadexopt_service (service_manager (find)))
+(allow postinstall sysfs_fs_f2fs (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow postinstall sysfs_fs_f2fs (dir (ioctl read getattr lock open watch watch_reads search)))
+;;* lmx 45 system/sepolicy/public/postinstall.te
+
+(neverallow base_typeattr_549 postinstall (process (transition dyntransition)))
+;;* lme
+
+(allow ppp proc_net_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow ppp proc_net_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow ppp proc_net_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow ppp mtp (socket (ioctl read write getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow ppp mtp (pppox_socket (ioctl read write getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allowx ppp self (ioctl udp_socket (0x6900 0x6902)))
+(allowx ppp self (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(allowx ppp self (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(allowx ppp mtp (ioctl socket ((range 0x7436 0x7441) (range 0x7446 0x7447) (range 0x744b 0x745a) (range 0x7480 0x7488))))
+(allowx ppp mtp (ioctl pppox_socket ((range 0x7436 0x7441) (range 0x7446 0x7447) (range 0x744b 0x745a) (range 0x7480 0x7488))))
+(allow ppp mtp (unix_dgram_socket (ioctl read write getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow ppp ppp_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow ppp self (capability (net_admin)))
+(allow ppp self (cap_userns (net_admin)))
+(allow ppp system_file (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow ppp vpn_data_file (dir (write lock open add_name remove_name search)))
+(allow ppp vpn_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow ppp mtp (fd (use)))
+(allow profman user_profile_data_file (file (read write getattr lock map)))
+(allow profman asec_apk_file (file (read map)))
+(allow profman apk_data_file (file (read getattr map)))
+(allow profman apk_data_file (dir (read getattr search)))
+(allow profman oemfs (file (read map)))
+(allow profman tmpfs (file (read map)))
+(allow profman profman_dump_data_file (file (write map)))
+(allow profman app_data_file (file (read write getattr lock map)))
+(allow profman privapp_data_file (file (read write getattr lock map)))
+(allow profman app_data_file (dir (read getattr search)))
+(allow profman privapp_data_file (dir (read getattr search)))
+(allow profman device_config_runtime_native_prop (file (read getattr map open)))
+(allow profman device_config_runtime_native_boot_prop (file (read getattr map open)))
+;;* lmx 31 system/sepolicy/public/profman.te
+
+(neverallow profman app_data_file (file (open)))
+(neverallow profman app_data_file (lnk_file (open)))
+(neverallow profman app_data_file (sock_file (open)))
+(neverallow profman app_data_file (fifo_file (open)))
+(neverallow profman privapp_data_file (file (open)))
+(neverallow profman privapp_data_file (lnk_file (open)))
+(neverallow profman privapp_data_file (sock_file (open)))
+(neverallow profman privapp_data_file (fifo_file (open)))
+;;* lme
+
+;;* lmx 6 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 apexd_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 7 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 bootloader_boot_reason_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 8 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_activity_manager_native_boot_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 9 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_boot_count_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 10 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_input_native_boot_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 11 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_netd_native_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 12 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_reset_performed_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 13 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 firstboot_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 boottime_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 charger_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 cold_boot_done_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_adbd_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_apexd_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_bootanim_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_bugreport_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_console_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_dumpstate_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_fuse_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_gsid_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_interface_restart_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_interface_stop_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_mdnsd_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_restart_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_rildaemon_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ctl_sigstop_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 dynamic_system_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 heapprofd_enabled_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 llkd_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 lpdumpd_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 mmc_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 mock_ota_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 net_dns_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 overlay_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 persistent_properties_ready_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 safemode_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 system_lmk_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 system_trace_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 test_boot_reason_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 time_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 traced_enabled_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 15 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 traced_lazy_prop (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 53 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 aac_drc_prop (property_service (set)))
+;;* lme
+
+;;* lmx 54 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 adaptive_haptics_prop (property_service (set)))
+;;* lme
+
+;;* lmx 55 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 apex_ready_prop (property_service (set)))
+;;* lme
+
+;;* lmx 56 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 arm64_memtag_prop (property_service (set)))
+;;* lme
+
+;;* lmx 57 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 binder_cache_bluetooth_server_prop (property_service (set)))
+;;* lme
+
+;;* lmx 58 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 binder_cache_system_server_prop (property_service (set)))
+;;* lme
+
+;;* lmx 59 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 binder_cache_telephony_server_prop (property_service (set)))
+;;* lme
+
+;;* lmx 60 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 boot_status_prop (property_service (set)))
+;;* lme
+
+;;* lmx 61 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 bootanim_system_prop (property_service (set)))
+;;* lme
+
+;;* lmx 62 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 bootloader_prop (property_service (set)))
+;;* lme
+
+;;* lmx 63 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 boottime_public_prop (property_service (set)))
+;;* lme
+
+;;* lmx 64 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 bq_config_prop (property_service (set)))
+;;* lme
+
+;;* lmx 65 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 build_bootimage_prop (property_service (set)))
+;;* lme
+
+;;* lmx 66 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 build_prop (property_service (set)))
+;;* lme
+
+;;* lmx 67 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 composd_vm_art_prop (property_service (set)))
+;;* lme
+
+;;* lmx 68 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_camera_native_prop (property_service (set)))
+;;* lme
+
+;;* lmx 69 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_edgetpu_native_prop (property_service (set)))
+;;* lme
+
+;;* lmx 70 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_media_native_prop (property_service (set)))
+;;* lme
+
+;;* lmx 71 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_nnapi_native_prop (property_service (set)))
+;;* lme
+
+;;* lmx 72 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_runtime_native_boot_prop (property_service (set)))
+;;* lme
+
+;;* lmx 73 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_runtime_native_prop (property_service (set)))
+;;* lme
+
+;;* lmx 74 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_surface_flinger_native_boot_prop (property_service (set)))
+;;* lme
+
+;;* lmx 75 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_vendor_system_native_prop (property_service (set)))
+;;* lme
+
+;;* lmx 76 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_config_vendor_system_native_boot_prop (property_service (set)))
+;;* lme
+
+;;* lmx 77 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 fingerprint_prop (property_service (set)))
+;;* lme
+
+;;* lmx 78 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 gwp_asan_prop (property_service (set)))
+;;* lme
+
+;;* lmx 79 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 hal_instrumentation_prop (property_service (set)))
+;;* lme
+
+;;* lmx 80 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 userdebug_or_eng_prop (property_service (set)))
+;;* lme
+
+;;* lmx 81 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 init_service_status_prop (property_service (set)))
+;;* lme
+
+;;* lmx 82 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 libc_debug_prop (property_service (set)))
+;;* lme
+
+;;* lmx 83 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 module_sdkextensions_prop (property_service (set)))
+;;* lme
+
+;;* lmx 84 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 nnapi_ext_deny_product_prop (property_service (set)))
+;;* lme
+
+;;* lmx 85 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 persist_wm_debug_prop (property_service (set)))
+;;* lme
+
+;;* lmx 86 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 power_debug_prop (property_service (set)))
+;;* lme
+
+;;* lmx 87 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 property_service_version_prop (property_service (set)))
+;;* lme
+
+;;* lmx 88 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 provisioned_prop (property_service (set)))
+;;* lme
+
+;;* lmx 89 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 restorecon_prop (property_service (set)))
+;;* lme
+
+;;* lmx 90 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 retaildemo_prop (property_service (set)))
+;;* lme
+
+;;* lmx 91 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 servicemanager_prop (property_service (set)))
+;;* lme
+
+;;* lmx 92 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 smart_idle_maint_enabled_prop (property_service (set)))
+;;* lme
+
+;;* lmx 93 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 socket_hook_prop (property_service (set)))
+;;* lme
+
+;;* lmx 94 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 sqlite_log_prop (property_service (set)))
+;;* lme
+
+;;* lmx 95 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 surfaceflinger_display_prop (property_service (set)))
+;;* lme
+
+;;* lmx 96 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 system_boot_reason_prop (property_service (set)))
+;;* lme
+
+;;* lmx 97 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 system_jvmti_agent_prop (property_service (set)))
+;;* lme
+
+;;* lmx 98 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 traced_oome_heap_session_count_prop (property_service (set)))
+;;* lme
+
+;;* lmx 99 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 ab_update_gki_prop (property_service (set)))
+;;* lme
+
+;;* lmx 100 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 usb_prop (property_service (set)))
+;;* lme
+
+;;* lmx 101 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 userspace_reboot_exported_prop (property_service (set)))
+;;* lme
+
+;;* lmx 102 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 vold_status_prop (property_service (set)))
+;;* lme
+
+;;* lmx 103 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 vts_status_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 config_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 cppreopt_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 dalvik_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 debuggerd_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 device_logging_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 dhcp_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 dumpstate_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 exported3_system_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 exported_dumpstate_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 exported_secure_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 heapprofd_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 net_radio_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 pan_result_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 persist_debug_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 shell_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 test_harness_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 theme_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 use_memfd_prop (property_service (set)))
+;;* lme
+
+;;* lmx 106 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_238 vold_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init apexd_config_prop (property_service (set)))
+(allow vendor_init apexd_config_prop (file (read getattr map open)))
+;;* lmx 130 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 apexd_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init apexd_select_prop (property_service (set)))
+(allow vendor_init apexd_select_prop (file (read getattr map open)))
+;;* lmx 131 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 apexd_select_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init aaudio_config_prop (property_service (set)))
+(allow vendor_init aaudio_config_prop (file (read getattr map open)))
+;;* lmx 132 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 aaudio_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init apk_verity_prop (property_service (set)))
+(allow vendor_init apk_verity_prop (file (read getattr map open)))
+;;* lmx 133 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 apk_verity_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init audio_config_prop (property_service (set)))
+(allow vendor_init audio_config_prop (file (read getattr map open)))
+;;* lmx 134 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 audio_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init bootanim_config_prop (property_service (set)))
+(allow vendor_init bootanim_config_prop (file (read getattr map open)))
+;;* lmx 135 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 bootanim_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init bluetooth_config_prop (property_service (set)))
+(allow vendor_init bluetooth_config_prop (file (read getattr map open)))
+;;* lmx 136 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 bluetooth_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init build_attestation_prop (property_service (set)))
+(allow vendor_init build_attestation_prop (file (read getattr map open)))
+;;* lmx 137 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 build_attestation_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init build_config_prop (property_service (set)))
+(allow vendor_init build_config_prop (file (read getattr map open)))
+;;* lmx 138 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 build_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init build_odm_prop (property_service (set)))
+(allow vendor_init build_odm_prop (file (read getattr map open)))
+;;* lmx 139 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 build_odm_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init build_vendor_prop (property_service (set)))
+(allow vendor_init build_vendor_prop (file (read getattr map open)))
+;;* lmx 140 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 build_vendor_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init camera_calibration_prop (property_service (set)))
+(allow vendor_init camera_calibration_prop (file (read getattr map open)))
+;;* lmx 141 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 camera_calibration_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init camera_config_prop (property_service (set)))
+(allow vendor_init camera_config_prop (file (read getattr map open)))
+;;* lmx 142 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 camera_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init camera2_extensions_prop (property_service (set)))
+(allow vendor_init camera2_extensions_prop (file (read getattr map open)))
+;;* lmx 143 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 camera2_extensions_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init camerax_extensions_prop (property_service (set)))
+(allow vendor_init camerax_extensions_prop (file (read getattr map open)))
+;;* lmx 144 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 camerax_extensions_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init charger_config_prop (property_service (set)))
+(allow vendor_init charger_config_prop (file (read getattr map open)))
+;;* lmx 145 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 charger_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init codec2_config_prop (property_service (set)))
+(allow vendor_init codec2_config_prop (file (read getattr map open)))
+;;* lmx 146 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 codec2_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init composd_vm_vendor_prop (property_service (set)))
+(allow vendor_init composd_vm_vendor_prop (file (read getattr map open)))
+;;* lmx 147 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 composd_vm_vendor_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init cpu_variant_prop (property_service (set)))
+(allow vendor_init cpu_variant_prop (file (read getattr map open)))
+;;* lmx 148 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 cpu_variant_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init debugfs_restriction_prop (property_service (set)))
+(allow vendor_init debugfs_restriction_prop (file (read getattr map open)))
+;;* lmx 149 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 debugfs_restriction_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init drm_service_config_prop (property_service (set)))
+(allow vendor_init drm_service_config_prop (file (read getattr map open)))
+;;* lmx 150 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 drm_service_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init exported_camera_prop (property_service (set)))
+(allow vendor_init exported_camera_prop (file (read getattr map open)))
+;;* lmx 151 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 exported_camera_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init exported_config_prop (property_service (set)))
+(allow vendor_init exported_config_prop (file (read getattr map open)))
+;;* lmx 152 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 exported_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init exported_default_prop (property_service (set)))
+(allow vendor_init exported_default_prop (file (read getattr map open)))
+;;* lmx 153 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 exported_default_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init ffs_config_prop (property_service (set)))
+(allow vendor_init ffs_config_prop (file (read getattr map open)))
+;;* lmx 154 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 ffs_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init framework_watchdog_config_prop (property_service (set)))
+(allow vendor_init framework_watchdog_config_prop (file (read getattr map open)))
+;;* lmx 155 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 framework_watchdog_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init graphics_config_prop (property_service (set)))
+(allow vendor_init graphics_config_prop (file (read getattr map open)))
+;;* lmx 156 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 graphics_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init hdmi_config_prop (property_service (set)))
+(allow vendor_init hdmi_config_prop (file (read getattr map open)))
+;;* lmx 157 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 hdmi_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init hw_timeout_multiplier_prop (property_service (set)))
+(allow vendor_init hw_timeout_multiplier_prop (file (read getattr map open)))
+;;* lmx 158 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 hw_timeout_multiplier_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init hypervisor_prop (property_service (set)))
+(allow vendor_init hypervisor_prop (file (read getattr map open)))
+;;* lmx 159 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 hypervisor_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init hypervisor_restricted_prop (property_service (set)))
+(allow vendor_init hypervisor_restricted_prop (file (read getattr map open)))
+;;* lmx 160 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 hypervisor_restricted_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init incremental_prop (property_service (set)))
+(allow vendor_init incremental_prop (file (read getattr map open)))
+;;* lmx 161 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 incremental_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init keyguard_config_prop (property_service (set)))
+(allow vendor_init keyguard_config_prop (file (read getattr map open)))
+;;* lmx 162 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 keyguard_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init keystore_config_prop (property_service (set)))
+(allow vendor_init keystore_config_prop (file (read getattr map open)))
+;;* lmx 163 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 keystore_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init lmkd_config_prop (property_service (set)))
+(allow vendor_init lmkd_config_prop (file (read getattr map open)))
+;;* lmx 164 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 lmkd_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init media_config_prop (property_service (set)))
+(allow vendor_init media_config_prop (file (read getattr map open)))
+;;* lmx 165 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 media_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init media_variant_prop (property_service (set)))
+(allow vendor_init media_variant_prop (file (read getattr map open)))
+;;* lmx 166 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 media_variant_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init mediadrm_config_prop (property_service (set)))
+(allow vendor_init mediadrm_config_prop (file (read getattr map open)))
+;;* lmx 167 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 mediadrm_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init mm_events_config_prop (property_service (set)))
+(allow vendor_init mm_events_config_prop (file (read getattr map open)))
+;;* lmx 168 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 mm_events_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init oem_unlock_prop (property_service (set)))
+(allow vendor_init oem_unlock_prop (file (read getattr map open)))
+;;* lmx 169 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 oem_unlock_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init packagemanager_config_prop (property_service (set)))
+(allow vendor_init packagemanager_config_prop (file (read getattr map open)))
+;;* lmx 170 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 packagemanager_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init quick_start_prop (property_service (set)))
+(allow vendor_init quick_start_prop (file (read getattr map open)))
+;;* lmx 171 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 quick_start_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init recovery_config_prop (property_service (set)))
+(allow vendor_init recovery_config_prop (file (read getattr map open)))
+;;* lmx 172 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 recovery_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init recovery_usb_config_prop (property_service (set)))
+(allow vendor_init recovery_usb_config_prop (file (read getattr map open)))
+;;* lmx 173 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 recovery_usb_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init sendbug_config_prop (property_service (set)))
+(allow vendor_init sendbug_config_prop (file (read getattr map open)))
+;;* lmx 174 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 sendbug_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init soc_prop (property_service (set)))
+(allow vendor_init soc_prop (file (read getattr map open)))
+;;* lmx 175 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 soc_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init storage_config_prop (property_service (set)))
+(allow vendor_init storage_config_prop (file (read getattr map open)))
+;;* lmx 176 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 storage_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init storagemanager_config_prop (property_service (set)))
+(allow vendor_init storagemanager_config_prop (file (read getattr map open)))
+;;* lmx 177 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 storagemanager_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init surfaceflinger_prop (property_service (set)))
+(allow vendor_init surfaceflinger_prop (file (read getattr map open)))
+;;* lmx 178 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 surfaceflinger_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init suspend_prop (property_service (set)))
+(allow vendor_init suspend_prop (file (read getattr map open)))
+;;* lmx 179 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 suspend_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init systemsound_config_prop (property_service (set)))
+(allow vendor_init systemsound_config_prop (file (read getattr map open)))
+;;* lmx 180 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 systemsound_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init telephony_config_prop (property_service (set)))
+(allow vendor_init telephony_config_prop (file (read getattr map open)))
+;;* lmx 181 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 telephony_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init tombstone_config_prop (property_service (set)))
+(allow vendor_init tombstone_config_prop (file (read getattr map open)))
+;;* lmx 182 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 tombstone_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init usb_config_prop (property_service (set)))
+(allow vendor_init usb_config_prop (file (read getattr map open)))
+;;* lmx 183 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 usb_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init userspace_reboot_config_prop (property_service (set)))
+(allow vendor_init userspace_reboot_config_prop (file (read getattr map open)))
+;;* lmx 184 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 userspace_reboot_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init vehicle_hal_prop (property_service (set)))
+(allow vendor_init vehicle_hal_prop (file (read getattr map open)))
+;;* lmx 185 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 vehicle_hal_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init vendor_security_patch_level_prop (property_service (set)))
+(allow vendor_init vendor_security_patch_level_prop (file (read getattr map open)))
+;;* lmx 186 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 vendor_security_patch_level_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init vendor_socket_hook_prop (property_service (set)))
+(allow vendor_init vendor_socket_hook_prop (file (read getattr map open)))
+;;* lmx 187 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 vendor_socket_hook_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init virtual_ab_prop (property_service (set)))
+(allow vendor_init virtual_ab_prop (file (read getattr map open)))
+;;* lmx 188 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 virtual_ab_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init vndk_prop (property_service (set)))
+(allow vendor_init vndk_prop (file (read getattr map open)))
+;;* lmx 189 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 vndk_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init vts_config_prop (property_service (set)))
+(allow vendor_init vts_config_prop (file (read getattr map open)))
+;;* lmx 190 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 vts_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init vold_config_prop (property_service (set)))
+(allow vendor_init vold_config_prop (file (read getattr map open)))
+;;* lmx 191 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 vold_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init wifi_config_prop (property_service (set)))
+(allow vendor_init wifi_config_prop (file (read getattr map open)))
+;;* lmx 192 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 wifi_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init zram_config_prop (property_service (set)))
+(allow vendor_init zram_config_prop (file (read getattr map open)))
+;;* lmx 193 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 zram_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init zygote_config_prop (property_service (set)))
+(allow vendor_init zygote_config_prop (file (read getattr map open)))
+;;* lmx 194 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 zygote_config_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allow vendor_init dck_prop (property_service (set)))
+(allow vendor_init dck_prop (file (read getattr map open)))
+;;* lmx 195 system/sepolicy/public/property.te
+
+(neverallow base_typeattr_247 dck_prop (property_service (set)))
+;;* lme
+
+(allow vendor_init property_socket (sock_file (write)))
+(allow vendor_init init (unix_stream_socket (connectto)))
+(allo

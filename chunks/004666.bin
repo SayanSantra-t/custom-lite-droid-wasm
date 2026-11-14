@@ -1,0 +1,647 @@
+t.SimpleDateFormat$ContextValue;
+[Landroid.icu.text.SpoofChecker$RestrictionLevel;
+[Landroid.icu.text.TimeZoneFormat$GMTOffsetPatternType;
+[Landroid.icu.text.TimeZoneFormat$OffsetFields;
+[Landroid.icu.text.TimeZoneFormat$ParseOption;
+[Landroid.icu.text.TimeZoneFormat$Style;
+[Landroid.icu.text.TimeZoneFormat$TimeType;
+[Landroid.icu.text.TimeZoneNames$NameType;
+[Landroid.icu.text.UnicodeSet$ComparisonStyle;
+[Landroid.icu.text.UnicodeSet$SpanCondition;
+[Landroid.icu.text.UnicodeSet;
+[Landroid.icu.text.UnicodeSetSpanner$CountMethod;
+[Landroid.icu.text.UnicodeSetSpanner$TrimOption;
+[Landroid.icu.util.BasicTimeZone$LocalOption;
+[Landroid.icu.util.BytesTrie$Result;
+[Landroid.icu.util.CodePointMap$RangeOption;
+[Landroid.icu.util.CodePointMap;
+[Landroid.icu.util.CodePointTrie$Type;
+[Landroid.icu.util.CodePointTrie$ValueWidth;
+[Landroid.icu.util.Currency$CurrencyUsage;
+[Landroid.icu.util.GenderInfo$Gender;
+[Landroid.icu.util.GenderInfo$ListGenderStyle;
+[Landroid.icu.util.Holiday;
+[Landroid.icu.util.IslamicCalendar$CalculationType;
+[Landroid.icu.util.LocaleMatcher$Demotion;
+[Landroid.icu.util.LocaleMatcher$Direction;
+[Landroid.icu.util.LocaleMatcher$FavorSubtag;
+[Landroid.icu.util.Measure;
+[Landroid.icu.util.MeasureUnit$Complexity;
+[Landroid.icu.util.MeasureUnit$MeasurePrefix;
+[Landroid.icu.util.Region$RegionType;
+[Landroid.icu.util.StringTrieBuilder$Node;
+[Landroid.icu.util.StringTrieBuilder$Option;
+[Landroid.icu.util.StringTrieBuilder$State;
+[Landroid.icu.util.TimeArrayTimeZoneRule;
+[Landroid.icu.util.TimeZone$SystemTimeZoneType;
+[Landroid.icu.util.TimeZoneRule;
+[Landroid.icu.util.ULocale$AvailableType;
+[Landroid.icu.util.ULocale$Category;
+[Landroid.icu.util.ULocale$Minimize;
+[Landroid.icu.util.ULocale;
+[Landroid.icu.util.UResourceBundle$RootType;
+[Landroid.icu.util.UniversalTimeScale$TimeScaleData;
+[Landroid.media.AudioAttributes;
+[Landroid.media.AudioDeviceInfo;
+[Landroid.media.AudioGain;
+[Landroid.media.AudioPatch;
+[Landroid.media.AudioPort;
+[Landroid.media.AudioPortConfig;
+[Landroid.media.DrmInitData$SchemeInitData;
+[Landroid.media.ExifInterface$ExifTag;
+[Landroid.media.ImageReader$SurfaceImage$SurfacePlane;
+[Landroid.media.ImageWriter$WriterSurfaceImage$SurfacePlane;
+[Landroid.media.MediaCodecInfo$CodecCapabilities;
+[Landroid.media.MediaCodecInfo$CodecProfileLevel;
+[Landroid.media.MediaCodecInfo$Feature;
+[Landroid.media.MediaCodecInfo;
+[Landroid.media.MediaPlayer$TrackInfo;
+[Landroid.media.MediaTimeProvider$OnMediaTimeListener;
+[Landroid.media.audiopolicy.AudioProductStrategy$AudioAttributesGroup;
+[Landroid.net.LocalSocketAddress$Namespace;
+[Landroid.net.NetworkKey;
+[Landroid.net.Uri;
+[Landroid.net.rtp.AudioCodec;
+[Landroid.os.AsyncTask$Status;
+[Landroid.os.BatteryConsumer$Dimensions;
+[Landroid.os.BatteryConsumer$Key;
+[Landroid.os.BatteryStats$BitDescription;
+[Landroid.os.BatteryStats$IntToString;
+[Landroid.os.BatteryStats$LongCounter;
+[Landroid.os.Bundle;
+[Landroid.os.Debug$MemoryInfo;
+[Landroid.os.IBinder;
+[Landroid.os.MessageQueue$IdleHandler;
+[Landroid.os.ParcelFileDescriptor;
+[Landroid.os.ParcelUuid;
+[Landroid.os.Parcelable;
+[Landroid.os.PatternMatcher;
+[Landroid.os.PersistableBundle;
+[Landroid.os.SystemService$State;
+[Landroid.os.Temperature;
+[Landroid.os.UserHandle;
+[Landroid.os.VibratorInfo;
+[Landroid.os.health.HealthKeys$SortedIntArray;
+[Landroid.os.storage.DiskInfo;
+[Landroid.os.storage.StorageVolume;
+[Landroid.os.storage.VolumeInfo;
+[Landroid.os.storage.VolumeRecord;
+[Landroid.os.vibrator.VibrationEffectSegment;
+[Landroid.provider.FontsContract$FontInfo;
+[Landroid.renderscript.Element$DataKind;
+[Landroid.renderscript.Element$DataType;
+[Landroid.renderscript.RenderScript$ContextType;
+[Landroid.security.KeyStore$State;
+[Landroid.service.notification.NotificationListenerService$Ranking;
+[Landroid.service.notification.StatusBarNotification;
+[Landroid.service.notification.ZenModeConfig$ZenRule;
+[Landroid.service.wallpaper.EngineWindowPage;
+[Landroid.sysprop.CryptoProperties$state_values;
+[Landroid.sysprop.CryptoProperties$type_values;
+[Landroid.system.StructCapUserData;
+[Landroid.system.StructIfaddrs;
+[Landroid.system.StructPollfd;
+[Landroid.system.keystore2.Authorization;
+[Landroid.system.suspend.internal.WakeLockInfo;
+[Landroid.telephony.ActivityStatsTechSpecificInfo;
+[Landroid.telephony.LocationAccessPolicy$LocationPermissionResult;
+[Landroid.telephony.SmsMessage$MessageClass;
+[Landroid.telephony.SubscriptionPlan;
+[Landroid.telephony.TelephonyManager$MultiSimVariants;
+[Landroid.telephony.UiccAccessRule;
+[Landroid.telephony.gsm.SmsMessage$MessageClass;
+[Landroid.text.DynamicLayout$ChangeWatcher;
+[Landroid.text.InputFilter;
+[Landroid.text.Layout$Alignment;
+[Landroid.text.Layout$Directions;
+[Landroid.text.PrecomputedText$ParagraphInfo;
+[Landroid.text.Selection$MemoryTextWatcher;
+[Landroid.text.SpanWatcher;
+[Landroid.text.TextLine;
+[Landroid.text.TextUtils$TruncateAt;
+[Landroid.text.TextWatcher;
+[Landroid.text.method.MultiTapKeyListener;
+[Landroid.text.method.QwertyKeyListener$Replaced;
+[Landroid.text.method.QwertyKeyListener;
+[Landroid.text.method.TextKeyListener$Capitalize;
+[Landroid.text.method.TextKeyListener;
+[Landroid.text.method.Touch$DragState;
+[Landroid.text.style.AlignmentSpan;
+[Landroid.text.style.CharacterStyle;
+[Landroid.text.style.ClickableSpan;
+[Landroid.text.style.LeadingMarginSpan;
+[Landroid.text.style.LineBackgroundSpan;
+[Landroid.text.style.LineHeightSpan;
+[Landroid.text.style.MetricAffectingSpan;
+[Landroid.text.style.ParagraphStyle;
+[Landroid.text.style.ReplacementSpan;
+[Landroid.text.style.SpellCheckSpan;
+[Landroid.text.style.SuggestionSpan;
+[Landroid.text.style.TabStopSpan;
+[Landroid.text.style.URLSpan;
+[Landroid.util.ArrayMap;
+[Landroid.util.DataUnit;
+[Landroid.util.JsonScope;
+[Landroid.util.JsonToken;
+[Landroid.util.LongSparseArray;
+[Landroid.util.Pair;
+[Landroid.util.Range;
+[Landroid.util.Rational;
+[Landroid.util.Size;
+[Landroid.util.SparseIntArray;
+[Landroid.util.Xml$Encoding;
+[Landroid.util.apk.DataSource;
+[Landroid.view.AppTransitionAnimationSpec;
+[Landroid.view.Choreographer$CallbackQueue;
+[Landroid.view.Choreographer$FrameTimeline;
+[Landroid.view.Display$Mode;
+[Landroid.view.Display;
+[Landroid.view.DisplayEventReceiver$VsyncEventData$FrameTimeline;
+[Landroid.view.HandlerActionQueue$HandlerAction;
+[Landroid.view.InsetsFrameProvider;
+[Landroid.view.InsetsSource;
+[Landroid.view.InsetsSourceControl;
+[Landroid.view.MenuItem;
+[Landroid.view.MotionEvent$PointerCoords;
+[Landroid.view.MotionEvent$PointerProperties;
+[Landroid.view.RemoteAnimationTarget;
+[Landroid.view.RoundedCorner;
+[Landroid.view.SurfaceControl$DisplayMode;
+[Landroid.view.SurfaceHolder$Callback;
+[Landroid.view.SyncRtSurfaceTransactionApplier$SurfaceParams;
+[Landroid.view.View$AttachInfo$InvalidateInfo;
+[Landroid.view.View;
+[Landroid.view.WindowManager$LayoutParams;
+[Landroid.view.accessibility.CaptioningManager$CaptionStyle;
+[Landroid.view.autofill.AutofillId;
+[Landroid.view.inputmethod.CompletionInfo;
+[Landroid.view.inputmethod.InputMethodSubtype;
+[Landroid.view.textservice.SentenceSuggestionsInfo;
+[Landroid.view.textservice.SuggestionsInfo;
+[Landroid.view.textservice.TextInfo;
+[Landroid.webkit.ConsoleMessage$MessageLevel;
+[Landroid.webkit.FindAddress$ZipRange;
+[Landroid.webkit.WebMessagePort;
+[Landroid.webkit.WebSettings$LayoutAlgorithm;
+[Landroid.webkit.WebSettings$PluginState;
+[Landroid.webkit.WebSettings$RenderPriority;
+[Landroid.webkit.WebSettings$ZoomDensity;
+[Landroid.widget.Editor$TextRenderNode;
+[Landroid.widget.Editor$TextViewPositionListener;
+[Landroid.widget.GridLayout$Arc;
+[Landroid.widget.GridLayout$Bounds;
+[Landroid.widget.GridLayout$Interval;
+[Landroid.widget.GridLayout$MutableInt;
+[Landroid.widget.GridLayout$Spec;
+[Landroid.widget.ImageView$ScaleType;
+[Landroid.widget.SpellChecker$RemoveReason;
+[Landroid.widget.SpellChecker$SpellParser;
+[Landroid.widget.TextView$BufferType;
+[Landroid.widget.TextView$ChangeWatcher;
+[Landroid.window.TransitionFilter$Requirement;
+[Lcom.android.framework.protobuf.GeneratedMessageLite$MethodToInvoke;
+[Lcom.android.framework.protobuf.MessageInfoFactory;
+[Lcom.android.framework.protobuf.ProtoSyntax;
+[Lcom.android.i18n.phonenumbers.NumberParseException$ErrorType;
+[Lcom.android.i18n.phonenumbers.PhoneNumberMatcher$State;
+[Lcom.android.i18n.phonenumbers.PhoneNumberUtil$Leniency;
+[Lcom.android.i18n.phonenumbers.PhoneNumberUtil$MatchType;
+[Lcom.android.i18n.phonenumbers.PhoneNumberUtil$PhoneNumberFormat;
+[Lcom.android.i18n.phonenumbers.PhoneNumberUtil$PhoneNumberType;
+[Lcom.android.i18n.phonenumbers.PhoneNumberUtil$ValidationResult;
+[Lcom.android.i18n.phonenumbers.Phonenumber$PhoneNumber$CountryCodeSource;
+[Lcom.android.i18n.phonenumbers.ShortNumberInfo$ShortNumberCost;
+[Lcom.android.internal.app.ResolverActivity$ActionTitle;
+[Lcom.android.internal.graphics.drawable.BackgroundBlurDrawable$BlurRegion;
+[Lcom.android.internal.os.PowerProfile$CpuClusterKey;
+[Lcom.android.internal.os.ZygoteServer$UsapPoolRefillAction;
+[Lcom.android.internal.policy.PhoneWindow$PanelFeatureState;
+[Lcom.android.internal.protolog.BaseProtoLogImpl$LogLevel;
+[Lcom.android.internal.protolog.ProtoLogGroup;
+[Lcom.android.internal.statusbar.LetterboxDetails;
+[Lcom.android.internal.statusbar.NotificationVisibility$NotificationLocation;
+[Lcom.android.internal.telephony.Call$SrvccState;
+[Lcom.android.internal.telephony.Call$State;
+[Lcom.android.internal.telephony.CommandException$Error;
+[Lcom.android.internal.telephony.Connection$PostDialState;
+[Lcom.android.internal.telephony.DctConstants$Activity;
+[Lcom.android.internal.telephony.DctConstants$State;
+[Lcom.android.internal.telephony.DriverCall$State;
+[Lcom.android.internal.telephony.IccCardConstants$State;
+[Lcom.android.internal.telephony.MmiCode$State;
+[Lcom.android.internal.telephony.OperatorInfo$State;
+[Lcom.android.internal.telephony.Phone;
+[Lcom.android.internal.telephony.PhoneConstants$DataState;
+[Lcom.android.internal.telephony.PhoneConstants$State;
+[Lcom.android.internal.telephony.PhoneInternalInterface$DataActivityState;
+[Lcom.android.internal.telephony.PhoneInternalInterface$SuppService;
+[Lcom.android.internal.telephony.SmsConstants$MessageClass;
+[Lcom.android.internal.telephony.cat.AppInterface$CommandType;
+[Lcom.android.internal.telephony.cat.ComprehensionTlvTag;
+[Lcom.android.internal.telephony.cat.Duration$TimeUnit;
+[Lcom.android.internal.telephony.cat.FontSize;
+[Lcom.android.internal.telephony.cat.LaunchBrowserMode;
+[Lcom.android.internal.telephony.cat.PresentationType;
+[Lcom.android.internal.telephony.cat.ResultCode;
+[Lcom.android.internal.telephony.cat.TextAlignment;
+[Lcom.android.internal.telephony.cat.TextColor;
+[Lcom.android.internal.telephony.cat.Tone;
+[Lcom.android.internal.telephony.gsm.SsData$RequestType;
+[Lcom.android.internal.telephony.gsm.SsData$ServiceType;
+[Lcom.android.internal.telephony.gsm.SsData$TeleserviceType;
+[Lcom.android.internal.telephony.imsphone.ImsPhoneCallTracker$HoldSwapState;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$CellularDataServiceSwitch;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$CellularServiceState;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$DataCallSession;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$ImsRegistrationStats;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$ImsRegistrationTermination;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$IncomingSms;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$NetworkRequests;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$OutgoingSms;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$VoiceCallRatUsage;
+[Lcom.android.internal.telephony.nano.PersistAtomsProto$VoiceCallSession;
+[Lcom.android.internal.telephony.phonenumbers.NumberParseException$ErrorType;
+[Lcom.android.internal.telephony.phonenumbers.PhoneNumberMatcher$State;
+[Lcom.android.internal.telephony.phonenumbers.PhoneNumberUtil$Leniency;
+[Lcom.android.internal.telephony.phonenumbers.PhoneNumberUtil$MatchType;
+[Lcom.android.internal.telephony.phonenumbers.PhoneNumberUtil$PhoneNumberFormat;
+[Lcom.android.internal.telephony.phonenumbers.PhoneNumberUtil$PhoneNumberType;
+[Lcom.android.internal.telephony.phonenumbers.PhoneNumberUtil$ValidationResult;
+[Lcom.android.internal.telephony.phonenumbers.Phonenumber$PhoneNumber$CountryCodeSource;
+[Lcom.android.internal.telephony.phonenumbers.ShortNumberInfo$ShortNumberCost;
+[Lcom.android.internal.telephony.uicc.IccCardApplicationStatus$AppState;
+[Lcom.android.internal.telephony.uicc.IccCardApplicationStatus$AppType;
+[Lcom.android.internal.telephony.uicc.IccCardApplicationStatus$PersoSubState;
+[Lcom.android.internal.telephony.uicc.IccCardStatus$CardState;
+[Lcom.android.internal.telephony.uicc.IccCardStatus$PinState;
+[Lcom.android.internal.telephony.uicc.SIMRecords$GetSpnFsmState;
+[Lcom.android.internal.telephony.uicc.UsimServiceTable$UsimService;
+[Lcom.android.internal.util.StateMachine$SmHandler$StateInfo;
+[Lcom.android.internal.view.AppearanceRegion;
+[Lcom.android.okhttp.CipherSuite;
+[Lcom.android.okhttp.ConnectionSpec;
+[Lcom.android.okhttp.HttpUrl$Builder$ParseResult;
+[Lcom.android.okhttp.Protocol;
+[Lcom.android.okhttp.TlsVersion;
+[Lcom.android.okhttp.okio.ByteString;
+[Lcom.android.org.bouncycastle.asn1.ASN1Encodable;
+[Lcom.android.org.bouncycastle.asn1.ASN1Enumerated;
+[Lcom.android.org.bouncycastle.asn1.ASN1ObjectIdentifier;
+[Lcom.android.org.bouncycastle.asn1.ASN1OctetString;
+[Lcom.android.org.bouncycastle.asn1.ASN1Primitive;
+[Lcom.android.org.bouncycastle.crypto.params.DHParameters;
+[Lcom.android.org.bouncycastle.crypto.params.DSAParameters;
+[Lcom.android.org.bouncycastle.jcajce.provider.asymmetric.x509.PEMUtil$Boundaries;
+[Lcom.android.org.kxml2.io.KXmlParser$ValueContext;
+[Ldalvik.system.DexPathList$Element;
+[Ldalvik.system.DexPathList$NativeLibraryElement;
+[Lgov.nist.javax.sip.DialogTimeoutEvent$Reason;
+[Ljava.io.Closeable;
+[Ljava.io.File$PathStatus;
+[Ljava.io.File;
+[Ljava.io.FileDescriptor;
+[Ljava.io.IOException;
+[Ljava.io.ObjectInputStream$HandleTable$HandleList;
+[Ljava.io.ObjectStreamClass$ClassDataSlot;
+[Ljava.io.ObjectStreamClass$MemberSignature;
+[Ljava.io.ObjectStreamField;
+[Ljava.io.Serializable;
+[Ljava.lang.Boolean;
+[Ljava.lang.Byte;
+[Ljava.lang.CharSequence;
+[Ljava.lang.Character$UnicodeBlock;
+[Ljava.lang.Character;
+[Ljava.lang.Class;
+[Ljava.lang.ClassLoader;
+[Ljava.lang.ClassValue$Entry;
+[Ljava.lang.Comparable;
+[Ljava.lang.Daemons$Daemon;
+[Ljava.lang.Double;
+[Ljava.lang.Enum;
+[Ljava.lang.Float;
+[Ljava.lang.Integer;
+[Ljava.lang.Long;
+[Ljava.lang.Number;
+[Ljava.lang.Object;
+[Ljava.lang.Package;
+[Ljava.lang.Runnable;
+[Ljava.lang.Short;
+[Ljava.lang.StackTraceElement;
+[Ljava.lang.StackWalker$Option;
+[Ljava.lang.String;
+[Ljava.lang.StringBuilder;
+[Ljava.lang.Thread$State;
+[Ljava.lang.Thread;
+[Ljava.lang.ThreadGroup;
+[Ljava.lang.ThreadLocal$ThreadLocalMap$Entry;
+[Ljava.lang.Throwable;
+[Ljava.lang.Void;
+[Ljava.lang.annotation.Annotation;
+[Ljava.lang.invoke.MethodHandle;
+[Ljava.lang.invoke.MethodType;
+[Ljava.lang.invoke.TypeDescriptor$OfField;
+[Ljava.lang.invoke.VarHandle$AccessMode;
+[Ljava.lang.invoke.VarHandle$AccessType;
+[Ljava.lang.ref.WeakReference;
+[Ljava.lang.reflect.AccessibleObject;
+[Ljava.lang.reflect.Constructor;
+[Ljava.lang.reflect.Field;
+[Ljava.lang.reflect.Method;
+[Ljava.lang.reflect.Parameter;
+[Ljava.lang.reflect.Type;
+[Ljava.lang.reflect.TypeVariable;
+[Ljava.math.BigDecimal;
+[Ljava.math.BigInteger;
+[Ljava.math.MathContext;
+[Ljava.math.RoundingMode;
+[Ljava.net.Authenticator$RequestorType;
+[Ljava.net.InetAddress;
+[Ljava.net.InterfaceAddress;
+[Ljava.net.NetworkInterface;
+[Ljava.net.Proxy$Type;
+[Ljava.net.StandardProtocolFamily;
+[Ljava.nio.ByteBuffer;
+[Ljava.nio.channels.SelectionKey;
+[Ljava.nio.charset.CoderResult;
+[Ljava.nio.file.AccessMode;
+[Ljava.nio.file.CopyOption;
+[Ljava.nio.file.FileVisitResult;
+[Ljava.nio.file.LinkOption;
+[Ljava.nio.file.OpenOption;
+[Ljava.nio.file.StandardCopyOption;
+[Ljava.nio.file.StandardOpenOption;
+[Ljava.nio.file.attribute.FileAttribute;
+[Ljava.security.CodeSigner;
+[Ljava.security.CryptoPrimitive;
+[Ljava.security.MessageDigest;
+[Ljava.security.Permission;
+[Ljava.security.Principal;
+[Ljava.security.ProtectionDomain;
+[Ljava.security.Provider;
+[Ljava.security.cert.CRLReason;
+[Ljava.security.cert.CertPathValidatorException$BasicReason;
+[Ljava.security.cert.Certificate;
+[Ljava.security.cert.PKIXReason;
+[Ljava.security.cert.PKIXRevocationChecker$Option;
+[Ljava.security.cert.X509CRL;
+[Ljava.security.cert.X509Certificate;
+[Ljava.text.DateFormat$Field;
+[Ljava.text.DateFormat;
+[Ljava.text.Format;
+[Ljava.text.Normalizer$Form;
+[Ljava.time.Clock;
+[Ljava.time.DayOfWeek;
+[Ljava.time.LocalDateTime;
+[Ljava.time.LocalTime;
+[Ljava.time.Month;
+[Ljava.time.ZoneOffset;
+[Ljava.time.format.DateTimeFormatterBuilder$DateTimePrinterParser;
+[Ljava.time.format.DateTimeFormatterBuilder$SettingsParser;
+[Ljava.time.format.ResolverStyle;
+[Ljava.time.format.SignStyle;
+[Ljava.time.format.TextStyle;
+[Ljava.time.temporal.ChronoField;
+[Ljava.time.temporal.ChronoUnit;
+[Ljava.time.temporal.IsoFields$Field;
+[Ljava.time.temporal.IsoFields$Unit;
+[Ljava.time.temporal.JulianFields$Field;
+[Ljava.time.temporal.TemporalUnit;
+[Ljava.time.zone.ZoneOffsetTransition;
+[Ljava.time.zone.ZoneOffsetTransitionRule$TimeDefinition;
+[Ljava.time.zone.ZoneOffsetTransitionRule;
+[Ljava.util.ArrayList;
+[Ljava.util.Comparators$NaturalOrderComparator;
+[Ljava.util.Enumeration;
+[Ljava.util.Formatter$Flags;
+[Ljava.util.HashMap$Node;
+[Ljava.util.HashMap;
+[Ljava.util.Hashtable$HashtableEntry;
+[Ljava.util.List;
+[Ljava.util.Locale$Category;
+[Ljava.util.Locale$FilteringMode;
+[Ljava.util.Locale$IsoCountryCode;
+[Ljava.util.Locale;
+[Ljava.util.Map$Entry;
+[Ljava.util.Set;
+[Ljava.util.TimerTask;
+[Ljava.util.UUID;
+[Ljava.util.WeakHashMap$Entry;
+[Ljava.util.concurrent.ConcurrentHashMap$CounterCell;
+[Ljava.util.concurrent.ConcurrentHashMap$Node;
+[Ljava.util.concurrent.ConcurrentHashMap$Segment;
+[Ljava.util.concurrent.ForkJoinPool$WorkQueue;
+[Ljava.util.concurrent.ForkJoinTask;
+[Ljava.util.concurrent.RunnableScheduledFuture;
+[Ljava.util.concurrent.TimeUnit;
+[Ljava.util.concurrent.atomic.Striped64$Cell;
+[Ljava.util.logging.Handler;
+[Ljava.util.prefs.AbstractPreferences;
+[Ljava.util.regex.Pattern;
+[Ljava.util.stream.Collector$Characteristics;
+[Ljava.util.stream.MatchOps$MatchKind;
+[Ljava.util.stream.StreamOpFlag$Type;
+[Ljava.util.stream.StreamOpFlag;
+[Ljava.util.stream.StreamShape;
+[Ljavax.crypto.Cipher$InitType;
+[Ljavax.crypto.Cipher$NeedToSet;
+[Ljavax.microedition.khronos.egl.EGLConfig;
+[Ljavax.net.ssl.KeyManager;
+[Ljavax.net.ssl.SSLEngineResult$HandshakeStatus;
+[Ljavax.net.ssl.SSLEngineResult$Status;
+[Ljavax.net.ssl.TrustManager;
+[Ljavax.security.auth.callback.Callback;
+[Ljavax.security.auth.x500.X500Principal;
+[Ljavax.security.cert.X509Certificate;
+[Ljavax.sip.DialogState;
+[Ljavax.sip.Timeout;
+[Ljavax.sip.TransactionState;
+[Ljdk.internal.math.FDBigInteger;
+[Ljdk.internal.math.FormattedFloatingDecimal$Form;
+[Llibcore.io.ClassPathURLStreamHandler;
+[Llibcore.io.IoTracker$Mode;
+[Llibcore.reflect.AnnotationMember$DefaultValues;
+[Llibcore.reflect.AnnotationMember;
+[Lorg.json.JSONStringer$Scope;
+[Lsun.invoke.util.Wrapper;
+[Lsun.nio.ch.SelectionKeyImpl;
+[Lsun.nio.fs.NativeBuffer;
+[Lsun.security.jca.ProviderConfig;
+[Lsun.security.jca.ServiceId;
+[Lsun.security.pkcs.SignerInfo;
+[Lsun.security.provider.certpath.OCSP$RevocationStatus$CertStatus;
+[Lsun.security.provider.certpath.OCSPResponse$ResponseStatus;
+[Lsun.security.provider.certpath.RevocationChecker$Mode;
+[Lsun.security.util.DerOutputStream;
+[Lsun.security.util.DerValue;
+[Lsun.security.util.DisabledAlgorithmConstraints$Constraint$Operator;
+[Lsun.security.util.ObjectIdentifier;
+[Lsun.security.x509.AVA;
+[Lsun.security.x509.AlgorithmId;
+[Lsun.security.x509.NetscapeCertTypeExtension$MapEntry;
+[Lsun.security.x509.RDN;
+[Lsun.util.calendar.Era;
+[Lsun.util.logging.PlatformLogger$Level;
+[S
+[Z
+[[B
+[[C
+[[D
+[[F
+[[I
+[[J
+[[Landroid.media.ExifInterface$ExifTag;
+[[Landroid.widget.GridLayout$Arc;
+[[Lcom.android.internal.widget.LockPatternView$Cell;
+[[Ljava.lang.Byte;
+[[Ljava.lang.Class;
+[[Ljava.lang.Long;
+[[Ljava.lang.Object;
+[[Ljava.lang.String;
+[[Ljava.lang.annotation.Annotation;
+[[Ljava.lang.invoke.MethodHandle;
+[[Ljava.math.BigInteger;
+[[Ljava.security.cert.Certificate;
+[[Ljava.security.cert.X509Certificate;
+[[S
+[[Z
+[[[B
+[[[I
+                                                                                                                                                                                                                                               ‹      İ½kwÛHv6ú=¿3ïòi;GÖàR 4qNh‰²uZ–Qng&å‘„˜8 h[“•ÿşî]”¸yE
+š^=ob¡
+ûúìçùŸ²¬?~ó"ÉÒ?Xtöí}û{øè(.Šè6.àáÿßá‘·®ã!sãÕƒÓâÛ‡q”'é­U”Q^ÂGQY7Yn•Ù·8}÷ªŸ-ß6Œ¿ÇC|ÓoİË÷ç½îô™Û<›Œñ™/Ÿ¾ußşğµwÕ¹¼:9ûğõËÉÙÑù—éK£_×ÏF¿ÿ)Jy–~ÿSç°¢ßÿôìôËä{RŞ_Æı,ìÿwô=ú£|ïÿîM×äØÜ!#Ö4÷;é\-úÂ§ç‡¿^uz¿®şMO³ş·«¨øv˜¥e‡q>ÿÛ:÷DèÄ·ÍãQö=¶N>u­"ÆÅ]VîYı?oşÕ?9;>_´ø¤Õq”ãatkˆÓrşl!<?àáÂtÆã+<1Ö(ú[ñÏÓÕôüt¾^v?ÿ¶ÆZV9:6ì›XK4¿Íc¸'Šøõ›kt>)©mßsÑğë_u¿vÎN>u®NÎÏz«¯ä.iwÒd•pŸ/;avÀ1¨ºÍ£´ì®ãÁ |IÒAöã8ëO
+ëG‚7¸%Ÿ—4¾İÏ?¯±>õ%>E)|Ã¼O$ı˜Xš#B¸±´ã(Æk˜eßĞˆMÆ¸&øh«€×À•Ãå©{‰Xmº——ç—[X’-¼×w‰%qy8Làfü-)’ëaŒ÷Õ¯?òîÕµu¸hQ«Ü__¯.;g½“5¦Z§¼Õç//a‰n ˆåeer“À]Á©+’Ùãm•wQ	ÿ‰­²KVRXyî÷›-SyŸMVºÊR‡TWKÙ%i?§l$øXX]™'°"«W‚HGë×J_l®Æ«A³Ëpx~vÕ=»“tx~ynyõ« ¿¼úî„²X½ğlÊ uÊ2KØtX_4˜›ôGRŞ©8Cm<lvd“ë·êy<ùû–Õ¹Îdd2ï<ÃíkuEè­±ÙÇÙ$Xi®±ìßá’<¯m+nq2x÷j :êw>Ÿ^}=:é]œvş²oÁ-#ßO½q½+±ñX!F°9c3êªôâ·Ğ:Q'»A£ëij¾0R[ãVÆ0øŞğ¯ã	*8“á±)GœŞv!¬9@ƒT€kÄ˜­ûŞ$¿‰ú±v¦MŒÖ=©½2*‰ÊDàraS[×Âºúß¬qÂM™¥Ve¥´@'x7²µç—`Aí®qóáW:Ïoá2ÿ=Î—;¶'xh{¡¿ª­IÒñ¤´Fqy—ÍIú-Í~¤Ú µÑÔx¾8°™ÄRÕ#½_O.Ğtş€`ã|÷®rêËç/PŸ1òugiî'iRÜÅƒ—Ûs|7È,;›Ñ _¿M
+X‘9‰}øà(Iá!>?˜Ä{oúäüõ?8wIià–§ú‹,]³Ë}R[*Å8¦º€¸—2ô»7Ö¬|ÉAËwÖö<Çs¨„Lèd_ec“|Xğ‹éß,õüÀz=€¿ó%J ÏÊ/¢I¿™ïû–®¼wÕ¹ê®éúóèvD¸nÈ¯læ‡£ü…öşğzÜ¨àa9i4ŠçÍEí»¬è/Æ¹Ë©bÑi4IûwèM4Ö¿‹ûß,°¦pÕÓ—©<RzMÃ¤õD¥ÉV®Ä˜†;Ú›ŒÑqµhÂqu'Ùé÷1a¾N†xh3ø›x%êŞò:´ÖSÂz=Ç>w¨ğó>íÀïÔÕt8-¿[ó"Uï/g‡_»gNÎÖ¨R½?íô®ğuÓ[°íó×ãá†éù;³&TOthZw„ê W}êúó.¨MACü7R›<í´V¸úÑò=şõ¨rÍe¬¶ ¬[ıqáı„y·_Bdí†eÛ£r¡Õ#ëvÛ
+,Æã¶R±8—2fDÆÂËıÃe~ÊqÛ·ÒCO@ÜMÙÃÏ—ÇÃ®uÚíüju{W—ç!Ì İmè}4éBçpÍlyE— ©lR&ğ“²ñOˆVëı«š5Ù¤À°Åş,Í\/àTä¼¨èÇpİ²‰)1w]+jp™ø{P«©]bM÷­ü:r—®÷•/~·©/Ø^ë' “%yYŠ^İ$¯GyôCÇÆÓ<N¦Ä2¸ÚÙx\¬5u…dãmßŸìzû×¯Ì(¼h8¾‹Ş½º±>ö Ö³gıf~Ü¥y¬İf‹#,›Ãv:6eHfÃ^s2ÿĞ²`7¢GŞWGñ0ç_;!à`Üa4àQáC¦S”bÇY¦LH­1–æ­u÷uƒ0äŒÛ>Ùô™ÓéMdšy3!Í–q,Ëši1Á{ªw[ï|©à«j€È?\úŠúkvŞ[!”	C.8q¥bÙìÁ‰ÓÎMçïá¨X#ıÑ]ùô »¾£ã,ïÇsïİeèmğŸ4
+H=~_€5Ç‡å÷×5bêò¼??¿Ú‚•†•Á¥¡ã Ç'è¨j„bÀV!)¬\ÒëWƒ7{V‘Y“ñ@Fïæ-ÿ_+Dàº`ÈØ6‡÷U`Òz+–ˆ³©â|°T¿áIÑMñ×ş6 k†Š3ßsşU€à„‰+ºˆSY§‘½ªiÑx0‘}ó(ÍÊ»8¯=PIšÂ[´GßwızqÙıí¤»F°ÿ¾ÚYô=¹]¡”Œëu\8ğT=¤à<íFùœÛõıˆ¾Åò§ş$Ïá4ÁE=Ï	©İìYÙô÷^œY>5{Ö·øşvå2=ÌFct¤ò‰õ{ôÁ³ÍNËùå	Ü0²¿ö½r™©P—Íf!Ü/ÄeûŒw¼v–i,;*7Éí$W‡"B{:MM…¦!œÌÂñÉ‡Ï—k.Ó¸õ~òt¸®/B—Š(›ğroÆ8³… jÔ–u’Â»£!}ùm\Íë´[L
+C/mÏñÈJm=›*âRßy«´dUçA‚`Y\ÈV¡,mÌÇüì>¥_í:LØÔùTáÜY–ÂÎ«­kñúM›{|Ç	y@ÄÙ4JİÄ8ŒŸš®m›¡Ëx …
+;/ã±ÊÙ¥Ù¼É£Q¬*fÍ×rÙíAõtõ$lKúOö˜{pCÕÓÖ8S÷êF„{°_óNŞÔ°
+7€ud‚k°2É0&¹M3	ÊÇ”¯æà!¬ıÛ$.J„Ànå‘DÌ¡s‰e†ˆıÈ™><“[¬ÊlêÓÈ¤ÕÇí!øp’cgB%eõ^8'`xÁk¢Ùïa^/jèJŸ"^À %*/²aÒ¿'®¼Í˜/ªù{•ßëÈAçUx&ˆÀKWÈLê÷?%é÷h˜L‹§!o“(3óU¶m‡BĞ·ÿ
+EÛCˆ@¸ØšcÔö^°,e¦ZƒK›$moÇÂÁÀ‚¬¥wÓb"dºî–³g¶¹ßğt.è{è‘<Û¡*Ï‡¼÷ã]¾(»™Æílÿ|õ³} á;uo³lp•}È
+Q4…Jañæ‹÷¬‘Nu§Óü³Ù	VlãØ	2©hpÖ7Âõäæ6tPŞIÛ]œÜŞ•­u‚eÙvÀ‡JÑ5rÄ`÷äP†l4jôú  êˆZÕ	üó€0¨ñ­/¦ÉSCì5;‡àÖ{`®g±òô8€\˜ÔÁ*Âô¥IÒÚĞÉsg“ËÇm×†À—Âvöã±NÊ»QÌ?îâTÕÔe7\ƒÒ%n­:¦¯_oˆğ3œK0â³sPÖ¨Ví:¼‹0×¹UÃ;:—%)³¹ãŠÚª„äcÕ
+>ÀbumŠ«êñã/7²?'iZX«Ç³¢0 ¿Í}ÚŠÌæ0&Ã°ú¸iªøÓ-²³rål!³eEÇÀ6üCï-k’" Ë¨}µğ¿›tş·X­
+à`4m*P9Tef0}ì3G‡iäÌøè¾lÄà4“õk÷/‡çG]Y@Ÿçğ–zŒTŞi@Â¡%àpPÿ£MM`?Mİfıoñ`š5?Ã¡]¼ØØ¡K#£Á½š0Ì6½nÑÈ@¶n»9Èë?G‘ÁiÄŸ$0[NJJjş´1¬	Ë¾T_
+KÔøu>ÆÃ1q}!l'ôÈ)]VÕ…`“¹ëtŒymJsŒ,55çø`#ÈÔ.Èo¹;82}yõİåt#QÏŞ&V~…Xlƒ/¸C>ÂDé! åä´•”¥ü4Kß“¤”ã½ºšÔ:xÎàÉ±˜ÑÁRñø•>2À¬büC>/—Åµï/ó-
+b1^Út¹I h–'=>¨c^Çp$cSLíËr¢ŠNf^á9#”¥eNÈ˜íûd+í¾äYïüRväÉ Nf\BR4I´£E]ÆšÄf‰ïö½PğĞaÔÚª)‚ºÙ”&N	ë«Æ=Ì#ëšÛ°¤køÏs Ğ&!}¿Æ÷Ò¬ÈØ»„
+¦JÔ@ ùÑÍn<ûRˆ˜FÆu=F|LJgÒUpUcñ2
+k©lí­bD=ğ€ÍWîê¤†ùBV‹•Í‘m{HÑ3ÜÄëI9Ó»)Êd8„pó¼İ}0ÉEÿ.Ld¼¥ºmÑæŒïÙwIN£|Í©­U8§4œÜ“ÃEÈ`!‚ÊÌÆ)Z€x ÖëiÍGZçä¬{Ù îYP¬æ8\ÆiŒşìÜn««Ğ<ä`-m‚ú>×†,IZjÉÁây³mE¢‹°?<à"\ŸlsK¦¤QRHˆŞÉ.á/­2ZÀıÜWèRås	MÃuÔÄ.û*eî¡ïs¨}8SL.«b‹†´°ŞÃ}æº!ó)›ÕÁÛb¡G:^Œ%6bm{ò‚ƒµb\ã÷§šøKÊ&ïUŞcÙYÂ:7˜²”÷òDOô7™ü2¹ŠÁùuêmİMözØf##ö{C–SWçÒÔ!ë±NÀ¯ïw^öYä‰88TGe¹â.ûq’Bä\¼NFñëGTŒZË ¹½Ã‚å”0ÊjPñY«x2ŠÕ—êe“¼_ä~ÄX,Pø.÷©äå·$Fª:üpXŒb‘ş·eî	0šÕd–øQ^ü'ª™„Á#[a€t¸ëƒEqIHÙµâğ‘d°TC(yôÖ7Iå-!t¸;$œBß*½>FP‡Ñ¸œä1K'·w.5ıC“MêPIİIûØ_Ÿa¥Ø{b6§¢Ô¬ºCÑ9—â|×œ] )Sâ~iI$Ë •„<™<ª*Çœ1çVİ^LXáæÔ¡¤h^†	nû®Ov[£ô<{•œºb•ÙÂmfjoM{^T5¾²W½^]h§,r[æâz_N®?>ñV»aNœ²}8t¡1
+*lù¥Õ¶àæl8u²ÅzÌãG…_õ  ‘ı`ÍäM‰‘(D 33œœõºWkœİ•#ÚÂ	ÙØ¾TÅ&œËœ›”I·/ÂwG¢cJ/´ÎÊòZßZ;A].«õkmÜŠÕp¡ÛjìÂº]ŸÑüÎùeD>à“5SS×ÈQZà†oùûŸà5õb6 3„ƒsS­Õş¾q2Ä?×|¨j‹ä´B9v§f˜ª1nÔ(ôìQÃ™ù/ÓÓ‹ÎÅ:á
+ˆ·ÌÿÌ·İ0 –EòšÁ¯3ÔfğŠïI^N¢á-ìì[úX86÷Œ4gp\áú4 ¸¢]¼Ip<Šk·mh88Kó9Ä%A#Ç®$°L2¸jØU[xa˜Ìfd¬É|À]t>÷ºG2—|]ÅºàYu›K}Ï¦>/pJîG²7 9ìœY—ç àü„›zÕã(WÍÖUólB]2Èëw­OçG]«{ÖyÚ=²^Cî5Á–†ğÖ`)ê†<ê»Ãónİ™¬m%•Œåğ|¶i0m¬ÍÇU½î«Øp°¿)æV¶Ï“Î”J9‘nîgİEÅ^³¨­4[˜T…øzzòáãôò+}ÊÒ„b½aCËO2zö‡q”NÆ‹©gotò9?ó³*
+š[¦M@xæ¹Â÷Ä
+ÖUS½AŒ¥,¬¦0ŸVUwlZûn yŠMÜh ±¨°¹qmã@ÿO2¿¶MbI¤Ë`~¨¨~ºk—İŞçOÆ)‚/4œw;Ú¬¥M†|³®MBt°èMü «L'<–®hUÜ˜µ²UåxîøÌÌGÚk²âúˆÇéRó?·„ì™9°â3ró£ö³êœ=·)$V	²íĞAŠÂÌèy´;È}Ô,Z“Ål­Wä‰ §~ª|.énêY¹AóAÎÇ2HBZ~ ‹Şğd9Ÿ§e?OHoN¼è·wÑgykäCä:‘Í‘ºÀÒDô®*¸GƒòÕ¶ëp [Â²3o
+kä¬k“wIBıA_;§§ç‡2º…„^ˆÈ•œ(y„œş%X:{’cUa
+Ÿn?«¤‡d/ÌgdÆ á†²€h*ã)+¶BÍŠ?nğÎğ—ïşóUñ_­K¼À·=NOe¦˜2Iwá§W…Lx>8ü»Pûæ{¤CÿÁÊíq×|š,xŠÕ­³èbãVçòxŞã¶”š ÔÜuúBƒü‡gAô˜Í/$ÌÇ”!zz¾WSjmœlÁs½ ô\’`ç|º5ÎËë¶fÚ¶n¤ªcKŒ>d¡A©•‡> QÑššŠMe`Ee™¿CÖ
++š!Wh˜Ú`>k[ó[¸iİv±—wˆÉ%£•Ïi>Cµrc s8W¬ñ³Q¯˜ÔheÛksá/ 3ïi†JÃ:eúÙ²z¶‘ê•´lØÛŞBQ$ie¨ôoZsè]_\LñÙXNG!Cd{JD¸ÎC²‚køâàÙqV,.x6mA¥İtC°][ÇvBâ‡é9ÑfKÜ¨İ³Áb„!i8ÿş±Œ'²ºÿqrÕÀ'¯gîtÈ°`ZÅ®,¦’J¦²ZaT¿|©ÊæDw¶Q@İm±íÀÔÖháÔ4Ë#å(Ş}ìô¾]v¾œY	1a½M?5AA`ûaHB¥åÌRJİ+5¸‡Äy—
+e® Òà‡ŒÄ'0®ß·@/»”HŒæø‹Àã£ñÓrCÕñNòÃŞ<Ã@R®UBÑvè· ÷`6\>ø¨ç+=Í¿$\Ø®ë:$Í§.¹|<9êZ¯Ñ²¾yÑ…­Y¶»<„Û7 † òÀ@SXdI¢‘qœêá=9pXıRA
+Ô¯rºˆ[Zq´‘ÕÔ¡LÎ?_Yf/Ñ@÷³q2wÒy‹Û¸‚¿w¹âÃdÙsn¢ôŸ»¢:Ÿ‘'›„5ÁíZÓjDvÕTš¾ò9šJKp#.}ÆC‡Zíï%Ëd`Ûƒ‰ÆÔßr9UFLÔÁìÃ(Mø³$[¦ÜĞçy_÷ÄÎH›h›‹¤şÛg*S~Î#ëˆ ğIf\Ä¥DpÀQÁÎ§‘#@ê90_ªc#íÎsw—e'€äŸ&ëY,N‚Xš4«dj0@J
+QÇE¦5;g¹JÍäôkVĞº¶pÁW‘åŸE‚uˆÆ1¤’éíñ0º-ZKtí àW…_ aİ°—¼ÃãìˆP–~¨-¼˜(Z”˜™©.à,œ¤NÁfê/ÅNË«Ó¦ ª'ó]›BCÏŸÆ©êv$¿â0ÎZué­U¿H í%ıN7ıÛ$ÄÖX)e/¹±WÇZCN‰^V_0Xc-˜'‡­8!GÊ*2°x ˜½ogÀı€@fÛ0}’PT'7IÑ‹û“#¤¶&ªÏôë‚ÜŠz­3IáWŞ
+¼ñ£’xH…Š ï5”Ë>ƒeKÎ­á½•N†ÃŠEÚD÷¶&«Ní´2J€‹â ˜#J¡¦x ËñmÅ’9ÜÀœyğ£'esEv´í›¿&‹b‚ôÅÊ|‰’²3Ã%ÅRÂìå![SPÁ²èÍa®Ÿ÷¨sƒH„»*oİ`*¥ÓúQŠG"ù®4ÑtÀÚÔ¸H°ûÚËEsçC¦ÅIšÆ9VæÄ(Ç±ÒĞÄ…}¦¶cO!­¢´¦­_¼AƒìI|—eşÄó™;ô\İÅ¹Ğ%­yp‚mpıMqJJŸêï²|Yƒ$ÅµÒìí|R–ßëÁ’ıÉ!Å«D¢ÒPØY­aVÑÛ%)„¥ù56i&mJë¾û€«ó±¬E¬’”äïºˆõåäê£…½1ë¢{6{#¬|æ¶ÂQï`5Cx!Õû8’$H¸Š©8TÕÒ7‘*ä<#× ±2–±EF²¦äôÿT«Â¢œšuÚààmO+‚¬ÎHŒ8¤¤=BÔNÒo)êC´UëØa€¥6*ÛQ™µ9şÙÁt)j±s³±†êØ+¤$QA/.åJ¦dV3k*èñ„m­j•i{ãrìîLNh0**^ğ½å´^Ö,ĞØ/°ˆ¶$Ú%qµªı¦á]å[i§ÚyM\o£YúìØço“cRfo/N.,9ü21bğq}ø¨#$($6¼Wò à›.
+Ã¶ûñ%[!w|r(p!ÆÃ²»> 2WÖñ$Ùi…İes#Xß±^ëòitŸMÊÖ¢ìÀGÖ(òè–wÑX£)Ìd—<-+û3;àÎ’7HCÃ9ŒÆ–ªN£¼H¥n>)ï”™·F~lÃ‚<?$æ³ÔxãÑÕüØ1Éõãm­÷Ø¾Í]a“ñ£eUì»ÒÔH_g”íT_d3Xó6Fy`}ÏR›ğQ ùï=°Ñ0»}9ƒY6ã<\8#ëæÎ»W?÷…ÑôÔ?Å¸øš e
+‘¥ƒi==âY÷-eUQ}JhA„ó£`Kå¶,‹³™ËÆHDê£SÚé£ú®¦»‘vè´_TâcƒEõ ¢¡²„,…Åeil!õª"8Î“[ø#ø²†€ŠÀõl×u˜- ùäæUÇdv€€Y5Ì¶0¦!Íu0mhÁ=wYãe*85“ÙBİÎ¶…ãÙÅJŠãXÃÎP™öÆq¿xWæ“yûÒBUÛ†<aé˜Ü–ÿój è¥rÜœ!ÖË%U>ñœ¾|éò \C¹‚ˆœT–öÁôwFf«ï3£è`A2£¤¦%x¡PŒY“"Ş½ˆ½!îs›,ØÏJ*ÊÉiKÒí[·q©ŸUHÒi·ÓšH‚Ğu©ş‹êNà¬,lÎìÈáù§O'Wr|ä«.‘ë¦¦;‰õäEúHçFöcªY,½››IÖ4¾¯–D‚pO…ä=5Ëº§I¡ÚøA1>OĞS·NçÌ™nd½·;Ô/XÈ˜ïÓŒ'J=?QÏxä™ÖUû«.ÏÃv=6+i2$-’6«I\œ†q½X€÷’l;%ğÄ.j+€Â˜9i »?ãş¤œª‘b£V³W^k³òó¸/ìázB,hYXÅ}ÚWlú{òçgáÎP{´êIt…øqZµæ jšîËVÊU!«yI`kBw˜‚d`+\³ëjÚ¬´ÌBw2
+-\ßõNÎ.J‡Wkàb‰ã E·’¸Ø”¦R9“&SAK	ª(0¬İ+•¸J)ÀqiÃÿ¬º6óé¼XÏxÍ½r|Ç9	-ÓšÆJÊx÷<Œtlä0—{¡Oj1¯Ç[ÕöbS(˜`®ëÑÙ	ª˜¤xô×º’6d½D$‰…>r#Tö•åN¬›•ŠúVÉWn}>9²¢ÒŠ¬2Íe®ßı*À„¤–ıË±Ô˜3£q•¥Ö½mİ„6-ÃÖnÀø¢ÖZQš=¯®ÛxüÆ07¤*€È/Y›¹…ô·¸•ãŒÃÑ½šÀí 1<—ûçu‘Ö·–lGC˜øAg£B"n²ÜÙæœ89;üÚ=ûpr¶†+xÚé]á7é¢ÚğüuøÂeîZÓ~KIú=&È%}+§[.}y¡M“ŸhÖvÿà;!‡Lfeèœö
+ø[µCR£y@Œkİo™[÷À|Ê´µq]b{¹äV	EW„„ÜG"\2¦$'ªgtMğ~ƒco¤l~ñšI«S‡ˆ@³‰gô§“jÖèdTçåMÇ1¶Å_rÙÎ"±’ßËJT§å4°×õ}ÒPöC&wÔlœW%û°ƒí2ÅxíSæ^ÍkµBõ})ônæ'õ¼º†høKÛ¹TaÁv¤¼Îl5?Â²àÈ`™91š*mY9H¬Ù.Ù}š§“¼ ïòLİõĞAà„$
+Uœf:eÈ¯!©ˆğŠ%~3üÎºr%Ëç¸B›¹à¦É|µ@heDéÌ¬×5D
+¹ùœ'.%Ge%f(ÄÔIrƒZã2´:TVEû‘
+ÉS´4(ëg„)J{GS‚!Õ.)¥9ê`d iÏhš³?È¤1İ×/BC›¥p–¤ÏGıoğ‰gp¹ˆCğÀ;Ìëv;kf¬WÿB&¸pÈ©€GÎ‹šè:Æy\T#õ<ÍÒ·æE:dk[5-‘´™†ø¶ev`åõ‚{< î3‚W*Ç‚†¡3†m|«ÎyÛRAX˜-x@†×–şy/¤Ğ¬
+±@eÒOÆ‘Ô•‡˜NÎF´OÜ+Àc02âÖ¨W	«{”waEj43í-kMê=çiõÀÇ¨ĞïÅ_u©+UøHEú#ßV£>òíÚ¨çÙßcùÈ¦Ûš& ã´YHòÎátSTQ#¶(fÂ¢±Ò(áOQşÍ İ¦´Epïb)­¡İÄA'hùåJ÷ ùiıƒ©rİI£`p…°É‡üÃ	Ü{\hüjˆ­'ø»FûOõ£_}ûòû!–‡j3*Œ˜&‹x(™TM"éìu‹ƒˆÙì£ÏGÎ_­ÚN«9F*âUF`=°ÎHğ¦Ô—T²Tfâõ¦’éFWt÷%4&)u©W¢\¯z¯¼Ñ7Ğ™ŞŠeÀ·=›œÇC8ßI7œ¿%R_2¨Ÿvsz‡—İîÙ×­ƒÌÃªd@Î¯Ñd1:‘p“»5ïÎ<æ94Zf¶ò“¢áÍMœÇpïmNİ^öí¹ÃrdrÚœÊãŒ$Äé¦æu®Úß£
+\HUlÇ§z´N¥l*D­¯€èÆx*©¢¦0Ÿ´?R]8Ç¼ü}|'Í3ë&ñ~õ²ÖÒ¶ÏBX1IÜS9ì$½É*Eâ4áĞ“~îê9ËÍkÊÈX*ŒÌ®¿Ô˜p@´Ì*µ•ıı†ŞnGÖö8j/Ó“²øª^š„º…Y³íúÜvH×óïJ«OÅÓ3Ç2—]¤ºˆ4VÓ¢ÓÎ5×VŸ†
+l$†pIöŸ‡VÓ5i–Éö£ÿT‹lDã»0ö;$¹à."²¬ò‚ÁDR_`owV;‚?F†(¾p…ØuwÉ,Pº6leKº¦x&£¿‘ÃÓJQ8o§?ğ÷õÈáW,C)½hC,0#­å¢Í¼€Ñ¾ÊÆa·
+’…{Ïãœ‘1Òıÿ†ŒV61Ùy+uÃZg;}?ÉîÉu\}üüéıYçäTæ;¤€ZbÒŒrD×)ó8ş;qè|Ÿã¨9é‰Ñä›ø÷FÖ,÷ê55p¨]sczämò ù<(ŸAÅ•Yú€7ÔÈ.jû¾§u	á‡dÉIõ„D¢4›^^u²¼¥êsÜG$o:Îá½£¬(«ğ1”usÜÌ§îeïdº1‡’wb‰=äÄ$œ+êË‘0ğùÕÆ¯ç%3­AÑ …µph˜¬¹8u®u,öÈx6ì"¹@JÖb22´ô;
+„—&úå—<Rà6j(¡Úf…f¶êó«¬;»±d¦ÈFÕHX2ÀFç®ÿå`5ß®¤€VQÍ1Ã9µTá³«,³[‚fø^:à˜© ëÄ4èu1²
+Á¨È’¼Æl|Äèû¯°è‚:rúe]Ú²ßVáÙ÷Àrz>me²Ñ()K±ÊtãZ€ GQœ¤ÓÀAq)k%½Z3pO÷ş!SZšÚú·C×%»ÿ¬ÿ‘BÅZ^«-Ï»è»”­6?w¤~Ä:şŒ¸Çš.>õk|;‰rBaaÅßnY8C26ZÏƒRsºœ!Ñ+»å²\Èã»®°v*uD‡Š™Ts\RkLÆÆªï~¦m…|Ãumì4µ$M¦±”Û½%­`.°gêd'G1†ã/v\CzèRnõ}¢U¦ó¬/U[0KÑXÁ6&¢š%]~yé®sòsúÜHé5.«u|À_¯ÖgG‹I Œì%“ÚC0iCğïRAÈšÓ–0o›¼¶ kˆK0oº>UÄÑhoZ„…Û
+Aú
+Á¤_‚AşLU7ª ÒÉX/'LêÜö2×lnK·ÁüÎ}Ç®· jp‘É¡æ£ìGz>)‹dË ^ù73+DİG[‰ÛW>’LØ.&™ÄÚâštêÉÍ™Ô½šrıc©rº¡ë-ÊÕf9hñ·)sİÂdí¹Xh9Ã®©G*İÁÙ=_¡?E¬dû·YÅg¡gÜpGRFæ_şå_¬ÃS0V­j¤PwUI­—ç—8sîÛd™q¦oö=R%FÓÃ}=[î¹vèˆ•îC™*O!ı×±†ç%©N’Ÿ;¨».W8a’]¦¹œ²ÚwÏ‚İHÆˆn¼%éwßñBÎ„¥ª¦±º#(;ğ{²*YhmÄöĞ¢íà6IPìÃF.Ú¬1bùt¦_üë¿_Á7_ªµ{!yï¦økÿId—7kûÎ|áùW#ğ}ŸöË%z>ïëW×oP™WÁ/*<TPÜ¾©=UÂÃß%£ğnH K‚H”ëÑu¤h¨Ø"¢Á`n{çƒ?¹Ô}<¢Gf1SÇ$G'éjÖ¥&âÏ¸¯ß¯f"@-]¶pH³ ½(>8&|?tlR¢rfZí6.P½œ ‚m\ÊÑ†CÊBææ0*-"Ää0ÇÃ*{n;¡\\½ó„ĞA—ùdØr'G$Î²òüº@E\æY?”’ÍıÚŠÙàCIqªÜe*ÌcÚAÀ'ü˜><‚s‘ûàòê;'£8›P{¾ôRıÚí^4©ã¯ˆ`tÎi^:†:°>M†eò¶ÉDŞ,İ!ÁYT¤Z¿¼*~AM|ò:VŒÆóz–;év-™Ï¸Ïhy¤ÃI.1§5 Õ8‡¤eb,FT}5‚ ë<Íİ“«„2ßó "$'gª9)ø|t¤¹Ã4ŠJ±DÈ#6ŞŒ¨¾IcƒZfÜ¤¼ßêŞ‡L®ğÜ’¦æ«†Ê	˜»ñÌ×x€9ÙšÂ÷{PÜ{ÕTùp»á ãç.=­aÎõÍ,ıøu¬„,+H* \‰åì[ ‹Ï£Ø„<ò9L _dX@†2+TOÏ»:-À2†#N"…®ò{]õÒ’Û¥ĞÌH3­¯£»=kL5˜–ÈvÄ1.8Nêd(ß™Ï5Rcf1Ñ^Tôt*MËöÓs/$#8=ÿ1UÏ¬’728°nQş€yÏIy-p‘Ôqãgl¨Ï_ †nHkÉ8ºÆ±™ÒsûNé.œÕ}.¦oæàô±G’Ñ\äñ8ÊµñÔØQÅcÉÁhšÀ&©„mã«ö°ÎPBìßLÁÁ®'8k¶on8¾ÓˆqIãˆ9<ô¹ãSGrÏ±Ô´@Wªâ¤k|«m	îÅl('Ç Š.ïäæ"+t	WBôôã8K7ÉSÙ ”z·#‚ìÕå“b˜`q¶+hÁ,ít•ºŞ!ïôe·súµ"Ÿş3X™‘šI‚g<)¸¸­âéá¦ô˜zo3’Rf”³´0k²_Û!nğ„ÇmN§é“j„SG&cÕ¨µ’şÜzûÎëÈÍ]‡,¿ÎS
+©€ıR¸›àÖÍ0º]‰s³k…<K„©O×ÿÛ$‘Î@+-ıˆ¾ÅuAÏf–¢i™`¹)ô1<ö’
+ş„	|Ä’ìÚ°¢övH¯y?u&uãPÕfúEkµÂWXd l?ddú¨YÛ;ãqQ©ÜÃ‰İ@˜cÓ|^Àõr‰UÁ­Ÿ6ñ¾Æ kŠá•druLïè·Ç Ş§nı<¥£óÏql›Ly+ë_Ê©±×4ÿ>ó¦U4>Ê¶C:€®¨¬ŠFUJÈİ¼KÅ¯Ñ×ì#ëñÓÓ‹ÎÅZ…xó½–œ^Î8ŠQ	\÷§Ìpú±uhFwÒzUîÕ˜Ûíµµ<î!Ù˜­7vëİ#9å±4?}¼n’ÚfvÕ†5\cÙCşŸ[Yë’¹ÚcÙıEóÚ_xıf=Æ¼Í/ÔZ¡ïÓS¯†AfÓa×`MFÉ$ÉcŒ…¡,V-ÔƒÆ?j‚q’”m*‹·ó’ÄŠ:xë"u
+I®FäÄå]6?*¾êfP¸'„oo{\$7åxlİÈiQ)‚,=ñÏq’ÇsK½»9á‡–@ÖT†.Adyr›¤ÑP3dfæfEüµîİY[x’œ ğFú7-y÷’
+D°$G0×¦òŸş0rÕˆDó_4”ÜÚšÒs\œ; …ïç)Ùí^¹n"ÊCíÀ#7¡3­È•UP¡Ñ^ªÙ­ºÄX¸B TÃ}zò•Ù,pCF2$œÁ×­bÁƒét¶ì[6¬Lm1ì³]p#)yÙı9VqZGM	²ĞY%6&åH7J£)ùÜÚ‹9OÙ´˜·dW¸rRRñQ}ÜŸ5–ìSÁöldi4Å#"Êd8˜}¤m	
+J?ØON›éò©Ê¦’ÙµÖõ‘'#VıúédºÏª%×wEÈ§¦®7Ò¥-Q¬w¹ãB<GV>Î2kYQœ«°n#èn£NÙ
+K`!ÄA	œ—KÍVt +è#,I×<+šÛ”ëí©ı”ËlWøœäCPØ¬™úÖ%6Åfé¢xòÿ¼*şWãùx\¼ûÏWÅI€™^ùDY®Ë=Rt¾üƒÀÇGÃäïuÌN¥ \IÛ#Eàæ tN’#ªì	*“mƒ«AIYG§“áğÏ²§
+	AÜ8Sışß’¼œDCóMŠRÜWo¼Æâ¼nß=3 gé`¨amˆ„ÑÔÉ™×³>§†òkJò¹A ¾%¥=×EHF‚X1UŸYüÑ.©-—Ô}\;]8”ÿ\À‘[E!Sa¯&ËÚS.¬eMÈ¬ãAÑRÜâ®Ee²A¸gHà«"8Qe¹#U’›N„Vå¸Ënçè/_¯Îåİ.V¶b9Î²IVKU£Øàt>§Ò•àÚ”öh/N3LÇØ0s\†¥z·”f«&8‡º!Éù{,Ë^ªŸİèëÆm„°~‚UmaAp	Ï&eIzµY:Ñ¬÷~Ü%™ƒ‹D	w#vê†Ïªä0n‰!¹ÆÊZ·ÏMaÎ*·’L>QXÿ/l­:;K—×–2{æ’°ë…‚±e<ZŸâA]ä™$~ÌÒÙScE×Xş^5qõõÁ8	£ÊA#ıö¦âPÛE';A`3Û'ï\%i]cÕ2å«‘[&jd	xt8É]SœërwíÑ&~´‘áRc#æ//,9ë¹~@Ò*õ"YMHúI«AœÕ—ÇõB0N9S)c-ÄqTN 
+Ç8Ôş¹#Î€õ c.ÄdÅã‘NY…j“)OE4£Ó‰)ÛÌìËÛP›s0T E%H×'!É³[k¿¼ÑĞêÆz­»…;ÌãÜœŠ‹T•ÿ,ş©ø	Ñ›ÓóåodÍ"\túUd¬»l7spÔô¤I¶pB²g¦Ìò³ÎH4{š¥JËêCË½ĞsÉùOi@fjâ• éA†õï»–Îe;.óÖB2bàı4œà±ÆbŞñ0Ó²i……ü2_jâÈ–‚û?,`Ÿàø!z>Öıóœ¬îYçı)|KAÿĞÄ»mOğÆ±CO»ètpı´FÑO3#†	ï$è’jplßÔğäDÙwä»Òï}'mÊôY•=xz£Ò0ü^¬TĞ5ét´,†şsê=Èb0RÃ:hU‚İúiUˆ°{°¦îxüº&FnkÕDÇö™m;6IåÙ@ªY4yißCÍ[ŠÀBè‘0õ¸œê'ªúìSWå²ğ—gø<è	‘]ã„Í¹ği0‡:ç	pSÜ6“f7n_;±lä­Á%²V>'Å–²ñKJŞ }·y@JjÌ º©ØŸßaŞR[İâ Ğ|Ïa´¢Í¯'§§Vïóåqç°kõº½²q­™m"i º#s¿ºãú¶KN›Èo¨¤>Îè¤¨’b‹u¸CÇqF&9'£¸qYÿí „ÒPWPTO’(€vT»È8[Tø¹‹Ío^chÁõ8ôşC]É¨4Š/ä›=Õäb„dhÛ6£¡ªá¬A F°”nÌHÁr5ÖÒ(X`àä¼æç4o[?r*4•§†,ã¶)ò`zÄ»u„u(`ì“Œ=HŞ!ñE…VôòSĞØŞfœO|,yÀ×&#@Šåÿ™ZŞÙ?_ı¤YÍ°t~(Ë‹pYgYÑ^ çG6›:äS	%™TÖÄ‘&hŞ7¬I_²^Ûçƒ!ñ£úÍj>Tèˆİ.kÁŒ’gß!Õ	Áµ™8zæ* Ğ±
+¥ãÁş´¹ß^96ÏÅYdrÊİ<ÇisyÀ¸¡ûàcü=Aö£‰û|ò…ºá	º[^'Ú1&‡•ïMÓ#­‹¬’Y•ìÊ¯®±Ğ£óÙƒĞ56ak ^-×ÖÊüœ¹XÉ¢&Ñ>À—4;ƒÌ&©Ğ ÃÆ!„AE9}¢PÏí[=‰YÂÈQ¿U1&åÛìæ-ÆÓ{’ı¢Î–±>xnZz a™:Ì¼IÒ'±Pk¬ÏÔQÕB¯°e3g¡"´=FŞËfÎ±†êpÅÀDâŸ
+ÔƒG@jU™_4Sú5QßN'rÅ§cûv’ =Ë:¾ìvÿÚİH´OgÉ_;§§ç‡Ûè¥:¸
+ZQâwãºBáè¾ğil<Õ•BšÂÑ…ò¥²Ÿ.ïÄ—Bè„Ã…®O¹ÀÎhş:³m¯ë°á7ª/;Ş· ¬HÎê¯Ø·.•;µO;è‘êäêüB—”Nz÷§İ£IÏ6µ<î‰"Ù
+o³lp•}Èpïk7Üş½ùŞ±Ò¯Pİ±—¿¦™¤=h8Q·#AÆİ3RßÁôÜ5g0.!^³yJ]ŞÉz$6`&ÃpT½mİ5î@ÖËIÆ6ËzÚ9üUZi­n¿33ı~õ±&1šwZ¹ã»¡¬Ìª«0j®ûåërG¸Gwsê¤Cß3,úkp{“;l+,C.8u¾êBôØ«¨ª|×È‰PßñÍs*S†,Š†ª›}ê0Ám´Ú'
+;ğÍor([ºR65gy©qIr•F£C¼‹§°%|®/hw0Õ.‹z?ËSÍR¸x™(Í±FÍ¥…*.‚ÛõHïlĞÔÎ'Ã’OÑ½"4iœ­Y¤Z95°…ç3·2ÅéV•©yøv[9¶ë£¾	uë( „ŠjšêbQCz×ÃtnÔ†ûŸò¤u`"-óËQTF-„ÉŞÊ7’şÓûõäâÀJJßÅrŠ¡\ÿ·œß¨ùòôÀvÇAÓ„Â3cùuã…cùÓ™ŸMÅp·6ÿì8Üã!#«}ÇS
+t=_k½ı×ö‰Ã9^hÃ¹#%gp}Ïzç—²šœƒ«‘Ó…×…dNÉ
+Òóµ½¥S±ÔŞ1Ûƒ¨”$¸ÃŸ®Åâ¬0'©5{ënİ±‚#Wx³^6ÉûñE9ı|Ø‰ƒ4GšÀ«<Q‰„÷yˆÓ®gµÄó¿ZÕÛ²Üöù™ì*tjÅÏ,ì¹h£–ß|(3ÆyóÕYUnT³>ó«ÏĞ:õ}‡Ê(”Ì+AĞ)fã=idùV–&ó€ñÀ¤¯ª«%'éMV‰gê[[;ÙA‰KÁÈF£¥ÿÑ¶Bbj•=,ÚG"è„Ìó]›Ä!Ü£H5¥ñbê¼°8¢[R9KM‚APÔŸÏåôZàÑ¼–Õ”eAØOÆüíRAâl§ºu$ÏÀ!™è	«³m¦šuBá»!·©µh*pÆ½«ó‹ğ(ÒK½–H×Ê:Î+¶<GÛŸúLP«!D¤ä’0„@¦ôyÏq¤óòe§a–»ùøÃ´CØ22h×¶CW€£ îÍù-ºzç¡›6Š!·<}éÚ.vøYĞŸqœåçS©Ÿ×Jöchd÷ 6)ªßŞüYÒÈ›_wK/´\ˆÃu 5µİ¤Ì *†€=aU³oŠ8Yş¤ES–ŠMÜ1ç:È8æ’½ìéñ”Á²5ˆ¥œ[{8*\X³Rsô¹x$3'ûZ·m¡ØœëAp’”§\¤pA?—ŠÒeœÃÓÊ›#D¨9KõFÛÕBL¤·
+NÚE¨ÄIzciBÑeğŸì­v”RÜfŠIM¤àãv\æû ¿öÃ1n]¸º4Kß¢LúÊ@¨ŞÈ>¬±såmß®ÛŒ.dí°´)§ôC{ã¶£F¾ËĞq9Ù!¾4È|ÓƒÅo}2êr†^à’°uSÊ¹RôÆÎê5<‹5cõ´¦o6°Q5Â9˜éëÉ-aGŞùñEÙQ!Hm)BİŒİ×Pê;´Œ+AÒ]¤pÉm(§›?œŸYWçğÿ­Mä\.\Ûgä,ŸdßMºŸ;µ^¼_ğÀwIV9¸43ÇİHó’GójúÛÉSàQ@[X€|Øbu€×4¢íëb1
+ÍBòİXüÀsÁâ“”ø;–7­2n›*×Xx`ÖWJ¨¦³HH$>;[„WüëáéÉlÁoİÎi}@©İCGnè±PpzÜ‰î‰Iv—–—ç(Kã ïO9Âî†!‘µt•@²x ÿBØ¹İP?à.ed%Ó¬fÙÅZä;lÈÀQD&D9WÁŒ*zıÁOJñÚJ
+Ã¾~SÍ†ª]¸Fá
+›…¤&äQ|ƒâš/Ù«Ïh¡Lxv‹ùì3ÎHÏ]!»#ùä¡ˆOp¨	ÿÌ¼]rKN­â‡Ì¶®Å’-))à¢„ËI$)ä5°bÑn°¢gûÜeŒìwô°`&ÈG³ƒîÑî¦Ç—VD<[Øğ|r!š.çåÉXÿùêfÏüû_kSömÀ	¡ıÚ› ±5k{8ùC¬¡J°;:;ÚPe§Q{µ£çÀÍÂCÒ˜MEÜ–|Œf»ªÙ·Á){X/…XŠÚ”#¬W›Ş`m.X *Ê£©ÿ%+ÒïÖúW"hßa¤´9ò{c”·E»Ö°Ix`!$˜TÜ?‡èhÊ__×şÎÍ+$‰ÌÔ¾Âú‰ä†>~z>/©{nr;96‡„{1¿â¬§!*u¥4Öq´ìÈh
+¨vl3s<ßvh"÷µ]:õxcä*u[¯Ô$Ñ§Š$Àñ˜Ë|[:íG—ò;³âİëWƒ½ùÓ[qU‹* Ä‚û$ˆ+k`¬©y²®N>uÏ?_íÏ
+‡$ÅÔõâRå£ó©vÈ~><°F‡S‘™‡5 cöñç´©sgmÇŸ*âayæ{]*Dvpu>…7¤xiÒËYsq$zqi}IOæÏaNÆäİóøvŸuàÚ'€ÿPSN•2tQOSñïV®c…È+€óæFİ¥a«¯‡u˜£ÄüDòêx§aVàÂuH6¨³,}+9êª›¯¾Ÿ
+›K…¹ûqÜ’Ø1`Üöé¾K96c¤Ğú^m3÷ª§ÔMùH`Ó°”69¹:üø”F"`"p	0Ç9†R]IÇ¨ÀAV}–ÃeÉ}ŠqfÓ·,ıÊ{‰24Íi7ıÛ$Ä¸†±&ÊiY„¶íTéÂ'ıĞd4BŠÌ2ŞWzÖc%şP§:’Ó§Ó¼uöÚ&ná…Ü•XúB¦*Èäm¬®JÀ÷Ú†erÁÁG“¥#S2+Ìñ±2™{¦Ò0’zb¶&OØàÉ²Ôû€O"&™kÛÙ‡Ò*Kä)Áâ_t>÷T…­EE6„>Ør2­–ÁĞpöPA©OÚÂ(i×@>D9@lD@S0Ä”®µ¡lhV+l8å²Z}ÙÜa~à-à’Kztâ¹¡óVà N#$™|ëÃg–®W„M¹@±~©ÍÕ+:9ëu¯ÖXÌŠÃp’Çád~„s‚˜®Xòÿ›Ï1_v{'}21†°kæ‘*lÇI^”Æøa°%Œ]´kPHøpxv—ÁK¡òÌeÜe4Tş1ş°ZM½,=I¿AÒjˆ(Ğ*"Ci{’’¥§J¸¦Ù)qä²wKÔÚÁQz_{I“S¹&	ÊÊ|!ÌãL0›Q…"éûË™?)Å&9İk¸Ò
+ h¢ûXØEH@ÛvÙæ…‚$ÀïŠˆÃZ*…÷,[Ö*Ş„ó}È‹]²u§ *U½HÓrÔˆÍS»Õ?\-±#	¼Av´›
+œf“BÉ6*ç ¿0‰Öø—<VèÅ0ÇóğOÎw±Âß…,˜:„õÕï‘–·})ã©Iî­6£H£¦2’Àºİh1î†·mrÌÎÒÿ|ƒShEÅÆ^~[!%Jv3l^’ë¸úøùÓû³ÎÉéF¼™›  ª şên2ºN£d8!¡pB’„å"¿'Ù¤°bÔ²«È§«f@‰Ó~Uåìêï`ùgzT‘´QìÙLvì=üÑ³è{r»¢Â=îØàë¨9¥8EFhóà«h.w*„Ÿ«ekÜvprf·S2¿-soœ1Çv<•NvÁ¼ŒÌ|ÄP‡g…¦ª“1J[Ê¼œûí5Ñ•%¶bÉ©bE¾÷Ë«âºâ±GË§îeï¤IÏn%x¶ïÜ€“SıµñÜc­Mˆö3Ô¢¹¯UxŒpıA³Üu'ˆvÎÃĞõl²HbÊ=Iq>ş6Á›­°0 şH3Â¹–x?°ô“ß©i@<©’ëıF70W,ï+*çcŸŸ¥½Ìë„pi­T×æt¹ôµvsŠ0äNEÕm¡1à!Gm	Z´:‡‡Ù0Ë{c¬bŞ¦¸²~{ÏdÈ‘Ä“D‰!tÅ¨ÂÙëd¿QÍ†gmKÌU¨îÛô£šà«‚Êê¯"|wbö|Ûv˜í“ıYùyKíãT§õ4a}ÛqC“š#Ø²‘wĞ7xàeÃªÚÒåÔR~|İ¾u¡^(§2g_×LíëRŠu2³u\7Ê¸
+æ‘Í0Ë:ë~i¥ô{Æ}ŸDĞÎfJúF4ß“¼œDÃª¦×óµUô¥ïÚÜÜ¥ş!Æ³Ìš2èè¸‚y4F¶mG„6Ò|›$XXˆÖT<Ó)ÏŒö=ÂFÎ°.¤2P9z¦´­H?Ğ¾v‚ïy>g4§12ç=ë5¸Ú‹Ìğ~ÕTéßXÿf½–ÓoÚÂø^È\ÁH_ò{y©F—èwµÆñ3‘³C2S^Æ`8¢[Ï%4[ÌV%|æ;œs’æDBXàK¤uj§L¬’5{Ao[Í¸T(¾ºXU¯|ËIs©â-ßåü‘é‹à‡¨(gLàu4hkÿÔ÷¹ËÁä‘Uµš•¬VÍcT_Ş‹ÙZ?Í÷}áœœ·ŠÊ2êßÍ0ş_eµîHTYòµªuŠ<r@º¦çsĞ
+d-.ØG¶rÊN`Ï¬];7f K*ìNâvà2ı€	¤ä"QnZÃ÷DEÉª<Œ¢›õaÖìÕìnàqˆvÉ‚âœI#~ªàÎêùA;ØüıÛ,ğHB×
+³£ÍZÓKÿ´à?ôQb–ä>Vˆ#=W¢jğ?$q€1‘Øq%t!¹É@’,«Ê†
+O¼PáÀ*ùÔÛ¡<¬ax®!K)ÍRh!Ls´»`#ªpÃLÓaïÑñŒV	ØñI“bÍÌşÔn6‘˜ëc9b†LÕÙŠ³Ó]”]ûšÀT¥ÎİU6®ì˜êUâK­S^
+îFµ‰Â†Úã¿Ì×´}f‰À•R>Šìh%_£ÌÜ–Aày"8òN™¶»Mø\ƒB5q››h‘,¦{çé×'ù×¥»ÁH>e i|—ŸŸ|ø|ùÔ}î€yÌ	Á&“™šï©‡V,5²ãŸÈš*¥éwwªÕğNcNàxäÉS(¹ŸÖ¹Í€qO8>Ù¾±ŒT…)WÁ}srV«ŒXc¥­ûåOÃè¶xgÿ|õÓúıO»Äı×|é‚	†ÀG^—ÌÃ‰ö}¿:ï$$H®‘C¨±šèVë'˜'µÊÓ, §^U;Ösr2RËÑcåd½qŸĞ2Úá“¤!†ˆˆˆEa¥±f[«ôüÀ:ŒÒT©êÆF+0Ë“[9àQÇ6W£m™B™ûÉ&ä¥æóïY™&óo.Ì½5Şı@H±#NŒ4]ÕŞ€Ó¨xßu‰¼Éz¹Ğ˜ºüü)<©#I6dé”õ7BoI{h…Rê{`UbÚêi›£Œ¶GÆ¼RáCñL´]à#´î:œ$™ÓJÕµY¦¼ÒPø­†1{ø­¨(²>Îşö-C¶Q{ÿ ¾‰&ÃÒØŸõj¸·`—Ş¨¡í‡Âá¤&)©j**6Xˆw˜HOÁøUàNFX‡Ë%òöCxDÓ/6Qm¨ºBXAVGñëT5ÅÃ/Ë&ª­²{ÉµÕBŸĞãàAéÁFN~G¹;˜ZA%¬Š²‹!Ón¹ŠLQœæı#†pI:A·ƒ³ePøkW5€Pa4Ü›™âµ³0p…çÑÔ•ı‘	m¸´ÎÁ,µĞÂA‹íâ-·Eçø¶ n§Ö4HNUŞF^Ìu7ĞCù@N9Ø)9v‹Ûç¡p]ÆlŸ²™_NÕÉRO±r^O}Œ
+A5ux¹´oÍ|Äöú†¡à86JòÓÀí„1m<èT-³)XP&“…ZÖNº7«M[„"}O¸”±}Ô«ş÷‘h˜İ¾¤‰_aû(¬DVEæbÆ`§¾râû´ÿ,vE­l5‹"_˜CÖvÔm×Õ‡'7ëèşNnhÕHâòİ‚Û?At¶î©â¨@ùXÕG¨£z¨©Âßn˜m@›¶,(ƒ’9H6OnÓbÉ"M…–ÏdCò 'î/°Cüßê™–†„*JkUã–ÎAòˆj‰Eıâú(~+1¬Â¾Úµ|Õ7ş:ˆÑ>]!lÖgèÍƒq„4¬4¤£áÍÛ›l8°à…>]g?ÕŠÀš,GJpøÄ5…ÒrØ(ŸÜ/;²ÊÊşß’TÒœğı‘"[ˆs<`ïã;¸‘d8ùä¾ÕÙŒ0jë“—‚Ûv U_(âô‡QúK©à%´0)çaxŸ¾gh¾È’1Ø§lîñùåa÷È::é]œvşbõ;§p'áï÷§İ£µ¢µ-yzî{c¦¿ĞÈ(\ÀT	c3”Á”¿ ©(üYyNq«¤}BaŒı3¦­mZè!—™O@<SvG×ñ`` ôJà[y|ˆ·3ìïê|±È*´„z GâIœM Èè9Hä$'ò@ßd“¹â¨«î·pÀù!Y¿„Õ!1éü:’~š³z>ZRáûÜÏM¿ÿ«Á|<]á?²»*§–6é7ZØûÓNï
+¿[s÷ÆGìKêB™V1Î`*Ÿ©ê†µ³y_u[Ío¸Õ‘1İïåÁÃ‹€»g$a5êœÎ×@R&õ÷?%¦M¹(™Ø/"«ğX H ’ê	ù:%ÛSoÇÒ‚ªÅ•w¨Z;óQ¢Æ¸šlì¶èŸDÛ[ƒI°/Â|¥q—´«ma]`!|Û#e+NÎi¨qF°µšcÛ°™ geşY
++âÈ§!}?5Ü¸KZˆ6€ÇÛq˜ïÚä,åeüvŠNRJ„íâò•z³Ì·Iãf´-M¹o%·i&›ÑY­Ê gNzb€ab9ÉSÙÌĞVÈå£U@^lb'ƒx#ŞóMÒ4ºÈîØ®kd¿%®ÇTkFê™¸©Ö¯²ÃQıÂ)Ï¬ ?3ôoÊf7-’mrlÏE(È9ÊT’hü¹º Ÿ®ÕÄ75äı\ìŒa-(—ÃÉIIÕ3S†–Ø™a›6yùø=IYÈ%™ı4¼P®Æcªœ·VˆöG–‡òIšJG÷Íğ[‰‡aõ¾ë†M
+¶`÷öqëÏ*İ }ßÀà0_¸®Or!ÍYìG“Û»rŠ„• ’*à¹F^¤kÏÑ¸Í¹Måo3Æ¨µVˆ
+3¹Ğ1ÌÈLäï”ÖL1–’øîÎè]M¦Eş‚	Ì‰y2)6FşyÖ—(i¶½ãôZíÔ|ø‚Kî.îpÆ9÷‡)éÊ-#i¥’ÔÆ£YMø›–C?!Ó!•%;õF1I'']™ŒbH@¯f§.ğ$yYtÃ¼­*Dì¸ò˜“¨3 óKœ3,‚ØM…Æ‡ZôéÂÂ€	æ“}rÅ½¨ûäE9A}åt¶,$1ŠDYXÒºìf!„tF®F%
+X‘Ÿe†³ƒ¦ä€f²êè®A‹Ú °F8ÌY I|Ùíşµ+í¡õZ«c³ÉÄ†â·4ÃEócÛ(ºKw×sœé>ùÔµÆR@Õ/AºÖÈ]Ø0‡ôÒ8s'#@å—eU}™Ê«f'ÛVwÇ… Ëõ)û©3Bj+ıt9n(aÁ½ğQÍ]ô
+Ûåp—…´*öNaZ¼D¤‚áb˜Xó°É{ò×.Ş6?×DãmëÎq}Ï)ŞĞƒ[e0QÓƒ¡Dl«âj|2PpÃJ¨«Eñ“Ãlæ2Û¦VeæÓÌ ÕÛßŸ×|ØHr™R+¬<m’QiÕi‹"ŞXT]ÿ9ç$`…v‰ftşœæñ-¢ròÊe&ğÂNû$y$áÚ¼ş`  †›ŒÊµúøÎ~‰!Éƒ#&'’h…0|;–\²HŸy.ç¤ÎRg«;ÒJ><A(aäºª¼RÛªŠì\Œ~ß÷BØRªîÚı÷'eü€‚ğÀšÏD° ³µà~…;²6‰e{NFq¸P2!8¬4Š«ûs°vI 5š¤ÙÅÂß÷ÁcÄòÇY¢¼f£²kÑó®²òĞG	*e;ÖUšÅNÃ¨Û´©ôä”KîJ	L H÷şIWKİZÛºV ÁÚCÏmwæ¯ËeGÓ'â @$;US£?ÄûÌ‚?zsSã&ğğ«M@ÜzGó@DƒA­¹ó §ƒ£UG–Rtƒ§N¦Fñw¾Aîf{ ™.MK÷8­Kª¥Í	
+4¹Âè«º@Òl’s²Úæ0|‚9³u·*p\¹J|Ò\eÖ0KQìI•ÇX jìÂ·ÁùğìÀÔ–Oµ˜Ì¤Ä<fÆg¡*w\O0OØd}‘èp—­Uv\îrÁ8Iƒ 5æQS¸À s†wR
+(ŸF÷Ù¤„$ûø:”
+˜€_—äë°PœHÍyÖ_‰0lUáÄzY½böÓåKZaP9cû"‰l5Û™‚ÜHÕ¾BÂ’7‚j4›À^aË},°ø$ŒŞğ—Ç†õzÏPèL§_ú“\·‚‰ş¥Ğ/luo}
+ÂqH-ğş%½¡b{SĞ0Ceµ#Ëv+t…€à…ræGRº]*Ô+9÷9î†úÀ¤ıIá³îãò9‹€Kv‹i.-t?ƒƒ1ò…s±nùu:ë¹ó]2ˆO¼¾H\ZA–/ºº–¦ºıIšHõáDB3Ì¼$Xšq½D-Î—³]*çñÔPgs8š|A”-!T3È©ôà7lŠJ¬ÖâÓè9­{.¾Éı–·‘Ô¨z¥dş§$
+p2ŸiòYJ×ìYº~rvğÎÃØIV™1ÆâC­`UÜ3d¬Ó­¶ñã¹«ôìĞf.Í[0Ş%C™ê ÂDëBMR‚*¾µãOæ™+±è·œ— Éá8$"V‘ıšèkÏµ>éÑeçË×‹îÙl›c«œ}ËFÜaA‡È×¦ÇˆøÙh5ggoh¸eÑ­ÄÑ\ƒú˜»$æ‡‚‡${Ú K¬&æ@&_X<ÿ=™VŒ¾€xÃÁ£]¤Èz?„¯ ¹Ä<+?Xëƒ>xJ=É`9¬P/Ø¡Zİáù¶øW'ÿµ¸«¾\†Åû26mOm‡³\Qä¾{u½W{P5¥LíÜ²ïY£Îx\˜WßY¢9GšcŞSÊ©?|?ì|ã—ÁÏÜGÎø×o„n`óW°0‹ºpÍ)TP•œiGÿg5,É&e,BC,í1?}¨á3&BŸìò(ø1lˆ^Ô–	t;ríªäygÛL£Ü2:ªŠBâ‹¬(Uq§ÉÛ’"¤ã…9ŒÄÃN(b*ú‹ÒúDÕìÕ´i¾A)¼1ûg­K>w©ÂÜ-Ôj0QWü§ã¤h}Tñí?sˆ!ßÁjÿkàJPÍU=ºSç7ÇH.I]øAÏ¡INd¬r©ûpUèµ¤w³4­Ü¬X°b‘€Ù+¸K¦š#˜İŸ+›ÄğÇä¶…ÿ„5`OÜÅ…ÍÆFh//Àm_Ía`MÀ¤U`iÖg(ƒMI±…ŒÁ°É‹Or"Mduò£"Kå8C¡¶ÜJús²óì„y¶çù!Y#Í©ëÚhù&ÎS¹NÅùŒ1¿¢ù·Æ^y;”°hæ!¡
+9—ñ~Œ,ø/xÌÅ$HüÜL-u¢¦ıÙ´Şİ‹K‰nR#éâŸ„ûyîú Ÿ¶oSF0B¦¿*A90 -8?Ë™‡éñW8aWçŸ¾œ}½8EQ}–vµ×ç¿^3_~!|2q—<Æ·5™¤+¥–¨é"9Yôü‹Zâì|Ïã\…“ŸÄ“X28Å·Qÿ^ò8¾-H\b£^Ì×O'ë8Œ•WA$Ô	¶ª×<ÒQƒ'D‚*k”²'¼/û£íƒãpcŒÜ5r|©_©BŠ+n‚ÁØæR8w9÷¨B—Š†Mi}w…‹E
+›¹äùSôÛõ(loA¶§Æ·DKèp›9~h“Ã–
+Æ[çEEµ¿M-üÓrÇqƒZ—ñ“³ÃË˜Y#Ö5t™5¹N†øD‰GÛL«Q
+l¡»ô`çT=–0àN#E!=aÿ€AâÈP=ßbêîˆ€)ìc6ŠÁO¾~U´Üp×ao“ºD3;S˜8Z
+é¾€8šÃ=0:¼"‰Å$¢l"¯ÎT×SÏ5ÙÎmqˆ9Z|Ø>Ê½Ei?VGu³Q!´ê\†ø/ƒœ¡hÔdtFÉĞº‹#¸NÊQ4FKÚt®¥yÆ³´Ì™ï„Gú¶9sW’¦^L9–‹XRÙÍp-7oÇ=	×2|­%{Éğ†9¯~®OAã¤ F-S„]Ó­Üzykq‰ºá.*²Aë(N“hXaC4t|Ï É±Ü@ĞŸæ{¡çr,`Îñü\«ŒáƒŠ"\ĞŞ@Ì2ÉcŒ4˜‡º±mäwàlò@p—24†~WMtëq€»ZÏ
+^µ¯û“X±ÿ¥èlíIùp|.ÇÕæ´.‡nm!R™Ø‚l˜<,Ä,¡Iİzía•[4>îS­ëÙ%Ygİÿ¸2_èëÕ_.º_Ï/ºg_/Ï{½¯—çÇ'§]üÒ½iªV^JŠnŠ¿öµ¸VËËMpa|æs²ÍÜMÿf*2¦²¨˜ ÚÄµ‡"!¾kÒ—t _¯Òe;u$ß=ÆéÓŠ:~™‚0´]Ç¼"¬$dëQò©B2)=äT&sÚ&ZÀ<´Í¹U£ïqN™ÑR< Z=©}|Ø¸"æ»ŒSv?Kåç{øÍXZ¼iÚ€ôOæ´|f3Ï§µÕ 7ˆşq0>÷l—{dô\M1ÊğëÆÌ ¼èéEX³><¤¥vµ’2‰áÌÇÀÌóGF10ªMúïÚn.¿yèÛÜ#‡³TÏÃÃuR½CÖØì.\_¤ÀEx.Ù*ßasCzdzAâPÆÃ¡õ	y^.òL¶ÀğÌ˜c+ºF÷ÍL
+ï´¸RŒÈTıÂÀ.¨·›YøX{O
+›[FfbFICT‘Q·­‹âşç:ÔIU³àı‡LÜ(
+ñ¼æu™i×·=§É§+n9Dvß$yç1;ø™â.û>%ÍÆ0Ï;îèC–ëFÊ•ÎPc=‡ã`1è[jÌÆ-f„p}á’†ô(Ã•‡hÉ¹Àä§ÇáÛ§¥šöŸ€‘›XènLc°{
+ ÀqQ®Î]°§´ñ•ÇºVZ¬ß¨pßªBÚ[=7cĞàk$Cü†İÃíZİÀµ]W„ô%Ávš
+M	àÅ‘PZê~.RpM˜Ìº9ûÒã+B¹ZÓè¨	õJö\5f*µe-Ü×ŠšÀ³=ÛvB*…¿PÅ	×­´n"cµ%­$X
+‡L$ eÉ+ˆË,eS»«'à
+I6„[¸/‡*&`„.I™ºJ7zºQ„	Ô´‘ÍS5ÉäK•zÊ¤d¿ÙhF£g{Âí0}owòÃN”/T® ÷“ş4nb1»D-Dò!­—Pó)­ô Ü·C—ÆÓÎ‘´Åöpaİ%ƒAÜJM[è…D- ù^¤æi¡Çâd´'3…Ü6µ°¹#x>)àê¡Ç¼oÍğCâ²2«ˆnb¥ÇØŠû;„ø×sHú„Ú8œ!ñÄf¹¢_»¬ñ˜©Gêúö£K…W)ºG½l7ÍY
+ÏuB:áWw±Æ==,eFÃd°o@F ÆulŠvl/ê‘qŠ'¦õ"·‚uAdÔ‹`šÎøZMÒeåYĞnºù¡»‘…_Œ8[-neJ-@ÊSÁItÁå´:ª<yú@'â÷Éîì£ñò*WŸ†Ãjª	–¢¡²jıa¥í8¹¡Í‘ã”‘ã@18OL_‹ÉXòh<äª«Ô(ıé‰ÆàÍ­ºóŒñò¾ózG¡”ã$?…éĞŸv>¨íûîG8€{n»*KHvâÚ¼oË@°D×>Ùê›ö¤sYl÷´U<ø­Š<µ·Á)€’âçÓ‚–3r¸Öç´ÄØlÓ~SŠÏ˜à…®ë9LxÔÚı9†x-šÏ¨³N§ÆsP¥MJ$¿ÛJô¨Ë*OÛàJ„Ì£S]ÉÙfë¥æ—#¥ÅÔº²hè2Çæ:ÔÔá;“ònªD>ª?¼3‘Š‡%t…-˜ ‘¤Sr=\R%´J;%Ä‘›Ğ')ìN³h0[ÚCç8Ë—½_‡ïÄ©Ã^1¥iê-üIg¨'æz“pN¡ç»£ë7^EÄw'¶ÓtâÉë@Ræ:ƒ™Ÿª}´ï^õ|Ïö=²¶[á0
+S®‰U±f‡	ù
+«à~zLP'—´WÙØ|rªÔlj“ƒøÔR½¡Ï—‡d×WùvÅÃr¥è`Î!Õu~Dß4Ë‹zò<íFùğ~ö¡c8©ú¡_ãûÛI”OÉPäªgf"ìO7ºD[Û}Ùb¤eş:Ç]ëÓùQWNbÒ;×o	Æ¹‹*ÖìŠÊ?Œ13
+²^ùç	[hjWŞO’!Qç¬‚BĞJÕÄ6“›Ş}›{Á¸|(n;.‰ó}úA‘Æ:€´JGÂq]XIš×ÆñXW5MIÍädE[tÏ!jca ÔÍ†Ù}ÅéŠñ'Õ7Ù:kÅ¾´pCÏAÒYMR‰™8Åğc:·íúl|I)Ãä>û½L³´3·ıÖ`Rl…è;á¶¶É ËLwÑ÷ØŠ,Yî­º=’Œf!_ºØíÓZ¸pÈœ`Ş ´²Uq[Uß“lRT/Ù½í^4KÏÉÍcìŠ+šy¥HÅ<É€gš™,ëÆÉÊ¡dÉW=§U°î­É"
+v«‚.Vs•àúZKšƒÿ!¶éR³ç3ûDN&<¤Ûğ¾33â"à¡GE“ZƒâÖºâã8‡¨h¤ñ»zõY„,]Á¨Eşë¿ş«…EgK~‘Î!~½{ë1KqÖÚ‡¬]XT…U„¨–FÕç>&
+(TéL™ÑÄª¯‰u4†K»\KMÉö´§„à¶ğIôzˆÃ:ÎËUŞ,‘ÊœŞÙ?‘>G–>âBÿg´(/uu}Ù¸d¹5´£€ yŸUÄûLFFõ£ºPÇÛµm‡àÛqSªt¥#•R¦ş@£Mdco_57‘cº›â‘—™<òµOÈn$4Éh}DÈÛlÏq¤ãIù)K“ùw5\"$0pÉ4µâ“äI£¸¼ËèZª®)Á‹"FpÚM€“Ş>gÇwî"›¾­…¹½±Çı0+ûv•éÊüªŞk:üª&ª^!ÁY»h¡-½«á„¯œÚå/½}Í~ctq‡R¶Øêè¶wÎš}\SÈ]›Fœ(n6ÃT{µ²uÛ
+Ğ°"ø\9U£âê#†mä1Àšf¡y©§‰Fg:­4PúÇÿÿd4îSáÒÓ’Å/O=\[²éÂ½I,¸å@VÄ‚3üw1sÿCO…å¯%“îmIóa…Œ	/©äğ÷²Š«ĞÓŒm,ŒçÔû×ø˜rmQ”à†ï9dÈ·&]dï°sÚıúù‚äo=k¤k{®Ø.9 {ø±{øë×“c)8İ¯Ç'g'½İ£ƒ¦e+z‚°asŸ9T­íAi#ºÁ¢MyÉI:H°İ:‡k#'í‚IÈ"ŞŠHÿå.NhBEv†Àëi‚Ö&Ú3Xî#E‘ªÄ\Y² °^CÄıw©Ç`•É(VÅ€7Í#•í\Û·Übd’õ`ü¡Š9ÌA<˜‚@màöAÀ¢}t÷>µè›l¨À²zù`ºÙúº‹†7Ç^£„—"%]ñ/”ìø_ñrö!ÌÂ{qZdó¨Áîõ£õµªb‹ä$ë»dØToEè©™Ã(ÆG•¼Áe“ô·¤Æu)Ë¿-¤•X^šQ±×ÉY¯{µÆİ³bûÖÎ‘—$¿ÄQšj.ÙªV£ÌÎºêæ¨¼ùïzUlÀƒßê¸ÂæØ.9’÷0 ©&»M»Ø2úoœgw°ùh4®ï­±‚ÌYíºHİ';BÃæ’Š©¸µ£Ú}ZÕ†wÂYÚ‡¥øa2r§M	g”ôÍğ—,yË;kŒâ½1„«…”+k‡ƒvlpÑi„b©S›ÂŠG×ñ Çºf:ÔÖ‘alƒ8ÄJ°<e&²…6£2ú°‰Ñ¨A¸gî8/ t¡®zi\ÙUvœg(ç¨ñ‹:íÛäü\a§%ğÁ#"°Ôª¬(«š8¾Ñ¸ÊZMöå·ã†Â	˜GÏakgE<¨Ø†U1e¯~‰yÎşŸôºÔŸ*ªÍ­©Õ–[F·ò{ÕïêÙË4ë½¾õÁõ$Ÿ²Éš<şˆÃ,±ï½øøõ!˜…6ûû³™ÆŸqÕ99ë^6½'W›}ŠJ6~k·Óteƒc“÷êæH³O@[ÔôŸ`ÏNß‡¿v»5€h³©PñÍŞ^7_Í>aÎ|HÓzX÷kú9’®Ù›7İ‡m‚ÆŸ‚XÀ†oşrruø±é›kóNÍ>A…(ÍŞ;íï7|ÿLºÑg ı{³O™"7ú˜Í].ÑY÷ÃT±î»$>¥÷ùò¸s÷÷)˜¬f1qYí0œú§ÿı§ÿ¾-v0[˜                      # See https://android.googlesource.com/platform/ndk/+/master/docs/PlatformApis.md
+libandroid.so
+libaaudio.so
+libamidi.so
+libbinder_ndk.so
+libc.so
+libcamera2ndk.so
+libclang_rt.hwasan-aarch64-android.so 64 nopreload
+libdl.so
+libEGL.so
+libGLESv1_CM.so
+libGLESv2.so
+libGLESv3.so
+libicu.so
+libicui18n.so
+libicuuc.so
+libjnigraphics.so
+liblog.so
+libmediandk.so
+libm.so
+libnativehelper.so
+libnativewindow.so
+libneuralnetworks.so nopreload
+libOpenMAXAL.so
+libOpenSLES.so
+libRS.so
+libstdc++.so
+libsync.so
+libvulkan.so
+libwebviewchromium_plat_support.so
+libz.so
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ë   .   X   ..  ì  Üimages                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ş
+È±Åì   .   ë   ..  í  Ücharger                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ş›Õ¹“í   .   ì   ..  î   battery_fail.pngï  Äbattery_scale.png                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ŞÎ×¾K‰PNG
+
+   IHDR   x   º    @/Ö±   tEXtSoftware Adobe ImageReadyqÉe<  fiTXtXML:com.adobe.xmp     <?xpacket begin="ï»¿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.0-c060 61.134777, 2010/02/12-17:32:00        "> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmpMM:OriginalDocumentID="xmp.did:0CE977BE6122681191099EE55008C48F" xmpMM:DocumentID="xmp.did:CFD265EBE09A11E095E98C93B8A44B9C" xmpMM:InstanceID="xmp.iid:CFD265EAE09A11E095E98C93B8A44B9C" xmp:CreatorTool="Adobe Photoshop CS5 Macintosh"> <xmpMM:DerivedFrom stRef:instanceID="xmp.iid:0580117407206811A7BA986CA3B86709" stRef:documentID="xmp.did:0CE977BE6122681191099EE55008C48F"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end="r"?>¢1  ˆIDATxí×q‰ì0€ñ8xÄB-ÄB,ÔB-ÄB-ÔB-ÔB-äg æ88¸¤ÜîÀÑ™…Ûï3ğƒ˜ õO~Óÿ õÎ0000000°¼(`ë€ƒcÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀN9:Ã¹ì§|U2G8oM®í‹9œù±VLá8²C5ÙÁ¹É³+x¥ÕÎ¢¶XÀ±‰^6€7½z?<ÉµvU®•ÛáuêÃgó&Cõv¸J_y8cóÍğôø÷¦AŞn†géÚÃPßú^¸<š*]–ğÓ—íà#\Zá)—Â¥l—WÁ»Õ8)ÅŞ=áÒÃ«<µüàs\ãnğ&}Éİ5xÁ£{F'8nKÁNšƒœ›Ñ	£´ÈÕ5€u·ÍÁ Öİš‚¬»[>pÒŸÙ>õñ5³¾Ÿmàm¼£üàÚÃÑîİ#øÁ¹‡ËÛÁù`-```ƒCXØ>````````````````ß€ş .¨s[vs    IEND®B`‚                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

@@ -1,0 +1,750 @@
+   chmod 0666 /sys/kernel/tracing/events/power/gpu_work_period/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/power/suspend_resume/enable
+    chmod 0666 /sys/kernel/tracing/events/power/suspend_resume/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/cpufreq_interactive/enable
+    chmod 0666 /sys/kernel/tracing/events/cpufreq_interactive/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_direct_reclaim_begin/enable
+    chmod 0666 /sys/kernel/tracing/events/vmscan/mm_vmscan_direct_reclaim_begin/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_direct_reclaim_end/enable
+    chmod 0666 /sys/kernel/tracing/events/vmscan/mm_vmscan_direct_reclaim_end/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_kswapd_wake/enable
+    chmod 0666 /sys/kernel/tracing/events/vmscan/mm_vmscan_kswapd_wake/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_kswapd_sleep/enable
+    chmod 0666 /sys/kernel/tracing/events/vmscan/mm_vmscan_kswapd_sleep/enable
+    chmod 0666 /sys/kernel/debug/tracing/tracing_on
+    chmod 0666 /sys/kernel/tracing/tracing_on
+    chmod 0666 /sys/kernel/debug/tracing/events/binder/binder_transaction/enable
+    chmod 0666 /sys/kernel/tracing/events/binder/binder_transaction/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/binder/binder_transaction_received/enable
+    chmod 0666 /sys/kernel/tracing/events/binder/binder_transaction_received/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/binder/binder_transaction_alloc_buf/enable
+    chmod 0666 /sys/kernel/tracing/events/binder/binder_transaction_alloc_buf/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/binder/binder_lock/enable
+    chmod 0666 /sys/kernel/tracing/events/binder/binder_lock/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/binder/binder_locked/enable
+    chmod 0666 /sys/kernel/tracing/events/binder/binder_locked/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/binder/binder_unlock/enable
+    chmod 0666 /sys/kernel/tracing/events/binder/binder_unlock/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/binder/binder_set_priority/enable
+    chmod 0666 /sys/kernel/tracing/events/binder/binder_set_priority/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/i2c/enable
+    chmod 0666 /sys/kernel/tracing/events/i2c/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/i2c/i2c_read/enable
+    chmod 0666 /sys/kernel/tracing/events/i2c/i2c_read/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/i2c/i2c_write/enable
+    chmod 0666 /sys/kernel/tracing/events/i2c/i2c_write/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/i2c/i2c_result/enable
+    chmod 0666 /sys/kernel/tracing/events/i2c/i2c_result/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/i2c/i2c_reply/enable
+    chmod 0666 /sys/kernel/tracing/events/i2c/i2c_reply/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/i2c/smbus_read/enable
+    chmod 0666 /sys/kernel/tracing/events/i2c/smbus_read/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/i2c/smbus_write/enable
+    chmod 0666 /sys/kernel/tracing/events/i2c/smbus_write/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/i2c/smbus_result/enable
+    chmod 0666 /sys/kernel/tracing/events/i2c/smbus_result/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/i2c/smbus_reply/enable
+    chmod 0666 /sys/kernel/tracing/events/i2c/smbus_reply/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/lowmemorykiller/enable
+    chmod 0666 /sys/kernel/tracing/events/lowmemorykiller/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/sync/enable
+    chmod 0666 /sys/kernel/tracing/events/sync/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/fence/enable
+    chmod 0666 /sys/kernel/tracing/events/fence/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/dma_fence/enable
+    chmod 0666 /sys/kernel/tracing/events/dma_fence/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/kmem/rss_stat/enable
+    chmod 0666 /sys/kernel/tracing/events/kmem/rss_stat/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/kmem/ion_heap_grow/enable
+    chmod 0666 /sys/kernel/tracing/events/kmem/ion_heap_grow/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/kmem/ion_heap_shrink/enable
+    chmod 0666 /sys/kernel/tracing/events/kmem/ion_heap_shrink/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ion/ion_stat/enable
+    chmod 0666 /sys/kernel/tracing/events/ion/ion_stat/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/mm_event/mm_event_record/enable
+    chmod 0666 /sys/kernel/tracing/events/mm_event/mm_event_record/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/signal/signal_generate/enable
+    chmod 0666 /sys/kernel/tracing/events/signal/signal_generate/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/signal/signal_deliver/enable
+    chmod 0666 /sys/kernel/tracing/events/signal/signal_deliver/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/mm_event/mm_event_record/enable
+    chmod 0666 /sys/kernel/tracing/events/mm_event/mm_event_record/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/lowmemorykiller/lowmemory_kill/enable
+    chmod 0666 /sys/kernel/tracing/events/lowmemorykiller/lowmemory_kill/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/oom/oom_score_adj_update/enable
+    chmod 0666 /sys/kernel/tracing/events/oom/oom_score_adj_update/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/oom/mark_victim/enable
+    chmod 0666 /sys/kernel/tracing/events/oom/mark_victim/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/task/task_rename/enable
+    chmod 0666 /sys/kernel/tracing/events/task/task_rename/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/task/task_newtask/enable
+    chmod 0666 /sys/kernel/tracing/events/task/task_newtask/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/gpu_mem/gpu_mem_total/enable
+    chmod 0666 /sys/kernel/tracing/events/gpu_mem/gpu_mem_total/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/irq_handler_entry/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/irq_handler_entry/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/irq_handler_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/irq_handler_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/softirq_entry/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/softirq_entry/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/softirq_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/softirq_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/softirq_raise/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/softirq_raise/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/tasklet_entry/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/tasklet_entry/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/tasklet_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/tasklet_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/tasklet_hi_entry/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/tasklet_hi_entry/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/irq/tasklet_hi_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/irq/tasklet_hi_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ipi/enable
+    chmod 0666 /sys/kernel/tracing/events/ipi/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ipi/ipi_entry/enable
+    chmod 0666 /sys/kernel/tracing/events/ipi/ipi_entry/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ipi/ipi_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/ipi/ipi_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ipi/ipi_raise/enable
+    chmod 0666 /sys/kernel/tracing/events/ipi/ipi_raise/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/clk/clk_enable/enable
+    chmod 0666 /sys/kernel/tracing/events/clk/clk_disable/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/clk/clk_disable/enable
+    chmod 0666 /sys/kernel/tracing/events/clk/clk_enable/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/clk/clk_set_rate/enable
+    chmod 0666 /sys/kernel/tracing/events/clk/clk_set_rate/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/printk/console/enable
+    chmod 0666 /sys/kernel/tracing/events/printk/console/enable
+
+    # disk
+    chmod 0666 /sys/kernel/tracing/events/f2fs/f2fs_get_data_block/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/f2fs/f2fs_get_data_block/enable
+    chmod 0666 /sys/kernel/tracing/events/f2fs/f2fs_iget/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/f2fs/f2fs_iget/enable
+    chmod 0666 /sys/kernel/tracing/events/f2fs/f2fs_sync_file_enter/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/f2fs/f2fs_sync_file_enter/enable
+    chmod 0666 /sys/kernel/tracing/events/f2fs/f2fs_sync_file_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/f2fs/f2fs_sync_file_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/f2fs/f2fs_write_begin/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/f2fs/f2fs_write_begin/enable
+    chmod 0666 /sys/kernel/tracing/events/f2fs/f2fs_write_end/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/f2fs/f2fs_write_end/enable
+    chmod 0666 /sys/kernel/tracing/events/ext4/ext4_da_write_begin/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ext4/ext4_da_write_begin/enable
+    chmod 0666 /sys/kernel/tracing/events/ext4/ext4_da_write_end/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ext4/ext4_da_write_end/enable
+    chmod 0666 /sys/kernel/tracing/events/ext4/ext4_es_lookup_extent_enter/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ext4/ext4_es_lookup_extent_enter/enable
+    chmod 0666 /sys/kernel/tracing/events/ext4/ext4_es_lookup_extent_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ext4/ext4_es_lookup_extent_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/ext4/ext4_load_inode/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ext4/ext4_load_inode/enable
+    chmod 0666 /sys/kernel/tracing/events/ext4/ext4_sync_file_enter/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ext4/ext4_sync_file_enter/enable
+    chmod 0666 /sys/kernel/tracing/events/ext4/ext4_sync_file_exit/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/ext4/ext4_sync_file_exit/enable
+    chmod 0666 /sys/kernel/tracing/events/block/block_rq_issue/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/block/block_rq_issue/enable
+    chmod 0666 /sys/kernel/tracing/events/block/block_rq_complete/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/block/block_rq_complete/enable
+
+    # filemap events for iorapd
+    chmod 0666 /sys/kernel/tracing/events/filemap/mm_filemap_add_to_page_cache/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/filemap/mm_filemap_add_to_page_cache/enable
+    chmod 0666 /sys/kernel/tracing/events/filemap/mm_filemap_delete_from_page_cache/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/filemap/mm_filemap_delete_from_page_cache/enable
+
+    # thermal
+    chmod 0666 /sys/kernel/debug/tracing/events/thermal/thermal_temperature/enable
+    chmod 0666 /sys/kernel/tracing/events/thermal/thermal_temperature/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/thermal/cdev_update/enable
+    chmod 0666 /sys/kernel/tracing/events/thermal/cdev_update/enable
+
+# Tracing disabled by default
+    write /sys/kernel/debug/tracing/tracing_on 0
+    write /sys/kernel/tracing/tracing_on 0
+
+# Read and truncate the kernel trace.
+    chmod 0666 /sys/kernel/debug/tracing/trace
+    chmod 0666 /sys/kernel/tracing/trace
+
+# Read and truncate the per-CPU kernel trace.
+# Cannot use wildcards in .rc files. Update this if there is a phone with
+# more CPUs.
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu0/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu0/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu1/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu1/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu2/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu2/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu3/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu3/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu4/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu4/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu5/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu5/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu6/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu6/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu7/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu7/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu8/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu8/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu9/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu9/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu10/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu10/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu11/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu11/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu12/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu12/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu13/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu13/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu14/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu14/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu15/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu15/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu16/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu16/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu17/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu17/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu18/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu18/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu19/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu19/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu20/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu20/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu21/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu21/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu22/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu22/trace
+    chmod 0666 /sys/kernel/debug/tracing/per_cpu/cpu23/trace
+    chmod 0666 /sys/kernel/tracing/per_cpu/cpu23/trace
+
+# Setup synthetic events
+    chmod 0666 /sys/kernel/tracing/synthetic_events
+    chmod 0666 /sys/kernel/debug/tracing/synthetic_events
+    copy /system/etc/ftrace_synthetic_events.conf /sys/kernel/tracing/synthetic_events
+    copy /system/etc/ftrace_synthetic_events.conf /sys/kernel/debug/tracing/synthetic_events
+
+    # allow creating rss_stat event triggers
+    chmod 0666 /sys/kernel/tracing/events/kmem/rss_stat/trigger
+    chmod 0666 /sys/kernel/debug/tracing/events/kmem/rss_stat/trigger
+
+    # allow enabling rss_stat_throttled
+    chmod 0666 /sys/kernel/tracing/events/synthetic/rss_stat_throttled/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/synthetic/rss_stat_throttled/enable
+
+    # allow creating suspend_resume triggers
+    chmod 0666 /sys/kernel/tracing/events/power/suspend_resume/trigger
+    chmod 0666 /sys/kernel/debug/tracing/events/power/suspend_resume/trigger
+
+    # allow enabling suspend_resume_minimal
+    chmod 0666 /sys/kernel/tracing/events/synthetic/suspend_resume_minimal/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/synthetic/suspend_resume_minimal/enable
+
+on late-init && property:ro.boot.fastboot.boottrace=enabled
+    setprop debug.atrace.tags.enableflags 802922
+    setprop persist.traced.enable 0
+    write /sys/kernel/tracing/events/binder/binder_transaction/enable 1
+    write /sys/kernel/tracing/events/binder/binder_transaction_received/enable 1
+    write /sys/kernel/tracing/events/binder/binder_transaction_alloc_buf/enable 1
+    write /sys/kernel/tracing/events/binder/binder_set_priority/enable 1
+    write /sys/kernel/tracing/events/binder/binder_lock/enable 1
+    write /sys/kernel/tracing/events/binder/binder_locked/enable 1
+    write /sys/kernel/tracing/events/binder/binder_unlock/enable 1
+    write /sys/kernel/debug/tracing/tracing_on 1
+    write /sys/kernel/tracing/tracing_on 1
+
+# Only create the tracing instance if persist.mm_events.enabled
+# Attempting to remove the tracing instance after it has been created
+# will likely fail with EBUSY as it would be in use by traced_probes.
+on post-fs-data && property:persist.mm_events.enabled=true
+# Create MM Events Tracing Instance for Kmem Activity Trigger
+    mkdir /sys/kernel/debug/tracing/instances/mm_events 0755 system system
+    mkdir /sys/kernel/tracing/instances/mm_events 0755 system system
+
+# Read and set per CPU buffer size
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/buffer_size_kb
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/buffer_size_kb
+
+# Set the default buffer size to the minimum
+    write /sys/kernel/debug/tracing/instances/mm_events/buffer_size_kb 1
+    write /sys/kernel/tracing/instances/mm_events/buffer_size_kb 1
+
+# Read and enable tracing
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/tracing_on
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/tracing_on
+
+# Tracing disabled by default
+    write /sys/kernel/debug/tracing/instances/mm_events/tracing_on 0
+    write /sys/kernel/tracing/instances/mm_events/tracing_on 0
+
+# Read and truncate kernel trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/trace
+
+# Enable trace events
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/events/vmscan/mm_vmscan_direct_reclaim_begin/enable
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/events/vmscan/mm_vmscan_direct_reclaim_begin/enable
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/events/vmscan/mm_vmscan_kswapd_wake/enable
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/events/vmscan/mm_vmscan_kswapd_wake/enable
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/events/compaction/mm_compaction_begin/enable
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/events/compaction/mm_compaction_begin/enable
+
+# Read and clear per-CPU raw kernel trace
+# Cannot use wildcards in .rc files. Update this if there is a phone with
+# more CPUs.
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu0/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu0/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu1/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu1/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu2/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu2/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu3/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu3/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu4/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu4/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu5/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu5/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu6/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu6/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu7/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu7/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu8/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu8/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu9/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu9/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu10/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu10/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu11/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu11/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu12/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu12/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu13/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu13/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu14/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu14/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu15/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu15/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu16/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu16/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu17/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu17/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu18/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu18/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu19/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu19/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu20/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu20/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu21/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu21/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu22/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu22/trace
+    chmod 0666 /sys/kernel/debug/tracing/instances/mm_events/per_cpu/cpu23/trace
+    chmod 0666 /sys/kernel/tracing/instances/mm_events/per_cpu/cpu23/trace
+
+# Handle hyp tracing instance
+on late-init && property:ro.boot.hypervisor.vm.supported=1
+
+# Hypervisor tracing instance doesn't support changing trace_clock
+    chmod 0440 /sys/kernel/debug/tracing/hyp/trace_clock
+    chmod 0440 /sys/kernel/tracing/hyp/trace_clock
+
+    chmod 0660 /sys/kernel/debug/tracing/hyp/buffer_size_kb
+    chmod 0660 /sys/kernel/tracing/hyp/buffer_size_kb
+
+    chmod 0660 /sys/kernel/debug/tracing/hyp/tracing_on
+    chmod 0660 /sys/kernel/tracing/hyp/tracing_on
+
+# Tracing disabled by default
+    write /sys/kernel/debug/tracing/hyp/tracing_on 0
+    write /sys/kernel/tracing/hyp/tracing_on 0
+
+# Read and truncate the hyp trace.
+    chmod 0660 /sys/kernel/debug/tracing/hyp/trace
+    chmod 0660 /sys/kernel/tracing/hyp/trace
+
+# Read and truncate the per-CPU kernel trace.
+# Cannot use wildcards in .rc files. Update this if there is a phone with
+# TODO(b/249050813, ioffe): introduce per-cpu wildcard
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu0/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu0/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu1/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu1/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu2/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu2/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu3/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu3/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu4/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu4/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu5/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu5/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu6/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu6/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu7/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu7/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu8/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu8/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu9/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu9/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu10/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu10/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu11/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu11/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu12/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu12/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu13/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu13/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu14/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu14/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu15/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu15/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu16/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu16/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu17/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu17/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu18/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu18/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu19/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu19/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu20/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu20/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu21/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu21/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu22/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu22/trace
+    chmod 0660 /sys/kernel/debug/tracing/hyp/per_cpu/cpu23/trace
+    chmod 0660 /sys/kernel/tracing/hyp/per_cpu/cpu23/trace
+
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/header_page
+    chmod 0440 /sys/kernel/tracing/hyp/events/header_page
+
+# Hyp events start here
+
+# hyp_enter event
+    chmod 0660 /sys/kernel/debug/tracing/hyp/events/hyp/hyp_enter/enable
+    chmod 0660 /sys/kernel/tracing/hyp/events/hyp/hyp_enter/enable
+# TODO(b/249050813): should this be handled in kernel?
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/hyp_enter/format
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/hyp_enter/format
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/hyp_enter/id
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/hyp_enter/id
+
+# hyp_exit event
+    chmod 0660 /sys/kernel/debug/tracing/hyp/events/hyp/hyp_exit/enable
+    chmod 0660 /sys/kernel/tracing/hyp/events/hyp/hyp_exit/enable
+# TODO(b/249050813): should this be handled in kernel?
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/hyp_exit/format
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/hyp_exit/format
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/hyp_exit/id
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/hyp_exit/id
+
+# host_hcall event
+    chmod 0660 /sys/kernel/debug/tracing/hyp/events/hyp/host_hcall/enable
+    chmod 0660 /sys/kernel/tracing/hyp/events/hyp/host_hcall/enable
+# TODO(b/249050813): should this be handled in kernel?
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/host_hcall/format
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/host_hcall/format
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/host_hcall/id
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/host_hcall/id
+
+# host_smc event
+    chmod 0660 /sys/kernel/debug/tracing/hyp/events/hyp/host_smc/enable
+    chmod 0660 /sys/kernel/tracing/hyp/events/hyp/host_smc/enable
+# TODO(b/249050813): should this be handled in kernel?
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/host_smc/format
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/host_smc/format
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/host_smc/id
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/host_smc/id
+
+# host_mem_abort event
+    chmod 0660 /sys/kernel/debug/tracing/hyp/events/hyp/host_mem_abort/enable
+    chmod 0660 /sys/kernel/tracing/hyp/events/hyp/host_mem_abort/enable
+# TODO(b/249050813): should this be handled in kernel?
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/host_mem_abort/format
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/host_mem_abort/format
+    chmod 0440 /sys/kernel/debug/tracing/hyp/events/hyp/host_mem_abort/id
+    chmod 0440 /sys/kernel/tracing/hyp/events/hyp/host_mem_abort/id
+
+
+on property:persist.debug.atrace.boottrace=1
+    start boottrace
+
+# Run atrace with the categories written in a file
+service boottrace /system/bin/atrace --async_start -f /data/misc/boottrace/categories
+    user root
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1 && property:ro.boot.fastboot.boottrace=enabled
+    setprop debug.atrace.tags.enableflags 0
+    setprop persist.traced.enable 1
+    write /sys/kernel/tracing/events/binder/binder_transaction/enable 0
+    write /sys/kernel/tracing/events/binder/binder_transaction_received/enable 0
+    write /sys/kernel/tracing/events/binder/binder_transaction_alloc_buf/enable 0
+    write /sys/kernel/tracing/events/binder/binder_set_priority/enable 0
+    write /sys/kernel/tracing/events/binder/binder_lock/enable 0
+    write /sys/kernel/tracing/events/binder/binder_locked/enable 0
+    write /sys/kernel/tracing/events/binder/binder_unlock/enable 0
+    write /sys/kernel/debug/tracing/tracing_on 0
+    write /sys/kernel/tracing/tracing_on 0
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ## Permissions to allow additional system-wide tracing to the kernel trace buffer.
+## The default list of permissions is set in frameworks/native/cmds/atrace/atrace.rc
+
+# Grant unix world read/write permissions to enable kernel tracepoints.
+# Access control to these files is now entirely in selinux policy.
+
+on post-fs
+    # On userdebug allow to enable any event via the generic
+    # set_event interface:
+    # echo sched/foo > set_event == echo 1 > events/sched/foo/enable.
+    chmod 0666 /sys/kernel/tracing/set_event
+    chmod 0666 /sys/kernel/debug/tracing/set_event
+
+    chmod 0666 /sys/kernel/tracing/events/workqueue/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/workqueue/enable
+    chmod 0666 /sys/kernel/tracing/events/regulator/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/regulator/enable
+    chmod 0666 /sys/kernel/tracing/events/filemap/enable
+    chmod 0666 /sys/kernel/debug/tracing/events/filemap/enable
+
+    # Allow traced_probes to use the raw_syscall filters to trace only a subset
+    # of syscalls.
+    chmod 0666 /sys/kernel/tracing/events/raw_syscalls/sys_enter/filter
+    chmod 0666 /sys/kernel/debug/tracing/events/raw_syscalls/sys_enter/filter
+    chmod 0666 /sys/kernel/tracing/events/raw_syscalls/sys_exit/filter
+    chmod 0666 /sys/kernel/debug/tracing/events/raw_syscalls/sys_exit/filter
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   service audioserver /system/bin/audioserver
+    class core
+    user audioserver
+    # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
+    group audio camera drmrpc media mediadrm net_bt net_bt_admin net_bw_acct wakelock
+    capabilities BLOCK_SUSPEND
+    ioprio rt 4
+    task_profiles ProcessCapacityHigh HighPerformance
+    onrestart restart vendor.audio-hal
+    onrestart restart vendor.audio-hal-aidl
+    onrestart restart vendor.audio-effect-hal-aidl
+    onrestart restart vendor.audio-hal-4-0-msd
+    onrestart restart audio_proxy_service
+
+on property:vts.native_server.on=1
+    stop audioserver
+on property:vts.native_server.on=0
+    start audioserver
+
+on property:init.svc.audioserver=stopped
+    stop vendor.audio-hal
+    stop vendor.audio-hal-aidl
+    stop vendor.audio-effect-hal-aidl
+    stop vendor.audio-hal-4-0-msd
+    stop audio_proxy_service
+    # See b/155364397. Need to have HAL service running for VTS.
+    # Can't use 'restart' because then HAL service would restart
+    # audioserver bringing it back into running state.
+    start vendor.audio-hal
+    start vendor.audio-hal-aidl
+    start vendor.audio-effect-hal-aidl
+    start vendor.audio-hal-4-0-msd
+    start audio_proxy_service
+
+on property:init.svc.audioserver=running
+    start vendor.audio-hal
+    start vendor.audio-hal-aidl
+    start vendor.audio-effect-hal-aidl
+    start vendor.audio-hal-4-0-msd
+    start audio_proxy_service
+
+on property:sys.audio.restart.hal=1
+    # See b/159966243. Avoid restart loop between audioserver and HAL.
+    # Keep the original service names for backward compatibility
+    stop vendor.audio-hal
+    stop vendor.audio-hal-aidl
+    stop vendor.audio-effect-hal-aidl
+    stop vendor.audio-hal-4-0-msd
+    stop audio_proxy_service
+    start vendor.audio-hal
+    start vendor.audio-hal-aidl
+    start vendor.audio-effect-hal-aidl
+    start vendor.audio-hal-4-0-msd
+    start audio_proxy_service
+    # reset the property
+    setprop sys.audio.restart.hal 0
+
+on init
+    mkdir /dev/socket/audioserver 0775 audioserver audioserver
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      service blank_screen /system/bin/blank_screen
+    user system
+    oneshot
+    group system
+    shutdown critical
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               service bootanim /system/bin/bootanimation
+    class core animation
+    user graphics
+    group graphics audio
+    disabled
+    oneshot
+    ioprio rt 0
+    task_profiles MaxPerformance
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       # This file is the userdebug LOCAL_INIT_RC file for the bootstat command.
+
+# FOR TESTING
+# For devices w/o bootloader boot reason reported, mirror test boot reason
+# to bootloader boot reason to allow test to inject reasons
+on property:persist.test.boot.reason=*
+    setprop ro.boot.bootreason ${persist.test.boot.reason}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              # This file is the LOCAL_INIT_RC file for the bootstat command.
+
+# Mirror bootloader boot reason to system boot reason
+# ro.boot.bootreason should be set by init already
+# before post-fs trigger
+on post-fs && property:ro.boot.bootreason=*
+    setprop sys.boot.reason ${ro.boot.bootreason}
+
+on post-fs-data
+    mkdir /data/misc/bootstat 0700 system log
+    # To deal with ota transition resulting from a change in DAC from
+    # root.root to system.log, may be deleted after ota has settled.
+    chown system log /data/misc/bootstat/absolute_boot_time
+    chown system log /data/misc/bootstat/boot_complete
+    chown system log /data/misc/bootstat/boot_complete_no_encryption
+    chown system log /data/misc/bootstat/boot_reason
+    chown system log /data/misc/bootstat/boottime.bootloader.1BLE
+    chown system log /data/misc/bootstat/boottime.bootloader.1BLL
+    chown system log /data/misc/bootstat/boottime.bootloader.2BLE
+    chown system log /data/misc/bootstat/boottime.bootloader.2BLL
+    chown system log /data/misc/bootstat/boottime.bootloader.AVB
+    chown system log /data/misc/bootstat/boottime.bootloader.KD
+    chown system log /data/misc/bootstat/boottime.bootloader.KL
+    chown system log /data/misc/bootstat/boottime.bootloader.ODT
+    chown system log /data/misc/bootstat/boottime.bootloader.SW
+    chown system log /data/misc/bootstat/boottime.bootloader.total
+    chown system log /data/misc/bootstat/build_date
+    chown system log /data/misc/bootstat/factory_reset
+    chown system log /data/misc/bootstat/factory_reset_boot_complete
+    chown system log /data/misc/bootstat/factory_reset_boot_complete_no_encryption
+    chown system log /data/misc/bootstat/factory_reset_current_time
+    chown system log /data/misc/bootstat/factory_reset_record_value
+    chown system log /data/misc/bootstat/last_boot_time_utc
+    chown system log /data/misc/bootstat/ota_boot_complete
+    chown system log /data/misc/bootstat/ota_boot_complete_no_encryption
+    chown system log /data/misc/bootstat/ro.boottime.init
+    chown system log /data/misc/bootstat/ro.boottime.init.cold_boot_wait
+    chown system log /data/misc/bootstat/ro.boottime.init.selinux
+    chown system log /data/misc/bootstat/time_since_factory_reset
+    chown system log /data/misc/bootstat/time_since_last_boot
+    # end ota transitional support
+
+# Initialize bootstat state machine.
+#
+# sys.bootstat.first_boot_completed: responsible for making sure that record_boot_complete happens
+# only once per device hard reboot. Possible values:
+#
+#   sys.bootstat.first_boot_completed=0 - first boot completed trigger wasn't processed yet.
+#   sys.bootstat.first_boot_completed=1 - first boot completed trigger was processed and
+#                                         record_boot_complete was called. Subsequent boot completed
+#                                         triggers (e.g. due to userspace reboot) won't retrigger
+#                                         record_boot_complete
+#
+# IMPORTANT, ro.persistent_properties.ready=1 trigger is used here to ensure that we initialize
+# state machine only once, which as result ensures that bootstat --set_system_boot_reason and
+# bootstat --record_boot_complete will be called only once per full reboot.
+on property:ro.persistent_properties.ready=true
+  setprop sys.bootstat.first_boot_completed 0
+
+# Set boot reason
+on property:ro.persistent_properties.ready=true
+    # Converts bootloader boot reason and persist.sys.boot.reason to system boot reason
+    # Need go after persist peroperties are loaded which is right before zygote-start trigger
+    exec_background - system log -- /system/bin/bootstat --set_system_boot_reason
+
+# Record boot complete metrics.
+on property:sys.boot_completed=1 && property:sys.bootstat.first_boot_completed=0
+    # Record boot_complete and related stats (decryption, etc).
+    # Record the boot reason.
+    # Record time since factory reset.
+    # Log all boot events.
+    exec_background - system log -- /system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l
+    setprop sys.bootstat.first_boot_completed 1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         # zygote-start is what officially starts netd (see //system/core/rootdir/init.rc)
+# However, on some hardware it's started from post-fs-data as well, which is just
+# a tad earlier.  There's no benefit to that though, since on 4.9+ P+ devices netd
+# will just block until bpfloader finishes and sets the bpf.progs_loaded property.
+#
+# It is important that we start bpfloader after:
+#   - /sys/fs/bpf is already mounted,
+#   - apex (incl. rollback) is initialized (so that in the future we can load bpf
+#     programs shipped as part of apex mainline modules)
+#   - logd is ready for us to log stuff
+#
+# At the same time we want to be as early as possible to reduce races and thus
+# failures (before memory is fragmented, and cpu is busy running tons of other
+# stuff) and we absolutely want to be before netd and the system boot slot is
+# considered to have booted successfully.
+#
+on load_bpf_programs
+    exec_start bpfloader
+
+service bpfloader /system/bin/bpfloader
+    capabilities CHOWN SYS_ADMIN NET_ADMIN
+    # The following group memberships are a workaround for lack of DAC_OVERRIDE
+    # and allow us to open (among other things) files that we created and are
+    # no longer root owned (due to CHOWN) but still have group read access to
+    # one of the following groups.  This is not perfect, but a more correct
+    # solution requires significantly more effort to implement.
+    group root graphics network_stack net_admin net_bw_acct net_bw_stats net_raw system
+    user root
+    #
+    # Set RLIMIT_MEMLOCK to 1GiB for bpfloader
+    #
+    # Actually only 8MiB would be needed if bpfloader ran as its own uid.
+    #
+    # However, while the rlimit is per-thread, the accounting is system wide.
+    # So, for example, if the graphics stack has already allocated 10MiB of
+    # memlock data before bpfloader even gets a chance to run, it would fail
+    # if its memlock rlimit is only 8MiB - since there would be none left for it.
+    #
+    # bpfloader succeeding is critical to system health, since a failure will
+    # cause netd crashloop and thus system server crashloop... and the only
+    # recovery is a full kernel reboot.
+    #
+    # We've had issues where devices would sometimes (rarely) boot into
+    # a crashloop because bpfloader would occasionally lose a boot time
+    # race against the graphics stack's boot time locked memory allocation.
+    #
+    # Thus bpfloader's memlock has to be 8MB higher then the locked memory
+    # consumption of the root uid anywhere else in the system...
+    # But we don't know what that is for all possible devices...
+    #
+    # Ideally, we'd simply grant bpfloader the IPC_LOCK capability and it
+    # would simply ignore it's memlock rlimit... but it turns that this
+    # capability is not even checked by the kernel's bpf system call.
+    #
+    # As such we simply use 1GiB as a reasonable approximation of infinity.
+    #
+    rlimit memlock 1073741824 1073741824
+    oneshot
+    #
+    # How to debug bootloops caused by 'bpfloader-failed'.
+    #
+    # 1. On some lower RAM devices (like wembley) you may need to first enable developer mode
+    #    (from the Settings app UI), and change the developer option "Logger buffer sizes"
+    #    from the default (wembley: 64kB) to the maximum (1M) per log buffer.
+    #    Otherwise buffer will overflow before you manage to dump it and you'll get useless logs.
+    #
+    # 2. comment out 'reboot_on_failure reboot,bpfloader-failed' below
+    # 3. rebuild/reflash/reboot
+    # 4. as the device is booting up capture bpfloader logs via:
+    #    adb logcat -s 'bpfloader:*' 'LibBpfLoader:*'
+    #
+    # something like:
+    #   $ adb reboot; sleep 1; adb wait-for-device; adb root; sleep 1; adb wait-for-device; adb logcat -s 'bpfloader:*' 'LibBpfLoader:*'
+    # will take care of capturing logs as early as possible
+    #
+    # 5. look through the logs from the kernel's bpf verifier that bpfloader dumps out,
+    #    it usually makes sense to search back from the end and find the particular
+    #    bpf verifier failure that caused bpfloader to terminate early with an error code.
+  

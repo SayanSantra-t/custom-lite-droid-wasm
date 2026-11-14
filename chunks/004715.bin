@@ -1,0 +1,1188 @@
+fer)))
+(allow hwservicemanager hal_evs_client (dir (search)))
+(allow hwservicemanager hal_evs_client (file (read map open)))
+(allow hwservicemanager hal_evs_client (process (getattr)))
+(allow hal_evs_server hwservicemanager (binder (call transfer)))
+(allow hwservicemanager hal_evs_server (binder (call transfer)))
+(allow hwservicemanager hal_evs_server (dir (search)))
+(allow hwservicemanager hal_evs_server (file (read map open)))
+(allow hwservicemanager hal_evs_server (process (getattr)))
+(allow hal_evs_client hal_evs_server (binder (call transfer)))
+(allow hal_evs_server hal_evs_client (binder (transfer)))
+(allow hal_evs_client hal_evs_server (fd (use)))
+(allow hal_evs_server hal_evs_client (binder (call transfer)))
+(allow hal_evs_client hal_evs_server (binder (transfer)))
+(allow hal_evs_server hal_evs_client (fd (use)))
+(allow hal_evs_client hal_evs_hwservice (hwservice_manager (find)))
+(allow hal_evs_server hal_evs_hwservice (hwservice_manager (add find)))
+(allow hal_evs_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 12 system/sepolicy/public/hal_evs.te
+
+(neverallow base_typeattr_383 hal_evs_hwservice (hwservice_manager (add)))
+;;* lme
+
+(allow hal_evs_client hal_evs_service (service_manager (find)))
+(allow hal_evs_server hal_evs_service (service_manager (add find)))
+;;* lmx 15 system/sepolicy/public/hal_evs.te
+
+(neverallow base_typeattr_384 hal_evs_service (service_manager (add)))
+;;* lme
+
+(allow hal_evs_server su (tcp_socket (read write accept getopt)))
+;;* lmx 15 system/sepolicy/public/hal_evs.te
+
+(neverallow base_typeattr_385 hal_evs_service (service_manager (find)))
+;;* lme
+
+(allow hal_face_client hal_face_server (binder (call transfer)))
+(allow hal_face_server hal_face_client (binder (transfer)))
+(allow hal_face_client hal_face_server (fd (use)))
+(allow hal_face_server hal_face_client (binder (call transfer)))
+(allow hal_face_client hal_face_server (binder (transfer)))
+(allow hal_face_server hal_face_client (fd (use)))
+(allow hal_face_client hal_face_hwservice (hwservice_manager (find)))
+(allow hal_face_server hal_face_hwservice (hwservice_manager (add find)))
+(allow hal_face_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_face.te
+
+(neverallow base_typeattr_386 hal_face_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_face.te
+
+(neverallow base_typeattr_387 hal_face_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_face_client hal_face_service (service_manager (find)))
+(allow hal_face_server hal_face_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_face.te
+
+(neverallow base_typeattr_386 hal_face_service (service_manager (add)))
+;;* lme
+
+(allow hal_face_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_face.te
+
+(neverallow base_typeattr_388 hal_face_service (service_manager (find)))
+;;* lme
+
+(allow hal_face_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_face_server (binder (transfer)))
+(allow hal_face_server servicemanager (fd (use)))
+(allow hal_face ion_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_face face_vendor_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow hal_face face_vendor_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow hal_fastboot_client hal_fastboot_server (binder (call transfer)))
+(allow hal_fastboot_server hal_fastboot_client (binder (transfer)))
+(allow hal_fastboot_client hal_fastboot_server (fd (use)))
+(allow hal_fastboot_client hal_fastboot_service (service_manager (find)))
+(allow hal_fastboot_server hal_fastboot_service (service_manager (add find)))
+;;* lmx 4 system/sepolicy/public/hal_fastboot.te
+
+(neverallow base_typeattr_389 hal_fastboot_service (service_manager (add)))
+;;* lme
+
+(allow hal_fastboot_server su (tcp_socket (read write accept getopt)))
+;;* lmx 4 system/sepolicy/public/hal_fastboot.te
+
+(neverallow base_typeattr_390 hal_fastboot_service (service_manager (find)))
+;;* lme
+
+(allow hal_fastboot_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_fastboot_server (binder (transfer)))
+(allow hal_fastboot_server servicemanager (fd (use)))
+(allow hal_fingerprint_client hal_fingerprint_server (binder (call transfer)))
+(allow hal_fingerprint_server hal_fingerprint_client (binder (transfer)))
+(allow hal_fingerprint_client hal_fingerprint_server (fd (use)))
+(allow hal_fingerprint_server hal_fingerprint_client (binder (call transfer)))
+(allow hal_fingerprint_client hal_fingerprint_server (binder (transfer)))
+(allow hal_fingerprint_server hal_fingerprint_client (fd (use)))
+(allow hal_fingerprint_client hal_fingerprint_hwservice (hwservice_manager (find)))
+(allow hal_fingerprint_server hal_fingerprint_hwservice (hwservice_manager (add find)))
+(allow hal_fingerprint_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_fingerprint.te
+
+(neverallow base_typeattr_391 hal_fingerprint_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_fingerprint.te
+
+(neverallow base_typeattr_392 hal_fingerprint_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_fingerprint_client hal_fingerprint_service (service_manager (find)))
+(allow hal_fingerprint_server hal_fingerprint_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_fingerprint.te
+
+(neverallow base_typeattr_391 hal_fingerprint_service (service_manager (add)))
+;;* lme
+
+(allow hal_fingerprint_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_fingerprint.te
+
+(neverallow base_typeattr_393 hal_fingerprint_service (service_manager (find)))
+;;* lme
+
+(allow hal_fingerprint_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_fingerprint_server (binder (call transfer)))
+(allow servicemanager hal_fingerprint_server (dir (search)))
+(allow servicemanager hal_fingerprint_server (file (read open)))
+(allow servicemanager hal_fingerprint_server (process (getattr)))
+(allow hal_fingerprint ion_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_fingerprint fingerprint_vendor_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow hal_fingerprint fingerprint_vendor_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow hal_fingerprint cgroup (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_fingerprint cgroup (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_fingerprint cgroup (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_fingerprint cgroup_v2 (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_fingerprint cgroup_v2 (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_fingerprint cgroup_v2 (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_fingerprint sysfs (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_fingerprint sysfs (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_fingerprint sysfs (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_gatekeeper_client hal_gatekeeper_server (binder (call transfer)))
+(allow hal_gatekeeper_server hal_gatekeeper_client (binder (transfer)))
+(allow hal_gatekeeper_client hal_gatekeeper_server (fd (use)))
+(allow hal_gatekeeper_client hal_gatekeeper_hwservice (hwservice_manager (find)))
+(allow hal_gatekeeper_server hal_gatekeeper_hwservice (hwservice_manager (add find)))
+(allow hal_gatekeeper_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 3 system/sepolicy/public/hal_gatekeeper.te
+
+(neverallow base_typeattr_394 hal_gatekeeper_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 3 system/sepolicy/public/hal_gatekeeper.te
+
+(neverallow base_typeattr_395 hal_gatekeeper_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_gatekeeper_client hal_gatekeeper_service (service_manager (find)))
+(allow hal_gatekeeper_server hal_gatekeeper_service (service_manager (add find)))
+;;* lmx 4 system/sepolicy/public/hal_gatekeeper.te
+
+(neverallow base_typeattr_394 hal_gatekeeper_service (service_manager (add)))
+;;* lme
+
+(allow hal_gatekeeper_server su (tcp_socket (read write accept getopt)))
+;;* lmx 4 system/sepolicy/public/hal_gatekeeper.te
+
+(neverallow base_typeattr_396 hal_gatekeeper_service (service_manager (find)))
+;;* lme
+
+(allow hal_gatekeeper_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_gatekeeper_server (binder (transfer)))
+(allow hal_gatekeeper_server servicemanager (fd (use)))
+(allow hal_gatekeeper tee_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_gatekeeper ion_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_gnss_client hal_gnss_server (binder (call transfer)))
+(allow hal_gnss_server hal_gnss_client (binder (transfer)))
+(allow hal_gnss_client hal_gnss_server (fd (use)))
+(allow hal_gnss_server hal_gnss_client (binder (call transfer)))
+(allow hal_gnss_client hal_gnss_server (binder (transfer)))
+(allow hal_gnss_server hal_gnss_client (fd (use)))
+(allow hal_gnss_client hal_gnss_hwservice (hwservice_manager (find)))
+(allow hal_gnss_server hal_gnss_hwservice (hwservice_manager (add find)))
+(allow hal_gnss_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_gnss.te
+
+(neverallow base_typeattr_397 hal_gnss_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_gnss.te
+
+(neverallow base_typeattr_398 hal_gnss_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_gnss_client hal_gnss_service (service_manager (find)))
+(allow hal_gnss_server hal_gnss_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_gnss.te
+
+(neverallow base_typeattr_397 hal_gnss_service (service_manager (add)))
+;;* lme
+
+(allow hal_gnss_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_gnss.te
+
+(neverallow base_typeattr_399 hal_gnss_service (service_manager (find)))
+;;* lme
+
+(allow hal_gnss_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_gnss_server (binder (transfer)))
+(allow hal_gnss_server servicemanager (fd (use)))
+(allow hal_gnss_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_gnss_client (binder (transfer)))
+(allow hal_gnss_client servicemanager (fd (use)))
+(allow hal_graphics_allocator_client hal_graphics_allocator_server (binder (call transfer)))
+(allow hal_graphics_allocator_server hal_graphics_allocator_client (binder (transfer)))
+(allow hal_graphics_allocator_client hal_graphics_allocator_server (fd (use)))
+(allow hal_graphics_allocator_client hal_graphics_allocator_hwservice (hwservice_manager (find)))
+(allow hal_graphics_allocator_server hal_graphics_allocator_hwservice (hwservice_manager (add find)))
+(allow hal_graphics_allocator_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 4 system/sepolicy/public/hal_graphics_allocator.te
+
+(neverallow base_typeattr_400 hal_graphics_allocator_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 4 system/sepolicy/public/hal_graphics_allocator.te
+
+(neverallow base_typeattr_401 hal_graphics_allocator_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_graphics_allocator_client hal_graphics_mapper_hwservice (hwservice_manager (find)))
+(allow hal_graphics_allocator_client same_process_hal_file (file (read getattr map execute open)))
+(allow hal_graphics_allocator gpu_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_graphics_allocator gpu_device (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_graphics_allocator ion_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_graphics_allocator dmabuf_system_heap_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_graphics_allocator dmabuf_system_secure_heap_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_graphics_allocator self (capability (sys_nice)))
+(allow hal_graphics_allocator self (cap_userns (sys_nice)))
+(allow hal_graphics_allocator_client hal_graphics_allocator_service (service_manager (find)))
+(allow hal_graphics_allocator_server hal_graphics_allocator_service (service_manager (add find)))
+;;* lmx 21 system/sepolicy/public/hal_graphics_allocator.te
+
+(neverallow base_typeattr_400 hal_graphics_allocator_service (service_manager (add)))
+;;* lme
+
+(allow hal_graphics_allocator_server su (tcp_socket (read write accept getopt)))
+;;* lmx 21 system/sepolicy/public/hal_graphics_allocator.te
+
+(neverallow base_typeattr_402 hal_graphics_allocator_service (service_manager (find)))
+;;* lme
+
+(allow hal_graphics_allocator_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_graphics_allocator_server (binder (transfer)))
+(allow hal_graphics_allocator_server servicemanager (fd (use)))
+(allow hal_graphics_allocator_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_graphics_allocator_client (binder (transfer)))
+(allow hal_graphics_allocator_client servicemanager (fd (use)))
+(allow hal_graphics_composer_client hal_graphics_composer_server (binder (call transfer)))
+(allow hal_graphics_composer_server hal_graphics_composer_client (binder (transfer)))
+(allow hal_graphics_composer_client hal_graphics_composer_server (fd (use)))
+(allow hal_graphics_composer_server hal_graphics_composer_client (binder (call transfer)))
+(allow hal_graphics_composer_client hal_graphics_composer_server (binder (transfer)))
+(allow hal_graphics_composer_server hal_graphics_composer_client (fd (use)))
+(allow hal_graphics_composer_client hal_graphics_composer_server_tmpfs (file (read write getattr map)))
+(allow hal_graphics_composer_server hal_graphics_composer_client_tmpfs (file (read write getattr map)))
+(allow hal_graphics_composer_client hal_graphics_composer_hwservice (hwservice_manager (find)))
+(allow hal_graphics_composer_server hal_graphics_composer_hwservice (hwservice_manager (add find)))
+(allow hal_graphics_composer_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 11 system/sepolicy/public/hal_graphics_composer.te
+
+(neverallow base_typeattr_403 hal_graphics_composer_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 11 system/sepolicy/public/hal_graphics_composer.te
+
+(neverallow base_typeattr_404 hal_graphics_composer_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_graphics_composer_server hal_graphics_mapper_hwservice (hwservice_manager (find)))
+(allow hal_graphics_composer gpu_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_graphics_composer gpu_device (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_graphics_composer ion_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_graphics_composer dmabuf_system_heap_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_graphics_composer hal_graphics_allocator (fd (use)))
+(allow hal_graphics_composer graphics_device (dir (search)))
+(allow hal_graphics_composer graphics_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_graphics_composer system_server (fd (use)))
+(allow hal_graphics_composer bootanim (fd (use)))
+(allow hal_graphics_composer appdomain (fd (use)))
+(allow hal_graphics_composer self (capability (sys_nice)))
+(allow hal_graphics_composer self (cap_userns (sys_nice)))
+(allow hal_graphics_composer_server hal_graphics_composer_client (fifo_file (write)))
+(allow hal_graphics_composer_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_graphics_composer_client (binder (transfer)))
+(allow hal_graphics_composer_client servicemanager (fd (use)))
+(allow hal_graphics_composer_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_graphics_composer_server (binder (transfer)))
+(allow hal_graphics_composer_server servicemanager (fd (use)))
+(allow hal_graphics_composer_client hal_graphics_composer_service (service_manager (find)))
+(allow hal_graphics_composer_server hal_graphics_composer_service (service_manager (add find)))
+;;* lmx 42 system/sepolicy/public/hal_graphics_composer.te
+
+(neverallow base_typeattr_403 hal_graphics_composer_service (service_manager (add)))
+;;* lme
+
+(allow hal_graphics_composer_server su (tcp_socket (read write accept getopt)))
+;;* lmx 42 system/sepolicy/public/hal_graphics_composer.te
+
+(neverallow base_typeattr_405 hal_graphics_composer_service (service_manager (find)))
+;;* lme
+
+(allow hal_health_client hal_health_server (binder (call transfer)))
+(allow hal_health_server hal_health_client (binder (transfer)))
+(allow hal_health_client hal_health_server (fd (use)))
+(allow hal_health_server hal_health_client (binder (call transfer)))
+(allow hal_health_client hal_health_server (binder (transfer)))
+(allow hal_health_server hal_health_client (fd (use)))
+(allow hal_health_client hal_health_hwservice (hwservice_manager (find)))
+(allow hal_health_server hal_health_hwservice (hwservice_manager (add find)))
+(allow hal_health_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_health.te
+
+(neverallow base_typeattr_406 hal_health_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_health.te
+
+(neverallow base_typeattr_407 hal_health_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_health_client hal_health_service (service_manager (find)))
+(allow hal_health_server hal_health_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_health.te
+
+(neverallow base_typeattr_406 hal_health_service (service_manager (add)))
+;;* lme
+
+(allow hal_health_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_health.te
+
+(neverallow base_typeattr_408 hal_health_service (service_manager (find)))
+;;* lme
+
+(allow hal_health_server self (netlink_kobject_uevent_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_health_server sysfs (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_health_server sysfs_batteryinfo (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_health_server sysfs_batteryinfo (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_health_server sysfs_batteryinfo (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_health_server sysfs_wake_lock (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_health_server self (capability2 (block_suspend)))
+(allow hal_health_server self (cap2_userns (block_suspend)))
+(allow hal_health_server system_suspend_server (binder (call transfer)))
+(allow system_suspend_server hal_health_server (binder (transfer)))
+(allow hal_health_server system_suspend_server (fd (use)))
+(allow hal_health_server system_suspend_hwservice (hwservice_manager (find)))
+(allow hal_health_server hwservicemanager (binder (call transfer)))
+(allow hwservicemanager hal_health_server (binder (call transfer)))
+(allow hwservicemanager hal_health_server (dir (search)))
+(allow hwservicemanager hal_health_server (file (read map open)))
+(allow hwservicemanager hal_health_server (process (getattr)))
+(allow hal_health_server hwservicemanager_prop (file (read getattr map open)))
+(allow hal_health_server hidl_manager_hwservice (hwservice_manager (find)))
+(allow hal_health_server hal_system_suspend_service (service_manager (find)))
+(allow hal_health_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_health_server (binder (call transfer)))
+(allow servicemanager hal_health_server (dir (search)))
+(allow servicemanager hal_health_server (file (read open)))
+(allow servicemanager hal_health_server (process (getattr)))
+(allow hal_health_server kmsg_device (chr_file (write getattr lock append map open)))
+(allow hal_health_server self (capability2 (wake_alarm)))
+(allow hal_health_server fs_bpf_vendor (dir (search)))
+(allow hal_health_server fs_bpf_vendor (file (read)))
+(allow hal_health_server bpfloader (bpf (prog_run)))
+(allow hal_health_storage_client hal_health_storage_server (binder (call transfer)))
+(allow hal_health_storage_server hal_health_storage_client (binder (transfer)))
+(allow hal_health_storage_client hal_health_storage_server (fd (use)))
+(allow hal_health_storage_server hal_health_storage_client (binder (call transfer)))
+(allow hal_health_storage_client hal_health_storage_server (binder (transfer)))
+(allow hal_health_storage_server hal_health_storage_client (fd (use)))
+(allow hal_health_storage_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_health_storage_server (binder (call transfer)))
+(allow servicemanager hal_health_storage_server (dir (search)))
+(allow servicemanager hal_health_storage_server (file (read open)))
+(allow servicemanager hal_health_storage_server (process (getattr)))
+(allow hal_health_storage_client hal_health_storage_hwservice (hwservice_manager (find)))
+(allow hal_health_storage_server hal_health_storage_hwservice (hwservice_manager (add find)))
+(allow hal_health_storage_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 7 system/sepolicy/public/hal_health_storage.te
+
+(neverallow base_typeattr_409 hal_health_storage_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 7 system/sepolicy/public/hal_health_storage.te
+
+(neverallow base_typeattr_410 hal_health_storage_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_health_storage_client hal_health_storage_service (service_manager (find)))
+(allow hal_health_storage_server hal_health_storage_service (service_manager (add find)))
+;;* lmx 8 system/sepolicy/public/hal_health_storage.te
+
+(neverallow base_typeattr_409 hal_health_storage_service (service_manager (add)))
+;;* lme
+
+(allow hal_health_storage_server su (tcp_socket (read write accept getopt)))
+;;* lmx 8 system/sepolicy/public/hal_health_storage.te
+
+(neverallow base_typeattr_411 hal_health_storage_service (service_manager (find)))
+;;* lme
+
+(allow hal_health_storage_server gsi_metadata_file_type (dir (search)))
+(allow hal_health_storage_server metadata_file (dir (search)))
+(allow hal_health_storage_server gsi_public_metadata_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_health_storage_server proc_bootconfig (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_health_storage_server proc_cmdline (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_identity_client hal_identity_server (binder (call transfer)))
+(allow hal_identity_server hal_identity_client (binder (transfer)))
+(allow hal_identity_client hal_identity_server (fd (use)))
+(allow hal_identity_client hal_identity_service (service_manager (find)))
+(allow hal_identity_server hal_identity_service (service_manager (add find)))
+;;* lmx 4 system/sepolicy/public/hal_identity.te
+
+(neverallow base_typeattr_412 hal_identity_service (service_manager (add)))
+;;* lme
+
+(allow hal_identity_server su (tcp_socket (read write accept getopt)))
+;;* lmx 4 system/sepolicy/public/hal_identity.te
+
+(neverallow base_typeattr_413 hal_identity_service (service_manager (find)))
+;;* lme
+
+(allow hal_identity_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_identity_server (binder (transfer)))
+(allow hal_identity_server servicemanager (fd (use)))
+(allow hal_input_classifier_client hal_input_classifier_server (binder (call transfer)))
+(allow hal_input_classifier_server hal_input_classifier_client (binder (transfer)))
+(allow hal_input_classifier_client hal_input_classifier_server (fd (use)))
+(allow hal_input_classifier_client hal_input_classifier_hwservice (hwservice_manager (find)))
+(allow hal_input_classifier_server hal_input_classifier_hwservice (hwservice_manager (add find)))
+(allow hal_input_classifier_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 4 system/sepolicy/public/hal_input_classifier.te
+
+(neverallow base_typeattr_414 hal_input_classifier_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 4 system/sepolicy/public/hal_input_classifier.te
+
+(neverallow base_typeattr_415 hal_input_classifier_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_input_processor_client hal_input_processor_server (binder (call transfer)))
+(allow hal_input_processor_server hal_input_processor_client (binder (transfer)))
+(allow hal_input_processor_client hal_input_processor_server (fd (use)))
+(allow hal_input_processor_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_input_processor_server (binder (transfer)))
+(allow hal_input_processor_server servicemanager (fd (use)))
+(allow hal_input_processor_client hal_input_processor_service (service_manager (find)))
+(allow hal_input_processor_server hal_input_processor_service (service_manager (add find)))
+;;* lmx 5 system/sepolicy/public/hal_input_processor.te
+
+(neverallow base_typeattr_416 hal_input_processor_service (service_manager (add)))
+;;* lme
+
+(allow hal_input_processor_server su (tcp_socket (read write accept getopt)))
+;;* lmx 5 system/sepolicy/public/hal_input_processor.te
+
+(neverallow base_typeattr_417 hal_input_processor_service (service_manager (find)))
+;;* lme
+
+(allow hal_input_processor_server dumpstate (fifo_file (write)))
+(allow hal_ir_client hal_ir_server (binder (call transfer)))
+(allow hal_ir_server hal_ir_client (binder (transfer)))
+(allow hal_ir_client hal_ir_server (fd (use)))
+(allow hal_ir_server hal_ir_client (binder (call transfer)))
+(allow hal_ir_client hal_ir_server (binder (transfer)))
+(allow hal_ir_server hal_ir_client (fd (use)))
+(allow hal_ir_client hal_ir_service (service_manager (find)))
+(allow hal_ir_server hal_ir_service (service_manager (add find)))
+;;* lmx 5 system/sepolicy/public/hal_ir.te
+
+(neverallow base_typeattr_418 hal_ir_service (service_manager (add)))
+;;* lme
+
+(allow hal_ir_server su (tcp_socket (read write accept getopt)))
+;;* lmx 5 system/sepolicy/public/hal_ir.te
+
+(neverallow base_typeattr_419 hal_ir_service (service_manager (find)))
+;;* lme
+
+(allow hal_ir_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_ir_server (binder (transfer)))
+(allow hal_ir_server servicemanager (fd (use)))
+(allow hal_ir_client hal_ir_hwservice (hwservice_manager (find)))
+(allow hal_ir_server hal_ir_hwservice (hwservice_manager (add find)))
+(allow hal_ir_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 8 system/sepolicy/public/hal_ir.te
+
+(neverallow base_typeattr_418 hal_ir_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 8 system/sepolicy/public/hal_ir.te
+
+(neverallow base_typeattr_420 hal_ir_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_ivn_client hal_ivn_server (binder (call transfer)))
+(allow hal_ivn_server hal_ivn_client (binder (transfer)))
+(allow hal_ivn_client hal_ivn_server (fd (use)))
+(allow hal_ivn_client hal_ivn_service (service_manager (find)))
+(allow hal_ivn_server hal_ivn_service (service_manager (add find)))
+;;* lmx 4 system/sepolicy/public/hal_ivn.te
+
+(neverallow base_typeattr_421 hal_ivn_service (service_manager (add)))
+;;* lme
+
+(allow hal_ivn_server su (tcp_socket (read write accept getopt)))
+;;* lmx 4 system/sepolicy/public/hal_ivn.te
+
+(neverallow base_typeattr_422 hal_ivn_service (service_manager (find)))
+;;* lme
+
+(allow hal_keymaster_client hal_keymaster_server (binder (call transfer)))
+(allow hal_keymaster_server hal_keymaster_client (binder (transfer)))
+(allow hal_keymaster_client hal_keymaster_server (fd (use)))
+(allow hal_keymaster_client hal_keymaster_hwservice (hwservice_manager (find)))
+(allow hal_keymaster_server hal_keymaster_hwservice (hwservice_manager (add find)))
+(allow hal_keymaster_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 4 system/sepolicy/public/hal_keymaster.te
+
+(neverallow base_typeattr_423 hal_keymaster_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 4 system/sepolicy/public/hal_keymaster.te
+
+(neverallow base_typeattr_424 hal_keymaster_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_keymaster tee_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_keymaster ion_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_keymint_client hal_keymint_server (binder (call transfer)))
+(allow hal_keymint_server hal_keymint_client (binder (transfer)))
+(allow hal_keymint_client hal_keymint_server (fd (use)))
+(allow hal_keymint_client hal_keymint_service (service_manager (find)))
+(allow hal_keymint_server hal_keymint_service (service_manager (add find)))
+;;* lmx 3 system/sepolicy/public/hal_keymint.te
+
+(neverallow base_typeattr_425 hal_keymint_service (service_manager (add)))
+;;* lme
+
+(allow hal_keymint_server su (tcp_socket (read write accept getopt)))
+;;* lmx 3 system/sepolicy/public/hal_keymint.te
+
+(neverallow base_typeattr_426 hal_keymint_service (service_manager (find)))
+;;* lme
+
+(allow hal_keymint_client hal_remotelyprovisionedcomponent_service (service_manager (find)))
+(allow hal_keymint_server hal_remotelyprovisionedcomponent_service (service_manager (add find)))
+;;* lmx 4 system/sepolicy/public/hal_keymint.te
+
+(neverallow base_typeattr_425 hal_remotelyprovisionedcomponent_service (service_manager (add)))
+;;* lme
+
+(allow hal_keymint_server su (tcp_socket (read write accept getopt)))
+;;* lmx 4 system/sepolicy/public/hal_keymint.te
+
+(neverallow base_typeattr_426 hal_remotelyprovisionedcomponent_service (service_manager (find)))
+;;* lme
+
+(allow hal_keymint_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_keymint_server (binder (transfer)))
+(allow hal_keymint_server servicemanager (fd (use)))
+(allow hal_keymint_server tee_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_keymint_server ion_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_light_client hal_light_server (binder (call transfer)))
+(allow hal_light_server hal_light_client (binder (transfer)))
+(allow hal_light_client hal_light_server (fd (use)))
+(allow hal_light_server hal_light_client (binder (call transfer)))
+(allow hal_light_client hal_light_server (binder (transfer)))
+(allow hal_light_server hal_light_client (fd (use)))
+(allow hal_light_client hal_light_hwservice (hwservice_manager (find)))
+(allow hal_light_server hal_light_hwservice (hwservice_manager (add find)))
+(allow hal_light_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_light.te
+
+(neverallow base_typeattr_427 hal_light_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_light.te
+
+(neverallow base_typeattr_428 hal_light_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_light_client hal_light_service (service_manager (find)))
+(allow hal_light_server hal_light_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_light.te
+
+(neverallow base_typeattr_427 hal_light_service (service_manager (add)))
+;;* lme
+
+(allow hal_light_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_light.te
+
+(neverallow base_typeattr_429 hal_light_service (service_manager (find)))
+;;* lme
+
+(allow hal_light_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_light_server (binder (transfer)))
+(allow hal_light_server servicemanager (fd (use)))
+(allow hal_light_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_light_client (binder (call transfer)))
+(allow servicemanager hal_light_client (dir (search)))
+(allow servicemanager hal_light_client (file (read open)))
+(allow servicemanager hal_light_client (process (getattr)))
+(allow hal_light_server dumpstate (fifo_file (write)))
+(allow hal_light sysfs_leds (lnk_file (read)))
+(allow hal_light sysfs_leds (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_light sysfs_leds (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_lowpan_client hal_lowpan_server (binder (call transfer)))
+(allow hal_lowpan_server hal_lowpan_client (binder (transfer)))
+(allow hal_lowpan_client hal_lowpan_server (fd (use)))
+(allow hal_lowpan_server hal_lowpan_client (binder (call transfer)))
+(allow hal_lowpan_client hal_lowpan_server (binder (transfer)))
+(allow hal_lowpan_server hal_lowpan_client (fd (use)))
+(allow hal_lowpan_client hal_lowpan_hwservice (hwservice_manager (find)))
+(allow hal_lowpan_server hal_lowpan_hwservice (hwservice_manager (add find)))
+(allow hal_lowpan_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 7 system/sepolicy/public/hal_lowpan.te
+
+(neverallow base_typeattr_430 hal_lowpan_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 7 system/sepolicy/public/hal_lowpan.te
+
+(neverallow base_typeattr_431 hal_lowpan_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_lowpan_server property_socket (sock_file (write)))
+(allow hal_lowpan_server init (unix_stream_socket (connectto)))
+(allow hal_lowpan_server lowpan_prop (property_service (set)))
+(allow hal_lowpan_server lowpan_prop (file (read getattr map open)))
+(allow hal_lowpan_server lowpan_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+;;* lmx 20 system/sepolicy/public/hal_lowpan.te
+
+(neverallow base_typeattr_432 lowpan_device (chr_file (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+(allow hal_memtrack_client hal_memtrack_server (binder (call transfer)))
+(allow hal_memtrack_server hal_memtrack_client (binder (transfer)))
+(allow hal_memtrack_client hal_memtrack_server (fd (use)))
+(allow hal_memtrack_client hal_memtrack_hwservice (hwservice_manager (find)))
+(allow hal_memtrack_server hal_memtrack_hwservice (hwservice_manager (add find)))
+(allow hal_memtrack_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 4 system/sepolicy/public/hal_memtrack.te
+
+(neverallow base_typeattr_433 hal_memtrack_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 4 system/sepolicy/public/hal_memtrack.te
+
+(neverallow base_typeattr_434 hal_memtrack_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_memtrack_client hal_memtrack_service (service_manager (find)))
+(allow hal_memtrack_server hal_memtrack_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_memtrack.te
+
+(neverallow base_typeattr_433 hal_memtrack_service (service_manager (add)))
+;;* lme
+
+(allow hal_memtrack_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_memtrack.te
+
+(neverallow base_typeattr_435 hal_memtrack_service (service_manager (find)))
+;;* lme
+
+(allow hal_memtrack_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_memtrack_server (binder (transfer)))
+(allow hal_memtrack_server servicemanager (fd (use)))
+(allow hal_neuralnetworks_client hal_neuralnetworks_server (binder (call transfer)))
+(allow hal_neuralnetworks_server hal_neuralnetworks_client (binder (transfer)))
+(allow hal_neuralnetworks_client hal_neuralnetworks_server (fd (use)))
+(allow hal_neuralnetworks_server hal_neuralnetworks_client (binder (call transfer)))
+(allow hal_neuralnetworks_client hal_neuralnetworks_server (binder (transfer)))
+(allow hal_neuralnetworks_server hal_neuralnetworks_client (fd (use)))
+(allow hal_neuralnetworks_client hal_neuralnetworks_hwservice (hwservice_manager (find)))
+(allow hal_neuralnetworks_server hal_neuralnetworks_hwservice (hwservice_manager (add find)))
+(allow hal_neuralnetworks_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_neuralnetworks.te
+
+(neverallow base_typeattr_436 hal_neuralnetworks_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_neuralnetworks.te
+
+(neverallow base_typeattr_437 hal_neuralnetworks_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_neuralnetworks hidl_memory_hwservice (hwservice_manager (find)))
+(allow hal_neuralnetworks hal_allocator (fd (use)))
+(allow hal_neuralnetworks hal_graphics_mapper_hwservice (hwservice_manager (find)))
+(allow hal_neuralnetworks hal_graphics_allocator (fd (use)))
+(allow hal_neuralnetworks gpu_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_neuralnetworks gpu_device (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_neuralnetworks_server app_data_file (file (read write getattr map)))
+(allow hal_neuralnetworks_server privapp_data_file (file (read write getattr map)))
+(allow hal_neuralnetworks_server shell_data_file (file (read write getattr map)))
+(allow hal_neuralnetworks_server ion_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_neuralnetworks_server storage_file (file (read getattr map)))
+(allow hal_neuralnetworks_server apk_data_file (file (read getattr map)))
+(allow hal_neuralnetworks_client nnapi_ext_deny_product_prop (file (read getattr map open)))
+(allow hal_neuralnetworks_client device_config_nnapi_native_prop (file (read getattr map open)))
+;;* lmx 39 system/sepolicy/public/hal_neuralnetworks.te
+
+(neverallow base_typeattr_208 nnapi_ext_deny_product_prop (property_service (set)))
+;;* lme
+
+(allow hal_neuralnetworks_client hal_neuralnetworks_service (service_manager (find)))
+(allow hal_neuralnetworks_server hal_neuralnetworks_service (service_manager (add find)))
+;;* lmx 42 system/sepolicy/public/hal_neuralnetworks.te
+
+(neverallow base_typeattr_436 hal_neuralnetworks_service (service_manager (add)))
+;;* lme
+
+(allow hal_neuralnetworks_server su (tcp_socket (read write accept getopt)))
+;;* lmx 42 system/sepolicy/public/hal_neuralnetworks.te
+
+(neverallow base_typeattr_438 hal_neuralnetworks_service (service_manager (find)))
+;;* lme
+
+(allow hal_neuralnetworks_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_neuralnetworks_server (binder (transfer)))
+(allow hal_neuralnetworks_server servicemanager (fd (use)))
+(allow hal_neuralnetworks_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_neuralnetworks_server (binder (call transfer)))
+(allow servicemanager hal_neuralnetworks_server (dir (search)))
+(allow servicemanager hal_neuralnetworks_server (file (read open)))
+(allow servicemanager hal_neuralnetworks_server (process (getattr)))
+(allow hal_neuralnetworks_server dumpstate (fifo_file (write)))
+;;* lmx 16 system/sepolicy/public/hal_neverallows.te
+
+(neverallow base_typeattr_439 self (capability (net_admin net_raw)))
+(neverallow base_typeattr_439 self (cap_userns (net_admin net_raw)))
+;;* lme
+
+;;* lmx 37 system/sepolicy/public/hal_neverallows.te
+
+(neverallow base_typeattr_440 domain (udp_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind node_bind)))
+(neverallow base_typeattr_440 domain (rawip_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind node_bind)))
+;;* lme
+
+;;* lmx 52 system/sepolicy/public/hal_neverallows.te
+
+(neverallow base_typeattr_441 base_typeattr_233 (tcp_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind node_bind name_connect)))
+;;* lme
+
+;;* lmx 56 system/sepolicy/public/hal_neverallows.te
+
+(neverallow hal_uwb_vendor_server self (capability (net_raw)))
+(neverallow hal_uwb_vendor_server self (cap_userns (net_raw)))
+;;* lme
+
+;;* lmx 60 system/sepolicy/public/hal_neverallows.te
+
+(neverallow hal_uwb_vendor_server domain (socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (rawip_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind node_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (packet_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (key_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_route_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind nlmsg_read nlmsg_write nlmsg_readpriv nlmsg_getneigh)))
+(neverallow hal_uwb_vendor_server domain (netlink_tcpdiag_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind nlmsg_read nlmsg_write)))
+(neverallow hal_uwb_vendor_server domain (netlink_nflog_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_xfrm_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind nlmsg_read nlmsg_write)))
+(neverallow hal_uwb_vendor_server domain (netlink_selinux_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_audit_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind nlmsg_read nlmsg_write nlmsg_relay nlmsg_readpriv nlmsg_tty_audit)))
+(neverallow hal_uwb_vendor_server domain (netlink_dnrt_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (tun_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind attach_queue)))
+(neverallow hal_uwb_vendor_server domain (netlink_iscsi_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_fib_lookup_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_connector_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_netfilter_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_scsitransport_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_rdma_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (netlink_crypto_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (qipcrtr_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow hal_uwb_vendor_server domain (xdp_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+;;* lme
+
+;;* lmx 87 system/sepolicy/public/hal_neverallows.te
+
+(neverallow base_typeattr_442 fs_type (file (execute_no_trans)))
+(neverallow base_typeattr_442 file_type (file (execute_no_trans)))
+;;* lme
+
+;;* lmx 89 system/sepolicy/public/hal_neverallows.te
+
+(neverallow base_typeattr_208 halserverdomain (process (transition)))
+;;* lme
+
+;;* lmx 93 system/sepolicy/public/hal_neverallows.te
+
+(neverallow base_typeattr_209 halserverdomain (process (dyntransition)))
+;;* lme
+
+(allow hal_nfc_client hal_nfc_server (binder (call transfer)))
+(allow hal_nfc_server hal_nfc_client (binder (transfer)))
+(allow hal_nfc_client hal_nfc_server (fd (use)))
+(allow hal_nfc_server hal_nfc_client (binder (call transfer)))
+(allow hal_nfc_client hal_nfc_server (binder (transfer)))
+(allow hal_nfc_server hal_nfc_client (fd (use)))
+(allow hal_nfc_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_nfc_server (binder (transfer)))
+(allow hal_nfc_server servicemanager (fd (use)))
+(allow hal_nfc_client hal_nfc_hwservice (hwservice_manager (find)))
+(allow hal_nfc_server hal_nfc_hwservice (hwservice_manager (add find)))
+(allow hal_nfc_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 6 system/sepolicy/public/hal_nfc.te
+
+(neverallow base_typeattr_443 hal_nfc_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 6 system/sepolicy/public/hal_nfc.te
+
+(neverallow base_typeattr_444 hal_nfc_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_nfc_client hal_nfc_service (service_manager (find)))
+(allow hal_nfc_server hal_nfc_service (service_manager (add find)))
+;;* lmx 7 system/sepolicy/public/hal_nfc.te
+
+(neverallow base_typeattr_443 hal_nfc_service (service_manager (add)))
+;;* lme
+
+(allow hal_nfc_server su (tcp_socket (read write accept getopt)))
+;;* lmx 7 system/sepolicy/public/hal_nfc.te
+
+(neverallow base_typeattr_445 hal_nfc_service (service_manager (find)))
+;;* lme
+
+(allow hal_nfc property_socket (sock_file (write)))
+(allow hal_nfc init (unix_stream_socket (connectto)))
+(allow hal_nfc nfc_prop (property_service (set)))
+(allow hal_nfc nfc_prop (file (read getattr map open)))
+(allow hal_nfc nfc_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_nlinterceptor_client hal_nlinterceptor_server (binder (call transfer)))
+(allow hal_nlinterceptor_server hal_nlinterceptor_client (binder (transfer)))
+(allow hal_nlinterceptor_client hal_nlinterceptor_server (fd (use)))
+(allow hal_nlinterceptor_client hal_nlinterceptor_service (service_manager (find)))
+(allow hal_nlinterceptor_server hal_nlinterceptor_service (service_manager (add find)))
+;;* lmx 3 system/sepolicy/public/hal_nlinterceptor.te
+
+(neverallow base_typeattr_446 hal_nlinterceptor_service (service_manager (add)))
+;;* lme
+
+(allow hal_nlinterceptor_server su (tcp_socket (read write accept getopt)))
+;;* lmx 3 system/sepolicy/public/hal_nlinterceptor.te
+
+(neverallow base_typeattr_447 hal_nlinterceptor_service (service_manager (find)))
+;;* lme
+
+(allow hal_nlinterceptor servicemanager (binder (call transfer)))
+(allow servicemanager hal_nlinterceptor (binder (transfer)))
+(allow hal_nlinterceptor servicemanager (fd (use)))
+(allow hal_nlinterceptor self (capability (net_admin)))
+(allow hal_nlinterceptor self (cap_userns (net_admin)))
+(allow hal_nlinterceptor self (netlink_generic_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow hal_nlinterceptor self (netlink_route_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown nlmsg_write nlmsg_readpriv)))
+(allow hal_oemlock_client hal_oemlock_server (binder (call transfer)))
+(allow hal_oemlock_server hal_oemlock_client (binder (transfer)))
+(allow hal_oemlock_client hal_oemlock_server (fd (use)))
+(allow hal_oemlock_client hal_oemlock_hwservice (hwservice_manager (find)))
+(allow hal_oemlock_server hal_oemlock_hwservice (hwservice_manager (add find)))
+(allow hal_oemlock_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 4 system/sepolicy/public/hal_oemlock.te
+
+(neverallow base_typeattr_448 hal_oemlock_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 4 system/sepolicy/public/hal_oemlock.te
+
+(neverallow base_typeattr_449 hal_oemlock_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_oemlock_client hal_oemlock_service (service_manager (find)))
+(allow hal_oemlock_server hal_oemlock_service (service_manager (add find)))
+;;* lmx 5 system/sepolicy/public/hal_oemlock.te
+
+(neverallow base_typeattr_448 hal_oemlock_service (service_manager (add)))
+;;* lme
+
+(allow hal_oemlock_server su (tcp_socket (read write accept getopt)))
+;;* lmx 5 system/sepolicy/public/hal_oemlock.te
+
+(neverallow base_typeattr_450 hal_oemlock_service (service_manager (find)))
+;;* lme
+
+(allow hal_oemlock_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_oemlock_server (binder (transfer)))
+(allow hal_oemlock_server servicemanager (fd (use)))
+(allow hal_omx_server binderservicedomain (binder (call transfer)))
+(allow binderservicedomain hal_omx_server (binder (transfer)))
+(allow hal_omx_server binderservicedomain (fd (use)))
+(allow hal_omx_server base_typeattr_356 (binder (call transfer)))
+(allow base_typeattr_356 hal_omx_server (binder (transfer)))
+(allow hal_omx_server base_typeattr_356 (fd (use)))
+(allow hal_omx_server hal_graphics_composer (fd (use)))
+(allow hal_omx_server ion_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow hal_omx_server hal_camera (fd (use)))
+(allow hal_omx_server su (fifo_file (append)))
+(allow hal_omx_server anr_data_file (file (append)))
+(allow hal_omx_server dumpstate (fd (use)))
+(allow hal_omx_server incidentd (fd (use)))
+(allow hal_omx_server dumpstate (fifo_file (write append)))
+(allow hal_omx_server incidentd (fifo_file (write append)))
+(allow hal_omx_server system_server (fifo_file (write append)))
+(allow hal_omx_server tombstoned (unix_stream_socket (connectto)))
+(allow hal_omx_server tombstoned (fd (use)))
+(allow hal_omx_server tombstoned_crash_socket (sock_file (write)))
+(allow hal_omx_server tombstone_data_file (file (append)))
+(allow hal_omx_server bufferhubd (fd (use)))
+(allow hal_omx_client hal_omx_hwservice (hwservice_manager (find)))
+(allow hal_omx_server hal_omx_hwservice (hwservice_manager (add find)))
+(allow hal_omx_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 21 system/sepolicy/public/hal_omx.te
+
+(neverallow base_typeattr_451 hal_omx_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 21 system/sepolicy/public/hal_omx.te
+
+(neverallow base_typeattr_452 hal_omx_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_omx_client hidl_token_hwservice (hwservice_manager (find)))
+(allow hal_omx_client media_variant_prop (file (read getattr map open)))
+(allow hal_omx_server media_variant_prop (file (read getattr map open)))
+(allow hal_omx_client hal_omx_server (binder (call transfer)))
+(allow hal_omx_server hal_omx_client (binder (transfer)))
+(allow hal_omx_client hal_omx_server (fd (use)))
+(allow hal_omx_server hal_omx_client (binder (call transfer)))
+(allow hal_omx_client hal_omx_server (binder (transfer)))
+(allow hal_omx_server hal_omx_client (fd (use)))
+;;* lmx 37 system/sepolicy/public/hal_omx.te
+
+(neverallow hal_omx_server fs_type (file (execute_no_trans)))
+(neverallow hal_omx_server file_type (file (execute_no_trans)))
+;;* lme
+
+;;* lmx 49 system/sepolicy/public/hal_omx.te
+
+(neverallow hal_omx_server domain (udp_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind node_bind)))
+(neverallow hal_omx_server domain (rawip_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind node_bind)))
+;;* lme
+
+;;* lmx 50 system/sepolicy/public/hal_omx.te
+
+(neverallow hal_omx_server base_typeattr_233 (tcp_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind node_bind name_connect)))
+;;* lme
+
+(allow hal_power_client hal_power_server (binder (call transfer)))
+(allow hal_power_server hal_power_client (binder (transfer)))
+(allow hal_power_client hal_power_server (fd (use)))
+(allow hal_power_server hal_power_client (binder (call transfer)))
+(allow hal_power_client hal_power_server (binder (transfer)))
+(allow hal_power_server hal_power_client (fd (use)))
+(allow hal_power_client hal_power_hwservice (hwservice_manager (find)))
+(allow hal_power_server hal_power_hwservice (hwservice_manager (add find)))
+(allow hal_power_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_power.te
+
+(neverallow base_typeattr_453 hal_power_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_power.te
+
+(neverallow base_typeattr_454 hal_power_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_power_client hal_power_service (service_manager (find)))
+(allow hal_power_server hal_power_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_power.te
+
+(neverallow base_typeattr_453 hal_power_service (service_manager (add)))
+;;* lme
+
+(allow hal_power_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_power.te
+
+(neverallow base_typeattr_455 hal_power_service (service_manager (find)))
+;;* lme
+
+(allow hal_power_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_power_server (binder (transfer)))
+(allow hal_power_server servicemanager (fd (use)))
+(allow hal_power_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_power_client (binder (transfer)))
+(allow hal_power_client servicemanager (fd (use)))
+(allow hal_power_stats_client hal_power_stats_server (binder (call transfer)))
+(allow hal_power_stats_server hal_power_stats_client (binder (transfer)))
+(allow hal_power_stats_client hal_power_stats_server (fd (use)))
+(allow hal_power_stats_server hal_power_stats_client (binder (call transfer)))
+(allow hal_power_stats_client hal_power_stats_server (binder (transfer)))
+(allow hal_power_stats_server hal_power_stats_client (fd (use)))
+(allow hal_power_stats_client hal_power_stats_hwservice (hwservice_manager (find)))
+(allow hal_power_stats_server hal_power_stats_hwservice (hwservice_manager (add find)))
+(allow hal_power_stats_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_power_stats.te
+
+(neverallow base_typeattr_456 hal_power_stats_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_power_stats.te
+
+(neverallow base_typeattr_457 hal_power_stats_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_power_stats_client hal_power_stats_service (service_manager (find)))
+(allow hal_power_stats_server hal_power_stats_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_power_stats.te
+
+(neverallow base_typeattr_456 hal_power_stats_service (service_manager (add)))
+;;* lme
+
+(allow hal_power_stats_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_power_stats.te
+
+(neverallow base_typeattr_458 hal_power_stats_service (service_manager (find)))
+;;* lme
+
+(allow hal_power_stats_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_power_stats_server (binder (transfer)))
+(allow hal_power_stats_server servicemanager (fd (use)))
+(allow hal_power_stats_client servicemanager (binder (call transfer)))
+(allow servicemanager hal_power_stats_client (binder (transfer)))
+(allow hal_power_stats_client servicemanager (fd (use)))
+(allow hal_rebootescrow_client hal_rebootescrow_server (binder (call transfer)))
+(allow hal_rebootescrow_server hal_rebootescrow_client (binder (transfer)))
+(allow hal_rebootescrow_client hal_rebootescrow_server (fd (use)))
+(allow hal_rebootescrow_client hal_rebootescrow_service (service_manager (find)))
+(allow hal_rebootescrow_server hal_rebootescrow_service (service_manager (add find)))
+;;* lmx 4 system/sepolicy/public/hal_rebootescrow.te
+
+(neverallow base_typeattr_459 hal_rebootescrow_service (service_manager (add)))
+;;* lme
+
+(allow hal_rebootescrow_server su (tcp_socket (read write accept getopt)))
+;;* lmx 4 system/sepolicy/public/hal_rebootescrow.te
+
+(neverallow base_typeattr_460 hal_rebootescrow_service (service_manager (find)))
+;;* lme
+
+(allow hal_rebootescrow_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_rebootescrow_server (binder (call transfer)))
+(allow servicemanager hal_rebootescrow_server (dir (search)))
+(allow servicemanager hal_rebootescrow_server (file (read open)))
+(allow servicemanager hal_rebootescrow_server (process (getattr)))
+(allow hal_remoteaccess_client hal_remoteaccess_server (binder (call transfer)))
+(allow hal_remoteaccess_server hal_remoteaccess_client (binder (transfer)))
+(allow hal_remoteaccess_client hal_remoteaccess_server (fd (use)))
+(allow hal_remoteaccess_server hal_remoteaccess_client (binder (call transfer)))
+(allow hal_remoteaccess_client hal_remoteaccess_server (binder (transfer)))
+(allow hal_remoteaccess_server hal_remoteaccess_client (fd (use)))
+(allow hal_remoteaccess_client hal_remoteaccess_service (service_manager (find)))
+(allow hal_remoteaccess_server hal_remoteaccess_service (service_manager (add find)))
+;;* lmx 5 system/sepolicy/public/hal_remoteaccess.te
+
+(neverallow base_typeattr_461 hal_remoteaccess_service (service_manager (add)))
+;;* lme
+
+(allow hal_remoteaccess_server su (tcp_socket (read write accept getopt)))
+;;* lmx 5 system/sepolicy/public/hal_remoteaccess.te
+
+(neverallow base_typeattr_462 hal_remoteaccess_service (service_manager (find)))
+;;* lme
+
+(allow hal_secure_element_client hal_secure_element_server (binder (call transfer)))
+(allow hal_secure_element_server hal_secure_element_client (binder (transfer)))
+(allow hal_secure_element_client hal_secure_element_server (fd (use)))
+(allow hal_secure_element_server hal_secure_element_client (binder (call transfer)))
+(allow hal_secure_element_client hal_secure_element_server (binder (transfer)))
+(allow hal_secure_element_server hal_secure_element_client (fd (use)))
+(allow hal_secure_element_client hal_secure_element_hwservice (hwservice_manager (find)))
+(allow hal_secure_element_server hal_secure_element_hwservice (hwservice_manager (add find)))
+(allow hal_secure_element_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_secure_element.te
+
+(neverallow base_typeattr_463 hal_secure_element_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_secure_element.te
+
+(neverallow base_typeattr_464 hal_secure_element_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_secure_element_client hal_secure_element_service (service_manager (find)))
+(allow hal_secure_element_server hal_secure_element_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_secure_element.te
+
+(neverallow base_typeattr_463 hal_secure_element_service (service_manager (add)))
+;;* lme
+
+(allow hal_secure_element_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_secure_element.te
+
+(neverallow base_typeattr_465 hal_secure_element_service (service_manager (find)))
+;;* lme
+
+(allow hal_secure_element_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_secure_element_server (binder (call transfer)))
+(allow servicemanager hal_secure_element_server (dir (search)))
+(allow servicemanager hal_secure_element_server (file (read open)))
+(allow servicemanager hal_secure_element_server (process (getattr)))
+(allow hal_secure_element_client hal_secure_element_service (service_manager (find)))
+(allow hal_sensors_client hal_sensors_server (binder (call transfer)))
+(allow hal_sensors_server hal_sensors_client (binder (transfer)))
+(allow hal_sensors_client hal_sensors_server (fd (use)))
+(allow hal_sensors_client hal_sensors_hwservice (hwservice_manager (find)))
+(allow hal_sensors_server hal_sensors_hwservice (hwservice_manager (add find)))
+(allow hal_sensors_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 4 system/sepolicy/public/hal_sensors.te
+
+(neverallow base_typeattr_466 hal_sensors_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 4 system/sepolicy/public/hal_sensors.te
+
+(neverallow base_typeattr_467 hal_sensors_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_sensors base_typeattr_356 (fd (use)))
+(allow hal_sensors hal_allocator (fd (use)))
+(allow hal_sensors self (capability (sys_nice)))
+(allow hal_sensors self (cap_userns (sys_nice)))
+(allow hal_sensors_server hal_sensors_service (service_manager (add find)))
+;;* lmx 16 system/sepolicy/public/hal_sensors.te
+
+(neverallow base_typeattr_466 hal_sensors_service (service_manager (add)))
+;;* lme
+
+(allow hal_sensors_server su (tcp_socket (read write accept getopt)))
+(allow hal_sensors_server servicemanager (binder (call transfer)))
+(allow servicemanager hal_sensors_server (binder (transfer)))
+(allow hal_sensors_server servicemanager (fd (use)))
+(allow hal_sensors_client hal_sensors_service (service_manager (find)))
+(allow hal_telephony_client hal_telephony_server (binder (call transfer)))
+(allow hal_telephony_server hal_telephony_client (binder (transfer)))
+(allow hal_telephony_client hal_telephony_server (fd (use)))
+(allow hal_telephony_server hal_telephony_client (binder (call transfer)))
+(allow hal_telephony_client hal_telephony_server (binder (transfer)))
+(allow hal_telephony_server hal_telephony_client (fd (use)))
+(allow hal_telephony_client hal_telephony_hwservice (hwservice_manager (find)))
+(allow hal_telephony_server hal_telephony_hwservice (hwservice_manager (add find)))
+(allow hal_telephony_server hidl_base_hwservice (hwservice_manager (add)))
+;;* lmx 5 system/sepolicy/public/hal_telephony.te
+
+(neverallow base_typeattr_468 hal_telephony_hwservice (hwservice_manager (add)))
+;;* lme
+
+;;* lmx 5 system/sepolicy/public/hal_telephony.te
+
+(neverallow base_typeattr_469 hal_telephony_hwservice (hwservice_manager (find)))
+;;* lme
+
+(allow hal_telephony_client hal_radio_service (service_manager (find)))
+(allow hal_telephony_server hal_radio_service (service_manager (add find)))
+;;* lmx 6 system/sepolicy/public/hal_telephony.te
+
+(neverallow base_typeattr_468 hal_radio_service (service_manager (add)))
+;;* lme
+
+(allow hal_telephony_server su (tcp_socket (read write accept getopt)))
+;;* lmx 6 system/sepolicy/public/hal_telephony.te
+
+(neverallow base_typeattr_470 hal_radio_service (service_manager (find)))
+;;* lme
+
+(allowx hal_telephony_server self (ioctl udp_socket (0x6900 0x6902)))
+(allowx hal_telephony_server self (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(allowx hal_telephony_server self (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(allow hal_telephony_server self (netlink_route_socket (nlmsg_write)))
+(allow hal_telephony_server kernel (system (module_request)))
+(allow hal_telephony_server self (capability (setgid setuid setpcap net_admin net_raw)))
+(allow hal_telephony_server self (cap_userns (setgid setuid setpcap net_admin net_raw)))
+(allow hal_telephony_server cgroup (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow hal_telephony_server cgroup (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server cgroup (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_telephony_server cgroup_v2 (dir (ioctl read write create getattr setattr lock r

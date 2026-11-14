@@ -1,0 +1,493 @@
+ (range 0x8912 0x8913) 0x8915 0x8917 0x8919 0x891b 0x8921 0x8933 0x8938 0x8942)))
+(allowx base_typeattr_217 self (ioctl tcp_socket (0x8b01 0x8b05 0x8b07 0x8b09 0x8b0b 0x8b0d 0x8b0f (range 0x8b11 0x8b13) 0x8b21 0x8b23 0x8b25 0x8b27 0x8b29 0x8b2d)))
+(allowx base_typeattr_217 self (ioctl udp_socket (0x8b01 0x8b05 0x8b07 0x8b09 0x8b0b 0x8b0d 0x8b0f (range 0x8b11 0x8b13) 0x8b21 0x8b23 0x8b25 0x8b27 0x8b29 0x8b2d)))
+(allowx base_typeattr_217 self (ioctl rawip_socket (0x8b01 0x8b05 0x8b07 0x8b09 0x8b0b 0x8b0d 0x8b0f (range 0x8b11 0x8b13) 0x8b21 0x8b23 0x8b25 0x8b27 0x8b29 0x8b2d)))
+(allow base_typeattr_608 ion_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow base_typeattr_608 dmabuf_system_heap_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow base_typeattr_608 dmabuf_system_secure_heap_device (chr_file (ioctl read getattr lock map open watch watch_reads)))
+(allow base_typeattr_608 hal_audio (fd (use)))
+(allow base_typeattr_608 hal_camera (fd (use)))
+(allow base_typeattr_608 hal_tv_tuner_server (fd (use)))
+(allow base_typeattr_608 hal_renderscript_hwservice (hwservice_manager (find)))
+(allow appdomain same_process_hal_file (file (read getattr map execute open)))
+(allow appdomain proc_meminfo (file (ioctl read getattr lock map open watch watch_reads)))
+(allow appdomain app_fuse_file (file (read write getattr append map)))
+(allow appdomain runas_exec (file (getattr)))
+(allow appdomain adbd (unix_stream_socket (connectto)))
+(allow appdomain adbd (fd (use)))
+(allow appdomain adbd (unix_stream_socket (ioctl read write getattr getopt shutdown)))
+(allow appdomain cache_file (dir (getattr)))
+(allow appdomain dropbox_data_file (file (read getattr)))
+(allow appdomain audioserver_tmpfs (file (read write getattr map)))
+(allow appdomain system_server_tmpfs (file (read write getattr map)))
+(allow appdomain zygote_tmpfs (file (read map)))
+;;* lmx 512 system/sepolicy/private/app.te
+
+(neverallow isolated_app_all base_typeattr_609 (file (execute execute_no_trans)))
+(neverallow bluetooth base_typeattr_609 (file (execute execute_no_trans)))
+(neverallow nfc base_typeattr_609 (file (execute execute_no_trans)))
+(neverallow radio base_typeattr_609 (file (execute execute_no_trans)))
+(neverallow shared_relro base_typeattr_609 (file (execute execute_no_trans)))
+(neverallow system_app base_typeattr_609 (file (execute execute_no_trans)))
+(neverallow sdk_sandbox_all base_typeattr_609 (file (execute execute_no_trans)))
+;;* lme
+
+;;* lmx 521 system/sepolicy/private/app.te
+
+(neverallow appdomain audio_device (chr_file (read write)))
+(neverallow appdomain camera_device (chr_file (read write)))
+(neverallow appdomain dm_device (chr_file (read write)))
+(neverallow appdomain radio_device (chr_file (read write)))
+(neverallow appdomain rpmsg_device (chr_file (read write)))
+;;* lme
+
+;;* lmx 528 system/sepolicy/private/app.te
+
+(neverallow base_typeattr_610 video_device (chr_file (read write)))
+;;* lme
+
+;;* lmx 540 system/sepolicy/private/app.te
+
+(neverallow base_typeattr_611 apk_data_file (dir (watch watch_reads)))
+;;* lme
+
+;;* lmx 548 system/sepolicy/private/app.te
+
+(neverallow base_typeattr_611 apk_data_file (file (watch watch_reads)))
+;;* lme
+
+;;* lmx 20 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow isolated_app_all domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow ephemeral_app domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow isolated_app domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow isolated_compute_app domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow mediaprovider domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_30 domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_29 domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_27 domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_25 domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow mediaprovider_app domain (netlink_kobject_uevent_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+;;* lme
+
+;;* lmx 23 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow isolated_app_all domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow ephemeral_app domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow isolated_app domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow isolated_compute_app domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow mediaprovider domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_30 domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_29 domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_27 domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow untrusted_app_25 domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+(neverallow mediaprovider_app domain (netlink_socket (ioctl read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind)))
+;;* lme
+
+;;* lmx 26 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app_all kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow ephemeral_app kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_compute_app kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_30 kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_29 kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_27 kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_25 kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider_app kmsg_device (chr_file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 30 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all base_typeattr_612 (file (read)))
+(neverallow isolated_app_all base_typeattr_612 (file (read)))
+(neverallow ephemeral_app base_typeattr_612 (file (read)))
+(neverallow isolated_app base_typeattr_612 (file (read)))
+(neverallow isolated_compute_app base_typeattr_612 (file (read)))
+(neverallow mediaprovider base_typeattr_612 (file (read)))
+(neverallow untrusted_app base_typeattr_612 (file (read)))
+(neverallow untrusted_app_30 base_typeattr_612 (file (read)))
+(neverallow untrusted_app_29 base_typeattr_612 (file (read)))
+(neverallow untrusted_app_27 base_typeattr_612 (file (read)))
+(neverallow untrusted_app_25 base_typeattr_612 (file (read)))
+(neverallow mediaprovider_app base_typeattr_612 (file (read)))
+;;* lme
+
+;;* lmx 31 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_613 debugfs_type (file (read)))
+(neverallow base_typeattr_613 debugfs_type (lnk_file (read)))
+;;* lme
+
+;;* lmx 36 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all service_manager_type (service_manager (add)))
+(neverallow isolated_app_all service_manager_type (service_manager (add)))
+(neverallow ephemeral_app service_manager_type (service_manager (add)))
+(neverallow isolated_app service_manager_type (service_manager (add)))
+(neverallow isolated_compute_app service_manager_type (service_manager (add)))
+(neverallow mediaprovider service_manager_type (service_manager (add)))
+(neverallow untrusted_app service_manager_type (service_manager (add)))
+(neverallow untrusted_app_30 service_manager_type (service_manager (add)))
+(neverallow untrusted_app_29 service_manager_type (service_manager (add)))
+(neverallow untrusted_app_27 service_manager_type (service_manager (add)))
+(neverallow untrusted_app_25 service_manager_type (service_manager (add)))
+(neverallow mediaprovider_app service_manager_type (service_manager (add)))
+;;* lme
+
+;;* lmx 39 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow isolated_app_all vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow ephemeral_app vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow isolated_app vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow isolated_compute_app vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow mediaprovider vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_30 vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_29 vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_27 vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow untrusted_app_25 vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow mediaprovider_app vndbinder_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 40 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all vndservice_manager_type (service_manager (add find list)))
+(neverallow isolated_app_all vndservice_manager_type (service_manager (add find list)))
+(neverallow ephemeral_app vndservice_manager_type (service_manager (add find list)))
+(neverallow isolated_app vndservice_manager_type (service_manager (add find list)))
+(neverallow isolated_compute_app vndservice_manager_type (service_manager (add find list)))
+(neverallow mediaprovider vndservice_manager_type (service_manager (add find list)))
+(neverallow untrusted_app vndservice_manager_type (service_manager (add find list)))
+(neverallow untrusted_app_30 vndservice_manager_type (service_manager (add find list)))
+(neverallow untrusted_app_29 vndservice_manager_type (service_manager (add find list)))
+(neverallow untrusted_app_27 vndservice_manager_type (service_manager (add find list)))
+(neverallow untrusted_app_25 vndservice_manager_type (service_manager (add find list)))
+(neverallow mediaprovider_app vndservice_manager_type (service_manager (add find list)))
+;;* lme
+
+;;* lmx 44 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_614 property_socket (sock_file (write)))
+;;* lme
+
+;;* lmx 45 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_614 init (unix_stream_socket (connectto)))
+;;* lme
+
+;;* lmx 46 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_614 property_type (property_service (set)))
+;;* lme
+
+;;* lmx 49 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all net_dns_prop (file (read)))
+(neverallow isolated_app_all net_dns_prop (file (read)))
+(neverallow ephemeral_app net_dns_prop (file (read)))
+(neverallow isolated_app net_dns_prop (file (read)))
+(neverallow isolated_compute_app net_dns_prop (file (read)))
+(neverallow mediaprovider net_dns_prop (file (read)))
+(neverallow untrusted_app net_dns_prop (file (read)))
+(neverallow untrusted_app_30 net_dns_prop (file (read)))
+(neverallow untrusted_app_29 net_dns_prop (file (read)))
+(neverallow untrusted_app_27 net_dns_prop (file (read)))
+(neverallow untrusted_app_25 net_dns_prop (file (read)))
+(neverallow mediaprovider_app net_dns_prop (file (read)))
+;;* lme
+
+;;* lmx 52 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all radio_cdma_ecm_prop (file (read)))
+(neverallow isolated_app_all radio_cdma_ecm_prop (file (read)))
+(neverallow ephemeral_app radio_cdma_ecm_prop (file (read)))
+(neverallow isolated_app radio_cdma_ecm_prop (file (read)))
+(neverallow isolated_compute_app radio_cdma_ecm_prop (file (read)))
+(neverallow mediaprovider radio_cdma_ecm_prop (file (read)))
+(neverallow untrusted_app radio_cdma_ecm_prop (file (read)))
+(neverallow untrusted_app_30 radio_cdma_ecm_prop (file (read)))
+(neverallow untrusted_app_29 radio_cdma_ecm_prop (file (read)))
+(neverallow untrusted_app_27 radio_cdma_ecm_prop (file (read)))
+(neverallow untrusted_app_25 radio_cdma_ecm_prop (file (read)))
+(neverallow mediaprovider_app radio_cdma_ecm_prop (file (read)))
+;;* lme
+
+;;* lmx 58 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow isolated_app_all app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow ephemeral_app app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow isolated_app app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow isolated_compute_app app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow mediaprovider app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow untrusted_app app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow untrusted_app_30 app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow untrusted_app_29 app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow untrusted_app_27 app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow untrusted_app_25 app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+(neverallow mediaprovider_app app_exec_data_file (file (write create setattr relabelfrom relabelto append link rename)))
+;;* lme
+
+;;* lmx 69 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_615 app_data_file (file (execute_no_trans)))
+(neverallow base_typeattr_615 privapp_data_file (file (execute_no_trans)))
+;;* lme
+
+;;* lmx 78 system/sepolicy/private/app_neverallows.te
+
+(neverallow base_typeattr_616 dex2oat_exec (file (execute execute_no_trans)))
+;;* lme
+
+;;* lmx 88 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all mlstrustedsubject (process (fork)))
+(neverallow isolated_app_all mlstrustedsubject (process (fork)))
+(neverallow ephemeral_app mlstrustedsubject (process (fork)))
+(neverallow isolated_app mlstrustedsubject (process (fork)))
+(neverallow isolated_compute_app mlstrustedsubject (process (fork)))
+(neverallow mediaprovider mlstrustedsubject (process (fork)))
+(neverallow untrusted_app mlstrustedsubject (process (fork)))
+(neverallow untrusted_app_30 mlstrustedsubject (process (fork)))
+(neverallow untrusted_app_29 mlstrustedsubject (process (fork)))
+(neverallow untrusted_app_27 mlstrustedsubject (process (fork)))
+(neverallow untrusted_app_25 mlstrustedsubject (process (fork)))
+(neverallow mediaprovider_app mlstrustedsubject (process (fork)))
+;;* lme
+
+;;* lmx 96 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all file_type (file (link)))
+(neverallow isolated_app_all file_type (file (link)))
+(neverallow ephemeral_app file_type (file (link)))
+(neverallow isolated_app file_type (file (link)))
+(neverallow isolated_compute_app file_type (file (link)))
+(neverallow mediaprovider file_type (file (link)))
+(neverallow untrusted_app file_type (file (link)))
+(neverallow untrusted_app_30 file_type (file (link)))
+(neverallow untrusted_app_29 file_type (file (link)))
+(neverallow untrusted_app_27 file_type (file (link)))
+(neverallow untrusted_app_25 file_type (file (link)))
+(neverallow mediaprovider_app file_type (file (link)))
+;;* lme
+
+;;* lmx 99 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app_all sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow ephemeral_app sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_compute_app sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_30 sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_29 sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_27 sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_25 sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider_app sysfs_net (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 102 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow isolated_app_all sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow ephemeral_app sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow isolated_app sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow isolated_compute_app sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow mediaprovider sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow untrusted_app sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow untrusted_app_30 sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow untrusted_app_29 sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow untrusted_app_27 sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow untrusted_app_25 sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+(neverallow mediaprovider_app sysfs_type (file (write create setattr relabelfrom append unlink link rename execute execute_no_trans)))
+;;* lme
+
+;;* lmx 105 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app_all sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow ephemeral_app sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_app sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow isolated_compute_app sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_30 sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_29 sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_27 sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow untrusted_app_25 sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+(neverallow mediaprovider_app sysfs (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 109 system/sepolicy/private/app_neverallows.te
+
+(neverallowx untrusted_app_all domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_all domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_all domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_all domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx isolated_app_all domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx isolated_app_all domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx isolated_app_all domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx isolated_app_all domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx ephemeral_app domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx ephemeral_app domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx ephemeral_app domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx ephemeral_app domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx isolated_app domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx isolated_app domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx isolated_app domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx isolated_app domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx isolated_compute_app domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx isolated_compute_app domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx isolated_compute_app domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx isolated_compute_app domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx mediaprovider domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx mediaprovider domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx mediaprovider domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx mediaprovider domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx untrusted_app domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_30 domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_30 domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_30 domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_30 domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_29 domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_29 domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_29 domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_29 domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_27 domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_27 domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_27 domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_27 domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_25 domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_25 domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_25 domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx untrusted_app_25 domain (ioctl icmp_socket (0x6900 0x6902)))
+(neverallowx mediaprovider_app domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx mediaprovider_app domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx mediaprovider_app domain (ioctl rawip_socket (0x6900 0x6902)))
+(neverallowx mediaprovider_app domain (ioctl icmp_socket (0x6900 0x6902)))
+;;* lme
+
+;;* lmx 109 system/sepolicy/private/app_neverallows.te
+
+(neverallowx untrusted_app_all domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_all domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_all domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_all domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_app_all domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_app_all domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_app_all domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_app_all domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx ephemeral_app domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx ephemeral_app domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx ephemeral_app domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx ephemeral_app domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_app domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_app domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_app domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_app domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_compute_app domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_compute_app domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_compute_app domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx isolated_compute_app domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediaprovider domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediaprovider domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediaprovider domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediaprovider domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_30 domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_30 domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_30 domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_30 domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_29 domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_29 domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_29 domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_29 domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_27 domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_27 domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_27 domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_27 domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_25 domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_25 domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_25 domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx untrusted_app_25 domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediaprovider_app domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediaprovider_app domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediaprovider_app domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediaprovider_app domain (ioctl icmp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+;;* lme
+
+;;* lmx 109 system/sepolicy/private/app_neverallows.te
+
+(neverallowx untrusted_app_all domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_all domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_all domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_all domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_app_all domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_app_all domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_app_all domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_app_all domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx ephemeral_app domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx ephemeral_app domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx ephemeral_app domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx ephemeral_app domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_app domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_app domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_app domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_app domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_compute_app domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_compute_app domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_compute_app domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx isolated_compute_app domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediaprovider domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediaprovider domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediaprovider domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediaprovider domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_30 domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_30 domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_30 domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_30 domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_29 domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_29 domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_29 domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_29 domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_27 domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_27 domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_27 domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_27 domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_25 domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_25 domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_25 domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx untrusted_app_25 domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediaprovider_app domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediaprovider_app domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediaprovider_app domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediaprovider_app domain (ioctl icmp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+;;* lme
+
+;;* lmx 110 system/sepolicy/private/app_neverallows.te
+
+(neverallow untrusted_app_all base_typeattr_209 (netlink_route_socket (ioctl)))
+(neverallow untrusted_app_all base_typeattr_209 (netlink_selinux_socket (ioctl)))
+(neverallow isolated_app_all base_typeattr_209 (netlink_route_socket (ioctl)))
+(neverallow isolated_app_all base_typeattr_209 (netlink_selinux_socket (ioctl)))
+(neverallow ephemeral_app base_typeattr_209 (netlink_r

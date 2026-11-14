@@ -1,0 +1,568 @@
+all of the following: &lt;ul&gt;     &lt;li&gt;- android:autoVerify=&quot;true&quot;&lt;/li&gt;     &lt;li&gt;- Intent.ACTION_VIEW&lt;/li&gt;     &lt;li&gt;- Intent.CATEGORY_BROWSABLE&lt;/li&gt;     &lt;li&gt;- Intent.CATEGORY_DEFAULT&lt;/li&gt;     &lt;li&gt;- Only IntentFilter.SCHEME_HTTP and/or IntentFilter.SCHEME_HTTPS,           with no other schemes&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; On prior versions of Android, Intent.CATEGORY_BROWSABLE was not a requirement, other schemes were allowed, and setting autoVerify to true in any intent filter would implicitly pretend that all intent filters were set to autoVerify=&quot;true&quot;." enableSinceTargetSdk="31" id="175408749" name="RESTRICT_DOMAINS" /><compat-change description="The new user preference API for verifying domains marked autoVerify=true in AndroidManifest.xml intent filters is not yet implemented in the current platform preview. This is anticipated to ship before S releases. For now, it is possible to preview the new user preference changes by enabling this ChangeId and using the &lt;code&gt;adb shell pm set-app-links-user-selection&lt;/code&gt; and similar commands." id="178111421" name="SETTINGS_API_V2" /><compat-change description="This change reflects the presence of the new Notification Permission" enableAfterTargetSdk="32" id="194833441" name="NOTIFICATION_PERM_CHANGE_ID" /><compat-change description="Apps targeting Android V and above need to define {@link android.Manifest.permission#TURN_SCREEN_ON} in their manifest for {@link android.os.PowerManager#ACQUIRE_CAUSES_WAKEUP} to have any effect. Note that most applications should use {@link android.R.attr#turnScreenOn} or {@link android.app.Activity#setTurnScreenOn(boolean)} instead, as this prevents the previous foreground app from being resumed first when the screen turns on." enableSinceTargetSdk="10000" id="216114297" name="REQUIRE_TURN_SCREEN_ON_PERMISSION" /><compat-change description="Apps targeting {@code Build.VERSION_CODES.S} or higher need {@link android.Manifest.permission#STATUS_BAR} permission to collapse the status bar panels due to security reasons. This was being exploited by malware to prevent the user from accessing critical notifications." enableSinceTargetSdk="31" id="173031413" name="LOCK_DOWN_COLLAPSE_STATUS_BAR" /><compat-change description="In apps targeting {@link android.os.Build.VERSION_CODES#TIRAMISU} or higher, calling {@link android.service.quicksettings.TileService#requestListeningState} will check that the  calling package (uid) and the package of the target {@link android.content.ComponentName}  match. It'll also make sure that the context used can take actions on behalf of the current  user." enableAfterTargetSdk="32" id="172251878" name="REQUEST_LISTENING_MUST_MATCH_PACKAGE" /><compat-change description="" enableAfterTargetSdk="33" id="242194868" name="REQUEST_LISTENING_OTHER_USER_NOOP" /><compat-change description="Implementors of the HotwordDetectionService must not augment the phrase IDs which are supplied via HotwordDetectionService #onDetect(AlwaysOnHotwordDetector.EventPayload, long, HotwordDetectionService.Callback). &lt;p&gt;The HotwordDetectedResult#getHotwordPhraseId() must match one of the phrase IDs from the AlwaysOnHotwordDetector.EventPayload#getKeyphraseRecognitionExtras() list. &lt;/p&gt; &lt;p&gt;This behavior change is made to ensure the HotwordDetectionService honors what it receives from the android.hardware.soundtrigger.SoundTriggerModule, and it cannot signal to the client application a phrase which was not originally detected. &lt;/p&gt;" disabled="true" id="215066299" name="ENFORCE_HOTWORD_PHRASE_ID" /><compat-change description="Grants access to the launching app's identity if the app opted-in to sharing its identity by launching this activity with an instance of {@link android.app.ActivityOptions} on which {@link android.app.ActivityOptions#setShareIdentityEnabled(boolean)} was invoked with a value of {@code true}, or if the launched activity's uid is the same as the launching app's. When this change is enabled and one of these requirements is met, the activity can access the launching app's uid and package name with {@link android.app.Activity#getLaunchedFromUid()} and {@link android.app.Activity#getLaunchedFromPackage()}, respectively." id="259743961" name="ACCESS_SHARED_IDENTITY" /><compat-change description="Feature flag for making Activities consume all touches within their task bounds." id="194480991" name="ENABLE_TOUCH_OPAQUE_ACTIVITIES" /><compat-change description="Feature flag to protect PendingIntent being abused to start background activity." enableSinceTargetSdk="33" id="192341120" name="ENABLE_PENDING_INTENT_BAL_OPTION" /><compat-change description="Feature flag for go/activity-security rules" disabled="true" id="230590090" name="ASM_RESTRICTIONS" /><compat-change description="If enabled BAL are prevented by default in applications targeting U and later." enableSinceTargetSdk="34" id="261072174" name="DEFAULT_RESCIND_BAL_FG_PRIVILEGES_BOUND_SERVICE" overridable="true" /><compat-change description="{@link CompatModePackages#DOWNSCALED_INVERSE} is the gatekeeper of all per-app buffer inverse downscale changes. Enabling this change will allow the following scaling factors: {@link CompatModePackages#DOWNSCALE_90} {@link CompatModePackages#DOWNSCALE_85} {@link CompatModePackages#DOWNSCALE_80} {@link CompatModePackages#DOWNSCALE_75} {@link CompatModePackages#DOWNSCALE_70} {@link CompatModePackages#DOWNSCALE_65} {@link CompatModePackages#DOWNSCALE_60} {@link CompatModePackages#DOWNSCALE_55} {@link CompatModePackages#DOWNSCALE_50} {@link CompatModePackages#DOWNSCALE_45} {@link CompatModePackages#DOWNSCALE_40} {@link CompatModePackages#DOWNSCALE_35} {@link CompatModePackages#DOWNSCALE_30} If {@link CompatModePackages#DOWNSCALED_INVERSE} is enabled for an app package, then the app will be forcibly resized to the lowest enabled scaling factor e.g. 1/0.8 if both 1/0.8 and 1/0.7 (* 100%) were enabled. When both {@link CompatModePackages#DOWNSCALED_INVERSE} and {@link CompatModePackages#DOWNSCALED} are enabled, then {@link CompatModePackages#DOWNSCALED_INVERSE} takes precedence." disabled="true" id="273564678" name="DOWNSCALED_INVERSE" overridable="true" /><compat-change description="{@link CompatModePackages#DOWNSCALED} is the gatekeeper of all per-app buffer downscaling changes. Enabling this change will allow the following scaling factors: {@link CompatModePackages#DOWNSCALE_90} {@link CompatModePackages#DOWNSCALE_85} {@link CompatModePackages#DOWNSCALE_80} {@link CompatModePackages#DOWNSCALE_75} {@link CompatModePackages#DOWNSCALE_70} {@link CompatModePackages#DOWNSCALE_65} {@link CompatModePackages#DOWNSCALE_60} {@link CompatModePackages#DOWNSCALE_55} {@link CompatModePackages#DOWNSCALE_50} {@link CompatModePackages#DOWNSCALE_45} {@link CompatModePackages#DOWNSCALE_40} {@link CompatModePackages#DOWNSCALE_35} {@link CompatModePackages#DOWNSCALE_30} If {@link CompatModePackages#DOWNSCALED} is enabled for an app package, then the app will be forcibly resized to the highest enabled scaling factor e.g. 80% if both 80% and 70% were enabled. When both {@link CompatModePackages#DOWNSCALED_INVERSE} and {@link CompatModePackages#DOWNSCALED} are enabled, then {@link CompatModePackages#DOWNSCALED_INVERSE} takes precedence." disabled="true" id="168419799" name="DOWNSCALED" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_90} for a package will force the app to assume it's running on a display with 90% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 111.11% the vertical and horizontal resolution of the real display" disabled="true" id="182811243" name="DOWNSCALE_90" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_85} for a package will force the app to assume it's running on a display with 85% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 117.65% the vertical and horizontal resolution of the real display" disabled="true" id="189969734" name="DOWNSCALE_85" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_80} for a package will force the app to assume it's running on a display with 80% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 125% the vertical and horizontal resolution of the real display" disabled="true" id="176926753" name="DOWNSCALE_80" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_75} for a package will force the app to assume it's running on a display with 75% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 133.33% the vertical and horizontal resolution of the real display" disabled="true" id="189969779" name="DOWNSCALE_75" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_70} for a package will force the app to assume it's running on a display with 70% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 142.86% the vertical and horizontal resolution of the real display" disabled="true" id="176926829" name="DOWNSCALE_70" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_65} for a package will force the app to assume it's running on a display with 65% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 153.85% the vertical and horizontal resolution of the real display" disabled="true" id="189969744" name="DOWNSCALE_65" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_60} for a package will force the app to assume it's running on a display with 60% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 166.67% the vertical and horizontal resolution of the real display" disabled="true" id="176926771" name="DOWNSCALE_60" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_55} for a package will force the app to assume it's running on a display with 55% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 181.82% the vertical and horizontal resolution of the real display" disabled="true" id="189970036" name="DOWNSCALE_55" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_50} for a package will force the app to assume it's running on a display with 50% vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 200% the vertical and horizontal resolution of the real display" disabled="true" id="176926741" name="DOWNSCALE_50" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_45} for a package will force the app to assume it's running on a display with 45% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 222.22% the vertical and horizontal resolution of the real display" disabled="true" id="189969782" name="DOWNSCALE_45" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_40} for a package will force the app to assume it's running on a display with 40% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 250% the vertical and horizontal resolution of the real display" disabled="true" id="189970038" name="DOWNSCALE_40" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_35} for a package will force the app to assume it's running on a display with 35% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 285.71% the vertical and horizontal resolution of the real display" disabled="true" id="189969749" name="DOWNSCALE_35" overridable="true" /><compat-change description="With {@link CompatModePackages#DOWNSCALED} enabled, subsequently enabling change-id {@link CompatModePackages#DOWNSCALE_30} for a package will force the app to assume it's running on a display with 30% the vertical and horizontal resolution of the real display. With {@link CompatModePackages#DOWNSCALED_INVERSE} enabled will force the app to assume it's running on a display with 333.33% the vertical and horizontal resolution of the real display" disabled="true" id="189970040" name="DOWNSCALE_30" overridable="true" /><compat-change description="On Android TV applications that target pre-S are not expecting to receive a Window larger than 1080p, so if needed we are downscaling their Windows to 1080p. However, applications that target S and greater release version are expected to be able to handle any Window size, so we should not downscale their Windows." enableSinceTargetSdk="31" id="157629738" name="DO_NOT_DOWNSCALE_TO_1080P_ON_TV" overridable="true" /><compat-change description="Application is allowed to receive the {@link android.window.SplashScreen.OnExitAnimationListener#onSplashScreenExit(SplashScreenView)} callback, even when the splash screen only shows a solid color." enableSinceTargetSdk="33" id="205907456" name="ALLOW_COPY_SOLID_COLOR_VIEW" /></config>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         processor	: 1
+BogoMIPS	: 1.00
+Features	: neon vfp swp half thumb fastmult edsp vfpv3 vfpv4 idiva idivt
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x6
+CPU part	: 0x802
+CPU revision	: 13
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         processor	: 1
+BogoMIPS	: 1.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x6
+CPU part	: 0x802
+CPU revision	: 13
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       #
+# Copyright (C) 2017 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+#
+#
+# Dirty-image-objects file for boot image.
+#
+# Objects in this file are known dirty at runtime. Current this includes:
+#   - classes with known dirty static fields.
+#
+# The image writer will bin these objects together in the image.
+#
+# This file can be generated using imgdiag with a command such as:
+#   adb shell imgdiag --image-diff-pid=<app pid> --zygote-diff-pid=<zygote pid> \
+#     --boot-image=/system/framework/boot.art --dump-dirty-objects
+# Then, grep for lines containing "Private dirty object" from the output.
+# This particular file was generated by dumping systemserver and systemui.
+#
+Landroid/animation/LayoutTransition;
+Landroid/app/ActivityManager;
+Landroid/app/ActivityTaskManager;
+Landroid/app/ActivityThread;
+Landroid/app/AlarmManager;
+Landroid/app/AppOpsManager;
+Landroid/app/ContextImpl;
+Landroid/app/Notification;
+Landroid/app/NotificationManager;
+Landroid/app/PendingIntent$FinishedDispatcher;
+Landroid/app/PropertyInvalidatedCache$NoPreloadHolder;
+Landroid/app/QueuedWork;
+Landroid/app/ResourcesManager;
+Landroid/app/SystemServiceRegistry;
+Landroid/app/WallpaperManager;
+Landroid/app/backup/BackupManager;
+Landroid/compat/Compatibility;
+Landroid/content/AsyncQueryHandler;
+Landroid/content/ContentProviderClient;
+Landroid/content/ContentResolver;
+Landroid/content/Context;
+Landroid/content/pm/PackageItemInfo;
+Landroid/content/pm/UserPackage;
+Landroid/content/res/ResourceTimer;
+Landroid/database/CursorWindow;
+Landroid/database/sqlite/SQLiteCompatibilityWalFlags;
+Landroid/database/sqlite/SQLiteDebug$NoPreloadHolder;
+Landroid/database/sqlite/SQLiteGlobal;
+Landroid/ddm/DdmHandleAppName;
+Landroid/graphics/Bitmap;
+Landroid/graphics/Canvas;
+Landroid/graphics/Compatibility;
+Landroid/graphics/HardwareRenderer;
+Landroid/graphics/TemporaryBuffer;
+Landroid/graphics/Typeface;
+Landroid/graphics/drawable/AdaptiveIconDrawable;
+Landroid/hardware/SensorPrivacyManager;
+Landroid/hardware/SystemSensorManager;
+Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+Landroid/hardware/display/ColorDisplayManager$ColorDisplayManagerInternal;
+Landroid/hardware/display/DisplayManagerGlobal;
+Landroid/hardware/input/InputManagerGlobal;
+Landroid/hardware/location/GeofenceHardwareImpl;
+Landroid/icu/impl/number/range/StandardPluralRanges;
+Landroid/icu/text/Collator;
+Landroid/icu/util/TimeZone;
+Landroid/location/LocationManager;
+Landroid/media/AudioManager;
+Landroid/media/AudioPlaybackConfiguration;
+Landroid/media/AudioSystem;
+Landroid/media/MediaCodec;
+Landroid/media/MediaCodecList;
+Landroid/media/MediaFrameworkPlatformInitializer;
+Landroid/media/MediaRouter2Manager;
+Landroid/media/MediaRouter;
+Landroid/media/PlayerBase;
+Landroid/media/audiopolicy/AudioProductStrategy;
+Landroid/media/audiopolicy/AudioVolumeGroup;
+Landroid/nfc/NfcAdapter;
+Landroid/nfc/NfcFrameworkInitializer;
+Landroid/nfc/cardemulation/CardEmulation;
+Landroid/os/AsyncTask;
+Landroid/os/BaseBundle;
+Landroid/os/Binder;
+Landroid/os/BinderProxy;
+Landroid/os/Environment;
+Landroid/os/FileObserver;
+Landroid/os/Handler;
+Landroid/os/LocaleList;
+Landroid/os/Looper;
+Landroid/os/Message;
+Landroid/os/NullVibrator;
+Landroid/os/Parcel;
+Landroid/os/Process;
+Landroid/os/ServiceManager;
+Landroid/os/StrictMode;
+Landroid/os/UEventObserver;
+Landroid/os/UserManager;
+Landroid/os/WorkSource;
+Landroid/os/storage/StorageManager;
+Landroid/permission/PermissionManager;
+Landroid/provider/DeviceConfigInitializer;
+Landroid/provider/FontsContract;
+Landroid/provider/Settings;
+Landroid/renderscript/RenderScript;
+Landroid/renderscript/RenderScriptCacheDir;
+Landroid/security/keystore2/KeyStoreCryptoOperationUtils;
+Landroid/security/net/config/ApplicationConfig;
+Landroid/security/net/config/SystemCertificateSource$NoPreloadHolder;
+Landroid/security/net/config/UserCertificateSource$NoPreloadHolder;
+Landroid/telecom/Log;
+Landroid/telecom/TelecomManager;
+Landroid/telephony/AnomalyReporter;
+Landroid/telephony/TelephonyFrameworkInitializer;
+Landroid/telephony/TelephonyLocalConnection;
+Landroid/telephony/TelephonyManager;
+Landroid/telephony/TelephonyRegistryManager;
+Landroid/text/DynamicLayout;
+Landroid/text/TextUtils;
+Landroid/text/format/DateFormat;
+Landroid/text/format/DateUtils;
+Landroid/text/method/ArrowKeyMovementMethod;
+Landroid/text/method/LinkMovementMethod;
+Landroid/text/method/SingleLineTransformationMethod;
+Landroid/text/style/ClickableSpan;
+Landroid/timezone/TelephonyLookup;
+Landroid/timezone/TimeZoneFinder;
+Landroid/util/ArrayMap;
+Landroid/util/ArraySet;
+Landroid/util/EventLog;
+Landroid/util/NtpTrustedTime;
+Landroid/view/Choreographer;
+Landroid/view/CrossWindowBlurListeners;
+Landroid/view/DisplayCutout;
+Landroid/view/KeyEvent;
+Landroid/view/MotionEvent;
+Landroid/view/PointerIcon;
+Landroid/view/RoundedCorners;
+Landroid/view/SurfaceControl;
+Landroid/view/View;
+Landroid/view/ViewGroup$TouchTarget;
+Landroid/view/ViewRootImpl;
+Landroid/view/ViewTreeObserver;
+Landroid/view/WindowManagerGlobal;
+Landroid/view/accessibility/AccessibilityManager;
+Landroid/view/accessibility/AccessibilityNodeIdManager;
+Landroid/view/autofill/Helper;
+Landroid/view/inputmethod/IInputMethodManagerGlobalInvoker;
+Landroid/view/inputmethod/InputMethodManager;
+Landroid/webkit/CookieSyncManager;
+Landroid/webkit/WebView;
+Landroid/webkit/WebViewFactory;
+Landroid/webkit/WebViewZygote;
+Landroid/widget/AbsListView;
+Landroid/widget/ImageView;
+Landroid/widget/LinearLayout;
+Landroid/widget/Toast;
+Landroid/window/SurfaceSyncGroup;
+Lcom/android/i18n/timezone/TelephonyLookup;
+Lcom/android/i18n/timezone/TimeZoneFinder;
+Lcom/android/internal/config/appcloning/AppCloningDeviceConfigHelper;
+Lcom/android/internal/content/om/OverlayConfig;
+Lcom/android/internal/display/BrightnessSynchronizer;
+Lcom/android/internal/infra/AndroidFuture;
+Lcom/android/internal/inputmethod/ImeTracing;
+Lcom/android/internal/inputmethod/InputMethodPrivilegedOperationsRegistry;
+Lcom/android/internal/jank/InteractionJankMonitor$InstanceHolder;
+Lcom/android/internal/jank/InteractionJankMonitor;
+Lcom/android/internal/logging/MetricsLogger;
+Lcom/android/internal/os/BackgroundThread;
+Lcom/android/internal/os/BinderInternal;
+Lcom/android/internal/os/KernelCpuBpfTracking;
+Lcom/android/internal/os/RuntimeInit;
+Lcom/android/internal/os/SomeArgs;
+Lcom/android/internal/os/ZygoteInit;
+Lcom/android/internal/policy/AttributeCache;
+Lcom/android/internal/protolog/BaseProtoLogImpl;
+Lcom/android/internal/protolog/ProtoLogImpl;
+Lcom/android/internal/statusbar/NotificationVisibility;
+Lcom/android/internal/telephony/CellBroadcastServiceManager;
+Lcom/android/internal/telephony/IntentBroadcaster;
+Lcom/android/internal/telephony/MccTable;
+Lcom/android/internal/telephony/MultiSimSettingController;
+Lcom/android/internal/telephony/PackageChangeReceiver;
+Lcom/android/internal/telephony/PhoneConfigurationManager;
+Lcom/android/internal/telephony/PhoneFactory;
+Lcom/android/internal/telephony/ProxyController;
+Lcom/android/internal/telephony/RILRequest;
+Lcom/android/internal/telephony/RadioConfig;
+Lcom/android/internal/telephony/RadioInterfaceCapabilityController;
+Lcom/android/internal/telephony/SmsApplication;
+Lcom/android/internal/telephony/SmsBroadcastUndelivered;
+Lcom/android/internal/telephony/SomeArgs;
+Lcom/android/internal/telephony/TelephonyComponentFactory;
+Lcom/android/internal/telephony/TelephonyDevController;
+Lcom/android/internal/telephony/cat/CatService;
+Lcom/android/internal/telephony/cdma/CdmaInboundSmsHandler;
+Lcom/android/internal/telephony/cdma/CdmaSubscriptionSourceManager;
+Lcom/android/internal/telephony/euicc/EuiccCardController;
+Lcom/android/internal/telephony/euicc/EuiccController;
+Lcom/android/internal/telephony/ims/ImsResolver;
+Lcom/android/internal/telephony/metrics/TelephonyMetrics;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$CarrierIdMismatch;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$CellularDataServiceSwitch;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$CellularServiceState;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$DataCallSession;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$EmergencyNumbersInfo;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$GbaEvent;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$ImsDedicatedBearerEvent;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$ImsDedicatedBearerListenerEvent;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$ImsRegistrationFeatureTagStats;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$ImsRegistrationServiceDescStats;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$ImsRegistrationStats;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$ImsRegistrationTermination;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$IncomingSms;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$NetworkRequests;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$NetworkRequestsV2;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$OutgoingShortCodeSms;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$OutgoingSms;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$PresenceNotifyEvent;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$RcsAcsProvisioningStats;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$RcsClientProvisioningStats;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SatelliteController;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SatelliteIncomingDatagram;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SatelliteOutgoingDatagram;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SatelliteProvision;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SatelliteSession;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SatelliteSosMessageRecommender;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SipDelegateStats;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SipMessageResponse;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SipTransportFeatureTagStats;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$SipTransportSession;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$UceEventStats;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$UnmeteredNetworks;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$VoiceCallRatUsage;
+Lcom/android/internal/telephony/nano/PersistAtomsProto$VoiceCallSession;
+Lcom/android/internal/telephony/nano/TelephonyProto$RilDataCall;
+Lcom/android/internal/telephony/nano/TelephonyProto$TelephonyCallSession$Event$RilCall;
+Lcom/android/internal/telephony/nano/TelephonyProto$TelephonyServiceState$NetworkRegistrationInfo;
+Lcom/android/internal/telephony/satellite/PointingAppController;
+Lcom/android/internal/telephony/satellite/SatelliteModemInterface;
+Lcom/android/internal/telephony/uicc/UiccController;
+Lcom/android/internal/telephony/uicc/UiccStateChangedLauncher;
+Lcom/android/internal/util/ContrastColorUtil;
+Lcom/android/internal/view/WindowManagerPolicyThread;
+Lcom/android/org/bouncycastle/crypto/CryptoServicesRegistrar;
+Lcom/android/phone/ecc/nano/ProtobufEccData$CountryInfo;
+Lcom/android/phone/ecc/nano/ProtobufEccData$EccInfo;
+Lcom/android/server/AppWidgetBackupBridge;
+Ldalvik/system/BaseDexClassLoader;
+Ldalvik/system/BlockGuard;
+Ldalvik/system/CloseGuard;
+Ldalvik/system/RuntimeHooks;
+Ldalvik/system/SocketTagger;
+Ldalvik/system/VMRuntime;
+Ldalvik/system/ZipPathValidator;
+Ldalvik/system/ZygoteHooks;
+Ljava/lang/System;
+Ljava/lang/Thread;
+Ljava/lang/Throwable;
+Ljava/lang/ref/FinalizerReference;
+Ljava/lang/ref/ReferenceQueue;
+Ljava/net/ResponseCache;
+Ljava/nio/Bits;
+Ljava/nio/charset/Charset;
+Ljava/security/Provider;
+Ljava/util/Collections;
+Ljava/util/GregorianCalendar;
+Ljava/util/Locale$NoImagePreloadHolder;
+Ljava/util/Locale;
+Ljava/util/Scanner;
+Ljava/util/TimeZone;
+Ljava/util/concurrent/ForkJoinPool;
+Ljava/util/concurrent/ThreadLocalRandom;
+Ljavax/net/ServerSocketFactory;
+Ljavax/net/SocketFactory;
+Ljavax/net/ssl/HttpsURLConnection$NoPreloadHolder;
+Ljavax/net/ssl/HttpsURLConnection;
+Ljavax/net/ssl/SSLContext;
+Ljavax/net/ssl/SSLServerSocketFactory;
+Ljavax/net/ssl/SSLSocketFactory;
+Llibcore/io/Libcore;
+Llibcore/net/NetworkSecurityPolicy;
+Lsun/misc/Cleaner;
+Lsun/nio/ch/FileChannelImpl$Unmapper;
+Lsun/nio/ch/FileChannelImpl;
+Lsun/security/jca/Providers;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              w   .   X   ..  x  Üdefault_television.xml                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Þ·˜Ç<displayConfiguration>
+    <densityMapping>
+         <density>
+            <height>480</height>
+            <width>720</width>
+            <density>120</density>
+         </density>
+         <density>
+            <height>720</height>
+            <width>1280</width>
+            <density>213</density>
+         </density>
+         <density>
+            <height>1080</height>
+            <width>1920</width>
+            <density>320</density>
+         </density>
+         <density>
+            <height>2160</height>
+            <width>3840</width>
+            <density>640</density>
+         </density>
+    </densityMapping>
+</displayConfiguration>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         42 answer (to life the universe etc|3)
+314 pi
+1003 auditd (avc|3)
+1004 chatty (dropped|3)
+1005 tag_def (tag|1),(name|3),(format|3)
+1006 liblog (dropped|1)
+2718 e
+2719 configuration_changed (config mask|1|5)
+2720 sync (id|3),(event|1|5),(source|1|5),(account|1|5)
+2721 cpu (total|1|6),(user|1|6),(system|1|6),(iowait|1|6),(irq|1|6),(softirq|1|6)
+2722 battery_level (level|1|6),(voltage|1|1),(temperature|1|1)
+2723 battery_status (status|1|5),(health|1|5),(present|1|5),(plugged|1|5),(technology|3)
+2724 power_sleep_requested (wakeLocksCleared|1|1)
+2725 power_screen_broadcast_send (wakelockCount|1|1)
+2726 power_screen_broadcast_done (on|1|5),(broadcastDuration|2|3),(wakelockCount|1|1)
+2727 power_screen_broadcast_stop (which|1|5),(wakelockCount|1|1)
+2728 power_screen_state (offOrOn|1|5),(becauseOfUser|1|5),(totalTouchDownTime|2|3),(touchCycles|1|1),(latency|1|3)
+2729 power_partial_wake_state (releasedorAcquired|1|5),(tag|3)
+2730 battery_discharge (duration|2|3),(minLevel|1|6),(maxLevel|1|6)
+2731 power_soft_sleep_requested (savedwaketimems|2)
+2732 storaged_disk_stats (type|3),(start_time|2|3),(end_time|2|3),(read_ios|2|1),(read_merges|2|1),(read_sectors|2|1),(read_ticks|2|3),(write_ios|2|1),(write_merges|2|1),(write_sectors|2|1),(write_ticks|2|3),(o_in_flight|2|1),(io_ticks|2|3),(io_in_queue|2|1)
+2733 storaged_emmc_info (mmc_ver|3),(eol|1),(lifetime_a|1),(lifetime_b|1)
+2737 thermal_changed (name|3),(type|1|5),(temperature|5),(sensor_status|1|5),(previous_system_status|1|5)
+2739 battery_saver_mode (fullPrevOffOrOn|1|5),(adaptivePrevOffOrOn|1|5),(fullNowOffOrOn|1|5),(adaptiveNowOffOrOn|1|5),(interactive|1|5),(features|3|5),(reason|1|5)
+2740 location_controller
+2741 force_gc (reason|3)
+2742 tickle (authority|3)
+2747 contacts_aggregation (aggregation time|2|3), (count|1|1)
+2748 cache_file_deleted (path|3)
+2749 storage_state (uuid|3),(old_state|1),(new_state|1),(usable|2),(total|2)
+2750 notification_enqueue (uid|1|5),(pid|1|5),(pkg|3),(id|1|5),(tag|3),(userid|1|5),(notification|3),(status|1)
+2751 notification_cancel (uid|1|5),(pid|1|5),(pkg|3),(id|1|5),(tag|3),(userid|1|5),(required_flags|1),(forbidden_flags|1),(reason|1|5),(listener|3)
+2752 notification_cancel_all (uid|1|5),(pid|1|5),(pkg|3),(userid|1|5),(required_flags|1),(forbidden_flags|1),(reason|1|5),(listener|3)
+2755 fstrim_start (time|2|3)
+2756 fstrim_finish (time|2|3)
+2802 watchdog (Service|3)
+2803 watchdog_proc_pss (Process|3),(Pid|1|5),(Pss|1|2)
+2804 watchdog_soft_reset (Process|3),(Pid|1|5),(MaxPss|1|2),(Pss|1|2),(Skip|3)
+2805 watchdog_hard_reset (Process|3),(Pid|1|5),(MaxPss|1|2),(Pss|1|2)
+2806 watchdog_pss_stats (EmptyPss|1|2),(EmptyCount|1|1),(BackgroundPss|1|2),(BackgroundCount|1|1),(ServicePss|1|2),(ServiceCount|1|1),(VisiblePss|1|2),(VisibleCount|1|1),(ForegroundPss|1|2),(ForegroundCount|1|1),(NoPssCount|1|1)
+2807 watchdog_proc_stats (DeathsInOne|1|1),(DeathsInTwo|1|1),(DeathsInThree|1|1),(DeathsInFour|1|1),(DeathsInFive|1|1)
+2808 watchdog_scheduled_reboot (Now|2|1),(Interval|1|3),(StartTime|1|3),(Window|1|3),(Skip|3)
+2809 watchdog_meminfo (MemFree|1|2),(Buffers|1|2),(Cached|1|2),(Active|1|2),(Inactive|1|2),(AnonPages|1|2),(Mapped|1|2),(Slab|1|2),(SReclaimable|1|2),(SUnreclaim|1|2),(PageTables|1|2)
+2810 watchdog_vmstat (runtime|2|3),(pgfree|1|1),(pgactivate|1|1),(pgdeactivate|1|1),(pgfault|1|1),(pgmajfault|1|1)
+2811 watchdog_requested_reboot (NoWait|1|1),(ScheduleInterval|1|3),(RecheckInterval|1|3),(StartTime|1|3),(Window|1|3),(MinScreenOff|1|3),(MinNextAlarm|1|3)
+2820 backup_data_changed (Package|3)
+2821 backup_start (Transport|3)
+2822 backup_transport_failure (Package|3)
+2823 backup_agent_failure (Package|3),(Message|3)
+2824 backup_package (Package|3),(Size|1|2)
+2825 backup_success (Packages|1|1),(Time|1|3)
+2826 backup_reset (Transport|3)
+2827 backup_initialize
+2828 backup_requested (Total|1|1),(Key-Value|1|1),(Full|1|1)
+2829 backup_quota_exceeded (Package|3)
+2830 restore_start (Transport|3),(Source|2|5)
+2831 restore_transport_failure
+2832 restore_agent_failure (Package|3),(Message|3)
+2833 restore_package (Package|3),(Size|1|2)
+2834 restore_success (Packages|1|1),(Time|1|3)
+2840 full_backup_package (Package|3)
+2841 full_backup_agent_failure (Package|3),(Message|3)
+2842 full_backup_transport_failure
+2843 full_backup_success (Package|3)
+2844 full_restore_package (Package|3)
+2845 full_backup_quota_exceeded (Package|3)
+2846 full_backup_cancelled (Package|3),(Message|3)
+2850 backup_transport_lifecycle (Transport|3),(Bound|1|1)
+2851 backup_transport_connection (Transport|3),(Connected|1|1)
+2900 rescue_note (uid|1),(count|1),(window|2)
+2901 rescue_level (level|1),(trigger_uid|1)
+2902 rescue_success (level|1)
+2903 rescue_failure (level|1),(msg|3)
+3000 boot_progress_start (time|2|3)
+3010 boot_progress_system_run (time|2|3)
+3011 system_server_start (start_count|1),(uptime|2|3),(elapse_time|2|3)
+3020 boot_progress_preload_start (time|2|3)
+3030 boot_progress_preload_end (time|2|3)
+3040 boot_progress_ams_ready (time|2|3)
+3050 boot_progress_enable_screen (time|2|3)
+3060 boot_progress_pms_start (time|2|3)
+3070 boot_progress_pms_system_scan_start (time|2|3)
+3080 boot_progress_pms_data_scan_start (time|2|3)
+3090 boot_progress_pms_scan_end (time|2|3)
+3100 boot_progress_pms_ready (time|2|3)
+3110 unknown_sources_enabled (value|1)
+3120 pm_critical_info (msg|3)
+3121 pm_package_stats (manual_time|2|3),(quota_time|2|3),(manual_data|2|2),(quota_data|2|2),(manual_cache|2|2),(quota_cache|2|2)
+3130 pm_snapshot_stats (build_count|1|1),(reuse_count|1|1),(big_builds|1|1),(short_lived|1|1),(max_build_time|1|3),(cumm_build_time|2|3)
+3131 pm_snapshot_rebuild (build_time|1|3),(lifetime|1|3)
+8000 job_deferred_execution (time|2|3)
+20003 dvm_lock_sample (process|3),(main|1|5),(thread|3),(time|1|3),(file|3),(line|1|5),(ownerfile|3),(ownerline|1|5),(sample_percent|1|6)
+20004 art_hidden_api_access (access_method|1),(flags|1),(class|3),(member|3),(type_signature|3)
+27390 battery_saving_stats (batterySaver|1|5),(interactive|1|5),(doze|1|5),(delta_duration|2|3),(delta_battery_drain|1|1),(delta_battery_drain_percent|1|6),(total_duration|2|3),(total_battery_drain|1|1),(total_battery_drain_percent|1|6)
+27391 user_activity_timeout_override (override|2|3)
+27392 battery_saver_setting (threshold|1)
+27500 notification_panel_revealed (items|1)
+27501 notification_panel_hidden
+27510 notification_visibility_changed (newlyVisibleKeys|3),(noLongerVisibleKeys|3)
+27511 notification_expansion (key|3),(user_action|1),(expanded|1),(lifespan|1),(freshness|1),(exposure|1)
+27520 notification_clicked (key|3),(lifespan|1),(freshness|1),(exposure|1),(rank|1),(count|1)
+27521 notification_action_clicked (key|3),(action_index|1),(lifespan|1),(freshness|1),(exposure|1),(rank|1),(count|1)
+27530 notification_canceled (key|3),(reason|1),(lifespan|1),(freshness|1),(exposure|1),(rank|1),(count|1),(listener|3)
+27531 notification_visibility (key|3),(visibile|1),(lifespan|1),(freshness|1),(exposure|1),(rank|1)
+27532 notification_alert (key|3),(buzz|1),(beep|1),(blink|1)
+27533 notification_autogrouped (key|3)
+27535 notification_adjusted (key|3),(adjustment_type|3),(new_value|3)
+30001 wm_finish_activity (User|1|5),(Token|1|5),(Task ID|1|5),(Component Name|3),(Reason|3)
+30002 wm_task_to_front (User|1|5),(Task|1|5),(Display Id|1|5)
+30003 wm_new_intent (User|1|5),(Token|1|5),(Task ID|1|5),(Component Name|3),(Action|3),(MIME Type|3),(URI|3),(Flags|1|5)
+30004 wm_create_task (User|1|5),(Task ID|1|5),(Root Task ID|1|5),(Display Id|1|5)
+30005 wm_create_activity (User|1|5),(Token|1|5),(Task ID|1|5),(Component Name|3),(Action|3),(MIME Type|3),(URI|3),(Flags|1|5)
+30006 wm_restart_activity (User|1|5),(Token|1|5),(Task ID|1|5),(Component Name|3)
+30007 wm_resume_activity (User|1|5),(Token|1|5),(Task ID|1|5),(Component Name|3)
+30008 am_anr (User|1|5),(pid|1|5),(Package Name|3),(Flags|1|5),(reason|3)
+30009 wm_activity_launch_time (User|1|5),(Token|1|5),(Component Name|3),(time|2|3)
+30010 am_proc_bound (User|1|5),(PID|1|5),(Process Name|3)
+30011 am_proc_died (User|1|5),(PID|1|5),(Process Name|3),(OomAdj|1|5),(ProcState|1|5)
+30012 wm_failed_to_pause (User|1|5),(Token|1|5),(Wanting to pause|3),(Currently pausing|3)
+30013 wm_pause_activity (User|1|5),(Token|1|5),(Component Name|3),(User Leaving|3),(Reason|3)
+30014 am_proc_start (User|1|5),(PID|1|5),(UID|1|5),(Process Name|3),(Type|3),(Component|3)
+30015 am_proc_bad (User|1|5),(UID|1|5),(Process Name|3)
+30016 am_proc_good (User|1|5),(UID|1|5),(Process Name|3)
+30017 am_low_memory (Num Processes|1|1)
+30018 wm_destroy_activity (User|1|5),(Token|1|5),(Task ID|1|5),(Component Name|3),(Reason|3)
+30019 wm_relaunch_resume_activity (User|1|5),(Token|1|5),(Task ID|1|5),(Component Name|3),(config mask|3)
+30020 wm_relaunch_activity (User|1|5),(Token|1|5),(Task ID|1|5),(Component Name|3),(config mask|3)
+30021 wm_on_paused_called (Token|1|5),(Component Name|3),(Reason|3),(time|2|3)
+30022 wm_on_resume_called (Token|1|5),(Component Name|3),(Reason|3),(time|2|3)
+30023 am_kill (User|1|5),(PID|1|5),(Process Name|3),(OomAdj|1|5),(Reason|3)
+30024 am_broadcast_discard_filter (User|1|5),(Broadcast|1|5),(Action|3),(Receiver Number|1|1),(BroadcastFilter|1|5)
+30025 am_broadcast_discard_app (User|1|5),(Broadcast|1|5),(Action|3),(Receiver Number|1|1),(App|3)
+30030 am_create_service (User|1|5),(Service Record|1|5),(Name|3),(UID|1|5),(PID|1|5)
+30031 am_destroy_service (User|1|5),(Service Record|1|5),(PID|1|5)
+30032 am_process_crashed_too_much (User|1|5),(Name|3),(PID|1|5)
+30033 am_drop_process (PID|1|5)
+30034 am_service_crashed_too_much (User|1|5),(Crash Count|1|1),(Component Name|3),(PID|1|5)
+30035 am_schedule_service_restart (User|1|5),(Component Name|3),(Time|2|3)
+30036 am_provider_lost_process (User|1|5),(Package Name|3),(UID|1|5),(Name|3)
+30037 am_process_start_timeout (User|1|5),(PID|1|5),(UID|1|5),(Process Name|3)
+30039 am_crash (User|1|5),(PID|1|5),(Process Name|3),(Flags|1|5),(Exception|3),(Message|3),(File|3),(Line|1|5),(Recoverable|1|5)
+30040 am_wtf (User|1|5),(PID|1|5),(Process Name|3),(Flags|1|5),(Tag|3),(Message|3)
+30041 am_switch_user (id|1|5)
+30043 wm_set_resumed_activity (User|1|5),(Component Name|3),(Reason|3)
+30044 wm_focused_root_task (User|1|5),(Display Id|1|5),(Focused Root Task Id|1|5),(Last Focused Root Task Id|1|5),(Reason|3)
+30045 am_pre_boot (User|1|5),(Package|3)
+30046 am_meminfo (Cached|2|2),(Free|2|2),(Zram|2|2),(Kernel|2|2),(Native|2|2)
+30047 am_pss (Pid|1|5),(UID|1|5),(Process Name|3),(Pss|2|2),(Uss|2|2),(SwapPss|2|2),(Rss|2|2),(StatType|1|5),(ProcState|1|5),(TimeToCollect|2|2)
+30048 wm_stop_activity (User|1|5),(Token|1|5),(Component Name|3)
+30049 wm_on_stop_called (Token|1|5),(Component Name|3),(Reason|3),(time|2|3)
+30050 am_mem_factor (Current|1|5),(Previous|1|5)
+30051 am_user_state_changed (id|1|5),(state|1|5)
+30052 am_uid_running (UID|1|5)
+30053 am_uid_stopped (UID|1|5)
+30054 am_uid_active (UID|1|5)
+30055 am_uid_idle (UID|1|5)
+30056 am_stop_idle_service (UID|1|5),(Component Name|3)
+30057 wm_on_create_called (Token|1|5),(Component Name|3),(Reason|3),(time|2|3)
+30058 wm_on_restart_called (Token|1|5),(Component Name|3),(Reason|3),(time|2|3)
+30059 wm_on_start_called (Token|1|5),(Component Name|3),(Reason|3),(time|2|3)
+30060 wm_on_destroy_called (Token|1|5),(Component Name|3),(Reason|3),(time|2|3)
+30062 wm_on_activity_result_called (Token|1|5),(Component Name|3),(Reason|3)
+30063 am_compact (Pid|1|5),(Process Name|3),(Action|3),(BeforeRssTotal|2|2),(BeforeRssFile|2|2),(BeforeRssAnon|2|2),(BeforeRssSwap|2|2),(DeltaRssTotal|2|2),(DeltaRssFile|2|2),(DeltaRssAnon|2|2),(DeltaRssSwap|2|2),(Time|2|3),(LastAction|1|2),(LastActionTimestamp|2|3),(setAdj|1|2),(procState|1|2),(BeforeZRAMFree|2|2),(DeltaZRAMFree|2|2)
+30064 wm_on_top_resumed_gained_called (Token|1|5),(Component Name|3),(Reason|3)
+30065 wm_on_top_resumed_lost_called (Token|1|5),(Component Name|3),(Reason|3)
+30066 wm_add_to_stopping (User|1|5),(Token|1|5),(Component Name|3),(Reason|3)
+30067 wm_set_keyguard_shown (Display Id|1|5),(keyguardShowing|1),(aodShowing|1),(keyguardGoingAway|1),(occluded|1),(Reason|3)
+30068 am_freeze (Pid|1|5),(Process Name|3)
+30069 am_unfreeze (Pid|1|5),(Process Name|3)
+30070 uc_finish_user_unlocking (userId|1|5)
+30071 uc_finish_user_unlocked (userId|1|5)
+30072 uc_finish_user_unlocked_completed (userId|1|5)
+30073 uc_finish_user_stopping (userId|1|5)
+30074 uc_finish_user_stopped (userId|1|5)
+30075 uc_switch_user (userId|1|5)
+30076 uc_start_user_internal (userId|1|5),(foreground|1),(displayId|1|5)
+30077 uc_unlock_user (userId|1|5)
+30078 uc_finish_user_boot (userId|1|5)
+30079 uc_dispatch_user_switch (oldUserId|1|5),(newUserId|1|5)
+30080 uc_continue_user_switch (oldUserId|1|5),(newUserId|1|5)
+30081 uc_send_user_broadcast (userId|1|5),(IntentAction|3)
+30082 ssm_user_starting (userId|1|5)
+30083 ssm_user_switching (oldUserId|1|5),(newUserId|1|5)
+30084 ssm_user_unlocking (userId|1|5)
+30085 ssm_user_unlocked (userId|1|5)
+30086 ssm_user_stopping (userId|1|5)
+30087 ssm_user_stopped (userId|1|5)
+30088 ssm_user_completed_event (userId|1|5),(eventFlag|1|5)
+30091 um_user_visibility_changed (userId|1|5),(visible|1)
+30100 am_foreground_service_start (User|1|5),(Component Name|3),(allowWhileInUse|1),(startReasonCode|3),(targetSdk|1|1),(callerTargetSdk|1|1),(notificationWasDeferred|1),(notificationShown|1),(durationMs|1|3),(startForegroundCount|1|1),(stopReason|3),(fgsType|1)
+30101 am_foreground_service_denied (User|1|5),(Component Name|3),(allowWhileInUse|1),(startReasonCode|3),(targetSdk|1|1),(callerTargetSdk|1|1),(notificationWasDeferred|1),(notificationShown|1),(durationMs|1|3),(startForegroundCount|1|1),(stopReason|3),(fgsType|1)
+30102 am_foreground_service_stop (User|1|5),(Component Name|3),(allowWhileInUse|1),(startReasonCode|3),(targetSdk|1|1),(callerTargetSdk|1|1),(notificationWasDeferred|1),(notificationShown|1),(durationMs|1|3),(startForegroundCount|1|1),(stopReason|3),(fgsType|1)
+30103 am_foreground_service_timed_out (User|1|5),(Component Name|3),(allowWhileInUse|1),(startReasonCode|3),(targetSdk|1|1),(callerTargetSdk|1|1),(notificationWasDeferred|1),(notificationShown|1),(durationMs|1|3),(startForegroundCount|1|1),(stopReason|3),(fgsType|1)
+30110 am_intent_sender_redirect_user (userId|1|5)
+31000 wm_no_surface_memory (Window|3),(PID|1|5),(Operation|3)
+31001 wm_task_created (TaskId|1|5)
+31002 wm_task_moved (TaskId|1|5),(Root Task ID|1|5),(Display Id|1|5),(ToTop|1),(Index|1)
+31003 wm_task_removed (TaskId|1|5),(Root Task ID|1|5),(Display Id|1|5),(Reason|3)
+31006 wm_set_requested_orientation (Orientation|1|5),(Component Name|3)
+31007 wm_boot_animation_done (time|2|3)
+31008 wm_set_keyguard_occluded (occluded|1),(animate|1),(transit|1),(Channel|3)
+31100 wm_back_navi_canceled (Reason|3)
+32000 imf_force_reconnect_ime (IME|4),(Time Since Connect|2|3),(Showing|1|1)
+32001 imf_show_ime (token|3),(window|3),(reason|3),(softInputMode|3)
+32002 imf_hide_ime (token|3),(window|3),(reason|3),(softInputMode|3)
+32003 imf_update_ime_parent (surface name|3)
+32004 imf_show_ime_screenshot (target window|3),(transition|1),(surface position|3)
+32005 imf_remove_ime_screenshot (target window|3)
+32006 imf_ime_anim_start (token|3),(animation type|1),(alpha|5),(current insets|3),(shown insets|3),(hidden insets|3)
+32007 imf_ime_anim_finish (token|3),(animation type|1),(alpha|5),(shown|1),(insets|3)
+32008 imf_ime_anim_cancel (token|3),(animation type|1),(pending insets|3)
+32009 imf_ime_remote_anim_start (token|3),(displayId|1),(direction|1),(alpha|5),(startY|5),(endY|5),(leash|3),(insets|3),(surface position|3),(ime frame|3)
+32010 imf_ime_remote_anim_end (token|3),(displayId|1),(direction|1),(endY|5),(leash|3),(insets|3),(surface position|3),(ime frame|3)
+32011 imf_ime_remote_anim_cancel (token|3),(displayId|1),(insets|3)
+33000 wp_wallpaper_crashed (component|3)
+33001 wm_wallpaper_surface (Display Id|1|5),(Visible|1),(Target|3)
+34000 device_idle (state|1|5), (reason|3)
+34001 device_idle_step
+34002 device_idle_wake_from_idle (is_idle|1|5), (reason|3)
+34003 device_idle_on_start
+34004 device_idle_on_phase (what|3)
+34005 device_idle_on_complete
+34006 device_idle_off_start (reason|3)
+34007 device_idle_off_phase (what|3)
+34008 device_idle_off_complete
+34009 device_idle_light (state|1|5), (reason|3)
+34010 device_idle_light_step
+35000 auto_brightness_adj (old_lux|5),(old_brightness|5),(new_lux|5),(new_brightness|5)
+36000 sysui_statusbar_touch (type|1),(x|1),(y|1),(disable1|1),(disable2|1)
+36001 sysui_heads_up_status (key|3),(visible|1)
+3

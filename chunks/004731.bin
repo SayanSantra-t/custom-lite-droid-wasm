@@ -1,0 +1,935 @@
+d open)))
+(allow servicemanager mediatuner (process (getattr)))
+(allow mediatuner appdomain (binder (call transfer)))
+(allow appdomain mediatuner (binder (transfer)))
+(allow mediatuner appdomain (fd (use)))
+(allow mediatuner mediatuner_service (service_manager (add find)))
+;;* lmx 14 system/sepolicy/private/mediatuner.te
+
+(neverallow base_typeattr_807 mediatuner_service (service_manager (add)))
+;;* lme
+
+(allow mediatuner su (tcp_socket (read write accept getopt)))
+(allow mediatuner system_server (fd (use)))
+(allow mediatuner tv_tuner_resource_mgr_service (service_manager (find)))
+(allow mediatuner package_native_service (service_manager (find)))
+(allow mediatuner system_server (binder (call transfer)))
+(allow system_server mediatuner (binder (transfer)))
+(allow mediatuner system_server (fd (use)))
+(allow mediatuner tuner_config_prop (file (read getattr map open)))
+;;* lmx 29 system/sepolicy/private/mediatuner.te
+
+(neverallow mediatuner fs_type (file (execute_no_trans)))
+(neverallow mediatuner file_type (file (execute_no_trans)))
+;;* lme
+
+;;* lmx 32 system/sepolicy/private/mediatuner.te
+
+(neverallowx mediatuner domain (ioctl tcp_socket (0x6900 0x6902)))
+(neverallowx mediatuner domain (ioctl udp_socket (0x6900 0x6902)))
+(neverallowx mediatuner domain (ioctl rawip_socket (0x6900 0x6902)))
+;;* lme
+
+;;* lmx 32 system/sepolicy/private/mediatuner.te
+
+(neverallowx mediatuner domain (ioctl tcp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediatuner domain (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(neverallowx mediatuner domain (ioctl rawip_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+;;* lme
+
+;;* lmx 32 system/sepolicy/private/mediatuner.te
+
+(neverallowx mediatuner domain (ioctl tcp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediatuner domain (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(neverallowx mediatuner domain (ioctl rawip_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+;;* lme
+
+(allow migrate_legacy_obb_data media_rw_data_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow migrate_legacy_obb_data media_rw_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow migrate_legacy_obb_data shell_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow migrate_legacy_obb_data toolbox_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow migrate_legacy_obb_data self (capability (chown dac_override dac_read_search fowner fsetid)))
+(allow migrate_legacy_obb_data mnt_user_file (dir (search)))
+(allow migrate_legacy_obb_data mnt_user_file (lnk_file (read)))
+(allow migrate_legacy_obb_data storage_file (dir (search)))
+(allow migrate_legacy_obb_data storage_file (lnk_file (read)))
+(allow migrate_legacy_obb_data sdcard_type (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow migrate_legacy_obb_data sdcard_type (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow migrate_legacy_obb_data installd (fd (use)))
+(allow migrate_legacy_obb_data installd (file (read)))
+;;* lmx 12 system/sepolicy/private/mlstrustedsubject.te
+
+(neverallow base_typeattr_808 app_data_file (file (create setattr relabelfrom relabelto unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+(neverallow base_typeattr_808 privapp_data_file (file (create setattr relabelfrom relabelto unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 18 system/sepolicy/private/mlstrustedsubject.te
+
+(neverallow base_typeattr_808 app_data_file (dir (ioctl write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+(neverallow base_typeattr_808 privapp_data_file (dir (ioctl write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+;;* lme
+
+;;* lmx 28 system/sepolicy/private/mlstrustedsubject.te
+
+(neverallow base_typeattr_809 app_data_file (dir (read getattr search)))
+(neverallow base_typeattr_809 privapp_data_file (dir (read getattr search)))
+;;* lme
+
+(allow init mm_events_exec (file (read getattr map execute open)))
+(allow init mm_events (process (transition)))
+(allow mm_events mm_events_exec (file (read getattr map execute open entrypoint)))
+(dontaudit init mm_events (process (noatsecure)))
+(allow init mm_events (process (siginh rlimitinh)))
+(typetransition init mm_events_exec process mm_events)
+(allow mm_events shell_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow mm_events toolbox_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow mm_events perfetto_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow mm_events perfetto_exec (file (read getattr map execute open)))
+(allow mm_events perfetto (process (transition)))
+(allow perfetto perfetto_exec (file (read getattr map execute open entrypoint)))
+(allow perfetto mm_events (process (sigchld)))
+(dontaudit mm_events perfetto (process (noatsecure)))
+(allow mm_events perfetto (process (siginh rlimitinh)))
+(typetransition mm_events perfetto_exec process perfetto)
+(allow init mtectrl_exec (file (read getattr map execute open)))
+(allow init mtectrl (process (transition)))
+(allow mtectrl mtectrl_exec (file (read getattr map execute open entrypoint)))
+(dontaudit init mtectrl (process (noatsecure)))
+(allow init mtectrl (process (siginh rlimitinh)))
+(typetransition init mtectrl_exec process mtectrl)
+(allow mtectrl property_socket (sock_file (write)))
+(allow mtectrl init (unix_stream_socket (connectto)))
+(allow mtectrl arm64_memtag_prop (property_service (set)))
+(allow mtectrl arm64_memtag_prop (file (read getattr map open)))
+(allow mtectrl misc_block_device (blk_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow mtectrl block_device (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow mtectrl gsi_metadata_file_type (dir (search)))
+(allow mtectrl metadata_file (dir (search)))
+(allow mtectrl gsi_public_metadata_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow mtectrl proc_bootconfig (file (ioctl read getattr lock map open watch watch_reads)))
+(allow mtectrl proc_cmdline (file (ioctl read getattr lock map open watch watch_reads)))
+(dontaudit mtectrl sysfs_dt_firmware_android (dir (search)))
+(dontaudit mtectrl vendor_property_type (file (read)))
+(allow init mtp_exec (file (read getattr map execute open)))
+(allow init mtp (process (transition)))
+(allow mtp mtp_exec (file (read getattr map execute open entrypoint)))
+(dontaudit init mtp (process (noatsecure)))
+(allow init mtp (process (siginh rlimitinh)))
+(typetransition init mtp_exec process mtp)
+(allow base_typeattr_810 node_type (tcp_socket (node_bind)))
+(allow base_typeattr_810 node_type (udp_socket (node_bind)))
+(allow base_typeattr_810 node_type (rawip_socket (node_bind)))
+(allow base_typeattr_810 node_type (icmp_socket (node_bind)))
+(allow base_typeattr_810 port_type (udp_socket (name_bind)))
+(allow base_typeattr_810 port_type (tcp_socket (name_bind)))
+(allow base_typeattr_811 self (netlink_route_socket (bind nlmsg_readpriv nlmsg_getneigh)))
+(allow init netd_exec (file (read getattr map execute open)))
+(allow init netd (process (transition)))
+(allow netd netd_exec (file (read getattr map execute open entrypoint)))
+(dontaudit init netd (process (noatsecure)))
+(allow init netd (process (siginh rlimitinh)))
+(typetransition init netd_exec process netd)
+(allow netd dnsmasq_exec (file (read getattr map execute open)))
+(allow netd dnsmasq (process (transition)))
+(allow dnsmasq dnsmasq_exec (file (read getattr map execute open entrypoint)))
+(allow dnsmasq netd (process (sigchld)))
+(dontaudit netd dnsmasq (process (noatsecure)))
+(allow netd dnsmasq (process (siginh rlimitinh)))
+(typetransition netd dnsmasq_exec process dnsmasq)
+(allow netd fs_bpf (dir (search)))
+(allow netd fs_bpf_netd_readonly (dir (search)))
+(allow netd fs_bpf_netd_shared (dir (search)))
+(allow netd fs_bpf (file (read getattr)))
+(allow netd fs_bpf_netd_readonly (file (read getattr)))
+(allow netd fs_bpf_netd_shared (file (read getattr)))
+(allow netd fs_bpf (file (write)))
+(allow netd fs_bpf_netd_shared (file (write)))
+(allow netd bpfloader (bpf (map_read map_write prog_run)))
+(allow netd self (key_socket (create)))
+(allow netd property_socket (sock_file (write)))
+(allow netd init (unix_stream_socket (connectto)))
+(allow netd ctl_mdnsd_prop (property_service (set)))
+(allow netd ctl_mdnsd_prop (file (read getattr map open)))
+(allow netd property_socket (sock_file (write)))
+(allow netd init (unix_stream_socket (connectto)))
+(allow netd netd_stable_secret_prop (property_service (set)))
+(allow netd netd_stable_secret_prop (file (read getattr map open)))
+(allow netd adbd_config_prop (file (read getattr map open)))
+(allow netd hwservicemanager_prop (file (read getattr map open)))
+(allow netd device_config_netd_native_prop (file (read getattr map open)))
+(allow netd statsdw_socket (sock_file (write)))
+(allow netd statsd (unix_dgram_socket (sendto)))
+(allow netd network_stack (binder (call transfer)))
+(allow network_stack netd (binder (transfer)))
+(allow netd network_stack (fd (use)))
+(allow netd dumpstate (fd (use)))
+(allow netd dumpstate (fifo_file (write getattr)))
+;;* lmx 41 system/sepolicy/private/netd.te
+
+(neverallow base_typeattr_812 netd_stable_secret_prop (file (ioctl read getattr lock map open watch watch_reads)))
+;;* lme
+
+;;* lmx 45 system/sepolicy/private/netd.te
+
+(neverallow base_typeattr_813 netd_stable_secret_prop (property_service (set)))
+;;* lme
+
+(allow netutils_wrapper system_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow netutils_wrapper system_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow netutils_wrapper system_file (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow netutils_wrapper self (capability (net_raw)))
+(allow netutils_wrapper self (cap_userns (net_raw)))
+(allow netutils_wrapper system_file (file (execute execute_no_trans)))
+(allow netutils_wrapper proc_net_type (file (read getattr open)))
+(allow netutils_wrapper self (rawip_socket (ioctl read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netutils_wrapper self (udp_socket (ioctl read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow netutils_wrapper self (capability (net_admin)))
+(allow netutils_wrapper self (cap_userns (net_admin)))
+(allow netutils_wrapper self (netlink_route_socket (read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind nlmsg_read nlmsg_write nlmsg_readpriv nlmsg_getneigh)))
+(allow netutils_wrapper self (netlink_xfrm_socket (read write create getattr setattr lock relabelfrom relabelto append map bind connect listen accept getopt setopt shutdown recvfrom sendto name_bind nlmsg_read nlmsg_write)))
+(allow netutils_wrapper netd_service (service_manager (find)))
+(allow netutils_wrapper dnsresolver_service (service_manager (find)))
+(allow netutils_wrapper mdns_service (service_manager (find)))
+(allow netutils_wrapper servicemanager (binder (call transfer)))
+(allow servicemanager netutils_wrapper (binder (call transfer)))
+(allow servicemanager netutils_wrapper (dir (search)))
+(allow servicemanager netutils_wrapper (file (read open)))
+(allow servicemanager netutils_wrapper (process (getattr)))
+(allow netutils_wrapper netd (binder (call transfer)))
+(allow netd netutils_wrapper (binder (transfer)))
+(allow netutils_wrapper netd (fd (use)))
+(allow netutils_wrapper fs_bpf (dir (search)))
+(allow netutils_wrapper fs_bpf_netd_shared (dir (search)))
+(allow netutils_wrapper fs_bpf (file (read getattr)))
+(allow netutils_wrapper fs_bpf_netd_shared (file (read getattr)))
+(allow netutils_wrapper fs_bpf (file (write)))
+(allow netutils_wrapper bpfloader (bpf (prog_run)))
+(allow netutils_wrapper net_data_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow netutils_wrapper net_data_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow netutils_wrapper net_data_file (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow base_typeattr_699 netutils_wrapper_exec (file (read getattr map execute open)))
+(allow base_typeattr_699 netutils_wrapper (process (transition)))
+(allow netutils_wrapper netutils_wrapper_exec (file (read getattr map execute open entrypoint)))
+(allow netutils_wrapper base_typeattr_699 (process (sigchld)))
+(dontaudit base_typeattr_699 netutils_wrapper (process (noatsecure)))
+(allow base_typeattr_699 netutils_wrapper (process (siginh rlimitinh)))
+(typetransition base_typeattr_699 netutils_wrapper_exec process netutils_wrapper)
+(dontaudit netutils_wrapper self (capability (sys_resource)))
+(dontaudit netutils_wrapper self (cap_userns (sys_resource)))
+(dontaudit netutils_wrapper sysfs_type (file (read)))
+;;* lmx 47 system/sepolicy/private/netutils_wrapper.te
+
+(neverallow netutils_wrapper self (capability (chown dac_override dac_read_search fowner fsetid kill setgid setuid setpcap linux_immutable net_bind_service net_broadcast ipc_lock ipc_owner sys_module sys_rawio sys_chroot sys_ptrace sys_pacct sys_admin sys_boot sys_nice sys_resource sys_time sys_tty_config mknod lease audit_write audit_control setfcap)))
+(neverallow netutils_wrapper self (cap_userns (chown dac_override dac_read_search fowner fsetid kill setgid setuid setpcap linux_immutable net_bind_service net_broadcast ipc_lock ipc_owner sys_module sys_rawio sys_chroot sys_ptrace sys_pacct sys_admin sys_boot sys_nice sys_resource sys_time sys_tty_config mknod lease audit_write audit_control setfcap)))
+;;* lme
+
+(typetransition network_stack tmpfs file appdomain_tmpfs)
+(allow network_stack network_stack_userfaultfd (anon_inode (ioctl read create)))
+(dontaudit su network_stack_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lmx 6 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_814 network_stack_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+(allow network_stack appdomain_tmpfs (file (read write getattr map execute)))
+;;* lmx 6 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_815 base_typeattr_814 (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 6 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_816 network_stack (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 6 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_817 network_stack (process (ptrace)))
+;;* lme
+
+(allow network_stack self (capability (net_bind_service net_broadcast net_admin net_raw)))
+(allow network_stack self (cap_userns (net_bind_service net_broadcast net_admin net_raw)))
+(allowx network_stack self (ioctl udp_socket (0x6900 0x6902)))
+(allowx network_stack self (ioctl udp_socket ((range 0x890b 0x890d) 0x8911 0x8914 0x8916 0x8918 0x891a (range 0x891c 0x8920) (range 0x8922 0x8927) 0x8929 (range 0x8930 0x8932) (range 0x8934 0x8937) 0x8939 (range 0x8940 0x8941) 0x8943 (range 0x8946 0x894b) (range 0x8953 0x8955) (range 0x8960 0x8962) (range 0x8970 0x8971) (range 0x8980 0x8983) (range 0x8990 0x8995) (range 0x89a0 0x89a3) 0x89b0 (range 0x89e0 0x89ff))))
+(allowx network_stack self (ioctl udp_socket (0x8b00 0x8b02 0x8b04 0x8b06 0x8b08 0x8b0a 0x8b0c 0x8b0e 0x8b10 (range 0x8b14 0x8b1d) 0x8b20 0x8b22 0x8b24 0x8b26 0x8b28 (range 0x8b2a 0x8b2c) (range 0x8b30 0x8b36) (range 0x8be0 0x8bff))))
+(allow network_stack self (packet_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow network_stack self (netlink_route_socket (nlmsg_write)))
+(allow network_stack self (netlink_kobject_uevent_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow network_stack self (netlink_nflog_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow network_stack self (netlink_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow network_stack self (netlink_generic_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow network_stack app_api_service (service_manager (find)))
+(allow network_stack dnsresolver_service (service_manager (find)))
+(allow network_stack mdns_service (service_manager (find)))
+(allow network_stack netd_service (service_manager (find)))
+(allow network_stack network_watchlist_service (service_manager (find)))
+(allow network_stack radio_service (service_manager (find)))
+(allow network_stack system_config_service (service_manager (find)))
+(allow network_stack radio_data_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow network_stack radio_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow network_stack netd (binder (call transfer)))
+(allow netd network_stack (binder (transfer)))
+(allow network_stack netd (fd (use)))
+(allow network_stack self (key_socket (create)))
+(dontaudit network_stack self (key_socket (getopt)))
+(allow network_stack device_config_connectivity_prop (file (read getattr map open)))
+(allow network_stack self (netlink_tcpdiag_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown nlmsg_read nlmsg_write)))
+(allow network_stack self (netlink_netfilter_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown)))
+(allow network_stack network_stack_service (service_manager (find)))
+(allow network_stack fs_bpf_tethering (dir (search)))
+(allow network_stack fs_bpf_net_private (dir (search)))
+(allow network_stack fs_bpf_net_shared (dir (search)))
+(allow network_stack fs_bpf_netd_readonly (dir (search)))
+(allow network_stack fs_bpf_netd_shared (dir (search)))
+(allow network_stack fs_bpf_tethering (file (read write getattr)))
+(allow network_stack fs_bpf_net_private (file (read write getattr)))
+(allow network_stack fs_bpf_net_shared (file (read write getattr)))
+(allow network_stack fs_bpf_netd_readonly (file (read write getattr)))
+(allow network_stack fs_bpf_netd_shared (file (read write getattr)))
+(allow network_stack bpfloader (bpf (map_read map_write prog_run)))
+(allow network_stack device_config_tethering_u_or_later_native_prop (file (read getattr map open)))
+(allow network_stack self (netlink_xfrm_socket (read write create getattr setattr lock append map bind connect getopt setopt shutdown nlmsg_read nlmsg_write)))
+(allow network_stack tun_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allowx network_stack tun_device (ioctl chr_file (0x54ca 0x54cd 0x54d2 0x54e2)))
+;;* lmx 82 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_648 fs_bpf_net_private (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 83 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_648 fs_bpf_net_private (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 86 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_649 fs_bpf_net_shared (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 87 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_649 fs_bpf_net_shared (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 91 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_650 fs_bpf_netd_readonly (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 92 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_650 fs_bpf_netd_readonly (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 93 system/sepolicy/private/network_stack.te
+
+(neverallow netd fs_bpf_netd_readonly (file (write)))
+;;* lme
+
+;;* lmx 97 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_651 fs_bpf_netd_shared (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 98 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_651 fs_bpf_netd_shared (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 99 system/sepolicy/private/network_stack.te
+
+(neverallow netutils_wrapper fs_bpf_netd_shared (file (write)))
+;;* lme
+
+;;* lmx 102 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_648 fs_bpf_tethering (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 103 system/sepolicy/private/network_stack.te
+
+(neverallow base_typeattr_648 fs_bpf_tethering (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+(typetransition nfc tmpfs file appdomain_tmpfs)
+(allow nfc nfc_userfaultfd (anon_inode (ioctl read create)))
+(dontaudit su nfc_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lmx 3 system/sepolicy/private/nfc.te
+
+(neverallow base_typeattr_818 nfc_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+(allow nfc appdomain_tmpfs (file (read write getattr map execute)))
+;;* lmx 3 system/sepolicy/private/nfc.te
+
+(neverallow base_typeattr_819 base_typeattr_818 (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 3 system/sepolicy/private/nfc.te
+
+(neverallow base_typeattr_820 nfc (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 3 system/sepolicy/private/nfc.te
+
+(neverallow base_typeattr_821 nfc (process (ptrace)))
+;;* lme
+
+(allow nfc nfc_service (service_manager (add find)))
+;;* lmx 7 system/sepolicy/private/nfc.te
+
+(neverallow base_typeattr_818 nfc_service (service_manager (add)))
+;;* lme
+
+(allow nfc su (tcp_socket (read write accept getopt)))
+(allow nfc nfc_data_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow nfc nfc_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow nfc nfc_data_file (lnk_file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow nfc nfc_data_file (sock_file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow nfc nfc_data_file (fifo_file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow nfc nfc_logs_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow nfc nfc_logs_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow nfc audioserver_service (service_manager (find)))
+(allow nfc drmserver_service (service_manager (find)))
+(allow nfc mediametrics_service (service_manager (find)))
+(allow nfc mediaextractor_service (service_manager (find)))
+(allow nfc mediaserver_service (service_manager (find)))
+(allow nfc radio_service (service_manager (find)))
+(allow nfc app_api_service (service_manager (find)))
+(allow nfc system_api_service (service_manager (find)))
+(allow nfc vr_manager_service (service_manager (find)))
+(allow nfc secure_element_service (service_manager (find)))
+(allow nfc property_socket (sock_file (write)))
+(allow nfc init (unix_stream_socket (connectto)))
+(allow nfc nfc_prop (property_service (set)))
+(allow nfc nfc_prop (file (read getattr map open)))
+(allow nfc shell_data_file (file (read)))
+(allow odrefresh apex_module_data_file (dir (getattr search)))
+(allow odrefresh apex_art_data_file (dir (ioctl read write create getattr setattr lock relabelfrom rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow odrefresh apex_art_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow odrefresh odrefresh_data_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow odrefresh odrefresh_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow odrefresh odrefresh_userfaultfd (anon_inode (ioctl read create)))
+(dontaudit su odrefresh_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lmx 14 system/sepolicy/private/odrefresh.te
+
+(neverallow base_typeattr_822 odrefresh_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+(allow odrefresh apex_art_staging_data_file (dir (ioctl read write create getattr setattr lock relabelto rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow odrefresh apex_art_staging_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow odrefresh dex2oat_exec (file (read getattr map execute open)))
+(allow odrefresh dex2oat (process (transition)))
+(allow dex2oat dex2oat_exec (file (read getattr map execute open entrypoint)))
+(allow dex2oat odrefresh (process (sigchld)))
+(dontaudit odrefresh dex2oat (process (noatsecure)))
+(allow odrefresh dex2oat (process (siginh rlimitinh)))
+(typetransition odrefresh dex2oat_exec process dex2oat)
+(allow odrefresh dex2oat (process (sigkill)))
+(allow odrefresh dexoptanalyzer_exec (file (read getattr map execute open)))
+(allow odrefresh dexoptanalyzer (process (transition)))
+(allow dexoptanalyzer dexoptanalyzer_exec (file (read getattr map execute open entrypoint)))
+(allow dexoptanalyzer odrefresh (process (sigchld)))
+(dontaudit odrefresh dexoptanalyzer (process (noatsecure)))
+(allow odrefresh dexoptanalyzer (process (siginh rlimitinh)))
+(typetransition odrefresh dexoptanalyzer_exec process dexoptanalyzer)
+(allow odrefresh dexoptanalyzer (process (sigkill)))
+(allow odrefresh odsign_devpts (chr_file (read write)))
+(allow odrefresh odsign (fd (use)))
+(allow odrefresh apex_info_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow odrefresh property_socket (sock_file (write)))
+(allow odrefresh init (unix_stream_socket (connectto)))
+(allow odrefresh bootanim_system_prop (property_service (set)))
+(allow odrefresh bootanim_system_prop (file (read getattr map open)))
+(allow odrefresh device_config_runtime_native_prop (file (read getattr map open)))
+(allow odrefresh device_config_runtime_native_boot_prop (file (read getattr map open)))
+(dontaudit odrefresh adbd (fd (use)))
+(dontaudit odrefresh shell (fd (use)))
+(dontaudit odrefresh devpts (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(dontaudit odrefresh adbd (unix_stream_socket (read write getattr)))
+;;* lmx 55 system/sepolicy/private/odrefresh.te
+
+(neverallow base_typeattr_823 apex_art_staging_data_file (file (open)))
+;;* lme
+
+;;* lmx 59 system/sepolicy/private/odrefresh.te
+
+(neverallow base_typeattr_824 odrefresh_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 60 system/sepolicy/private/odrefresh.te
+
+(neverallow base_typeattr_824 odrefresh_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+(allow init odsign_exec (file (read getattr map execute open)))
+(allow init odsign (process (transition)))
+(allow odsign odsign_exec (file (read getattr map execute open entrypoint)))
+(dontaudit init odsign (process (noatsecure)))
+(allow init odsign (process (siginh rlimitinh)))
+(typetransition init odsign_exec process odsign)
+(allow odsign odsign_data_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow odsign odsign_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow odsign odsign_metrics_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow odsign odsign_metrics_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(typetransition odsign devpts chr_file odsign_devpts)
+(allow odsign odsign_devpts (chr_file (ioctl read write getattr open)))
+(allowx odsign odsign_devpts (ioctl chr_file ((range 0x5401 0x5404) 0x540b (range 0x540e 0x5411) (range 0x5413 0x5414) (range 0x5450 0x5451))))
+;;* lmx 21 system/sepolicy/private/odsign.te
+
+(neverallowx base_typeattr_209 odsign_devpts (ioctl chr_file (0x5412)))
+;;* lme
+
+(allowx odsign apex_art_data_file (ioctl file (0x6601 (range 0x6685 0x6686))))
+(allow odsign servicemanager (binder (call transfer)))
+(allow servicemanager odsign (binder (call transfer)))
+(allow servicemanager odsign (dir (search)))
+(allow servicemanager odsign (file (read open)))
+(allow servicemanager odsign (process (getattr)))
+(allow keystore odsign (dir (search)))
+(allow keystore odsign (file (read open)))
+(allow keystore odsign (process (getattr)))
+(allow odsign apc_service (service_manager (find)))
+(allow odsign keystore_service (service_manager (find)))
+(allow odsign legacykeystore_service (service_manager (find)))
+(allow odsign keystore (binder (call transfer)))
+(allow keystore odsign (binder (transfer)))
+(allow odsign keystore (fd (use)))
+(allow keystore odsign (binder (call transfer)))
+(allow odsign keystore (binder (transfer)))
+(allow keystore odsign (fd (use)))
+(allow odsign odsign_key (keystore2_key (delete get_info rebind use)))
+(allow odsign apex_module_data_file (dir (getattr search)))
+(allow odsign apex_art_data_file (dir (ioctl read write getattr lock rename open watch watch_reads add_name remove_name search rmdir)))
+(allow odsign apex_art_data_file (file (ioctl read write getattr lock append map unlink open watch watch_reads)))
+(allow odsign odrefresh_exec (file (read getattr map execute open)))
+(allow odsign odrefresh (process (transition)))
+(allow odrefresh odrefresh_exec (file (read getattr map execute open entrypoint)))
+(allow odrefresh odsign (process (sigchld)))
+(dontaudit odsign odrefresh (process (noatsecure)))
+(allow odsign odrefresh (process (siginh rlimitinh)))
+(typetransition odsign odrefresh_exec process odrefresh)
+(allow odsign fsverity_init_exec (file (read getattr map execute open)))
+(allow odsign fsverity_init (process (transition)))
+(allow fsverity_init fsverity_init_exec (file (read getattr map execute open entrypoint)))
+(allow fsverity_init odsign (process (sigchld)))
+(dontaudit odsign fsverity_init (process (noatsecure)))
+(allow odsign fsverity_init (process (siginh rlimitinh)))
+(typetransition odsign fsverity_init_exec process fsverity_init)
+(allow odsign compos_verify_exec (file (read getattr map execute open)))
+(allow odsign compos_verify (process (transition)))
+(allow compos_verify compos_verify_exec (file (read getattr map execute open entrypoint)))
+(allow compos_verify odsign (process (sigchld)))
+(dontaudit odsign compos_verify (process (noatsecure)))
+(allow odsign compos_verify (process (siginh rlimitinh)))
+(typetransition odsign compos_verify_exec process compos_verify)
+(allow odsign property_socket (sock_file (write)))
+(allow odsign init (unix_stream_socket (connectto)))
+(allow odsign odsign_prop (property_service (set)))
+(allow odsign odsign_prop (file (read getattr map open)))
+;;* lmx 62 system/sepolicy/private/odsign.te
+
+(neverallow base_typeattr_825 odsign_prop (property_service (set)))
+;;* lme
+
+(allow odsign property_socket (sock_file (write)))
+(allow odsign init (unix_stream_socket (connectto)))
+(allow odsign ctl_odsign_prop (property_service (set)))
+(allow odsign ctl_odsign_prop (file (read getattr map open)))
+;;* lmx 68 system/sepolicy/private/odsign.te
+
+(neverallow base_typeattr_826 odsign_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+;;* lme
+
+;;* lmx 69 system/sepolicy/private/odsign.te
+
+(neverallow base_typeattr_826 odsign_data_file (file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+(allow otapreopt_chroot postinstall_file (dir (mounton search)))
+(allow otapreopt_chroot apex_mnt_dir (dir (mounton)))
+(allow otapreopt_chroot device (dir (mounton)))
+(allow otapreopt_chroot linkerconfig_file (dir (mounton)))
+(allow otapreopt_chroot rootfs (dir (mounton)))
+(allow otapreopt_chroot sysfs (dir (mounton)))
+(allow otapreopt_chroot system_data_root_file (dir (mounton)))
+(allow otapreopt_chroot system_file (dir (mounton)))
+(allow otapreopt_chroot vendor_file (dir (mounton)))
+(allow otapreopt_chroot self (capability (sys_chroot sys_admin)))
+(allow otapreopt_chroot self (cap_userns (sys_chroot sys_admin)))
+(allow otapreopt_chroot block_device (dir (search)))
+(allow otapreopt_chroot labeledfs (filesystem (mount unmount)))
+(allow otapreopt_chroot dm_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow otapreopt_chroot postinstall_file (filesystem (unmount)))
+(dontaudit otapreopt_chroot kernel (process (setsched)))
+(allow otapreopt_chroot file_contexts_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow otapreopt_chroot postinstall_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow otapreopt_chroot apexd_prop (file (read getattr map open)))
+(allow otapreopt_chroot postinstall (fd (use)))
+(allow otapreopt_chroot update_engine (fd (use)))
+(allow otapreopt_chroot update_engine (fifo_file (write)))
+(allow otapreopt_chroot postinstall_dexopt_exec (file (read getattr map execute open)))
+(allow otapreopt_chroot postinstall_dexopt (process (transition)))
+(allow postinstall_dexopt postinstall_dexopt_exec (file (read getattr map execute open entrypoint)))
+(allow postinstall_dexopt otapreopt_chroot (process (sigchld)))
+(dontaudit otapreopt_chroot postinstall_dexopt (process (noatsecure)))
+(allow otapreopt_chroot postinstall_dexopt (process (siginh rlimitinh)))
+(typetransition otapreopt_chroot postinstall_dexopt_exec process postinstall_dexopt)
+(allow otapreopt_chroot linkerconfig_exec (file (read getattr map execute open)))
+(allow otapreopt_chroot linkerconfig (process (transition)))
+(allow linkerconfig linkerconfig_exec (file (read getattr map execute open entrypoint)))
+(allow linkerconfig otapreopt_chroot (process (sigchld)))
+(dontaudit otapreopt_chroot linkerconfig (process (noatsecure)))
+(allow otapreopt_chroot linkerconfig (process (siginh rlimitinh)))
+(typetransition otapreopt_chroot linkerconfig_exec process linkerconfig)
+(allow otapreopt_chroot apexd_exec (file (read getattr map execute open)))
+(allow otapreopt_chroot apexd (process (transition)))
+(allow apexd apexd_exec (file (read getattr map execute open entrypoint)))
+(allow apexd otapreopt_chroot (process (sigchld)))
+(dontaudit otapreopt_chroot apexd (process (noatsecure)))
+(allow otapreopt_chroot apexd (process (siginh rlimitinh)))
+(typetransition otapreopt_chroot apexd_exec process apexd)
+(allow otapreopt_chroot linkerconfig_file (dir (ioctl read write create getattr setattr lock relabelto rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow otapreopt_chroot linkerconfig_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow otapreopt_chroot loop_control_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow otapreopt_chroot loop_device (blk_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allowx otapreopt_chroot loop_device (ioctl blk_file (0x1261)))
+(allowx otapreopt_chroot loop_device (ioctl blk_file ((range 0x4c00 0x4c01) (range 0x4c04 0x4c05) (range 0x4c08 0x4c0a))))
+(allow otapreopt_chroot sysfs_loop (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow otapreopt_chroot sysfs_loop (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow otapreopt_chroot tmpfs (filesystem (mount)))
+(allow otapreopt_chroot tmpfs (dir (relabelfrom)))
+(allow otapreopt_chroot postinstall_apex_mnt_dir (dir (relabelto)))
+(allow otapreopt_chroot postinstall_apex_mnt_dir (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow otapreopt_chroot postinstall_apex_mnt_dir (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow otapreopt_chroot postinstall_apex_mnt_dir (dir (mounton)))
+(allow otapreopt_chroot block_device (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow otapreopt_chroot postinstall_file (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow otapreopt_chroot cold_boot_done_prop (file (read getattr map open)))
+(allow otapreopt_chroot linkerconfig_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow init otapreopt_slot_exec (file (read getattr map execute open)))
+(allow init otapreopt_slot (process (transition)))
+(allow otapreopt_slot otapreopt_slot_exec (file (read getattr map execute open entrypoint)))
+(dontaudit init otapreopt_slot (process (noatsecure)))
+(allow init otapreopt_slot (process (siginh rlimitinh)))
+(typetransition init otapreopt_slot_exec process otapreopt_slot)
+(allow otapreopt_slot ota_data_file (dir (ioctl read write getattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow otapreopt_slot ota_data_file (file (getattr)))
+(allow otapreopt_slot ota_data_file (lnk_file (getattr)))
+(allow otapreopt_slot ota_data_file (lnk_file (read)))
+(allow otapreopt_slot dalvikcache_data_file (dir (read write getattr open add_name remove_name search rmdir)))
+(allow otapreopt_slot dalvikcache_data_file (file (getattr unlink)))
+(allow otapreopt_slot dalvikcache_data_file (lnk_file (read getattr unlink)))
+(allow otapreopt_slot shell_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(allow otapreopt_slot toolbox_exec (file (ioctl read getattr lock map execute open watch watch_reads execute_no_trans)))
+(typetransition perfetto tmpfs file perfetto_tmpfs)
+(allow perfetto perfetto_tmpfs (file (read write getattr map)))
+(allow init perfetto_exec (file (read getattr map execute open)))
+(allow init perfetto (process (transition)))
+(allow perfetto perfetto_exec (file (read getattr map execute open entrypoint)))
+(dontaudit init perfetto (process (noatsecure)))
+(allow init perfetto (process (siginh rlimitinh)))
+(typetransition init perfetto_exec process perfetto)
+(allow perfetto traced_consumer_socket (sock_file (write)))
+(allow perfetto traced (unix_stream_socket (connectto)))
+(allow perfetto traced (fd (use)))
+(allow perfetto traced_tmpfs (file (read write getattr map)))
+(allow perfetto traced_producer_socket (sock_file (write)))
+(allow perfetto traced (unix_stream_socket (connectto)))
+(allow traced perfetto (fd (use)))
+(allow perfetto perfetto_traces_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow perfetto perfetto_traces_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow perfetto perfetto_traces_bugreport_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow perfetto perfetto_traces_bugreport_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow perfetto tracingproxy_service (service_manager (find)))
+(allow perfetto servicemanager (binder (call transfer)))
+(allow servicemanager perfetto (binder (call transfer)))
+(allow servicemanager perfetto (dir (search)))
+(allow servicemanager perfetto (file (read open)))
+(allow servicemanager perfetto (process (getattr)))
+(allow perfetto system_server (binder (call transfer)))
+(allow system_server perfetto (binder (transfer)))
+(allow perfetto system_server (fd (use)))
+(allow perfetto perfetto_configs_data_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow perfetto perfetto_configs_data_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow perfetto shell (fd (use)))
+(allow perfetto statsd (fd (use)))
+(allow perfetto su (fd (use)))
+(allow perfetto mm_events (fd (use)))
+(allow perfetto shell (fifo_file (read write getattr)))
+(allow perfetto statsd (fifo_file (read write getattr)))
+(allow perfetto su (fifo_file (read write getattr)))
+(allow perfetto mm_events (fifo_file (read write getattr)))
+(allow perfetto adbd (fd (use)))
+(allow perfetto adbd (unix_stream_socket (read write)))
+(allow perfetto adbd (process (sigchld)))
+(allow perfetto statsdw_socket (sock_file (write)))
+(allow perfetto statsd (unix_dgram_socket (sendto)))
+(allow perfetto devpts (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow perfetto incident_service (service_manager (find)))
+(allow perfetto incidentd (binder (call transfer)))
+(allow incidentd perfetto (binder (transfer)))
+(allow perfetto incidentd (fd (use)))
+(dontaudit perfetto adbd (unix_stream_socket (getattr)))
+(dontauditx perfetto adbd (ioctl unix_stream_socket ((range 0x5401 0x5404) 0x540b (range 0x540e 0x5411) (range 0x5413 0x5414) (range 0x5450 0x5451))))
+(dontauditx perfetto su (ioctl unix_stream_socket ((range 0x5401 0x5404) 0x540b (range 0x540e 0x5411) (range 0x5413 0x5414) (range 0x5450 0x5451))))
+(dontauditx perfetto shell (ioctl fifo_file ((range 0x5401 0x5404) 0x540b (range 0x540e 0x5411) (range 0x5413 0x5414) (range 0x5450 0x5451))))
+;;* lmx 89 system/sepolicy/private/perfetto.te
+
+(neverallow base_typeattr_827 perfetto_traces_data_file (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 98 system/sepolicy/private/perfetto.te
+
+(neverallow base_typeattr_828 perfetto_traces_data_file (file (ioctl write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+;;* lmx 104 system/sepolicy/private/perfetto.te
+
+(neverallow perfetto self (process (execmem)))
+;;* lme
+
+;;* lmx 107 system/sepolicy/private/perfetto.te
+
+(neverallow perfetto dev_type (blk_file (read write)))
+;;* lme
+
+;;* lmx 110 system/sepolicy/private/perfetto.te
+
+(neverallow perfetto domain (process (ptrace)))
+;;* lme
+
+;;* lmx 127 system/sepolicy/private/perfetto.te
+
+(neverallow perfetto base_typeattr_829 (dir (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent search rmdir)))
+;;* lme
+
+;;* lmx 128 system/sepolicy/private/perfetto.te
+
+(neverallow perfetto base_typeattr_830 (dir (ioctl read write create setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads add_name remove_name reparent rmdir)))
+;;* lme
+
+;;* lmx 135 system/sepolicy/private/perfetto.te
+
+(neverallow perfetto base_typeattr_831 (file (ioctl read create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+(allow init performanced_exec (file (read getattr map execute open)))
+(allow init performanced (process (transition)))
+(allow performanced performanced_exec (file (read getattr map execute open entrypoint)))
+(dontaudit init performanced (process (noatsecure)))
+(allow init performanced (process (siginh rlimitinh)))
+(typetransition init performanced_exec process performanced)
+(typetransition permissioncontroller_app tmpfs file appdomain_tmpfs)
+(allow permissioncontroller_app permissioncontroller_app_userfaultfd (anon_inode (ioctl read create)))
+(dontaudit su permissioncontroller_app_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lmx 6 system/sepolicy/private/permissioncontroller_app.te
+
+(neverallow base_typeattr_832 permissioncontroller_app_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+(allow permissioncontroller_app appdomain_tmpfs (file (read write getattr map execute)))
+;;* lmx 6 system/sepolicy/private/permissioncontroller_app.te
+
+(neverallow base_typeattr_833 base_typeattr_832 (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 6 system/sepolicy/private/permissioncontroller_app.te
+
+(neverallow base_typeattr_834 permissioncontroller_app (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 6 system/sepolicy/private/permissioncontroller_app.te
+
+(neverallow base_typeattr_835 permissioncontroller_app (process (ptrace)))
+;;* lme
+
+(allow permissioncontroller_app app_api_service (service_manager (find)))
+(allow permissioncontroller_app system_api_service (service_manager (find)))
+(allow permissioncontroller_app gpuservice (binder (call transfer)))
+(allow gpuservice permissioncontroller_app (binder (transfer)))
+(allow permissioncontroller_app gpuservice (fd (use)))
+(allow permissioncontroller_app radio_service (service_manager (find)))
+(allow permissioncontroller_app incident_service (service_manager (find)))
+(allow permissioncontroller_app incidentd (binder (call transfer)))
+(allow incidentd permissioncontroller_app (binder (transfer)))
+(allow permissioncontroller_app incidentd (fd (use)))
+(allow permissioncontroller_app incidentd (fifo_file (read write)))
+(allow permissioncontroller_app gpu_device (dir (search)))
+(typetransition platform_app tmpfs file appdomain_tmpfs)
+(allow platform_app platform_app_userfaultfd (anon_inode (ioctl read create)))
+(dontaudit su platform_app_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lmx 7 system/sepolicy/private/platform_app.te
+
+(neverallow base_typeattr_836 platform_app_userfaultfd (anon_inode (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+(allow platform_app appdomain_tmpfs (file (read write getattr map execute)))
+;;* lmx 7 system/sepolicy/private/platform_app.te
+
+(neverallow base_typeattr_837 base_typeattr_836 (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 7 system/sepolicy/private/platform_app.te
+
+(neverallow base_typeattr_838 platform_app (file (ioctl read write create setattr lock relabelfrom append unlink link rename open watch watch_mount watch_sb watch_with_perm watch_reads)))
+;;* lme
+
+;;* lmx 7 system/sepolicy/private/platform_app.te
+
+(neverallow base_typeattr_839 platform_app (process (ptrace)))
+;;* lme
+
+(allow platform_app shell_data_file (dir (search)))
+(allow platform_app shell_data_file (file (read getattr open)))
+(allow platform_app icon_file (file (read getattr open)))
+(allow platform_app apk_tmp_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow platform_app apk_private_tmp_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow platform_app apk_tmp_file (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow platform_app apk_private_tmp_file (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow platform_app apk_private_data_file (dir (search)))
+(allow platform_app asec_apk_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow platform_app asec_apk_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow platform_app media_rw_data_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow platform_app media_rw_data_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow platform_app cache_file (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow platform_app cache_file (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow platform_app mnt_media_rw_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow platform_app sdcard_type (dir (ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir)))
+(allow platform_app sdcard_type (file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(allow platform_app rootfs (dir (getattr)))
+(allow platform_app radio_cdma_ecm_prop (file (read getattr map open)))
+(allow platform_app property_socket (sock_file (write)))
+(allow platform_app init (unix_stream_socket (connectto)))
+(allow platform_app persist_wm_debug_prop (property_service (set)))
+(allow platform_app persist_wm_debug_prop (file (read getattr map open)))
+;;* lmx 46 system/sepolicy/private/platform_app.te
+
+(neverallow base_typeattr_840 persist_wm_debug_prop (property_service (set)))
+;;* lme
+
+(allow platform_app property_socket (sock_file (write)))
+(allow platform_app init (unix_stream_socket (connectto)))
+(allow platform_app persist_sysui_builder_extras_prop (property_service (set)))
+(allow platform_app persist_sysui_builder_extras_prop (file (read getattr map open)))
+(allow platform_app proc_vmstat (file (ioctl read getattr lock map open watch watch_reads)))
+(allow platform_app proc_net_type (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow platform_app proc_net_type (file (ioctl read getattr lock map open watch watch_reads)))
+(allow platform_app proc_net_type (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(auditallow platform_app proc_net_type (file (read getattr open)))
+(auditallow platform_app proc_net_type (dir (read getattr open)))
+(auditallow platform_app proc_net_type (lnk_file (read getattr open)))
+(allow platform_app wm_trace_data_file (dir (ioctl read write getattr lock open watch watch_reads add_name remove_name search)))
+(allow platform_app wm_trace_data_file (file (write create getattr setattr lock append map unlink open)))
+(allow platform_app audioserver_service (service_manager (find)))
+(allow platform_app cameraserver_service (service_manager (find)))
+(allow platform_app drmserver_service (service_manager (find)))
+(allow platform_app mediaserver_service (service_manager (find)))
+(allow platform_app mediametrics_service (service_manager (find)))
+(allow platform_app mediaextractor_service (service_manager (find)))
+(allow platform_app mediadrmserver_service (service_manager (find)))
+(allow platform_app persistent_data_block_service (service_manager (find)))
+(allow platform_app radio_service (service_manager (find)))
+(allow platform_app thermal_service (service_manager (find)))
+(allow platform_app app_api_service (service_manager (find)))
+(allow platform_app system_api_service (service_manager (find)))
+(allow platform_app vr_manager_service (service_manager (find)))
+(allow platform_app stats_service (service_manager (find)))
+(allow platform_app statsd (binder (call transfer)))
+(allow statsd platform_app (binder (transfer)))
+(allow platform_app statsd (fd (use)))
+(allow platform_app artd_service (service_manager (find)))
+(allow platform_app artd (binder (call transfer)))
+(allow artd platform_app (binder (transfer)))
+(allow platform_app artd (fd (use)))
+(allow platform_app preloads_data_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow platform_app preloads_data_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow platform_app preloads_media_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow platform_app preloads_media_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow platform_app runtime_event_log_tags_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow platform_app system_server (udp_socket (read write getattr connect getopt setopt recvfrom sendto)))
+(allow platform_app property_socket (sock_file (write)))
+(allow platform_app init (unix_stream_socket (connectto)))
+(allow platform_app test_boot_reason_prop (property_service (set)))
+(allow platform_app test_boot_reason_prop (file (read getattr map open)))
+(allow platform_app keyguard_config_prop (file (read getattr map open)))
+(allow platform_app qemu_hw_prop (file (read getattr map open)))
+(allow platform_app app_data_file (lnk_file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))
+(dontaudit platform_app debugfs_tracing (file (ioctl read write getattr lock append map open watch watch_reads)))
+(allow platform_app virtualizationmanager_exec (file (read getattr map execute open)))
+(allow platform_app virtualizationmanager (process (transition)))
+(allow virtualizationmanager virtualizationmanager_exec (file (read getattr map execute open entrypoint)))
+(allow virtualizationmanager platform_app (process (sigchld)))
+(dontaudit platform_app virtualizationmanager (process (noatsecure)))
+(allow platform_app virtualizationmanager (process (siginh rlimitinh)))
+(typetransition platform_app virtualizationmanager_exec process virtualizationmanager)
+(allow crosvm platform_app (unix_stream_socket (read write getattr)))
+(allow virtualizationmanager platform_app (unix_stream_socket (read write getattr)))
+(allow crosvm platform_app (fd (use)))
+(allow virtualizationmanager platform_app (fd (use)))
+(allow platform_app virtualizationmanager (fd (use)))
+(allow crosvm platform_app (fifo_file (read write getattr)))
+(allow virtualizationmanager platform_app (fifo_file (read write getattr)))
+(allow platform_app virtualizationmanager (vsock_socket (read write getattr getopt)))
+(allow platform_app hypervisor_prop (file (read getattr map open)))
+(allow platform_app virtualizationservice_data_file (file (read getattr)))
+;;* lmx 129 system/sepolicy/private/platform_app.te
+
+(neverallow base_typeattr_841 persist_sysui_builder_extras_prop (property_service (set)))
+;;* lme
+
+;;* lmx 132 system/sepolicy/private/platform_app.te
+
+(neverallow platform_app fuse_device (chr_file (ioctl read write create getattr setattr lock relabelfrom relabelto append map unlink link rename execute quotaon mounton audit_access open execmod watch watch_mount watch_sb watch_with_perm watch_reads execute_no_trans entrypoint)))
+;;* lme
+
+(allow postinstall otapreopt_chroot_exec (file (read getattr map execute open)))
+(allow postinstall otapreopt_chroot (process (transition)))
+(allow otapreopt_chroot otapreopt_chroot_exec (file (read getattr map execute open entrypoint)))
+(allow otapreopt_chroot postinstall (process (sigchld)))
+(dontaudit postinstall otapreopt_chroot (process (noatsecure)))
+(allow postinstall otapreopt_chroot (process (siginh rlimitinh)))
+(typetransition postinstall otapreopt_chroot_exec process otapreopt_chroot)
+(allow postinstall rootfs (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow postinstall_dexopt dex2oat_exec (file (read getattr map execute open)))
+(allow postinstall_dexopt dex2oat (process (transition)))
+(allow dex2oat dex2oat_exec (file (read getattr map execute open entrypoint)))
+(allow dex2oat postinstall_dexopt (process (sigchld)))
+(dontaudit postinstall_dexopt dex2oat (process (noatsecure)))
+(allow postinstall_dexopt dex2oat (process (siginh rlimitinh)))
+(typetransition postinstall_dexopt dex2oat_exec process dex2oat)
+(allow postinstall_dexopt postinstall_file (file (read getattr map execute open)))
+(allow postinstall_dexopt dex2oat (process (transition)))
+(allow dex2oat postinstall_file (file (read getattr map execute open entrypoint)))
+(allow dex2oat postinstall_dexopt (process (sigchld)))
+(dontaudit postinstall_dexopt dex2oat (process (noatsecure)))
+(allow postinstall_dexopt dex2oat (process (siginh rlimitinh)))
+(typetransition postinstall_dexopt postinstall_file process dex2oat)
+(allow postinstall_dexopt derive_classpath_exec (file (read getattr map execute open)))
+(allow postinstall_dexopt derive_classpath (process (transition)))
+(allow derive_classpath derive_classpath_exec (file (read getattr map execute open entrypoint)))
+(allow derive_classpath postinstall_dexopt (process (sigchld)))
+(dontaudit postinstall_dexopt derive_classpath (process (noatsecure)))
+(allow postinstall_dexopt derive_classpath (process (siginh rlimitinh)))
+(typetransition postinstall_dexopt derive_classpath_exec process derive_classpath)
+(typetransition postinstall_dexopt tmpfs file postinstall_dexopt_tmpfs)
+(allow postinstall_dexopt postinstall_dexopt_tmpfs (file (read write getattr map)))
+(allow postinstall_dexopt postinstall_dexopt_tmpfs (file (open)))
+(allow postinstall_dexopt self (capability (chown dac_override dac_read_search fowner fsetid setgid setuid)))
+(allow postinstall_dexopt self (cap_userns (chown dac_override dac_read_search fowner fsetid setgid setuid)))
+(allow postinstall_dexopt postinstall_file (filesystem (getattr)))
+(allow postinstall_dexopt postinstall_file (dir (read getattr search)))
+(allow postinstall_dexopt postinstall_file (lnk_file (read getattr)))
+(allow postinstall_dexopt proc_filesystems (file (read getattr open)))
+(allow postinstall_dexopt rootfs (file (ioctl read getattr lock map open watch watch_reads)))
+(allow postinstall_dexopt tmpfs (file (read)))
+(allow postinstall_dexopt odsign_prop (file (read getattr map open)))
+(allow postinstall_dexopt postinstall_apex_mnt_dir (dir (getattr search)))
+(allow postinstall_dexopt apk_data_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow postinstall_dexopt apk_data_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow postinstall_dexopt apk_data_file (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow postinstall_dexopt vendor_app_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow postinstall_dexopt vendor_app_file (file (ioctl read getattr lock map open watch watch_reads)))
+(allow postinstall_dexopt vendor_app_file (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow postinstall_dexopt vendor_overlay_file (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow postinstall_dexopt vendor_overlay_file (
