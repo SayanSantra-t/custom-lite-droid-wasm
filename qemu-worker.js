@@ -169,6 +169,7 @@ async function fetchFirmwareAssets() {
     'vgabios-virtio.bin',
     'vgabios-qxl.bin',
     'efi-virtio.rom',
+    'efi-e1000.rom',
     'kvmvapic.bin',
     'linuxboot_dma.bin'
   ];
@@ -341,7 +342,7 @@ self.onmessage = async (e) => {
         '-initrd', '/boot/ramdisk.img',
         '-drive', 'file=/disk/system.img,format=raw,if=virtio',
         '-append', appendCmdline,
-        '-vga', 'none', '-nographic',
+        '-net', 'none', '-vga', 'none', '-nographic',
         '-serial', 'mon:stdio'
       ];
 
