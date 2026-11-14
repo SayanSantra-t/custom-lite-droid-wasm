@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Lite Droid — Pixel 5 (Android 14) Rooted WASM</title>
+  <title>Custom Lite Droid — Pixel 5 (Android 14) Rooted QEMU Wasm</title>
   <style>
     :root {
       --bg: #0d1117;
       --card: #161b22;
       --accent: #38bdf8;
       --accent-ok: #4ade80;
+      --warn: #fbbf24;
       --text: #e2e8f0;
     }
     * { box-sizing: border-box; }
@@ -27,7 +28,7 @@
       border-bottom: 1px solid #1f2937;
       padding: 10px 18px;
       display: flex;
-      gap: 12px;
+      gap: 10px;
       align-items: center;
       font-size: 13px;
       flex-wrap: wrap;
@@ -39,16 +40,9 @@
       border: 1px solid #334155;
       font-size: 12px;
     }
-    .badge.ok {
-      background: #064e3b;
-      color: #6ee7b7;
-      border-color: #047857;
-    }
-    .badge.active {
-      background: #0c4a6e;
-      color: #7dd3fc;
-      border-color: #0284c7;
-    }
+    .badge.ok { background: #064e3b; color: #6ee7b7; border-color: #047857; }
+    .badge.active { background: #0c4a6e; color: #7dd3fc; border-color: #0284c7; }
+    .badge.warn { background: #451a03; color: #fcd34d; border-color: #b45309; }
     .main {
       flex: 1;
       display: flex;
@@ -72,43 +66,40 @@
       background: #020617;
       border-radius: 18px;
       display: block;
-      max-height: 75vh;
+      max-height: 74vh;
       max-width: 100%;
       object-fit: contain;
     }
-    .nav { display: flex; gap: 16px; width: 100%; justify-content: center; }
+    .nav { display: flex; gap: 12px; width: 100%; justify-content: center; }
     button {
       background: #1f2937;
       color: var(--text);
       border: 1px solid #374151;
       border-radius: 8px;
-      padding: 8px 14px;
+      padding: 8px 13px;
       cursor: pointer;
       font-size: 13px;
       transition: all 0.15s ease;
     }
     button:hover { border-color: var(--accent); }
     button:disabled { opacity: 0.6; cursor: not-allowed; }
-    button.running {
-      background: #064e3b;
-      color: #6ee7b7;
-      border-color: #059669;
-    }
+    button.running { background: #064e3b; color: #6ee7b7; border-color: #059669; }
     .panel {
       flex: 1;
-      min-width: 320px;
+      min-width: 340px;
       background: var(--card);
       border: 1px solid #262c3a;
       border-radius: 12px;
       padding: 14px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
+      overflow: hidden;
     }
     .drop {
       border: 2px dashed #374151;
       border-radius: 10px;
-      padding: 16px;
+      padding: 12px;
       text-align: center;
       font-size: 13px;
       color: #9ca3af;
@@ -122,20 +113,37 @@
       border-radius: 8px;
       padding: 10px;
       flex: 1;
-      min-height: 240px;
+      min-height: 220px;
       overflow: auto;
       font-size: 12px;
       color: #86efac;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      line-height: 1.5;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      word-break: break-word;
     }
+    .cmd-bar { display: flex; gap: 8px; }
+    .cmd-bar input {
+      flex: 1;
+      background: #090b10;
+      color: #f8fafc;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+    }
+    .cmd-bar input:focus { outline: none; border-color: var(--accent); }
+    .quick-cmds { display: flex; gap: 6px; flex-wrap: wrap; }
+    .quick-cmds button { padding: 4px 9px; font-size: 11px; background: #0f172a; }
   </style>
 </head>
 <body>
   <div class="bar">
-    <div><strong>Custom Lite Droid</strong> <span class="badge ok">Magisk Rooted</span></div>
+    <div><strong>Custom Lite Droid</strong> <span class="badge ok">Real QEMU TCG Wasm</span></div>
     <div id="profileBadge" class="badge">Detecting device...</div>
-    <div id="cacheBadge" class="badge active">IndexedDB Cache: 0 MB</div>
+    <div id="cacheBadge" class="badge active">IndexedDB Cache: 0 blocks (0.0 MB)</div>
+    <div id="vmStateBadge" class="badge warn">VM: Idle</div>
   </div>
 
   <div class="main">
@@ -149,210 +157,205 @@
     </div>
 
     <div class="panel">
-      <div style="display:flex; gap:8px; flex-wrap:wrap;">
-        <button id="bootBtn" onclick="bootOS()">Boot Lazy OS</button>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <button id="bootBtn" onclick="bootOS()">Boot QEMU Wasm</button>
         <button onclick="clearBlockCache()">Clear Block Cache</button>
       </div>
+
       <div id="dropZone" class="drop">
-        Drop <code>.apk</code> or Magisk <code>.zip</code> here to sideload into <code>/data/local/tmp</code>
+        Drop <code>.apk</code> or Magisk <code>.zip</code> here to inject into guest <code>/data/local/tmp</code>
       </div>
+
       <pre id="log"></pre>
+
+      <div class="quick-cmds">
+        <button onclick="sendShellCmd('uname -a')">uname -a</button>
+        <button onclick="sendShellCmd('id && su -c id')">su -c id</button>
+        <button onclick="sendShellCmd('cat /proc/meminfo | head -n 5')">meminfo</button>
+        <button onclick="sendShellCmd('ls -la /dev/block /data/local/tmp')">/dev/block</button>
+        <button onclick="sendShellCmd('getprop ro.build.version.release')">Android ver</button>
+      </div>
+
+      <form class="cmd-bar" onsubmit="handleCmdSubmit(event)">
+        <input id="cmdInput" type="text" placeholder="Type root shell command for ttyS0 (e.g. su, magisk -v, ls /system)..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
     </div>
   </div>
 
   <script>
     const logEl = document.getElementById('log');
-    const log = (m) => {
-      logEl.textContent += `[${new Date().toLocaleTimeString()}] ${m}\n`;
-      logEl.scrollTop = logEl.scrollHeight;
-    };
+    const ttyTail = [];
+    const MAX_TTY_LINES = 34;
 
-    // 1. Adaptive Device Profile
+    function appendLog(line, isErr = false) {
+      const ts = new Date().toLocaleTimeString();
+      logEl.textContent += `[${ts}] ${line}\n`;
+      if (logEl.textContent.length > 120000) {
+        logEl.textContent = logEl.textContent.slice(-90000);
+      }
+      logEl.scrollTop = logEl.scrollHeight;
+
+      ttyTail.push({ text: line, isErr });
+      if (ttyTail.length > MAX_TTY_LINES) ttyTail.shift();
+      renderLiveConsoleCanvas();
+    }
+
     const mem = navigator.deviceMemory || 4;
     const cores = navigator.hardwareConcurrency || 2;
     const sab = self.crossOriginIsolated === true;
     const isLowPower = mem <= 4 || cores <= 4 || !sab;
     const profile = isLowPower
-      ? { name: 'Low-Power', ramMB: 768, w: 480, h: 854, fps: 15, threads: 1, sab }
-      : { name: 'Desktop', ramMB: 1536, w: 720, h: 1280, fps: 30, threads: Math.min(4, cores), sab };
+      ? { name: 'Low-Power', ramMB: 512, w: 480, h: 854, threads: 1, sab }
+      : { name: 'Desktop', ramMB: 1024, w: 540, h: 960, threads: Math.min(4, cores), sab };
 
     const canvas = document.getElementById('screen');
     const ctx = canvas.getContext('2d');
     canvas.width = profile.w;
     canvas.height = profile.h;
     document.getElementById('profileBadge').textContent =
-      `${profile.name} (${profile.ramMB}MB RAM · ${profile.w}x${profile.h} · ${profile.threads}T · SAB:${sab ? 'ON' : 'OFF'})`;
+      `${profile.name} (${profile.ramMB}MB Guest · ${profile.threads}T · SAB:${sab ? 'ON' : 'OFF'})`;
 
-    // Initial canvas screen
-    function drawInitialScreen() {
-      ctx.fillStyle = '#050811';
+    let vmStatus = 'Idle — Click "Boot QEMU Wasm"';
+    let cachedBlocksCount = 0;
+
+    function renderLiveConsoleCanvas() {
+      ctx.fillStyle = '#030712';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#0f172a';
+      ctx.fillRect(0, 0, canvas.width, 32);
       ctx.fillStyle = '#38bdf8';
-      ctx.font = 'bold 20px monospace';
-      ctx.textAlign = 'center';
-      ctx.fillText('Pixel 5 (Android 14)', canvas.width / 2, canvas.height / 2 - 30);
-      ctx.fillStyle = '#94a3b8';
-      ctx.font = '14px monospace';
-      ctx.fillText('Click "Boot Lazy OS" to start', canvas.width / 2, canvas.height / 2 + 10);
+      ctx.font = 'bold 12px monospace';
+      ctx.textAlign = 'left';
+      ctx.fillText('QEMU-SYSTEM-X86_64 · ttyS0', 12, 20);
+      ctx.textAlign = 'right';
       ctx.fillStyle = '#4ade80';
-      ctx.fillText('Magisk v27.0 Root Ready', canvas.width / 2, canvas.height / 2 + 40);
-    }
-    drawInitialScreen();
+      ctx.fillText(`BLK:${cachedBlocksCount}`, canvas.width - 12, 20);
 
-    // 2. IndexedDB Lazy Block Cache (only stores 64KB chunks actually read)
-    const DB_NAME = 'pixel_wasm_blocks';
-    function openDB() {
-      return new Promise((res, rej) => {
-        const req = indexedDB.open(DB_NAME, 1);
-        req.onupgradeneeded = () => req.result.createObjectStore('chunks');
-        req.onsuccess = () => res(req.result);
-        req.onerror = () => rej(req.error);
-      });
-    }
+      ctx.fillStyle = '#1e293b';
+      ctx.fillRect(10, 42, canvas.width - 20, 24);
+      ctx.fillStyle = '#e2e8f0';
+      ctx.font = '11px monospace';
+      ctx.textAlign = 'left';
+      ctx.fillText(vmStatus.slice(0, 56), 16, 58);
 
-    let cachedBytes = 0;
-    async function updateCacheBadge() {
-      try {
-        const db = await openDB();
-        const count = await new Promise(r => {
-          const req = db.transaction('chunks').objectStore('chunks').count();
-          req.onsuccess = () => r(req.result);
-        });
-        const mb = ((count * 65536) / 1048576).toFixed(1);
-        document.getElementById('cacheBadge').textContent = `IndexedDB Cache: ${count} blocks (${mb} MB)`;
-      } catch (e) {}
-    }
+      ctx.font = '11px monospace';
+      let y = 86;
+      const lineHeight = 20;
+      const maxChars = Math.floor((canvas.width - 24) / 6.7);
 
-    async function fetchChunk(idx, file) {
-      const db = await openDB();
-      const cached = await new Promise(r => {
-        const g = db.transaction('chunks').objectStore('chunks').get(idx);
-        g.onsuccess = () => r(g.result);
-      });
-      if (cached) return cached;
-      const resp = await fetch(`./chunks/${file}`);
-      const buf = new Uint8Array(await resp.arrayBuffer());
-      await new Promise(r => {
-        const p = db.transaction('chunks', 'readwrite').objectStore('chunks').put(buf, idx);
-        p.oncomplete = r;
-      });
-      updateCacheBadge();
-      return buf;
-    }
-
-    async function clearBlockCache() {
-      indexedDB.deleteDatabase(DB_NAME);
-      document.getElementById('cacheBadge').textContent = 'IndexedDB Cache: 0 MB';
-      log('Cleared IndexedDB OS block cache.');
-    }
-
-    // 3. QEMU Web Worker Boot
-    let qemuWorker = null;
-
-    async function bootOS() {
-      const btn = document.getElementById('bootBtn');
-      btn.disabled = true;
-      btn.textContent = 'Booting...';
-      log(`Initializing ${profile.name} profile (${profile.ramMB}MB RAM, ${profile.threads}T, SAB:${sab ? 'ON' : 'OFF'})...`);
-
-      try {
-        const m = await fetch('./manifest.json').then(r => r.json());
-        log(`Manifest loaded: ${m.chunks.length} blocks (${(m.total_size / 1048576).toFixed(1)} MB virtual disk).`);
-        log('Attaching qemu-system-x86_64.wasm + boot/kernel-ranchu + boot/ramdisk.img (Magisk)...');
-
-        if (!qemuWorker) {
-          qemuWorker = new Worker('./qemu-worker.js');
-          
-          qemuWorker.onmessage = async (e) => {
-            const data = e.data;
-            if (data.type === 'STATUS') {
-              log(`[System] ${data.text}`);
-            } else if (data.type === 'LOG') {
-              log(`[QEMU] ${data.text}`);
-            } else if (data.type === 'LOG_ERR' || data.type === 'ERROR') {
-              log(`[Error] ${data.text}`);
-            } else if (data.type === 'FETCH_BLOCK') {
-              await fetchChunk(data.idx, data.file);
-            } else if (data.type === 'READY') {
-              btn.textContent = 'OS Running (Rooted)';
-              btn.classList.add('running');
-              drawActiveScreen();
-            }
-          };
-        }
-
-        qemuWorker.postMessage({
-          type: 'BOOT',
-          profile: profile,
-          kernelUrl: './boot/kernel-ranchu',
-          ramdiskUrl: './boot/ramdisk.img',
-          manifestUrl: './manifest.json',
-          cmdline: 'console=tty0 console=ttyS0 root=/dev/ram0 rw init=/init androidboot.hardware=ranchu androidboot.selinux=permissive'
-        });
-
-      } catch (e) {
-        log(`Boot error: ${e.message}`);
-        btn.disabled = false;
-        btn.textContent = 'Retry Boot';
+      for (const entry of ttyTail) {
+        if (y > canvas.height - 16) break;
+        ctx.fillStyle = entry.isErr ? '#fca5a5' : '#86efac';
+        ctx.fillText(entry.text.slice(0, maxChars), 12, y);
+        y += lineHeight;
       }
     }
+    renderLiveConsoleCanvas();
 
-    function drawActiveScreen() {
-      ctx.fillStyle = '#0f172a';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
-      // Top status bar
-      ctx.fillStyle = '#1e293b';
-      ctx.fillRect(0, 0, canvas.width, 28);
-      ctx.fillStyle = '#f8fafc';
-      ctx.font = '12px monospace';
-      ctx.textAlign = 'left';
-      ctx.fillText('12:00', 14, 18);
-      ctx.textAlign = 'right';
-      ctx.fillText('5G ■■ 100%', canvas.width - 14, 18);
+    let qemuWorker = null;
 
-      // Home screen app grid
-      ctx.textAlign = 'center';
-      const apps = [
-        { name: 'Magisk', color: '#10b981' },
-        { name: 'Terminal', color: '#38bdf8' },
-        { name: 'Settings', color: '#8b5cf6' },
-        { name: 'Files', color: '#f59e0b' }
-      ];
-
-      const startY = canvas.height / 2 - 80;
-      apps.forEach((app, i) => {
-        const x = (canvas.width / 4) * (i + 0.5);
-        ctx.fillStyle = app.color;
-        ctx.beginPath();
-        ctx.arc(x, startY, 26, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.fillStyle = '#e2e8f0';
-        ctx.font = '11px sans-serif';
-        ctx.fillText(app.name, x, startY + 44);
-      });
-
-      // Root prompt banner
-      ctx.fillStyle = '#0284c7';
-      ctx.font = 'bold 13px monospace';
-      ctx.fillText('# su (MagiskSU granted: root@android)', canvas.width / 2, canvas.height - 60);
+    function ensureWorker() {
+      if (qemuWorker) return qemuWorker;
+      qemuWorker = new Worker('./qemu-worker.js', { type: 'module' });
+      qemuWorker.onmessage = (e) => {
+        const data = e.data || {};
+        if (data.type === 'STATUS') {
+          vmStatus = data.text;
+          appendLog(`[System] ${data.text}`);
+        } else if (data.type === 'LOG') {
+          appendLog(data.text, false);
+        } else if (data.type === 'LOG_ERR') {
+          appendLog(data.text, true);
+        } else if (data.type === 'ERROR') {
+          vmStatus = 'QEMU Error';
+          document.getElementById('vmStateBadge').textContent = 'VM: Error';
+          document.getElementById('vmStateBadge').className = 'badge warn';
+          appendLog(`[ERROR] ${data.text}`, true);
+          const btn = document.getElementById('bootBtn');
+          btn.disabled = false;
+          btn.textContent = 'Retry QEMU Boot';
+        } else if (data.type === 'CACHE_STATS') {
+          cachedBlocksCount = data.blocks;
+          const mb = (data.bytes / 1048576).toFixed(2);
+          document.getElementById('cacheBadge').textContent = `IndexedDB Cache: ${data.blocks} blocks (${mb} MB)`;
+          renderLiveConsoleCanvas();
+        } else if (data.type === 'READY') {
+          vmStatus = 'QEMU TCG Running (ttyS0 active)';
+          const btn = document.getElementById('bootBtn');
+          btn.textContent = 'QEMU TCG Running';
+          btn.classList.add('running');
+          const stateBadge = document.getElementById('vmStateBadge');
+          stateBadge.textContent = 'VM: Running';
+          stateBadge.className = 'badge ok';
+          renderLiveConsoleCanvas();
+        }
+      };
+      qemuWorker.onerror = (err) => {
+        appendLog(`[Worker Fatal] ${err.message || err}`, true);
+      };
+      return qemuWorker;
     }
 
-    function sendKey(k) { log(`Virtual key: ${k}`); }
+    function bootOS() {
+      if (!sab) {
+        appendLog('[Warning] crossOriginIsolated=false — SharedArrayBuffer unavailable; Wasm pthreads may fail.', true);
+      }
+      const btn = document.getElementById('bootBtn');
+      btn.disabled = true;
+      btn.textContent = 'Booting QEMU...';
+      document.getElementById('vmStateBadge').textContent = 'VM: Booting';
+
+      ensureWorker().postMessage({
+        type: 'BOOT',
+        profile,
+        kernelUrl: './boot/kernel-ranchu',
+        ramdiskUrl: './boot/ramdisk.img',
+        manifestUrl: './manifest.json',
+        cmdline: 'console=ttyS0 earlycon=uart8250,io,0x3f8,115200n8 root=/dev/ram0 rw init=/init androidboot.hardware=ranchu androidboot.selinux=permissive'
+      });
+    }
+
+    function sendShellCmd(cmd) {
+      if (!cmd) return;
+      appendLog(`# ${cmd}`);
+      ensureWorker().postMessage({ type: 'CMD', text: cmd });
+    }
+
+    function handleCmdSubmit(ev) {
+      ev.preventDefault();
+      const input = document.getElementById('cmdInput');
+      const val = input.value;
+      input.value = '';
+      sendShellCmd(val);
+    }
+
+    function sendKey(k) {
+      ensureWorker().postMessage({ type: 'KEY', key: k });
+    }
+
+    function clearBlockCache() {
+      indexedDB.deleteDatabase('pixel_wasm_blocks');
+      cachedBlocksCount = 0;
+      document.getElementById('cacheBadge').textContent = 'IndexedDB Cache: 0 blocks (0.0 MB)';
+      appendLog('[System] Cleared IndexedDB OS block cache.');
+    }
 
     const dz = document.getElementById('dropZone');
     dz.ondragover = (e) => { e.preventDefault(); dz.classList.add('over'); };
     dz.ondragleave = () => dz.classList.remove('over');
-    dz.ondrop = (e) => {
-      e.preventDefault(); dz.classList.remove('over');
+    dz.ondrop = async (e) => {
+      e.preventDefault();
+      dz.classList.remove('over');
+      const worker = ensureWorker();
       for (const f of e.dataTransfer.files) {
-        log(`Sideloaded ${f.name} (${(f.size / 1048576).toFixed(2)} MB) into /data/local/tmp`);
+        const buf = await f.arrayBuffer();
+        worker.postMessage({ type: 'SIDELOAD', name: f.name, data: buf }, [buf]);
       }
     };
 
-    updateCacheBadge();
-    log(`Device detected: ${mem}GB RAM, ${cores} cores, COOP/COEP=${sab}`);
+    appendLog(`Host ready: ${mem}GB RAM, ${cores} cores, COOP/COEP=${sab}`);
   </script>
 </body>
 </html>
-
