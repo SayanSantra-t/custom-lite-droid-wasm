@@ -331,11 +331,12 @@ self.onmessage = async (e) => {
       const guestRamMB = Math.min(profile.ramMB, 1024);
       const appendCmdline =
         msg.cmdline ||
-        'console=ttyS0 earlycon=uart8250,io,0x3f8,115200n8 root=/dev/ram0 rw init=/init androidboot.hardware=ranchu androidboot.selinux=permissive';
+        'console=ttyS0 earlycon=uart8250,io,0x3f8,115200n8 root=/dev/ram0 rw init=/init androidboot.hardware=ranchu androidboot.selinux=permissive panic=-1';
 
       const qemuArgs = [
         '-L', '/firmware',
         '-M', 'pc',
+        '-cpu', 'max',
         '-m', `${guestRamMB}M`,
         '-smp', `${Math.max(1, profile.threads)}`,
         '-kernel', '/boot/kernel-ranchu',

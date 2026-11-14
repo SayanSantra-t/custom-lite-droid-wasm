@@ -313,7 +313,7 @@
         kernelUrl: './boot/kernel-ranchu',
         ramdiskUrl: './boot/ramdisk.img',
         manifestUrl: './manifest.json',
-        cmdline: 'console=ttyS0 earlycon=uart8250,io,0x3f8,115200n8 root=/dev/ram0 rw init=/init androidboot.hardware=ranchu androidboot.selinux=permissive'
+        cmdline: 'console=ttyS0 earlycon=uart8250,io,0x3f8,115200n8 root=/dev/ram0 rw init=/init androidboot.hardware=ranchu androidboot.selinux=permissive panic=-1'
       });
     }
 
